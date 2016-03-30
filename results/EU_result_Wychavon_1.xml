@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReferendumResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ReferendumResult.xsd" revision="1" declarationTime="2016-03-22T15:37:06+00:00">
+  <Referendum name="EU" date="2016-06-23">
+    <VotingArea number="378" name="Wychavon" electorate="92026">
+      <Proposition text="Should the UK remain a member of the EU or leave the EU?" turnout="47945" percentageTurnout="52.10" winningAnswerText="Leave the EU" majority="1055" percentageMajority="2.20">
+        <Answer winning="false" text="Remain a member of the EU" shortText="Remain Test" votes="23445" percentageShare="48.90" />
+        <Answer winning="true" text="Leave the EU" shortText="Leave Test" votes="24500" percentageShare="51.10" />
+      </Proposition>
+    </VotingArea>
+  </Referendum>
+</ReferendumResult>
+

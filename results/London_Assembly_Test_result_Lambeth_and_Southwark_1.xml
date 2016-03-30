@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:31:38+00:00">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="10" name="Lambeth &amp; Southwark" electorate="410344" turnout="238709" percentageTurnout="58.17" percentageChangeTurnout="+20.91" winningParty="Lab" gainOrHold="hold" sittingParty="Lab" majority="63536" percentageMajority="26.62" percentageChangeMajority="+20.91" swing="3.41" swingTo="C" swingFrom="Lab">
+      <Candidate elected="*" previousSittingMember="*" paId="172015" sex="M" firstName="Gordon" surname="Williams Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" votes="116779" percentageShare="48.92" percentageShareChange="-3.89" />
+      </Candidate>
+      <Candidate paId="172014" sex="F" firstName="Gillian" surname="Williamson Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" votes="53243" percentageShare="22.30" percentageShareChange="+2.93" />
+      </Candidate>
+      <Candidate paId="172017" sex="M" firstName="John" surname="Walsh Test">
+        <Party paId="8571" name="Green" abbreviation="Green" votes="24214" percentageShare="10.14" percentageShareChange="-1.37" />
+      </Candidate>
+      <Candidate paId="172019" sex="F" firstName="Kate" surname="Foster Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" votes="21441" percentageShare="8.98" percentageShareChange="+6.19" />
+      </Candidate>
+      <Candidate paId="172016" sex="M" firstName="Andrew" surname="Lewis Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" votes="14262" percentageShare="5.97" percentageShareChange="-5.67" />
+      </Candidate>
+      <Candidate paId="172018" sex="M" firstName="James" surname="Lee Test">
+        <Party paId="8609" name="The Socialist Party (GB)" abbreviation="SPGB" votes="8770" percentageShare="3.67" percentageShareChange="+1.81" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="London" date="2012-05-03" type="L">
+    <Constituency number="10" name="Lambeth &amp; Southwark" turnout="157612" percentageTurnout="37.26" winningParty="Lab" majority="52702" percentageMajority="33.44">
+      <Candidate paId="76019" firstName="Val" surname="Shawcross" sex="F">
+        <Party paId="6421" name="Labour" abbreviation="Lab" votes="83239" percentageShare="52.81" />
+      </Candidate>
+      <Candidate paId="80386" firstName="Michael" surname="Mitchell" sex="M">
+        <Party paId="6420" name="Conservative" abbreviation="C" votes="30537" percentageShare="19.37" />
+      </Candidate>
+      <Candidate paId="84770" firstName="Rob" surname="Blackie" sex="M">
+        <Party paId="6422" name="Liberal Democrat" abbreviation="LD" votes="18359" percentageShare="11.65" />
+      </Candidate>
+      <Candidate paId="80417" firstName="Jonathan" surname="Bartley" sex="M">
+        <Party paId="6423" name="Green" abbreviation="Green" votes="18144" percentageShare="11.51" />
+      </Candidate>
+      <Candidate paId="84776" firstName="James" surname="Fluss" sex="M">
+        <Party paId="6459" name="UK Independence Party" abbreviation="UKIP" votes="4395" percentageShare="2.79" />
+      </Candidate>
+      <Candidate paId="84778" firstName="Daniel" surname="Lambert" sex="M">
+        <Party paId="6457" name="The Socialist Party (GB)" abbreviation="SPGB" votes="2938" percentageShare="1.86" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LocalElectionNominations>
+  <Election date='2016-05-05' paId='82'>
+    <Council name='Manchester' paId='3129' type='Metro' proportion='third'>
+      <Party name='Labour' abbreviation='Lab' paId='314' seatsHeld='96' seatsOffered='32' unopposedReturns='0' candidates='0'/>
+    </Council>
+  </Election>
+</LocalElectionNominations>

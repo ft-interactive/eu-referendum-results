@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:07:46+00:00">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="13" name="Caithness, Sutherland &amp; Ross" electorate="55116" turnout="36604" percentageTurnout="66.41" percentageChangeTurnout="+14.52" winningParty="SNP" gainOrHold="hold" sittingParty="SNP" majority="15814" percentageMajority="43.20" percentageChangeMajority="+14.52" swing="2.53" swingTo="SNP" swingFrom="C">
+      <Candidate elected="*" previousSittingMember="+" paId="171219" sex="M" firstName="Jim" surname="Thompson Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" votes="21970" percentageShare="60.02" percentageShareChange="+11.62" />
+      </Candidate>
+      <Candidate paId="171216" sex="M" firstName="Tom" surname="Stevens Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" votes="6156" percentageShare="16.82" percentageShareChange="+6.56" />
+      </Candidate>
+      <Candidate paId="171217" sex="M" firstName="John" surname="Smith Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" votes="5366" percentageShare="14.66" percentageShareChange="-4.35" />
+      </Candidate>
+      <Candidate paId="171218" sex="M" firstName="Ian" surname="Grant Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" votes="3112" percentageShare="8.50" percentageShareChange="-13.82" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Scottish Parliament" date="2011-05-05" type="S">
+    <Constituency number="13" name="Caithness, Sutherland &amp; Ross" turnout="28600" percentageTurnout="51.89" winningParty="SNP" majority="7458" percentageMajority="26.08">
+      <Candidate paId="60654" firstName="Rob" surname="Gibson" sex="M">
+        <Party paId="5669" name="Scottish National Party" abbreviation="SNP" votes="13843" percentageShare="48.40" />
+      </Candidate>
+      <Candidate paId="66461" firstName="Robbie" surname="Rowantree" sex="M">
+        <Party paId="5668" name="Liberal Democrat" abbreviation="LD" votes="6385" percentageShare="22.33" />
+      </Candidate>
+      <Candidate paId="60784" firstName="John" surname="MacKay" sex="M">
+        <Party paId="5666" name="Labour" abbreviation="Lab" votes="5438" percentageShare="19.01" />
+      </Candidate>
+      <Candidate paId="60461" firstName="Edward" surname="Mountain" sex="M">
+        <Party paId="5665" name="Conservative" abbreviation="C" votes="2934" percentageShare="10.26" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

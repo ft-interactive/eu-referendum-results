@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:33:20+00:00">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="17" name="Clydesdale" electorate="56828" turnout="29747" percentageTurnout="52.35" percentageChangeTurnout="-0.33" winningParty="SNP" gainOrHold="hold" sittingParty="SNP" majority="12537" percentageMajority="42.15" percentageChangeMajority="-0.33" swing="14.03" swingTo="SNP" swingFrom="Lab">
+      <Candidate elected="*" previousSittingMember="+" paId="171234" sex="M" firstName="Tony" surname="Ritchie Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" votes="20122" percentageShare="67.64" percentageShareChange="+17.77" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171233" sex="M" firstName="Danny" surname="Lewis Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" votes="7585" percentageShare="25.50" percentageShareChange="-10.29" />
+      </Candidate>
+      <Candidate paId="171232" sex="M" firstName="Steve" surname="Ellis Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" votes="2040" percentageShare="6.86" percentageShareChange="-7.48" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Scottish Parliament" date="2011-05-05" type="S">
+    <Constituency number="17" name="Clydesdale" turnout="29937" percentageTurnout="52.68" winningParty="SNP" majority="4216" percentageMajority="14.08">
+      <Candidate paId="60658" firstName="Aileen" surname="Campbell" sex="F">
+        <Party paId="5669" name="Scottish National Party" abbreviation="SNP" votes="14931" percentageShare="49.87" />
+      </Candidate>
+      <Candidate paId="60788" firstName="Karen" surname="Gillon" sex="F">
+        <Party paId="5666" name="Labour" abbreviation="Lab" votes="10715" percentageShare="35.79" />
+      </Candidate>
+      <Candidate paId="60502" firstName="Colin" surname="McGavigan" sex="M">
+        <Party paId="5665" name="Conservative" abbreviation="C" votes="4291" percentageShare="14.33" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

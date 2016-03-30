@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="32" name="Preseli Pembrokeshire" electorate="57758" gainOrHold="gain" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="C" sittingPartyName="Conservative" change="true" paStyleMessageText="Labour gain from Conservative in Preseli Pembrokeshire">
+      <Candidate previousSittingMember="*" paId="174009" sex="M" firstName="Sean" surname="Ritchie Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" paId="174010" sex="M" firstName="David" surname="Adams Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="174011" sex="M" firstName="Bill" surname="Scott Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="174012" sex="M" firstName="Paul" surname="Jones Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

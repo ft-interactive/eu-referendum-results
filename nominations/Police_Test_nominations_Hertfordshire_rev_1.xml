@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='16' name='Hertfordshire' electorate='845253' paId='527' boundaryChange='false'>
+      <Candidate firstName='David' surname='Hutton Test' sex='M' paId='3010'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Joe' surname='Griffiths Test' sex='M' paId='3009'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <Candidate firstName='Clive' surname='Watt Test' sex='M' paId='3011'>
+        <Party name='Liberal Democrat' abbreviation='LD' paId='1093'/>
+      </Candidate>
+      <Candidate firstName='Steve' surname='MacDonald Test' sex='M' paId='3012'>
+        <Party name='UK Independence Party' abbreviation='UKIP' paId='1096'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate firstName='David' surname='Lloyd' sex='M' paId='2071' votes='54686'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <Candidate firstName='Sherma' surname='Batson' sex='F' paId='2029' votes='34528'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Christopher' surname='Townsend' sex='M' paId='2245' votes='16790'>
+          <Party name='Liberal Democrat' abbreviation='LD' paId='661'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Marion' surname='Mason' sex='F' paId='2310' votes='13154'>
+          <Party name='United Kingdom Independence Party' abbreviation='Ukip' paId='662'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='David' surname='Lloyd' sex='M' paId='2071'>
+            <Party name='Conservative' abbreviation='C' paId='660'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

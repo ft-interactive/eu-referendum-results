@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Northern Ireland test' type='NI' date='2016-05-04'>
+    <Constituency number='6' name='Belfast South' electorate='62484' paId='478' boundaryChange='false'>
+      <Candidate firstName='Andrew' surname='Bennett Test' sex='M' paId='2777'>
+        <Party name='Green' abbreviation='Green' paId='1074'/>
+      </Candidate>
+      <Candidate firstName='Ian' surname='Dixon Test' sex='M' paId='2785' previousSittingMember='+'>
+        <Party name='Ulster Unionist Party' abbreviation='UUP' paId='1060'/>
+      </Candidate>
+      <Candidate firstName='Chris' surname='Roberts Test' sex='M' paId='2779'>
+        <Party name='Ulster Unionist Party' abbreviation='UUP' paId='1060'/>
+      </Candidate>
+      <Candidate firstName='Tom' surname='Boyd Test' sex='M' paId='2787'>
+        <Party name='Democratic Unionist Party' abbreviation='DUP' paId='1061'/>
+      </Candidate>
+      <Candidate firstName='Tom' surname='Knight Test' sex='M' paId='2789' previousSittingMember='+'>
+        <Party name='Democratic Unionist Party' abbreviation='DUP' paId='1061'/>
+      </Candidate>
+      <Candidate firstName='Peter' surname='Moore Test' sex='M' paId='2784' title='Dr' previousSittingMember='+'>
+        <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='1062'/>
+      </Candidate>
+      <Candidate firstName='Denis' surname='Stevens Test' sex='M' paId='2783' previousSittingMember='+'>
+        <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='1062'/>
+      </Candidate>
+      <Candidate firstName='Chris' surname='Holmes Test' sex='M' paId='2782' previousSittingMember='+'>
+        <Party name='Sinn Fein' abbreviation='SF' paId='1063'/>
+      </Candidate>
+      <Candidate firstName='Brian' surname='Wood Test' sex='M' paId='2780' previousSittingMember='+'>
+        <Party name='Alliance' abbreviation='Alliance' paId='1064'/>
+      </Candidate>
+      <Candidate firstName='Mohammed' surname='Bentley Test' sex='M' paId='2781'>
+        <Party name='Workers&apos; Party' abbreviation='WP' paId='1107'/>
+      </Candidate>
+      <Candidate firstName='Nick' surname='Singh Test' sex='M' paId='2788'>
+        <Party name='Pro-Capitalism' abbreviation='Capitalism' paId='1109'/>
+      </Candidate>
+      <Candidate firstName='Don' surname='Wilson Test' sex='M' paId='2778'>
+        <Party name='People Before Profit Alliance' abbreviation='People' paId='1106'/>
+      </Candidate>
+      <Candidate firstName='Alistair' surname='Scott Test' sex='M' paId='2786'>
+        <Party name='Socialist Party' abbreviation='Soc' paId='1108'/>
+      </Candidate>
+      <Candidate firstName='David' surname='Shaw Test' sex='M' paId='2790'>
+        <Party name='UK Independence Party' abbreviation='UKIP' paId='1073'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate resultStatus='*' firstName='Anna' surname='Lo' sex='F' paId='1698' previousSittingMember='+' votes='6390'>
+          <Party name='Alliance' abbreviation='Alliance' paId='492'/>
+        </Candidate>
+        <Candidate firstName='Alasdair' surname='McDonnell' sex='M' paId='1702' title='Dr' previousSittingMember='+' votes='4527'>
+          <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+        </Candidate>
+        <Candidate firstName='Jimmy' surname='Spratt' sex='M' paId='1707' previousSittingMember='+' votes='4045'>
+          <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+        </Candidate>
+        <Candidate firstName='Alex' surname='Maskey' sex='M' paId='1700' previousSittingMember='+' votes='4038'>
+          <Party name='Sinn Fein' abbreviation='SF' paId='496'/>
+        </Candidate>
+        <Candidate firstName='Ruth' surname='Patterson' sex='F' paId='1705' votes='3800'>
+          <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+        </Candidate>
+        <Candidate firstName='Conall' surname='McDevitt' sex='M' paId='1701' previousSittingMember='+' votes='3191'>
+          <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+        </Candidate>
+        <Candidate firstName='Michael' surname='McGimpsey' sex='M' paId='1703' previousSittingMember='+' votes='2988'>
+          <Party name='Ulster Unionist Party' abbreviation='UUP' paId='491'/>
+        </Candidate>
+        <Candidate firstName='Mark' surname='Finlay' sex='M' paId='1697' votes='1394'>
+          <Party name='Ulster Unionist Party' abbreviation='UUP' paId='491'/>
+        </Candidate>
+        <Candidate firstName='Clare' surname='Bailey' sex='F' paId='1695' votes='889'>
+          <Party name='Green' abbreviation='Green' paId='493'/>
+        </Candidate>
+        <Candidate firstName='Brian' surname='Faloon' sex='M' paId='1696' votes='414'>
+          <Party name='People Before Profit Alliance' abbreviation='People' paId='506'/>
+        </Candidate>
+        <Candidate firstName='Paddy' surname='Meehan' sex='M' paId='1704' votes='234'>
+          <Party name='Socialist Party' abbreviation='Soc' paId='500'/>
+        </Candidate>
+        <Candidate firstName='Nicolas' surname='Torregrosa' sex='M' paId='1708' votes='234'>
+          <Party name='United Kingdom Independence Party' abbreviation='UKIP' paId='508'/>
+        </Candidate>
+        <Candidate firstName='Paddy' surname='Lynn' sex='M' paId='1699' votes='135'>
+          <Party name='Workers&apos; Party' abbreviation='WP' paId='502'/>
+        </Candidate>
+        <Candidate firstName='Samuel' surname='Smyth' sex='M' paId='1706' votes='29'>
+          <Party name='Pro-Capitalism' abbreviation='Capitalism' paId='507'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Anna' surname='Lo' sex='F' paId='1698' previousSittingMember='+'>
+            <Party name='Alliance' abbreviation='Alliance' paId='492'/>
+          </Candidate>
+          <Candidate firstName='Alex' surname='Maskey' sex='M' paId='1700' previousSittingMember='+'>
+            <Party name='Sinn Fein' abbreviation='SF' paId='496'/>
+          </Candidate>
+          <Candidate firstName='Conall' surname='McDevitt' sex='M' paId='1701' previousSittingMember='+'>
+            <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+          </Candidate>
+          <Candidate firstName='Alasdair' surname='McDonnell' sex='M' paId='1702' title='Dr' previousSittingMember='+'>
+            <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+          </Candidate>
+          <Candidate firstName='Michael' surname='McGimpsey' sex='M' paId='1703' previousSittingMember='+'>
+            <Party name='Ulster Unionist Party' abbreviation='UUP' paId='491'/>
+          </Candidate>
+          <Candidate firstName='Jimmy' surname='Spratt' sex='M' paId='1707' previousSittingMember='+'>
+            <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

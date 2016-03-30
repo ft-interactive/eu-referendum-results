@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="13" name="Carmarthen East &amp; Dinefwr" electorate="54243" gainOrHold="gain" winningPartyAbbreviation="C" winningPartyName="Conservative" sittingPartyAbbreviation="PC" sittingPartyName="Plaid Cymru" change="true" paStyleMessageText="Conservative gain from Plaid Cymru in Carmarthen East &amp; Dinefwr">
+      <Candidate elected="*" paId="173925" sex="M" firstName="Neil" surname="Clark Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="173926" sex="F" firstName="Helen" surname="Hanson Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173927" sex="M" firstName="Malcolm" surname="Nolan Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate previousSittingMember="*" paId="173928" sex="M" firstName="Douglas" surname="Harris Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

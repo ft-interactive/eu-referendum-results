@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:39:32+00:00">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="4" name="City &amp; East" electorate="493477" turnout="321920" percentageTurnout="65.24" percentageChangeTurnout="+31.52" winningParty="Lab" gainOrHold="hold" sittingParty="Lab" majority="2293" percentageMajority="0.71" percentageChangeMajority="+31.52" swing="23.84" swingTo="C" swingFrom="Lab">
+      <Candidate elected="*" previousSittingMember="*" paId="171972" sex="M" firstName="John" surname="Kennedy Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" votes="127150" percentageShare="39.50" percentageShareChange="-23.47" />
+      </Candidate>
+      <Candidate paId="171971" sex="M" firstName="Tim" surname="Watson Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" votes="124857" percentageShare="38.79" percentageShareChange="+24.21" />
+      </Candidate>
+      <Candidate paId="171977" sex="M" firstName="Stephen" surname="Lloyd Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" votes="34462" percentageShare="10.71" percentageShareChange="+7.64" />
+      </Candidate>
+      <Candidate paId="171974" sex="M" firstName="Philip" surname="Cook Test">
+        <Party paId="8571" name="Green" abbreviation="Green" votes="14631" percentageShare="4.54" percentageShareChange="-1.82" />
+      </Candidate>
+      <Candidate paId="171973" sex="M" firstName="Richard" surname="Chapman Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" votes="9510" percentageShare="2.95" percentageShareChange="-1.34" />
+      </Candidate>
+      <Candidate paId="171975" sex="M" firstName="Phil" surname="Nattrass Test">
+        <Party paId="8575" name="British National Party" abbreviation="BNP" votes="5681" percentageShare="1.76" percentageShareChange="-2.35" />
+      </Candidate>
+      <Candidate paId="171976" sex="M" firstName="Lee" surname="Young Test">
+        <Party paId="8579" name="Communist League" abbreviation="Comm L" votes="3518" percentageShare="1.09" percentageShareChange="+0.44" />
+      </Candidate>
+      <Candidate paId="171978" sex="M" firstName="James" surname="Simpson Test">
+        <Party paId="8581" name="Communities United Party" abbreviation="Communities" votes="2111" percentageShare="0.66" percentageShareChange="-3.31" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="London" date="2012-05-03" type="L">
+    <Constituency number="4" name="City &amp; East" turnout="170988" percentageTurnout="33.71" winningParty="Lab" majority="82744" percentageMajority="48.39">
+      <Candidate paId="76016" firstName="John" surname="Biggs" sex="M">
+        <Party paId="6421" name="Labour" abbreviation="Lab" votes="107667" percentageShare="62.97" />
+      </Candidate>
+      <Candidate paId="80391" firstName="John" surname="Moss" sex="M">
+        <Party paId="6420" name="Conservative" abbreviation="C" votes="24923" percentageShare="14.58" />
+      </Candidate>
+      <Candidate paId="80411" firstName="Chris" surname="Smith" sex="M">
+        <Party paId="6423" name="Green" abbreviation="Green" votes="10891" percentageShare="6.37" />
+      </Candidate>
+      <Candidate paId="84761" firstName="Richard" surname="Macmillan" sex="M">
+        <Party paId="6422" name="Liberal Democrat" abbreviation="LD" votes="7351" percentageShare="4.30" />
+      </Candidate>
+      <Candidate paId="84759" firstName="Paul" surname="Borg" sex="M">
+        <Party paId="6427" name="British National Party" abbreviation="BNP" votes="7031" percentageShare="4.11" />
+      </Candidate>
+      <Candidate paId="84762" firstName="Kamran" surname="Malik" sex="M">
+        <Party paId="6828" name="Communities United Party" abbreviation="Communities" votes="6774" percentageShare="3.96" />
+      </Candidate>
+      <Candidate paId="80421" firstName="Steven" surname="Woolfe" sex="M">
+        <Party paId="6459" name="UK Independence Party" abbreviation="UKIP" votes="5243" percentageShare="3.07" />
+      </Candidate>
+      <Candidate paId="84760" firstName="Paul" surname="Davies" sex="M">
+        <Party paId="6431" name="Communist League" abbreviation="Comm L" votes="1108" percentageShare="0.65" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

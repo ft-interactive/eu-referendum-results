@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostNominations revision="1">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="3" name="Brent &amp; Harrow" electorate="379896">
+      <Candidate paId="171966" sex="M" firstName="Michael" surname="Davis Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="171967" previousSittingMember="*" sex="M" firstName="Chris" surname="Watts Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171968" sex="M" firstName="Mark" surname="McCabe Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="171969" sex="M" firstName="Matthew" surname="Graham Test">
+        <Party paId="8571" name="Green" abbreviation="Green" />
+      </Candidate>
+      <Candidate paId="171970" sex="M" firstName="Tony" surname="Davies Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="London" date="2012-05-03" type="L">
+    <Constituency number="3" name="Brent &amp; Harrow" turnout="145070" percentageTurnout="37.06" winningParty="Lab" majority="29796" percentageMajority="20.54">
+      <Candidate paId="76018" firstName="Navin" surname="Shah" sex="M">
+        <Party paId="6421" name="Labour" abbreviation="Lab" votes="70400" percentageShare="48.53" />
+      </Candidate>
+      <Candidate paId="80384" firstName="Sachin" surname="Rajput" sex="M">
+        <Party paId="6420" name="Conservative" abbreviation="C" votes="40604" percentageShare="27.99" />
+      </Candidate>
+      <Candidate paId="84758" firstName="Charlotte" surname="Henry" sex="F">
+        <Party paId="6422" name="Liberal Democrat" abbreviation="LD" votes="15690" percentageShare="10.82" />
+      </Candidate>
+      <Candidate paId="76054" firstName="Shahrar" surname="Ali" sex="M">
+        <Party paId="6423" name="Green" abbreviation="Green" votes="10546" percentageShare="7.27" />
+      </Candidate>
+      <Candidate paId="80428" firstName="Mick" surname="McGough" sex="M">
+        <Party paId="6459" name="UK Independence Party" abbreviation="UKIP" votes="7830" percentageShare="5.40" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostNominations>
+

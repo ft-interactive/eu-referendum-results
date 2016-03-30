@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostNominations revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="22" name="Islwyn" electorate="54893">
+      <Candidate paId="173963" sex="M" firstName="John" surname="Taylor Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="173964" sex="M" firstName="Dennis" surname="Owen Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173965" sex="M" firstName="Stephen" surname="Edwards Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="173966" sex="M" firstName="Neil" surname="Williamson Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+      <Candidate paId="173967" sex="F" firstName="Catherine" surname="Hardy Test">
+        <Party paId="8630" name="British National Party" abbreviation="BNP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Welsh Assembly" date="2011-05-05" type="W">
+    <Constituency number="22" name="Islwyn" turnout="20908" percentageTurnout="38.09" winningParty="Lab" majority="7589" percentageMajority="36.30">
+      <Candidate paId="60983" firstName="Gwyn" surname="Price" sex="M">
+        <Party paId="5732" name="Labour" abbreviation="Lab" votes="12116" percentageShare="57.95" />
+      </Candidate>
+      <Candidate paId="60906" firstName="Steffan" surname="Lewis" sex="M">
+        <Party paId="5735" name="Plaid Cymru" abbreviation="PC" votes="4527" percentageShare="21.65" />
+      </Candidate>
+      <Candidate paId="66513" firstName="David" surname="Chipp" sex="M">
+        <Party paId="5731" name="Conservative" abbreviation="C" votes="2497" percentageShare="11.94" />
+      </Candidate>
+      <Candidate paId="71314" firstName="Peter" surname="Whalley" sex="M">
+        <Party paId="5738" name="British National Party" abbreviation="BNP" votes="1115" percentageShare="5.33" />
+      </Candidate>
+      <Candidate paId="70852" firstName="Tom" surname="Sullivan" sex="M">
+        <Party paId="5734" name="Liberal Democrat" abbreviation="LD" votes="653" percentageShare="3.12" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostNominations>
+

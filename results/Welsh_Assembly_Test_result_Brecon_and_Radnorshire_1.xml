@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:19:56+00:00">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="6" name="Brecon &amp; Radnorshire" electorate="53546" turnout="32836" percentageTurnout="61.32" percentageChangeTurnout="+8.38" winningParty="PC" gainOrHold="gain" sittingParty="LD" majority="11408" percentageMajority="34.74" percentageChangeMajority="+8.38" swing="44.01" swingTo="PC" swingFrom="LD">
+      <Candidate elected="*" paId="173898" sex="M" firstName="Ian" surname="Davies Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" votes="19723" percentageShare="60.07" percentageShareChange="+53.34" />
+      </Candidate>
+      <Candidate paId="173896" sex="M" firstName="Gary" surname="Hussain Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" votes="8315" percentageShare="25.32" percentageShareChange="+8.40" />
+      </Candidate>
+      <Candidate previousSittingMember="*" paId="173897" sex="M" firstName="Peter" surname="Jackson Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" votes="2746" percentageShare="8.36" percentageShareChange="-34.68" />
+      </Candidate>
+      <Candidate paId="173895" sex="M" firstName="Denis" surname="Clark Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" votes="2052" percentageShare="6.25" percentageShareChange="-27.07" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Welsh Assembly" date="2011-05-05" type="W">
+    <Constituency number="6" name="Brecon &amp; Radnorshire" turnout="28348" percentageTurnout="52.94" winningParty="LD" majority="2757" percentageMajority="9.73">
+      <Candidate paId="60572" firstName="Kirsty" surname="Williams" sex="F">
+        <Party paId="5734" name="Liberal Democrat" abbreviation="LD" votes="12201" percentageShare="43.04" />
+      </Candidate>
+      <Candidate paId="60748" firstName="Chris" surname="Davies" sex="M">
+        <Party paId="5731" name="Conservative" abbreviation="C" votes="9444" percentageShare="33.31" />
+      </Candidate>
+      <Candidate paId="60972" firstName="Christopher" surname="Lloyd" sex="M">
+        <Party paId="5732" name="Labour" abbreviation="Lab" votes="4797" percentageShare="16.92" />
+      </Candidate>
+      <Candidate paId="60890" firstName="Gary" surname="Price" sex="M">
+        <Party paId="5735" name="Plaid Cymru" abbreviation="PC" votes="1906" percentageShare="6.72" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

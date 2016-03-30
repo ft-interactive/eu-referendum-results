@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:07:46+00:00">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="26" name="Montgomeryshire" electorate="48675" turnout="26894" percentageTurnout="55.25" percentageChangeTurnout="+8.14" winningParty="Lab" gainOrHold="gain" sittingParty="C" majority="8607" percentageMajority="32.00" percentageChangeMajority="+8.14" swing="43.49" swingTo="Lab" swingFrom="C">
+      <Candidate elected="*" paId="173984" sex="F" firstName="Anthea" surname="Wallace Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" votes="16199" percentageShare="60.23" percentageShareChange="+48.86" />
+      </Candidate>
+      <Candidate paId="173986" sex="M" firstName="Bob" surname="King Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" votes="7592" percentageShare="28.23" percentageShareChange="+16.91" />
+      </Candidate>
+      <Candidate paId="173985" sex="F" firstName="Vanessa" surname="Scott Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" votes="1596" percentageShare="5.93" percentageShareChange="-27.65" />
+      </Candidate>
+      <Candidate paId="173983" sex="M" firstName="Martin" surname="Wilson Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" votes="1507" percentageShare="5.60" percentageShareChange="-38.12" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Welsh Assembly" date="2011-05-05" type="W">
+    <Constituency number="26" name="Montgomeryshire" turnout="22933" percentageTurnout="47.11" winningParty="C" majority="2324" percentageMajority="10.13">
+      <Candidate paId="60482" firstName="Russell" surname="George" sex="M">
+        <Party paId="5731" name="Conservative" abbreviation="C" votes="10026" percentageShare="43.72" />
+      </Candidate>
+      <Candidate paId="60476" firstName="Wyn" surname="Williams" sex="M">
+        <Party paId="5734" name="Liberal Democrat" abbreviation="LD" votes="7702" percentageShare="33.58" />
+      </Candidate>
+      <Candidate paId="66528" firstName="Nick" surname="Colbourne" sex="M">
+        <Party paId="5732" name="Labour" abbreviation="Lab" votes="2609" percentageShare="11.38" />
+      </Candidate>
+      <Candidate paId="60886" firstName="David" surname="Senior" sex="M">
+        <Party paId="5735" name="Plaid Cymru" abbreviation="PC" votes="2596" percentageShare="11.32" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

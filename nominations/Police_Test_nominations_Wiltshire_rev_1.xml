@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='40' name='Wiltshire' electorate='514855' paId='551' boundaryChange='false'>
+      <Candidate firstName='Howard' surname='Webb Test' sex='M' paId='3085'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Roy' surname='Anderson Test' sex='M' paId='3084'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <Candidate firstName='Douglas' surname='Kelly Test' sex='M' paId='3087'>
+        <Party name='Liberal Democrat' abbreviation='LD' paId='1093'/>
+      </Candidate>
+      <Candidate firstName='Steve' surname='Edwards Test' sex='M' paId='3086'>
+        <Party name='UK Independence Party' abbreviation='UKIP' paId='1096'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate firstName='Angus' surname='Macpherson' sex='M' paId='2141' votes='28558'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <Candidate firstName='Clare' surname='Moody' sex='F' paId='2059' votes='16198'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Colin' surname='Skelton' sex='M' paId='2238' votes='11446'>
+          <Party name='Independent Colin Skelton' abbreviation='Ind' paId='730'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Paul' surname='Batchelor' sex='M' paId='2305' votes='10130'>
+          <Party name='Liberal Democrat' abbreviation='LD' paId='661'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='John' surname='Short' sex='M' paId='2294' votes='7250'>
+          <Party name='United Kingdom Independence Party' abbreviation='Ukip' paId='662'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Liam' surname='Silcocks' sex='M' paId='2306' votes='5212'>
+          <Party name='Independent Liam Silcocks' abbreviation='Ind' paId='729'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Angus' surname='Macpherson' sex='M' paId='2141'>
+            <Party name='Conservative' abbreviation='C' paId='660'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

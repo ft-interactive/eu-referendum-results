@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:33:42+00:00">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="29" name="East Lothian" electorate="56333" turnout="38470" percentageTurnout="68.29" percentageChangeTurnout="+11.17" winningParty="SNP" gainOrHold="gain" sittingParty="Lab" majority="12088" percentageMajority="31.42" percentageChangeMajority="+11.17" swing="22.04" swingTo="SNP" swingFrom="Lab">
+      <Candidate elected="*" paId="171285" sex="M" firstName="Michael" surname="Robinson Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" votes="20334" percentageShare="52.86" percentageShareChange="+14.37" />
+      </Candidate>
+      <Candidate paId="171284" sex="M" firstName="Jimmy" surname="Lynch Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" votes="8246" percentageShare="21.43" percentageShareChange="+15.49" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171282" sex="M" firstName="Robert" surname="Kelly Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" votes="6333" percentageShare="16.46" percentageShareChange="-0.15" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171283" sex="F" firstName="Anne" surname="Smith Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" votes="3557" percentageShare="9.25" percentageShareChange="-29.71" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Scottish Parliament" date="2011-05-05" type="S">
+    <Constituency number="29" name="East Lothian" turnout="32177" percentageTurnout="57.12" winningParty="Lab" majority="151" percentageMajority="0.47">
+      <Candidate paId="60799" firstName="Iain" surname="Gray" sex="M">
+        <Party paId="5666" name="Labour" abbreviation="Lab" votes="12536" percentageShare="38.96" />
+      </Candidate>
+      <Candidate paId="60668" firstName="Dave" surname="Berry" sex="M">
+        <Party paId="5669" name="Scottish National Party" abbreviation="SNP" votes="12385" percentageShare="38.49" />
+      </Candidate>
+      <Candidate paId="60431" firstName="Derek" surname="Brownlee" sex="M">
+        <Party paId="5665" name="Conservative" abbreviation="C" votes="5344" percentageShare="16.61" />
+      </Candidate>
+      <Candidate paId="60558" firstName="Ettie" surname="Spencer" sex="F">
+        <Party paId="5668" name="Liberal Democrat" abbreviation="LD" votes="1912" percentageShare="5.94" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

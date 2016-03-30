@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostNominations revision="1">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="33" name="Edinburgh Northern &amp; Leith" electorate="59138">
+      <Candidate paId="171298" sex="M" firstName="Patrick" surname="Green Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="171299" previousSittingMember="+" sex="M" firstName="Andrew" surname="Hawkins Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171300" sex="M" firstName="Andy" surname="Webb Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="171301" previousSittingMember="+" sex="M" firstName="David" surname="Campbell Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Scottish Parliament" date="2011-05-05" type="S">
+    <Constituency number="33" name="Edinburgh Northern &amp; Leith" turnout="30885" percentageTurnout="52.23" winningParty="Lab" majority="595" percentageMajority="1.93">
+      <Candidate paId="60803" firstName="Malcolm" surname="Chisholm" sex="M">
+        <Party paId="5666" name="Labour" abbreviation="Lab" votes="12858" percentageShare="41.63" />
+      </Candidate>
+      <Candidate paId="60672" firstName="Shirley-Anne" surname="Somerville" sex="F">
+        <Party paId="5669" name="Scottish National Party" abbreviation="SNP" votes="12263" percentageShare="39.71" />
+      </Candidate>
+      <Candidate paId="71125" firstName="Sheila" surname="Low" sex="F">
+        <Party paId="5665" name="Conservative" abbreviation="C" votes="2928" percentageShare="9.48" />
+      </Candidate>
+      <Candidate paId="66475" firstName="Dan" surname="Farthing" sex="M">
+        <Party paId="5668" name="Liberal Democrat" abbreviation="LD" votes="2836" percentageShare="9.18" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostNominations>
+

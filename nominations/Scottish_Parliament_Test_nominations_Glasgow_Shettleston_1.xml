@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostNominations revision="1">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="49" name="Glasgow Shettleston" electorate="55874">
+      <Candidate paId="171368" sex="F" firstName="Lesley" surname="Hawkins Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="171369" previousSittingMember="+" sex="M" firstName="Gavin" surname="Walsh Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171370" sex="F" firstName="Linda" surname="Phillips Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="171371" sex="M" firstName="John" surname="McCarthy Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Scottish Parliament" date="2011-05-05" type="S">
+    <Constituency number="49" name="Glasgow Shettleston" turnout="21204" percentageTurnout="37.95" winningParty="SNP" majority="586" percentageMajority="2.76">
+      <Candidate paId="60683" firstName="John" surname="Mason" sex="M">
+        <Party paId="5669" name="Scottish National Party" abbreviation="SNP" votes="10128" percentageShare="47.76" />
+      </Candidate>
+      <Candidate paId="60815" firstName="Frank" surname="McAveety" sex="M">
+        <Party paId="5666" name="Labour" abbreviation="Lab" votes="9542" percentageShare="45.00" />
+      </Candidate>
+      <Candidate paId="60465" firstName="David" surname="Wilson" sex="M">
+        <Party paId="5665" name="Conservative" abbreviation="C" votes="1163" percentageShare="5.48" />
+      </Candidate>
+      <Candidate paId="70735" firstName="Ruaraidh" surname="Dobson" sex="M">
+        <Party paId="5668" name="Liberal Democrat" abbreviation="LD" votes="371" percentageShare="1.75" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostNominations>
+

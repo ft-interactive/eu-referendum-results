@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Bristol mayor test' type='M' date='2016-05-04'>
+    <Constituency number='2' name='Bristol' electorate='326654' paId='510' boundaryChange='false'>
+      <Candidate firstName='Michael' surname='Smith Test' sex='M' rushText='Conservative Sir Michael Smith Test' paId='2651'>
+        <Party name='Conservative' abbreviation='C' paId='1085'/>
+      </Candidate>
+      <Candidate firstName='John' surname='Jameson Test' sex='M' rushText='Sir John Jameson Test' paId='2654' title='Sir'>
+        <Party name='Labour' abbreviation='Lab' paId='1086'/>
+      </Candidate>
+      <Candidate firstName='Zuri' surname='Kasha Test' sex='F' paId='2653'>
+        <Party name='Liberal Democrat' abbreviation='LD' paId='1087'/>
+      </Candidate>
+      <Candidate firstName='Lisa' surname='Smythe-Harrison Test' sex='F' paId='2656'>
+        <Party name='Green Party' abbreviation='Green' paId='1088'/>
+      </Candidate>
+      <Candidate firstName='John' surname='Wilson Test' sex='M' paId='2655'>
+        <Party name='Bristol 1st' abbreviation='Bristol 1st' paId='1089'/>
+      </Candidate>
+      <Candidate firstName='Noor' surname='Akmal Test' sex='F' paId='2652'>
+        <Party name='Independent' abbreviation='Ind' paId='1090'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate firstName='George' surname='Ferguson' sex='M' paId='2279' votes='31321'>
+          <Party name='Bristol 1st' abbreviation='Bristol 1st' paId='702'/>
+        </Candidate>
+        <Candidate firstName='Marvin' surname='Rees' sex='M' paId='2285' votes='25896'>
+          <Party name='Labour' abbreviation='Lab' paId='697'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Geoff' surname='Gollop' sex='M' paId='2280' votes='8136'>
+          <Party name='Conservative' abbreviation='C' paId='694'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Jon' surname='Rogers' sex='M' paId='2286' votes='6202'>
+          <Party name='Liberal Democrat' abbreviation='LD' paId='698'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Daniella' surname='Radice' sex='F' paId='2284' votes='5248'>
+          <Party name='Green Party' abbreviation='Green' paId='696'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Owain' surname='George' sex='M' paId='2317' votes='2404'>
+          <Party name='Independent Owain George' abbreviation='Ind' paId='743'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Spud' surname='Murphy' sex='M' paId='2282' votes='1855'>
+          <Party name='Independent Spud Murphy' abbreviation='Ind' paId='744'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Neil' surname='Maggs' sex='M' paId='2281' votes='1568'>
+          <Party name='Respect Party' abbreviation='Respect' paId='695'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Stoney' surname='Garnett' sex='M' paId='2316' votes='1413'>
+          <Party name='Independent Stoney Garnett' abbreviation='Ind' paId='742'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Tom' surname='Baldwin' sex='M' paId='2276' votes='1412'>
+          <Party name='Trade Unionists and Socialists Against Cuts' abbreviation='TUSC' paId='703'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Tim' surname='Collins' sex='M' paId='2278' votes='1037'>
+          <Party name='Independent Tim Collins' abbreviation='Ind' paId='740'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Philip' surname='Pover' sex='M' paId='2318' votes='994'>
+          <Party name='Independent Philip Pover' abbreviation='Ind' paId='745'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Tony' surname='Britt' sex='M' paId='2313' votes='761'>
+          <Party name='Independent Tony Britt' abbreviation='Ind' paId='739'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Rich' surname='Fisher' sex='M' paId='2315' votes='494'>
+          <Party name='Independent Rich Fisher' abbreviation='Ind' paId='741'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Dave' surname='Dobbs' sex='M' paId='2314' votes='411'>
+          <Party name='Birthday Party' abbreviation='Birthday' paId='701'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='George' surname='Ferguson' sex='M' paId='2279'>
+            <Party name='Bristol 1st' abbreviation='Bristol 1st' paId='702'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

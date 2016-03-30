@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="31" name="Pontypridd" electorate="60028" gainOrHold="hold" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="Lab" sittingPartyName="Labour" change="false" paStyleMessageText="Labour hold Pontypridd">
+      <Candidate paId="174004" sex="F" firstName="Linda" surname="Shaw Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" paId="174005" sex="M" firstName="Mick" surname="Taylor Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="174006" sex="M" firstName="Brian" surname="Marsh Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="174007" sex="M" firstName="Stephen" surname="Walker Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+      <Candidate paId="174008" sex="M" firstName="Mike" surname="Rule Test">
+        <Party paId="8651" name="No description" abbreviation="ND" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

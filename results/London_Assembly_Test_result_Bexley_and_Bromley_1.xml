@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:19:44+00:00">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="2" name="Bexley &amp; Bromley" electorate="402807" turnout="256720" percentageTurnout="63.73" percentageChangeTurnout="+23.24" winningParty="C" gainOrHold="hold" sittingParty="C" majority="99975" percentageMajority="38.94" percentageChangeMajority="+23.24" swing="5.27" swingTo="C" swingFrom="Lab">
+      <Candidate elected="*" previousSittingMember="*" paId="171960" sex="M" firstName="Colin" surname="Hope Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" votes="150260" percentageShare="58.53" percentageShareChange="+5.91" />
+      </Candidate>
+      <Candidate paId="171961" sex="M" firstName="Kevin" surname="James Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" votes="50285" percentageShare="19.59" percentageShareChange="-4.63" />
+      </Candidate>
+      <Candidate paId="171965" sex="F" firstName="Dorothy" surname="Randall Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" votes="35953" percentageShare="14.00" percentageShareChange="+7.60" />
+      </Candidate>
+      <Candidate paId="171962" sex="M" firstName="Nigel" surname="Vincent Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" votes="9999" percentageShare="3.89" percentageShareChange="-2.88" />
+      </Candidate>
+      <Candidate paId="171963" sex="M" firstName="Bruce" surname="Bennett Test">
+        <Party paId="8571" name="Green" abbreviation="Green" votes="6499" percentageShare="2.53" percentageShareChange="-2.95" />
+      </Candidate>
+      <Candidate paId="171964" sex="M" firstName="Paul" surname="Thompson Test">
+        <Party paId="8575" name="British National Party" abbreviation="BNP" votes="3724" percentageShare="1.45" percentageShareChange="-3.05" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="London" date="2012-05-03" type="L">
+    <Constituency number="2" name="Bexley &amp; Bromley" turnout="168135" percentageTurnout="40.50" winningParty="C" majority="47768" percentageMajority="28.41">
+      <Candidate paId="80393" firstName="James" surname="Cleverly" sex="M">
+        <Party paId="6420" name="Conservative" abbreviation="C" votes="88482" percentageShare="52.63" />
+      </Candidate>
+      <Candidate paId="76022" firstName="Josie" surname="Channer" sex="F">
+        <Party paId="6421" name="Labour" abbreviation="Lab" votes="40714" percentageShare="24.22" />
+      </Candidate>
+      <Candidate paId="84756" firstName="Sam" surname="Webber" sex="M">
+        <Party paId="6422" name="Liberal Democrat" abbreviation="LD" votes="11396" percentageShare="6.78" />
+      </Candidate>
+      <Candidate paId="80422" firstName="David" surname="Coburn" sex="M">
+        <Party paId="6459" name="UK Independence Party" abbreviation="UKIP" votes="10771" percentageShare="6.41" />
+      </Candidate>
+      <Candidate paId="80410" firstName="Jonathan" surname="Rooks" sex="M">
+        <Party paId="6423" name="Green" abbreviation="Green" votes="9209" percentageShare="5.48" />
+      </Candidate>
+      <Candidate paId="84754" firstName="Donna" surname="Treanor" sex="F">
+        <Party paId="6427" name="British National Party" abbreviation="BNP" votes="7563" percentageShare="4.50" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='34' name='Sussex' electorate='1234166' paId='545' boundaryChange='false'>
+      <Candidate firstName='David' surname='Jackson Test' sex='M' paId='3127'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Helen' surname='Marshall Test' sex='F' paId='3126'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <Candidate firstName='Jim' surname='Campbell Test' sex='M' paId='3130'>
+        <Party name='Liberal Democrat' abbreviation='LD' paId='1093'/>
+      </Candidate>
+      <Candidate firstName='Geoff' surname='Powell Test' sex='M' paId='3128'>
+        <Party name='Independent' abbreviation='Ind' paId='1095'/>
+      </Candidate>
+      <Candidate firstName='Andrew' surname='Taylor Test' sex='M' paId='3129'>
+        <Party name='UK Independence Party' abbreviation='UKIP' paId='1096'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate firstName='Katy' surname='Bourne' sex='F' paId='2091' votes='59635'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <Candidate firstName='Godfrey' surname='Daniel' sex='M' paId='2044' votes='40765'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Ian' surname='Chisnall' sex='M' paId='2200' votes='38930'>
+          <Party name='Independent' abbreviation='Ind' paId='659'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Tony' surname='Armstrong' sex='M' paId='2203' votes='29327'>
+          <Party name='United Kingdom Independence Party' abbreviation='Ukip' paId='662'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='David' surname='Rogers' sex='M' paId='2297' votes='20579'>
+          <Party name='Liberal Democrat' abbreviation='LD' paId='661'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Katy' surname='Bourne' sex='F' paId='2091'>
+            <Party name='Conservative' abbreviation='C' paId='660'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

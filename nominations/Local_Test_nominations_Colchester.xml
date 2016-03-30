@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LocalElectionNominations>
+  <Election date='2016-05-05' paId='82'>
+    <Council name='Colchester' paId='3184' type='Non-Met' proportion='all' boundaryChange='true'>
+      <Party name='Conservative' abbreviation='C' paId='313' seatsHeld='27' seatsOffered='27' unopposedReturns='0' candidates='0'/>
+      <Party name='Labour' abbreviation='Lab' paId='314' seatsHeld='9' seatsOffered='9' unopposedReturns='0' candidates='0'/>
+      <Party name='Liberal Democrat' abbreviation='LD' paId='315' seatsHeld='20' seatsOffered='20' unopposedReturns='0' candidates='0'/>
+      <Party name='Independent/Other' abbreviation='Ind' paId='318' seatsHeld='4' seatsOffered='4' unopposedReturns='0' candidates='0'/>
+    </Council>
+  </Election>
+</LocalElectionNominations>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostStateOfParties numberOfResults="1" totalNumberOfConstituencies="14" totalVotes="207686">
+  <Election name="London Assembly Test" date="2016-05-04" type="L" />
+  <Parties>
+    <Party paId="8569" name="Labour" abbreviation="Lab" totalSeats="1" gains="1" totalVotes="109915" percentageShare="52.92" percentageChange="+22.44" />
+    <Party paId="8568" name="Conservative" abbreviation="C" losses="1" totalVotes="58209" percentageShare="28.03" percentageChange="-22.36" />
+    <Party paId="8570" name="Liberal Democrat" abbreviation="LD" totalVotes="22971" percentageShare="11.06" percentageChange="+4.21" />
+    <Party paId="8571" name="Green" abbreviation="Green" totalVotes="10358" percentageShare="4.99" percentageChange="-3.76" />
+    <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" totalVotes="6233" percentageShare="3.00" percentageChange="-0.52" />
+  </Parties>
+  <ConstituenciesIncluded>
+    <Constituency number="14" name="West Central" />
+  </ConstituenciesIncluded>
+</FirstPastThePostStateOfParties>
+

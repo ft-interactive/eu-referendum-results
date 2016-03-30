@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='31' name='Staffordshire' electorate='849788' paId='542' boundaryChange='false'>
+      <Candidate firstName='Brendan' surname='Harvey Test' sex='M' paId='3070'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Peter' surname='Booth Test' sex='M' paId='3069'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate resultStatus='*' firstName='Matthew' surname='Ellis' sex='M' paId='2069' votes='51237'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <Candidate firstName='Joy' surname='Garner' sex='F' paId='2018' votes='47589'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Matthew' surname='Ellis' sex='M' paId='2069'>
+            <Party name='Conservative' abbreviation='C' paId='660'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

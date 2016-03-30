@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LocalElectionNominations>
+  <Election date='2016-05-05' paId='82'>
+    <Council name='Winchester' paId='3236' type='Non-Met' proportion='all' boundaryChange='true'>
+      <Party name='Conservative' abbreviation='C' paId='313' seatsHeld='33' seatsOffered='33' unopposedReturns='0' candidates='0'/>
+      <Party name='Labour' abbreviation='Lab' paId='314' seatsHeld='2' seatsOffered='2' unopposedReturns='0' candidates='0'/>
+      <Party name='Liberal Democrat' abbreviation='LD' paId='315' seatsHeld='22' seatsOffered='22' unopposedReturns='0' candidates='0'/>
+    </Council>
+  </Election>
+</LocalElectionNominations>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LocalElectionNominations>
+  <Election date='2016-05-05' paId='82'>
+    <Council name='North Tyneside' paId='3131' type='Metro' proportion='third'>
+      <Party name='Labour' abbreviation='Lab' paId='314' seatsHeld='49' seatsOffered='15' unopposedReturns='0' candidates='0'/>
+      <Party name='Liberal Democrat' abbreviation='LD' paId='315' seatsHeld='2' seatsOffered='1' unopposedReturns='0' candidates='0'/>
+      <Party name='Conservative' abbreviation='C' paId='313' seatsHeld='9' seatsOffered='4' unopposedReturns='0' candidates='0'/>
+    </Council>
+  </Election>
+</LocalElectionNominations>

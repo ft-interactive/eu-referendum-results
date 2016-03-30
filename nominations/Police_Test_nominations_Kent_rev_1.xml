@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='18' name='Kent' electorate='1281239' paId='529' boundaryChange='false'>
+      <Candidate firstName='Paul' surname='Baker Test' sex='M' paId='3038'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Stephen' surname='Lord Test' sex='M' paId='3037'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <Candidate firstName='Robert' surname='Smith Test' sex='M' paId='3039'>
+        <Party name='English Democrats Party' abbreviation='Eng Dem' paId='1114'/>
+      </Candidate>
+      <Candidate firstName='Mary' surname='Foster Test' sex='F' paId='3040'>
+        <Party name='UK Independence Party' abbreviation='UKIP' paId='1096'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate firstName='Ann' surname='Barnes' sex='F' paId='2183' votes='95901'>
+          <Party name='Independent Ann Barnes' abbreviation='Ind' paId='708'/>
+        </Candidate>
+        <Candidate firstName='Craig' surname='Mackinlay' sex='M' paId='2061' votes='51671'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Harriet' surname='Yeo' sex='F' paId='2042' votes='23005'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Piers' surname='Wauchope' sex='M' paId='2235' votes='15885'>
+          <Party name='United Kingdom Independence Party' abbreviation='Ukip' paId='662'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Steve' surname='Uncles' sex='M' paId='2214' votes='10789'>
+          <Party name='English Democrats Party' abbreviation='Eng Dem' paId='680'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Dai' surname='Liyanage' sex='M' paId='2186' votes='7666'>
+          <Party name='Independent Dai Liyanage' abbreviation='Ind' paId='723'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Ann' surname='Barnes' sex='F' paId='2183'>
+            <Party name='Independent Ann Barnes' abbreviation='Ind' paId='708'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Northern Ireland test' type='NI' date='2016-05-04'>
+    <Constituency number='2' name='Antrim North' electorate='74760' paId='474' boundaryChange='false'>
+      <Candidate firstName='Mark' surname='Kennedy Test' sex='M' paId='2844'>
+        <Party name='Ulster Unionist Party' abbreviation='UUP' paId='1060'/>
+      </Candidate>
+      <Candidate firstName='Philip' surname='Martin Test' sex='M' paId='2837'>
+        <Party name='Ulster Unionist Party' abbreviation='UUP' paId='1060'/>
+      </Candidate>
+      <Candidate firstName='Mike' surname='Davies Test' sex='M' paId='2843' previousSittingMember='+'>
+        <Party name='Democratic Unionist Party' abbreviation='DUP' paId='1061'/>
+      </Candidate>
+      <Candidate firstName='Carl' surname='Griffiths Test' sex='M' paId='2838'>
+        <Party name='Democratic Unionist Party' abbreviation='DUP' paId='1061'/>
+      </Candidate>
+      <Candidate firstName='Martin' surname='Hussain Test' sex='M' paId='2842'>
+        <Party name='Democratic Unionist Party' abbreviation='DUP' paId='1061'/>
+      </Candidate>
+      <Candidate firstName='Mark' surname='McDonnell Test' sex='M' paId='2836' previousSittingMember='+'>
+        <Party name='Democratic Unionist Party' abbreviation='DUP' paId='1061'/>
+      </Candidate>
+      <Candidate firstName='Clare' surname='Davies Test' sex='F' paId='2840' previousSittingMember='+'>
+        <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='1062'/>
+      </Candidate>
+      <Candidate firstName='Paul' surname='Jones Test' sex='M' paId='2839' previousSittingMember='+'>
+        <Party name='Sinn Fein' abbreviation='SF' paId='1063'/>
+      </Candidate>
+      <Candidate firstName='Patrick' surname='Wallace Test' sex='M' paId='2835'>
+        <Party name='Alliance' abbreviation='Alliance' paId='1064'/>
+      </Candidate>
+      <Candidate firstName='Jonathan' surname='Harris Test' sex='M' paId='2834'>
+        <Party name='Traditional Unionist Voice' abbreviation='TUV' paId='1072'/>
+      </Candidate>
+      <Candidate firstName='Roger' surname='Holmes Test' sex='M' paId='2841'>
+        <Party name='Traditional Unionist Voice' abbreviation='TUV' paId='1072'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate resultStatus='*' firstName='Paul' surname='Frew' sex='M' paId='1648' previousSittingMember='+' votes='6581'>
+          <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+        </Candidate>
+        <Candidate resultStatus='*' firstName='Daithi' surname='McKay' sex='M' paId='1651' previousSittingMember='+' votes='6152'>
+          <Party name='Sinn Fein' abbreviation='SF' paId='496'/>
+        </Candidate>
+        <Candidate resultStatus='*' firstName='Mervyn' surname='Storey' sex='M' paId='1655' previousSittingMember='+' votes='6083'>
+          <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+        </Candidate>
+        <Candidate firstName='Jim' surname='Allister' sex='M' paId='1646' votes='4061'>
+          <Party name='Traditional Unionist Voice' abbreviation='TUV' paId='499'/>
+        </Candidate>
+        <Candidate firstName='Declan' surname='O&apos;Loan' sex='M' paId='1652' previousSittingMember='+' votes='3682'>
+          <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+        </Candidate>
+        <Candidate firstName='David' surname='McIlveen' sex='M' paId='1650' votes='3275'>
+          <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+        </Candidate>
+        <Candidate firstName='Evelyne' surname='Robinson' sex='F' paId='1654' votes='3256'>
+          <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+        </Candidate>
+        <Candidate firstName='Robin' surname='Swann' sex='M' paId='1656' votes='2518'>
+          <Party name='Ulster Unionist Party' abbreviation='UUP' paId='491'/>
+        </Candidate>
+        <Candidate firstName='Bill' surname='Kennedy' sex='M' paId='1649' votes='2189'>
+          <Party name='Ulster Unionist Party' abbreviation='UUP' paId='491'/>
+        </Candidate>
+        <Candidate firstName='Jayne' surname='Dunlop' sex='F' paId='1647' votes='1848'>
+          <Party name='Alliance' abbreviation='Alliance' paId='492'/>
+        </Candidate>
+        <Candidate firstName='Audrey' surname='Patterson' sex='F' paId='1653' votes='668'>
+          <Party name='Traditional Unionist Voice' abbreviation='TUV' paId='499'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Jim' surname='Allister' sex='M' paId='1646'>
+            <Party name='Traditional Unionist Voice' abbreviation='TUV' paId='499'/>
+          </Candidate>
+          <Candidate firstName='Paul' surname='Frew' sex='M' paId='1648' previousSittingMember='+'>
+            <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+          </Candidate>
+          <Candidate firstName='David' surname='McIlveen' sex='M' paId='1650'>
+            <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+          </Candidate>
+          <Candidate firstName='Daithi' surname='McKay' sex='M' paId='1651' previousSittingMember='+'>
+            <Party name='Sinn Fein' abbreviation='SF' paId='496'/>
+          </Candidate>
+          <Candidate firstName='Mervyn' surname='Storey' sex='M' paId='1655' previousSittingMember='+'>
+            <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+          </Candidate>
+          <Candidate firstName='Robin' surname='Swann' sex='M' paId='1656'>
+            <Party name='Ulster Unionist Party' abbreviation='UUP' paId='491'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

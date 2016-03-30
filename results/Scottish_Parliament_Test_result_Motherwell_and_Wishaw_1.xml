@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:23:38+00:00">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="60" name="Motherwell &amp; Wishaw" electorate="53610" turnout="40564" percentageTurnout="75.66" percentageChangeTurnout="+30.06" winningParty="SNP" gainOrHold="gain" sittingParty="Lab" majority="5860" percentageMajority="14.45" percentageChangeMajority="+30.06" swing="12.20" swingTo="SNP" swingFrom="Lab">
+      <Candidate elected="*" paId="171420" sex="M" firstName="Gordon" surname="Clarke Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" votes="16430" percentageShare="40.50" percentageShareChange="-0.91" />
+      </Candidate>
+      <Candidate paId="171417" sex="M" firstName="Geoffrey" surname="Stevens Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" votes="10570" percentageShare="26.06" percentageShareChange="+18.89" />
+      </Candidate>
+      <Candidate paId="171418" sex="M" firstName="David" surname="Dunn Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" votes="7508" percentageShare="18.51" percentageShareChange="-25.31" />
+      </Candidate>
+      <Candidate paId="171419" sex="M" firstName="Alan" surname="Roberts Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" votes="3405" percentageShare="8.39" percentageShareChange="+6.89" />
+      </Candidate>
+      <Candidate paId="171421" sex="M" firstName="Tom" surname="Green Test">
+        <Party paId="8507" name="Scottish Christian Party" abbreviation="SCP" votes="1713" percentageShare="4.22" percentageShareChange="+1.99" />
+      </Candidate>
+      <Candidate paId="171422" sex="F" firstName="Dawn" surname="MacDonald Test">
+        <Party paId="8450" name="All Scotland Pensioners Party" abbreviation="Pensioners" votes="938" percentageShare="2.31" percentageShareChange="-1.55" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Scottish Parliament" date="2011-05-05" type="S">
+    <Constituency number="60" name="Motherwell &amp; Wishaw" turnout="24451" percentageTurnout="45.61" winningParty="Lab" majority="587" percentageMajority="2.40">
+      <Candidate paId="60827" firstName="John" surname="Pentland" sex="M">
+        <Party paId="5666" name="Labour" abbreviation="Lab" votes="10713" percentageShare="43.81" />
+      </Candidate>
+      <Candidate paId="60695" firstName="Clare" surname="Adamson" sex="F">
+        <Party paId="5669" name="Scottish National Party" abbreviation="SNP" votes="10126" percentageShare="41.41" />
+      </Candidate>
+      <Candidate paId="60513" firstName="Bob" surname="Burgess" sex="M">
+        <Party paId="5665" name="Conservative" abbreviation="C" votes="1753" percentageShare="7.17" />
+      </Candidate>
+      <Candidate paId="71075" firstName="John" surname="Swinburne" sex="M">
+        <Party paId="6176" name="All Scotland Pensioners Party" abbreviation="Pensioners" votes="945" percentageShare="3.86" />
+      </Candidate>
+      <Candidate paId="71061" firstName="Tom" surname="Selfridge" sex="M">
+        <Party paId="5717" name="Scottish Christian Party" abbreviation="SCP" votes="547" percentageShare="2.24" />
+      </Candidate>
+      <Candidate paId="70875" firstName="Beverley" surname="Hope" sex="F">
+        <Party paId="5668" name="Liberal Democrat" abbreviation="LD" votes="367" percentageShare="1.50" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

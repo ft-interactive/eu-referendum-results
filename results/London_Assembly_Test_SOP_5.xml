@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostStateOfParties numberOfResults="5" totalNumberOfConstituencies="14" totalVotes="1252672">
+  <Election name="London Assembly Test" date="2016-05-04" type="L" />
+  <Parties>
+    <Party paId="8569" name="Labour" abbreviation="Lab" totalSeats="3" gains="2" losses="1" totalVotes="531970" percentageShare="42.47" percentageChange="+1.03" />
+    <Party paId="8568" name="Conservative" abbreviation="C" totalSeats="2" gains="1" losses="2" totalVotes="472601" percentageShare="37.73" percentageChange="+3.19" />
+    <Party paId="8571" name="Green" abbreviation="Green" totalVotes="81640" percentageShare="6.52" percentageChange="-3.17" />
+    <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" totalVotes="81496" percentageShare="6.51" percentageChange="+2.63" />
+    <Party paId="8570" name="Liberal Democrat" abbreviation="LD" totalVotes="72595" percentageShare="5.80" percentageChange="-3.17" />
+    <Party paId="8575" name="British National Party" abbreviation="BNP" totalVotes="6059" percentageShare="0.48" percentageChange="+0.09" />
+    <Party paId="8588" name="Independent" abbreviation="Ind" totalVotes="4638" percentageShare="0.37" percentageChange="-0.55" />
+    <Party paId="-9999" name="Others" abbreviation="Others" totalVotes="1673" percentageShare="0.13" />
+  </Parties>
+  <ConstituenciesIncluded>
+    <Constituency number="5" name="Croydon &amp; Sutton" />
+    <Constituency number="7" name="Enfield &amp; Haringey" />
+    <Constituency number="11" name="Merton &amp; Wandsworth" />
+    <Constituency number="12" name="North East" />
+    <Constituency number="14" name="West Central" />
+  </ConstituenciesIncluded>
+</FirstPastThePostStateOfParties>
+

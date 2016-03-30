@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Northern Ireland test' type='NI' date='2016-05-04'>
+    <Constituency number='11' name='Foyle' electorate='68663' paId='483' boundaryChange='false'>
+      <Candidate firstName='Brian' surname='Bennett Test' sex='M' paId='2806' previousSittingMember='+'>
+        <Party name='Democratic Unionist Party' abbreviation='DUP' paId='1061'/>
+      </Candidate>
+      <Candidate firstName='Anthony' surname='Cook Test' sex='M' paId='2803'>
+        <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='1062'/>
+      </Candidate>
+      <Candidate firstName='Richard' surname='Morris Test' sex='M' paId='2804'>
+        <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='1062'/>
+      </Candidate>
+      <Candidate firstName='Christopher' surname='Robinson Test' sex='M' paId='2802' previousSittingMember='+'>
+        <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='1062'/>
+      </Candidate>
+      <Candidate firstName='Angus' surname='Thompson Test' sex='M' paId='2811' previousSittingMember='+'>
+        <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='1062'/>
+      </Candidate>
+      <Candidate firstName='Brian' surname='Burgess Test' sex='M' paId='2808' previousSittingMember='+'>
+        <Party name='Sinn Fein' abbreviation='SF' paId='1063'/>
+      </Candidate>
+      <Candidate firstName='Lynne' surname='Kerr Test' sex='F' paId='2801' previousSittingMember='+'>
+        <Party name='Sinn Fein' abbreviation='SF' paId='1063'/>
+      </Candidate>
+      <Candidate firstName='Elaine' surname='Vincent Test' sex='F' paId='2805'>
+        <Party name='Sinn Fein' abbreviation='SF' paId='1063'/>
+      </Candidate>
+      <Candidate firstName='John' surname='Lewis Test' sex='M' paId='2810'>
+        <Party name='Alliance' abbreviation='Alliance' paId='1064'/>
+      </Candidate>
+      <Candidate firstName='Frank' surname='Skinner Test' sex='M' paId='2809'>
+        <Party name='Independent' abbreviation='Ind' paId='1065'/>
+      </Candidate>
+      <Candidate firstName='Peter' surname='Walker Test' sex='M' paId='2807'>
+        <Party name='People Before Profit Alliance' abbreviation='People' paId='1106'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate resultStatus='*' firstName='William' surname='Hay' sex='M' paId='1764' previousSittingMember='+' votes='7154'>
+          <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+        </Candidate>
+        <Candidate resultStatus='*' firstName='Martina' surname='Anderson' sex='F' paId='1758' previousSittingMember='+' votes='6950'>
+          <Party name='Sinn Fein' abbreviation='SF' paId='496'/>
+        </Candidate>
+        <Candidate firstName='Mark H' surname='Durkan' sex='M' paId='1761' votes='4970'>
+          <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+        </Candidate>
+        <Candidate firstName='Raymond' surname='McCartney' sex='M' paId='1766' previousSittingMember='+' votes='3638'>
+          <Party name='Sinn Fein' abbreviation='SF' paId='496'/>
+        </Candidate>
+        <Candidate firstName='Pat' surname='Ramsey' sex='M' paId='1769' previousSittingMember='+' votes='3138'>
+          <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+        </Candidate>
+        <Candidate firstName='Eamonn' surname='McCann' sex='M' paId='1765' votes='3120'>
+          <Party name='People Before Profit Alliance' abbreviation='People' paId='506'/>
+        </Candidate>
+        <Candidate firstName='Colum' surname='Eastwood' sex='M' paId='1762' votes='2967'>
+          <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+        </Candidate>
+        <Candidate firstName='Pol' surname='Callaghan' sex='M' paId='1759' previousSittingMember='+' votes='2624'>
+          <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+        </Candidate>
+        <Candidate firstName='Paul' surname='Fleming' sex='M' paId='1763' votes='2612'>
+          <Party name='Sinn Fein' abbreviation='SF' paId='496'/>
+        </Candidate>
+        <Candidate firstName='Paul' surname='McFadden' sex='M' paId='1767' votes='1280'>
+          <Party name='Independent' abbreviation='Ind' paId='503'/>
+        </Candidate>
+        <Candidate firstName='Keith' surname='McGrellis' sex='M' paId='1768' votes='334'>
+          <Party name='Alliance' abbreviation='Alliance' paId='492'/>
+        </Candidate>
+        <Candidate firstName='Terry' surname='Doherty' sex='M' paId='1760' votes='60'>
+          <Party name='Independent Doherty' abbreviation='Ind D' paId='510'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Martina' surname='Anderson' sex='F' paId='1758' previousSittingMember='+'>
+            <Party name='Sinn Fein' abbreviation='SF' paId='496'/>
+          </Candidate>
+          <Candidate firstName='Mark H' surname='Durkan' sex='M' paId='1761'>
+            <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+          </Candidate>
+          <Candidate firstName='Colum' surname='Eastwood' sex='M' paId='1762'>
+            <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+          </Candidate>
+          <Candidate firstName='William' surname='Hay' sex='M' paId='1764' previousSittingMember='+'>
+            <Party name='Democratic Unionist Party' abbreviation='DUP' paId='494'/>
+          </Candidate>
+          <Candidate firstName='Raymond' surname='McCartney' sex='M' paId='1766' previousSittingMember='+'>
+            <Party name='Sinn Fein' abbreviation='SF' paId='496'/>
+          </Candidate>
+          <Candidate firstName='Pat' surname='Ramsey' sex='M' paId='1769' previousSittingMember='+'>
+            <Party name='Social Democratic and Labour Party' abbreviation='SDLP' paId='495'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

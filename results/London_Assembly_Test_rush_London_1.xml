@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TopUpRush revision="1">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="15" name="London" electorate="5634331">
+      <Candidate elected="*" previousSittingMember="*" paId="172044" sex="M" firstName="Kevin" surname="Coleman Test" partyListRank="1">
+        <Party paId="8568" abbreviation="C" name="Conservative" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="*" paId="172043" sex="F" firstName="Christine" surname="Ord Test" partyListRank="2">
+        <Party paId="8568" abbreviation="C" name="Conservative" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="*" paId="172045" sex="M" firstName="Stephen" surname="Roberts Test" partyListRank="3">
+        <Party paId="8568" abbreviation="C" name="Conservative" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="*" paId="172055" sex="M" firstName="Michael" surname="Shaw Test" partyListRank="1">
+        <Party paId="8569" abbreviation="Lab" name="Labour" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="*" paId="172056" sex="F" firstName="Jacqui" surname="Reid Test" partyListRank="2">
+        <Party paId="8569" abbreviation="Lab" name="Labour" />
+      </Candidate>
+      <Candidate elected="*" paId="172057" sex="M" firstName="Jim" surname="Khan Test" partyListRank="3">
+        <Party paId="8569" abbreviation="Lab" name="Labour" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="*" paId="172066" sex="F" firstName="Rosie" surname="Singh Test" partyListRank="1">
+        <Party paId="8570" abbreviation="LD" name="Liberal Democrat" />
+      </Candidate>
+      <Candidate elected="*" paId="172067" sex="M" firstName="Clive" surname="Davies Test" partyListRank="2">
+        <Party paId="8570" abbreviation="LD" name="Liberal Democrat" />
+      </Candidate>
+      <Candidate elected="*" paId="172068" sex="M" firstName="John" surname="Gardner Test" partyListRank="3">
+        <Party paId="8570" abbreviation="LD" name="Liberal Democrat" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="*" paId="172077" sex="M" firstName="Neil" surname="Knight Test" partyListRank="1">
+        <Party paId="8571" abbreviation="Green" name="Green" />
+      </Candidate>
+      <Candidate elected="*" paId="172136" sex="M" firstName="Michael" surname="Foster Test" partyListRank="1">
+        <Party paId="8612" abbreviation="UKIP" name="UK Independence Party" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</TopUpRush>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="15" name="Ceredigion" electorate="56983" gainOrHold="gain" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="PC" sittingPartyName="Plaid Cymru" change="true" paStyleMessageText="Labour gain from Plaid Cymru in Ceredigion">
+      <Candidate paId="173933" sex="F" firstName="Elaine" surname="Smith Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" paId="173934" sex="M" firstName="David" surname="Harris Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173935" sex="M" firstName="Christopher" surname="Macdonald Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate previousSittingMember="*" paId="173936" sex="M" firstName="Howard" surname="Dhillon Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+      <Candidate paId="173937" sex="F" firstName="Nicola" surname="Booth Test">
+        <Party paId="8628" name="Green" abbreviation="Green" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

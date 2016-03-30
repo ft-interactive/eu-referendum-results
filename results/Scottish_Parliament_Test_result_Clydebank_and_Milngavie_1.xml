@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:23:39+00:00">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="16" name="Clydebank &amp; Milngavie" electorate="53018" turnout="25649" percentageTurnout="48.38" percentageChangeTurnout="-5.13" winningParty="LD" gainOrHold="gain" sittingParty="SNP" majority="4038" percentageMajority="15.74" percentageChangeMajority="-5.13" swing="26.39" swingTo="LD" swingFrom="SNP">
+      <Candidate elected="*" paId="171230" sex="M" firstName="Bernard" surname="Arnott Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" votes="11507" percentageShare="44.86" percentageShareChange="+38.63" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171231" sex="M" firstName="Christopher" surname="Walsh Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" votes="7469" percentageShare="29.12" percentageShareChange="-14.16" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171229" sex="M" firstName="Stewart" surname="Evans Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" votes="4270" percentageShare="16.65" percentageShareChange="-24.11" />
+      </Candidate>
+      <Candidate paId="171228" sex="M" firstName="Jason" surname="Hope Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" votes="2403" percentageShare="9.37" percentageShareChange="-0.35" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Scottish Parliament" date="2011-05-05" type="S">
+    <Constituency number="16" name="Clydebank &amp; Milngavie" turnout="28369" percentageTurnout="53.51" winningParty="SNP" majority="714" percentageMajority="2.52">
+      <Candidate paId="60657" firstName="Gil" surname="Paterson" sex="F">
+        <Party paId="5669" name="Scottish National Party" abbreviation="SNP" votes="12278" percentageShare="43.28" />
+      </Candidate>
+      <Candidate paId="60787" firstName="Des" surname="McNulty" sex="M">
+        <Party paId="5666" name="Labour" abbreviation="Lab" votes="11564" percentageShare="40.76" />
+      </Candidate>
+      <Candidate paId="70782" firstName="Alice" surname="Struthers" sex="F">
+        <Party paId="5665" name="Conservative" abbreviation="C" votes="2758" percentageShare="9.72" />
+      </Candidate>
+      <Candidate paId="71012" firstName="John" surname="Duncan" sex="M">
+        <Party paId="5668" name="Liberal Democrat" abbreviation="LD" votes="1769" percentageShare="6.24" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

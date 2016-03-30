@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostNominations revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="33" name="Rhondda" electorate="52532">
+      <Candidate paId="174013" sex="F" firstName="Louise" surname="Campbell Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="174014" previousSittingMember="*" sex="M" firstName="Michael" surname="Stewart Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="174015" sex="M" firstName="Jack" surname="Fox Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="174016" previousSittingMember="+" sex="F" firstName="Pauline" surname="Cooper Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Welsh Assembly" date="2011-05-05" type="W">
+    <Constituency number="33" name="Rhondda" turnout="20027" percentageTurnout="38.12" winningParty="Lab" majority="6739" percentageMajority="33.65">
+      <Candidate paId="60989" firstName="Leighton" surname="Andrews" sex="M">
+        <Party paId="5732" name="Labour" abbreviation="Lab" votes="12650" percentageShare="63.16" />
+      </Candidate>
+      <Candidate paId="60491" firstName="Sera" surname="Evans-Fear" sex="F">
+        <Party paId="5735" name="Plaid Cymru" abbreviation="PC" votes="5911" percentageShare="29.52" />
+      </Candidate>
+      <Candidate paId="70762" firstName="James" surname="Jeffreys" sex="M">
+        <Party paId="5731" name="Conservative" abbreviation="C" votes="969" percentageShare="4.84" />
+      </Candidate>
+      <Candidate paId="60943" firstName="George" surname="Summers" sex="M">
+        <Party paId="5734" name="Liberal Democrat" abbreviation="LD" votes="497" percentageShare="2.48" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostNominations>
+

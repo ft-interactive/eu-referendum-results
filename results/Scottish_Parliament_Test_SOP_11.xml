@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostStateOfParties numberOfResults="11" totalNumberOfConstituencies="73" totalVotes="333955">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S" />
+  <Parties>
+    <Party paId="8447" name="Scottish National Party" abbreviation="SNP" totalSeats="8" gains="3" losses="3" totalVotes="156652" percentageShare="46.91" percentageChange="+0.84" />
+    <Party paId="8446" name="Liberal Democrat" abbreviation="LD" totalSeats="1" gains="1" losses="1" totalVotes="75242" percentageShare="22.53" percentageChange="+12.33" />
+    <Party paId="8443" name="Conservative" abbreviation="C" totalSeats="1" gains="1" totalVotes="53584" percentageShare="16.05" percentageChange="+3.05" />
+    <Party paId="8444" name="Labour" abbreviation="Lab" totalSeats="1" gains="1" losses="2" totalVotes="45904" percentageShare="13.75" percentageChange="-15.25" />
+    <Party paId="8520" name="UK Independence Party" abbreviation="UKIP" totalVotes="1025" percentageShare="0.31" percentageChange="-0.22" />
+    <Party paId="8465" name="Independent" abbreviation="Ind" totalVotes="806" percentageShare="0.24" percentageChange="-0.74" />
+    <Party paId="8507" name="Scottish Christian Party" abbreviation="SCP" totalVotes="742" percentageShare="0.22" percentageChange="-0.00" />
+  </Parties>
+  <ConstituenciesIncluded>
+    <Constituency number="13" name="Caithness, Sutherland &amp; Ross" />
+    <Constituency number="22" name="Cunninghame South" />
+    <Constituency number="23" name="Dumbarton" />
+    <Constituency number="25" name="Dundee City East" />
+    <Constituency number="33" name="Edinburgh Northern &amp; Leith" />
+    <Constituency number="34" name="Edinburgh Pentlands" />
+    <Constituency number="38" name="Falkirk East" />
+    <Constituency number="41" name="Fife North East" />
+    <Constituency number="50" name="Glasgow Southside" />
+    <Constituency number="53" name="Inverness &amp; Nairn" />
+    <Constituency number="62" name="Orkney Islands" />
+  </ConstituenciesIncluded>
+</FirstPastThePostStateOfParties>
+

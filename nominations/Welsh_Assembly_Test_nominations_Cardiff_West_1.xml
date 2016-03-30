@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostNominations revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="12" name="Cardiff West" electorate="64219">
+      <Candidate paId="173921" sex="M" firstName="David" surname="Gardner Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="173922" sex="M" firstName="Eric" surname="Campbell Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173923" sex="M" firstName="Malcolm" surname="Love Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="173924" sex="M" firstName="Nick" surname="Thompson Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Welsh Assembly" date="2011-05-05" type="W">
+    <Constituency number="12" name="Cardiff West" turnout="27726" percentageTurnout="43.17" winningParty="Lab" majority="5901" percentageMajority="21.28">
+      <Candidate paId="60977" firstName="Mark" surname="Drakeford" sex="M">
+        <Party paId="5732" name="Labour" abbreviation="Lab" votes="13067" percentageShare="47.13" />
+      </Candidate>
+      <Candidate paId="60630" firstName="Craig" surname="Williams" sex="M">
+        <Party paId="5731" name="Conservative" abbreviation="C" votes="7166" percentageShare="25.85" />
+      </Candidate>
+      <Candidate paId="60901" firstName="Neil" surname="McEvoy" sex="M">
+        <Party paId="5735" name="Plaid Cymru" abbreviation="PC" votes="5551" percentageShare="20.02" />
+      </Candidate>
+      <Candidate paId="70773" firstName="David" surname="Morgan" sex="M">
+        <Party paId="5734" name="Liberal Democrat" abbreviation="LD" votes="1942" percentageShare="7.00" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostNominations>
+

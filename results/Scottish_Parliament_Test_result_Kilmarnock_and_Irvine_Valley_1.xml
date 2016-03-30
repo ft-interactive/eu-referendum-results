@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:23:12+00:00">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="54" name="Kilmarnock &amp; Irvine Valley" electorate="63257" turnout="32504" percentageTurnout="51.38" percentageChangeTurnout="+1.02" winningParty="SNP" gainOrHold="hold" sittingParty="SNP" majority="9108" percentageMajority="28.02" percentageChangeMajority="+1.02" swing="11.65" swingTo="LD" swingFrom="SNP">
+      <Candidate elected="*" previousSittingMember="+" paId="171393" sex="M" firstName="Peter" surname="Adams Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" votes="19658" percentageShare="60.48" percentageShareChange="+7.23" />
+      </Candidate>
+      <Candidate paId="171392" sex="M" firstName="Stephen" surname="Prentice Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" votes="10550" percentageShare="32.46" percentageShareChange="+30.53" />
+      </Candidate>
+      <Candidate paId="171390" sex="M" firstName="Robin" surname="Hughes Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" votes="1590" percentageShare="4.89" percentageShareChange="-5.50" />
+      </Candidate>
+      <Candidate paId="171391" sex="M" firstName="Brendan" surname="Lewis Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" votes="706" percentageShare="2.17" percentageShareChange="-32.27" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Scottish Parliament" date="2011-05-05" type="S">
+    <Constituency number="54" name="Kilmarnock &amp; Irvine Valley" turnout="31858" percentageTurnout="50.36" winningParty="SNP" majority="5993" percentageMajority="18.81">
+      <Candidate paId="60688" firstName="Willie" surname="Coffey" sex="M">
+        <Party paId="5669" name="Scottish National Party" abbreviation="SNP" votes="16964" percentageShare="53.25" />
+      </Candidate>
+      <Candidate paId="60820" firstName="Matt" surname="McLaughlin" sex="M">
+        <Party paId="5666" name="Labour" abbreviation="Lab" votes="10971" percentageShare="34.44" />
+      </Candidate>
+      <Candidate paId="60509" firstName="Grant" surname="Fergusson" sex="M">
+        <Party paId="5665" name="Conservative" abbreviation="C" votes="3309" percentageShare="10.39" />
+      </Candidate>
+      <Candidate paId="71041" firstName="Robbie" surname="Simpson" sex="M">
+        <Party paId="5668" name="Liberal Democrat" abbreviation="LD" votes="614" percentageShare="1.93" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

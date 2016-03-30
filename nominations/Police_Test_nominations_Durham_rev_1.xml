@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='10' name='Durham' electorate='486624' paId='520' boundaryChange='false'>
+      <Candidate firstName='William' surname='McCartney Test' sex='M' paId='3089'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Gordon' surname='Grant Test' sex='M' paId='3088'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <Candidate firstName='David' surname='Smith Test' sex='M' paId='3090'>
+        <Party name='Independent' abbreviation='Ind' paId='1095'/>
+      </Candidate>
+      <Candidate firstName='Paul' surname='Hope Test' sex='M' paId='3091'>
+        <Party name='UK Independence Party' abbreviation='UKIP' paId='1096'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate resultStatus='*' firstName='Ron' surname='Hogg' sex='M' rushText='Former deputy chief constable Labour&apos;s Ron Hogg' paId='2039' votes='36171'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <Candidate firstName='Kingsley' surname='Smith' sex='M' paId='2288' votes='18813'>
+          <Party name='Independent' abbreviation='Ind' paId='659'/>
+        </Candidate>
+        <Candidate firstName='Mike' surname='Costello' sex='M' paId='2308' votes='8257'>
+          <Party name='United Kingdom Independence Party' abbreviation='Ukip' paId='662'/>
+        </Candidate>
+        <Candidate firstName='Nick' surname='Varley' sex='M' paId='2083' votes='6900'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Ron' surname='Hogg' sex='M' rushText='Former deputy chief constable Labour&apos;s Ron Hogg' paId='2039'>
+            <Party name='Labour' abbreviation='Lab' paId='658'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

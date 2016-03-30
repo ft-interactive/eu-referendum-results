@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='25' name='North Yorkshire' electorate='620497' paId='536' boundaryChange='false'>
+      <Candidate firstName='Ian' surname='Turner Test' sex='M' paId='3132'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Christopher' surname='Davidson Test' sex='M' paId='3131'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate resultStatus='*' firstName='Julia' surname='Mulligan' sex='F' paId='2089' votes='47885'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <Candidate firstName='Ruth' surname='Potter' sex='F' paId='2033' votes='34328'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Julia' surname='Mulligan' sex='F' paId='2089'>
+            <Party name='Conservative' abbreviation='C' paId='660'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

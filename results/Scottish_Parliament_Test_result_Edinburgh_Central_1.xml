@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:31:02+00:00">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="31" name="Edinburgh Central" electorate="53606" turnout="32214" percentageTurnout="60.09" percentageChangeTurnout="+5.97" winningParty="C" gainOrHold="gain" sittingParty="SNP" majority="921" percentageMajority="2.86" percentageChangeMajority="+5.97" swing="26.90" swingTo="C" swingFrom="SNP">
+      <Candidate elected="*" paId="171290" sex="M" firstName="Daniel" surname="Burgess Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" votes="14552" percentageShare="45.17" percentageShareChange="+30.17" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171291" sex="M" firstName="Colin" surname="Kennedy Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" votes="13631" percentageShare="42.31" percentageShareChange="+10.46" />
+      </Candidate>
+      <Candidate paId="171293" sex="M" firstName="Chris" surname="Wilcock Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" votes="2911" percentageShare="9.04" percentageShareChange="-23.64" />
+      </Candidate>
+      <Candidate paId="171292" sex="M" firstName="John" surname="Campbell Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" votes="1120" percentageShare="3.48" percentageShareChange="-16.99" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Scottish Parliament" date="2011-05-05" type="S">
+    <Constituency number="31" name="Edinburgh Central" turnout="29014" percentageTurnout="54.12" winningParty="SNP" majority="237" percentageMajority="0.82">
+      <Candidate paId="60670" firstName="Marco" surname="Biagi" sex="M">
+        <Party paId="5669" name="Scottish National Party" abbreviation="SNP" votes="9480" percentageShare="32.67" />
+      </Candidate>
+      <Candidate paId="60801" firstName="Sarah" surname="Boyack" sex="F">
+        <Party paId="5666" name="Labour" abbreviation="Lab" votes="9243" percentageShare="31.86" />
+      </Candidate>
+      <Candidate paId="60566" firstName="Alex" surname="Cole-Hamilton" sex="M">
+        <Party paId="5668" name="Liberal Democrat" abbreviation="LD" votes="5937" percentageShare="20.46" />
+      </Candidate>
+      <Candidate paId="60433" firstName="Iain" surname="McGill" sex="M">
+        <Party paId="5665" name="Conservative" abbreviation="C" votes="4354" percentageShare="15.01" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

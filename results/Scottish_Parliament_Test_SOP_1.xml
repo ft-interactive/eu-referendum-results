@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostStateOfParties numberOfResults="1" totalNumberOfConstituencies="73" totalVotes="30320">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S" />
+  <Parties>
+    <Party paId="8443" name="Conservative" abbreviation="C" totalSeats="1" gains="1" totalVotes="15349" percentageShare="50.62" percentageChange="+42.96" />
+    <Party paId="8447" name="Scottish National Party" abbreviation="SNP" losses="1" totalVotes="6338" percentageShare="20.90" percentageChange="-33.53" />
+    <Party paId="8444" name="Labour" abbreviation="Lab" totalVotes="5077" percentageShare="16.74" percentageChange="-18.45" />
+    <Party paId="8446" name="Liberal Democrat" abbreviation="LD" totalVotes="3556" percentageShare="11.73" percentageChange="+9.02" />
+  </Parties>
+  <ConstituenciesIncluded>
+    <Constituency number="50" name="Glasgow Southside" />
+  </ConstituenciesIncluded>
+</FirstPastThePostStateOfParties>
+

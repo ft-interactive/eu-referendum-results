@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='32' name='Suffolk' electorate='552780' paId='543' boundaryChange='false'>
+      <Candidate firstName='William' surname='Davies Test' sex='M' paId='3093'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Edward' surname='Taylor Test' sex='M' paId='3092'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <Candidate firstName='Donald' surname='Potter Test' sex='M' paId='3094'>
+        <Party name='Independent' abbreviation='Ind' paId='1095'/>
+      </Candidate>
+      <Candidate firstName='David' surname='Harris Test' sex='M' paId='3095'>
+        <Party name='UK Independence Party' abbreviation='UKIP' paId='1096'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate firstName='Jane' surname='Basham' sex='F' paId='2031' votes='29967'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <Candidate firstName='Tim' surname='Passmore' sex='M' paId='2250' votes='29805'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='David' surname='Cocks' sex='M' paId='2251' votes='14217'>
+          <Party name='Independent' abbreviation='Ind' paId='659'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Bill' surname='Mountford' sex='M' paId='2298' votes='11179'>
+          <Party name='United Kingdom Independence Party' abbreviation='Ukip' paId='662'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Tim' surname='Passmore' sex='M' paId='2250'>
+            <Party name='Conservative' abbreviation='C' paId='660'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

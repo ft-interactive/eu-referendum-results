@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="3" declarationTime="2016-03-23T18:41:09+00:00">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="1" name="Aberdeen Central" electorate="57396" turnout="43532" percentageTurnout="75.85" percentageChangeTurnout="+32.03" winningParty="SNP" gainOrHold="hold" sittingParty="SNP" majority="14049" percentageMajority="32.27" percentageChangeMajority="+32.03" swing="14.91" swingTo="SNP" swingFrom="Lab">
+      <Candidate elected="*" paId="171162" sex="M" firstName="Peter" surname="Wilcock Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" votes="22255" percentageShare="51.12" percentageShareChange="+11.13" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171160" sex="M" firstName="Robert" surname="Peacock Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" votes="8206" percentageShare="18.85" percentageShareChange="-18.69" />
+      </Candidate>
+      <Candidate paId="171159" sex="M" firstName="Mike" surname="Charlesworth Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" votes="7626" percentageShare="17.52" percentageShareChange="+5.19" />
+      </Candidate>
+      <Candidate paId="171161" sex="F" firstName="Janet" surname="Burt Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" votes="2552" percentageShare="5.86" percentageShareChange="-3.48" />
+      </Candidate>
+      <Candidate paId="171163" sex="M" firstName="Chris" surname="Moore Test">
+        <Party paId="8491" name="National Front" abbreviation="Nat Front" votes="1159" percentageShare="2.66" percentageShareChange="+1.86" />
+      </Candidate>
+      <Candidate paId="174049" sex="F" firstName="Martha" surname="Patrick Test">
+        <Party paId="8669" name="Independent Martha Patrick" abbreviation="Ind" votes="701" percentageShare="1.61" />
+      </Candidate>
+      <Candidate paId="174048" sex="M" firstName="David" surname="McIntosh Test">
+        <Party paId="8465" name="Independent" abbreviation="Ind" votes="578" percentageShare="1.33" />
+      </Candidate>
+      <Candidate paId="174050" sex="M" firstName="John" surname="Brown Test">
+        <Party paId="8670" name="Independent John Brown" abbreviation="Ind" votes="455" percentageShare="1.05" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Scottish Parliament" date="2011-05-05" type="S">
+    <Constituency number="1" name="Aberdeen Central" turnout="25149" percentageTurnout="43.82" winningParty="SNP" majority="617" percentageMajority="2.45">
+      <Candidate paId="60642" firstName="Kevin" surname="Stewart" sex="M">
+        <Party paId="5669" name="Scottish National Party" abbreviation="SNP" votes="10058" percentageShare="39.99" />
+      </Candidate>
+      <Candidate paId="60775" firstName="Lewis" surname="Macdonald" sex="M">
+        <Party paId="5666" name="Labour" abbreviation="Lab" votes="9441" percentageShare="37.54" />
+      </Candidate>
+      <Candidate paId="60420" firstName="Sandy" surname="Wallace" sex="M">
+        <Party paId="5665" name="Conservative" abbreviation="C" votes="3100" percentageShare="12.33" />
+      </Candidate>
+      <Candidate paId="60553" firstName="Sheila" surname="Thomson" sex="F">
+        <Party paId="5668" name="Liberal Democrat" abbreviation="LD" votes="2349" percentageShare="9.34" />
+      </Candidate>
+      <Candidate paId="70881" firstName="Mike" surname="Phillips" sex="M">
+        <Party paId="6174" name="National Front" abbreviation="Nat Front" votes="201" percentageShare="0.80" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

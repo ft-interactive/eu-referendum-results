@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LocalElectionNominations>
+  <Election date='2016-05-05' paId='82'>
+    <Council name='Redditch' paId='3214' type='Non-Met' proportion='third'>
+      <Party name='UK Independence Party' abbreviation='UKIP' paId='317' seatsHeld='1' seatsOffered='0' unopposedReturns='0' candidates='0'/>
+      <Party name='Conservative' abbreviation='C' paId='313' seatsHeld='13' seatsOffered='2' unopposedReturns='0' candidates='0'/>
+      <Party name='Labour' abbreviation='Lab' paId='314' seatsHeld='15' seatsOffered='7' unopposedReturns='0' candidates='0'/>
+    </Council>
+  </Election>
+</LocalElectionNominations>

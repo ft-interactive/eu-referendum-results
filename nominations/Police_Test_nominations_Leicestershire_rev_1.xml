@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='20' name='Leicestershire' electorate='776964' paId='531' boundaryChange='false'>
+      <Candidate firstName='Malcolm' surname='Dixon Test' sex='M' paId='3067' title='Sir'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Jonathan' surname='White Test' sex='M' paId='3066'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <Candidate firstName='Sue' surname='Boyd Test' sex='F' paId='3068'>
+        <Party name='Independent' abbreviation='Ind' paId='1095'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate firstName='Clive' surname='Loader' sex='M' paId='2064' title='Sir' votes='59915'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <Candidate firstName='Sarah' surname='Russell' sex='F' paId='2052' votes='42503'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Suleman' surname='Nagdi' sex='M' paId='2188' votes='21744'>
+          <Party name='Independent' abbreviation='Ind' paId='659'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Clive' surname='Loader' sex='M' paId='2064' title='Sir'>
+            <Party name='Conservative' abbreviation='C' paId='660'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

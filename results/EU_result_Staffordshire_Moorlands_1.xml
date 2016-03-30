@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReferendumResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ReferendumResult.xsd" revision="1" declarationTime="2016-03-22T15:19:34+00:00">
+  <Referendum name="EU" date="2016-06-23">
+    <VotingArea number="307" name="Staffordshire Moorlands" electorate="78703">
+      <Proposition text="Should the UK remain a member of the EU or leave the EU?" turnout="38332" percentageTurnout="48.70" winningAnswerText="Remain a member of the EU" majority="1420" percentageMajority="3.70">
+        <Answer winning="true" text="Remain a member of the EU" shortText="Remain Test" votes="19876" percentageShare="51.85" />
+        <Answer winning="false" text="Leave the EU" shortText="Leave Test" votes="18456" percentageShare="48.15" />
+      </Proposition>
+    </VotingArea>
+  </Referendum>
+</ReferendumResult>
+

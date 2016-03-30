@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='9' name='Dorset' electorate='588436' paId='519' boundaryChange='false'>
+      <Candidate firstName='Chris' surname='Wallace Test' sex='M' paId='3072'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Kate' surname='Morris Test' sex='F' paId='3071'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <Candidate firstName='John' surname='Cook Test' sex='M' paId='3074'>
+        <Party name='Liberal Democrat' abbreviation='LD' paId='1093'/>
+      </Candidate>
+      <Candidate firstName='Peter' surname='Shaw Test' sex='M' paId='3073'>
+        <Party name='Independent' abbreviation='Ind' paId='1095'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate firstName='Martyn' surname='Underhill' sex='M' paId='2074' votes='43425'>
+          <Party name='Independent' abbreviation='Ind' paId='659'/>
+        </Candidate>
+        <Candidate firstName='Nick' surname='King' sex='M' paId='2073' votes='31165'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Rachel' surname='Rogers' sex='F' paId='2057' votes='11596'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Andy' surname='Canning' sex='M' paId='2144' votes='9963'>
+          <Party name='Liberal Democrat' abbreviation='LD' paId='661'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Martyn' surname='Underhill' sex='M' paId='2074'>
+            <Party name='Independent' abbreviation='Ind' paId='659'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

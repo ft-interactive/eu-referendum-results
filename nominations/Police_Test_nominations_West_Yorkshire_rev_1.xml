@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='39' name='West Yorkshire' electorate='1609614' paId='550' boundaryChange='false'>
+      <Candidate firstName='William' surname='Campbell Test' sex='M' paId='3046'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='David' surname='Thomas Test' sex='M' paId='3045'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <Candidate firstName='Clare' surname='Davies Test' sex='F' paId='3047'>
+        <Party name='Liberal Democrat' abbreviation='LD' paId='1093'/>
+      </Candidate>
+      <Candidate firstName='David' surname='Bennett Test' sex='M' paId='3048'>
+        <Party name='Independent' abbreviation='Ind' paId='1095'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate firstName='Mark' surname='Burns-Williamson' sex='M' paId='2035' votes='102817'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <Candidate firstName='Cedric' surname='Christie' sex='M' paId='2296' votes='49299'>
+          <Party name='Independent' abbreviation='Ind' paId='659'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Geraldine' surname='Carter' sex='F' paId='2096' votes='45365'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Andrew' surname='Marchington' sex='M' paId='2155' votes='17247'>
+          <Party name='Liberal Democrat' abbreviation='LD' paId='661'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Mark' surname='Burns-Williamson' sex='M' paId='2035'>
+            <Party name='Labour' abbreviation='Lab' paId='658'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ElectionNominations revision='1'>
+  <Election name='Police Test' type='STV' date='2016-05-04'>
+    <Constituency number='36' name='Warwickshire' electorate='422163' paId='547' boundaryChange='false'>
+      <Candidate firstName='Mary' surname='Jeremy Test' sex='F' paId='3147'>
+        <Party name='Conservative' abbreviation='C' paId='1091'/>
+      </Candidate>
+      <Candidate firstName='Gillian' surname='Moss Test' sex='F' paId='3146'>
+        <Party name='Labour' abbreviation='Lab' paId='1092'/>
+      </Candidate>
+      <Candidate firstName='Clive' surname='Morris Test' sex='M' paId='3148'>
+        <Party name='Independent' abbreviation='Ind' paId='1095'/>
+      </Candidate>
+      <PreviousFirstRoundResultsSummary>
+        <Candidate firstName='James' surname='Plaskitt' sex='M' rushText='Labour former minister James Plaskitt' paId='2019' votes='22308'>
+          <Party name='Labour' abbreviation='Lab' paId='658'/>
+        </Candidate>
+        <Candidate firstName='Ron' surname='Ball' sex='M' paId='2207' votes='21410'>
+          <Party name='Independent' abbreviation='Ind' paId='659'/>
+        </Candidate>
+        <Candidate resultStatus='-' firstName='Fraser' surname='Pithie' sex='M' paId='2093' votes='20571'>
+          <Party name='Conservative' abbreviation='C' paId='660'/>
+        </Candidate>
+        <CandidatesElected>
+          <Candidate firstName='Ron' surname='Ball' sex='M' paId='2207'>
+            <Party name='Independent' abbreviation='Ind' paId='659'/>
+          </Candidate>
+        </CandidatesElected>
+      </PreviousFirstRoundResultsSummary>
+    </Constituency>
+  </Election>
+</ElectionNominations>
