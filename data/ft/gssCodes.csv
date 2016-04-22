@@ -1,0 +1,381 @@
+my_society_id,ons_id,name
+2650,S12000033,Aberdeen City Council
+2648,S12000034,Aberdeenshire Council
+2464,E07000223,Adur District Council
+2274,E07000026,Allerdale Borough Council
+2281,E07000032,Amber Valley Borough Council
+2550,S12000041,Angus Council
+2647,S12000035,Argyll and Bute Council
+2463,E07000224,Arun District Council
+2413,E07000170,Ashfield District Council
+2353,E07000105,Ashford Borough Council
+2258,E07000004,Aylesbury Vale District Council
+2441,E07000200,Babergh District Council
+2511,E09000002,Barking and Dagenham Borough Council
+2489,E09000003,Barnet Borough Council
+2513,E08000016,Barnsley Borough Council
+2276,E07000027,Barrow-in-Furness Borough Council
+2319,E07000066,Basildon Borough Council
+2327,E07000084,Basingstoke and Deane Borough Council
+2410,E07000171,Bassetlaw District Council
+2551,E06000022,Bath and North East Somerset Council
+2253,E06000055,Bedford Borough Council
+2494,E09000004,Bexley Borough Council
+2514,E08000025,Birmingham City Council
+2376,E07000129,Blaby District Council
+2552,E06000008,Blackburn with Darwen Borough Council
+2553,E06000009,Blackpool Borough Council
+2554,W06000019,Blaenau Gwent Council
+2282,E07000033,Bolsover District Council
+2515,E08000001,Bolton Borough Council
+2382,E07000136,Boston Borough Council
+2555,E06000028,Bournemouth Borough Council
+2556,E06000036,Bracknell Forest Council
+2516,E08000032,Bradford City Council
+2317,E07000067,Braintree District Council
+2390,E07000143,Breckland District Council
+2488,E09000005,Brent Borough Council
+2309,E07000068,Brentwood Borough Council
+2592,W06000013,Bridgend Council
+2614,E06000043,Brighton and Hove City Council
+2561,E06000023,Bristol City Council
+2626,E07000144,Broadland District Council
+2482,E09000006,Bromley Council
+2477,E07000234,Bromsgrove District Council
+2340,E07000095,Broxbourne Borough Council
+2415,E07000172,Broxtowe Borough Council
+2371,E07000117,Burnley Borough Council
+2517,E08000002,Bury Borough Council
+2558,W06000018,Caerphilly Council
+2518,E08000033,Calderdale Borough Council
+2263,E07000008,Cambridge City Council
+2505,E09000007,Camden Borough Council
+2438,E07000192,Cannock Chase District Council
+2354,E07000106,Canterbury City Council
+2639,W06000015,Cardiff Council
+2272,E07000028,Carlisle City Council
+2604,W06000010,Carmarthenshire Council
+2320,E07000069,Castle Point Borough Council
+21070,E06000056,Central Bedfordshire Council
+2640,W06000008,Ceredigion Council
+2377,E07000130,Charnwood Borough Council
+2314,E07000070,Chelmsford City Council
+2326,E07000078,Cheltenham Borough Council
+2419,E07000177,Cherwell District Council
+21069,E06000049,Cheshire East Council
+21068,E06000050,Cheshire West and Chester Council
+2284,E07000034,Chesterfield Borough Council
+2465,E07000225,Chichester District Council
+2257,E07000005,Chiltern District Council
+2362,E07000118,Chorley Borough Council
+2292,E07000048,Christchurch Borough Council
+2651,S12000036,City of Edinburgh Council
+2512,E09000001,City of London Corporation
+2625,E06000014,City of York Council
+2569,S12000005,Clackmannanshire Council
+2315,E07000071,Colchester Borough Council
+2646,S12000013,Comhairle nan Eilean Siar
+2570,W06000003,Conwy Council
+2271,E07000029,Copeland Borough Council
+2398,E07000150,Corby Borough Council
+2250,E06000052,Cornwall Council
+2322,E07000079,Cotswold District Council
+2520,E08000026,Coventry City Council
+2405,E07000163,Craven District Council
+2469,E07000226,Crawley Borough Council
+2481,E09000008,Croydon Borough Council
+2341,E07000096,Dacorum Borough Council
+2572,E06000005,Darlington Borough Council
+2358,E07000107,Dartford Borough Council
+2394,E07000151,Daventry District Council
+2602,W06000004,Denbighshire Council
+2562,E06000015,Derby City Council
+2283,E07000035,Derbyshire Dales District Council
+2521,E08000017,Doncaster Borough Council
+2355,E07000108,Dover District Council
+2522,E08000027,Dudley Borough Council
+2656,S12000006,Dumfries and Galloway Council
+2573,S12000042,Dundee City Council
+2223,E06000047,Durham County Council
+2484,E09000009,Ealing Borough Council
+2574,S12000008,East Ayrshire Council
+2307,E07000061,Eastbourne Borough Council
+2261,E07000009,East Cambridgeshire District Council
+2286,E07000040,East Devon District Council
+2294,E07000049,East Dorset District Council
+2575,S12000045,East Dunbartonshire Council
+2330,E07000085,East Hampshire District Council
+2342,E07000242,East Hertfordshire District Council
+2329,E07000086,Eastleigh Borough Council
+2384,E07000137,East Lindsey District Council
+2652,S12000010,East Lothian Council
+2393,E07000152,East Northamptonshire District Council
+2576,S12000011,East Renfrewshire Council
+2577,E06000011,East Riding of Yorkshire Council
+2437,E07000193,East Staffordshire Borough Council
+2275,E07000030,Eden District Council
+2455,E07000207,Elmbridge Borough Council
+2495,E09000010,Enfield Borough Council
+2311,E07000072,Epping Forest District Council
+2457,E07000208,Epsom and Ewell Borough Council
+2279,E07000036,Erewash Borough Council
+2290,E07000041,Exeter City Council
+2578,S12000014,Falkirk Council
+2335,E07000087,Fareham Borough Council
+2259,E07000010,Fenland District Council
+2649,S12000015,Fife Council
+2605,W06000005,Flintshire Council
+2444,E07000201,Forest Heath District Council
+2321,E07000080,Forest of Dean District Council
+2365,E07000119,Fylde Borough Council
+2523,E08000037,Gateshead Borough Council
+2412,E07000173,Gedling Borough Council
+2579,S12000046,Glasgow City Council
+2325,E07000081,Gloucester City Council
+2334,E07000088,Gosport Borough Council
+2359,E07000109,Gravesham Borough Council
+2387,E07000145,Great Yarmouth Borough Council
+2493,E09000011,Greenwich Borough Council
+2452,E07000209,Guildford Borough Council
+2638,W06000002,Gwynedd Council
+2508,E09000012,Hackney Borough Council
+2580,E06000006,Halton Borough Council
+2409,E07000164,Hambleton District Council
+2502,E09000013,Hammersmith and Fulham Borough Council
+2375,E07000131,Harborough District Council
+2509,E09000014,Haringey Borough Council
+2318,E07000073,Harlow District Council
+2407,E07000165,Harrogate Borough Council
+2487,E09000015,Harrow Borough Council
+2333,E07000089,Hart District Council
+2581,E06000001,Hartlepool Borough Council
+2308,E07000062,Hastings Borough Council
+2336,E07000090,Havant Borough Council
+2485,E09000016,Havering Borough Council
+2571,E06000019,Herefordshire Council
+2339,E07000098,Hertsmere Borough Council
+2643,S12000017,Highland Council
+2277,E07000037,High Peak Borough Council
+2486,E09000017,Hillingdon Borough Council
+2372,E07000132,Hinckley and Bosworth Borough Council
+2467,E07000227,Horsham District Council
+2483,E09000018,Hounslow Borough Council
+2563,E06000010,Hull City Council
+2262,E07000011,Huntingdonshire District Council
+2370,E07000120,Hyndburn Borough Council
+2582,S12000018,Inverclyde Council
+2446,E07000202,Ipswich Borough Council
+2637,W06000001,Isle of Anglesey Council
+2636,E06000046,Isle of Wight Council
+2251,E06000053,Isles of Scilly
+2507,E09000019,Islington Borough Council
+2503,E09000020,Kensington and Chelsea Borough Council
+2396,E07000153,Kettering Borough Council
+2389,E07000146,King's Lynn and West Norfolk Borough Council
+2480,E09000021,Kingston upon Thames Borough Council
+2524,E08000034,Kirklees Borough Council
+2525,E08000011,Knowsley Borough Council
+2490,E09000022,Lambeth Borough Council
+2361,E07000121,Lancaster City Council
+2526,E08000035,Leeds City Council
+2564,E06000016,Leicester City Council
+2304,E07000063,Lewes District Council
+2492,E09000023,Lewisham Borough Council
+2434,E07000194,Lichfield District Council
+2385,E07000138,Lincoln City Council
+2527,E08000012,Liverpool City Council
+2583,E06000032,Luton Borough Council
+2356,E07000110,Maidstone Borough Council
+2316,E07000074,Maldon District Council
+2474,E07000235,Malvern Hills District Council
+2528,E08000003,Manchester City Council
+2416,E07000174,Mansfield District Council
+2584,E06000035,Medway Council
+2374,E07000133,Melton Borough Council
+2428,E07000187,Mendip District Council
+2585,W06000024,Merthyr Tydfil Council
+2500,E09000024,Merton Borough Council
+2289,E07000042,Mid Devon District Council
+2586,E06000002,Middlesbrough Council
+2587,S12000019,Midlothian Council
+2445,E07000203,Mid Suffolk District Council
+2466,E07000228,Mid Sussex District Council
+2588,E06000042,Milton Keynes Council
+2454,E07000210,Mole Valley District Council
+2603,W06000021,Monmouthshire Council
+2644,S12000020,Moray Council
+2560,W06000012,Neath Port Talbot Council
+2414,E07000175,Newark and Sherwood District Council
+2435,E07000195,Newcastle-under-Lyme Borough Council
+2529,E08000021,Newcastle upon Tyne City Council
+2328,E07000091,New Forest District Council
+2510,E09000025,Newham Borough Council
+2559,W06000022,Newport Council
+2397,E07000154,Northampton Borough Council
+2654,S12000021,North Ayrshire Council
+2285,E07000043,North Devon Council
+2295,E07000050,North Dorset District Council
+2280,E07000038,North East Derbyshire District Council
+2589,E06000012,North East Lincolnshire Council
+2345,E07000099,North Hertfordshire District Council
+2383,E07000139,North Kesteven District Council
+2590,S12000044,North Lanarkshire Council
+2591,E06000013,North Lincolnshire Council
+2386,E07000147,North Norfolk District Council
+2642,E06000024,North Somerset Council
+2530,E08000022,North Tyneside Borough Council
+2248,E06000057,Northumberland County Council
+2458,E07000218,North Warwickshire Borough Council
+2373,E07000134,North West Leicestershire District Council
+2391,E07000148,Norwich City Council
+2565,E06000018,Nottingham City Council
+2462,E07000219,Nuneaton and Bedworth Borough Council
+2378,E07000135,Oadby and Wigston Borough Council
+2531,E08000004,Oldham Borough Council
+2645,S12000023,Orkney Islands Council
+2421,E07000178,Oxford City Council
+2641,W06000009,Pembrokeshire Council
+2368,E07000122,Pendle Borough Council
+2593,S12000024,Perth and Kinross Council
+2566,E06000031,Peterborough City Council
+2658,E06000026,Plymouth City Council
+2594,E06000029,Poole Borough Council
+2657,E06000044,Portsmouth City Council
+2595,W06000023,Powys Council
+2366,E07000123,Preston City Council
+2291,E07000051,Purbeck District Council
+2596,E06000038,Reading Borough Council
+2497,E09000026,Redbridge Borough Council
+2597,E06000003,Redcar and Cleveland Borough Council
+2479,E07000236,Redditch Borough Council
+2453,E07000211,Reigate and Banstead Borough Council
+2598,S12000038,Renfrewshire Council
+2599,W06000016,Rhondda Cynon Taf Council
+2369,E07000124,Ribble Valley Borough Council
+2406,E07000166,Richmondshire District Council
+2499,E09000027,Richmond upon Thames Borough Council
+2532,E08000005,Rochdale Borough Council
+2310,E07000075,Rochford District Council
+2364,E07000125,Rossendale Borough Council
+2305,E07000064,Rother District Council
+2533,E08000018,Rotherham Borough Council
+2459,E07000220,Rugby Borough Council
+2451,E07000212,Runnymede Borough Council
+2411,E07000176,Rushcliffe Borough Council
+2337,E07000092,Rushmoor Borough Council
+2600,E06000017,Rutland County Council
+2408,E07000167,Ryedale District Council
+2534,E08000006,Salford City Council
+2535,E08000028,Sandwell Borough Council
+2403,E07000168,Scarborough Borough Council
+2601,S12000026,Scottish Borders Council
+2431,E07000188,Sedgemoor District Council
+2536,E08000014,Sefton Borough Council
+2404,E07000169,Selby District Council
+2350,E07000111,Sevenoaks District Council
+2537,E08000019,Sheffield City Council
+2349,E07000112,Shepway District Council
+2653,S12000027,Shetland Islands Council
+2238,E06000051,Shropshire Council
+2606,E06000039,Slough Borough Council
+2538,E08000029,Solihull Borough Council
+2567,E06000045,Southampton City Council
+2655,S12000028,South Ayrshire Council
+2256,E07000006,South Bucks District Council
+2260,E07000012,South Cambridgeshire District Council
+2278,E07000039,South Derbyshire District Council
+2607,E06000033,Southend-on-Sea Borough Council
+2608,E06000025,South Gloucestershire Council
+2629,E07000044,South Hams District Council
+2381,E07000140,South Holland District Council
+2380,E07000141,South Kesteven District Council
+2273,E07000031,South Lakeland District Council
+2609,S12000029,South Lanarkshire Council
+2388,E07000149,South Norfolk District Council
+2392,E07000155,South Northamptonshire District Council
+2418,E07000179,South Oxfordshire District Council
+2363,E07000126,South Ribble Borough Council
+2430,E07000189,South Somerset District Council
+2433,E07000196,South Staffordshire District Council
+2539,E08000023,South Tyneside Borough Council
+2491,E09000028,Southwark Borough Council
+2456,E07000213,Spelthorne Borough Council
+2436,E07000197,Stafford Borough Council
+2432,E07000198,Staffordshire Moorlands District Council
+2343,E07000240,St Albans City Council
+2443,E07000204,St Edmundsbury Borough Council
+2347,E07000243,Stevenage Borough Council
+2541,E08000013,St Helens Borough Council
+2610,S12000030,Stirling Council
+2540,E08000007,Stockport Borough Council
+2611,E06000004,Stockton-on-Tees Borough Council
+2568,E06000021,Stoke-on-Trent City Council
+2461,E07000221,Stratford-on-Avon District Council
+2323,E07000082,Stroud District Council
+2442,E07000205,Suffolk Coastal District Council
+2542,E08000024,Sunderland City Council
+2450,E07000214,Surrey Heath Borough Council
+2498,E09000029,Sutton Borough Council
+2357,E07000113,Swale Borough Council
+2549,W06000011,Swansea Council
+2612,E06000030,Swindon Borough Council
+2543,E08000008,Tameside Borough Council
+2439,E07000199,Tamworth Borough Council
+2448,E07000215,Tandridge District Council
+2429,E07000190,Taunton Deane Borough Council
+2287,E07000045,Teignbridge District Council
+2613,E06000020,Telford and Wrekin Council
+2312,E07000076,Tendring District Council
+2332,E07000093,Test Valley Borough Council
+2324,E07000083,Tewkesbury Borough Council
+2352,E07000114,Thanet District Council
+2338,E07000102,Three Rivers District Council
+2615,E06000034,Thurrock Borough Council
+2351,E07000115,Tonbridge and Malling Borough Council
+2617,E06000027,Torbay Borough Council
+2616,W06000020,Torfaen Council
+2630,E07000046,Torridge District Council
+2506,E09000030,Tower Hamlets Borough Council
+2544,E08000009,Trafford Borough Council
+2348,E07000116,Tunbridge Wells Borough Council
+2313,E07000077,Uttlesford District Council
+2557,W06000014,Vale of Glamorgan Council
+2417,E07000180,Vale of White Horse District Council
+2545,E08000036,Wakefield City Council
+2546,E08000030,Walsall Borough Council
+2496,E09000031,Waltham Forest Borough Council
+2501,E09000032,Wandsworth Borough Council
+2618,E06000007,Warrington Borough Council
+2460,E07000222,Warwick District Council
+2346,E07000103,Watford Borough Council
+2440,E07000206,Waveney District Council
+2447,E07000216,Waverley Borough Council
+2306,E07000065,Wealden District Council
+2395,E07000156,Wellingborough Borough Council
+2344,E07000241,Welwyn Hatfield Borough Council
+2619,E06000037,West Berkshire Council
+2288,E07000047,West Devon Borough Council
+2293,E07000052,West Dorset District Council
+2620,S12000039,West Dunbartonshire Council
+2360,E07000127,West Lancashire Borough Council
+2379,E07000142,West Lindsey District Council
+2621,S12000040,West Lothian Council
+2504,E09000033,Westminster City Council
+2420,E07000181,West Oxfordshire District Council
+2427,E07000191,West Somerset District Council
+2296,E07000053,Weymouth and Portland Borough Council
+2547,E08000010,Wigan Borough Council
+2245,E06000054,Wiltshire Council
+2331,E07000094,Winchester City Council
+2622,E06000040,Windsor and Maidenhead Council
+2548,E08000015,Wirral Borough Council
+2449,E07000217,Woking Borough Council
+2623,E06000041,Wokingham Borough Council
+2519,E08000031,Wolverhampton City Council
+2478,E07000237,Worcester City Council
+2468,E07000229,Worthing Borough Council
+2624,W06000006,Wrexham Council
+2476,E07000238,Wychavon District Council
+2255,E07000007,Wycombe District Council
+2367,E07000128,Wyre Borough Council
+2475,E07000239,Wyre Forest District Council
