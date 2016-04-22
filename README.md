@@ -4,9 +4,9 @@ Items for the UK EU Referendum results, June 2016.
 
 ## dependencies
 
-* csvkit
-* jq
-* pup
+* [csvkit](https://csvkit.readthedocs.org/en/0.9.1/)
+* [jq](https://stedolan.github.io/jq/)
+* [pup](https://github.com/ericchiang/pup)
 
 ## (future) contents
 
