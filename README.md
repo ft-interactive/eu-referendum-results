@@ -2,6 +2,12 @@
 
 Items for the UK EU Referendum results, June 2016.
 
+## dependencies
+
+* csvkit
+* jq
+* pup
+
 ## (future) contents
 
 * Press Association data scraper/cleaner
