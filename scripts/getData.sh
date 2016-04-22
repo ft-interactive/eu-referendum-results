@@ -28,3 +28,15 @@ rm data/ft/gssCodes.csv
 rm data/ft/gssCodes2.csv
 rm data/ft/paCodes.csv
 rm data/ft/paCodes2.csv
+
+#make detail pages
+mkdir site
+mkdir site/area
+touch site/index.md
+touch site/area/index.md
+for area in $(csvcut -c 4 data/ft/lookup.csv | sed s/" "/"-"/g | sed s/"\'"//g | tr '[:upper:]' '[:lower:]')
+do
+	echo $area
+	mkdir site/area/$area
+	touch site/area/$area/index.md
+done
