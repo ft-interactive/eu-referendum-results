@@ -1,0 +1,381 @@
+CODE,NAME
+E07000007,Wycombe District
+E07000006,South Bucks District
+E07000005,Chiltern District
+E07000004,Aylesbury Vale District
+E07000010,Fenland District
+E07000012,South Cambridgeshire District
+E07000009,East Cambridgeshire District
+E07000011,Huntingdonshire District
+E07000008,Cambridge District (B)
+E07000029,Copeland District (B)
+E07000028,Carlisle District (B)
+E07000031,South Lakeland District
+E07000026,Allerdale District (B)
+E07000030,Eden District
+E07000027,Barrow-in-Furness District (B)
+E07000037,High Peak District (B)
+E07000039,South Derbyshire District
+E07000036,Erewash District (B)
+E07000038,North East Derbyshire District
+E07000032,Amber Valley District (B)
+E07000033,Bolsover District
+E07000035,Derbyshire Dales District
+E07000034,Chesterfield District (B)
+E07000043,North Devon District
+E07000040,East Devon District
+E07000045,Teignbridge District
+E07000047,West Devon District (B)
+E07000042,Mid Devon District
+E07000041,Exeter District (B)
+E07000051,Purbeck District
+E07000048,Christchurch District (B)
+E07000052,West Dorset District
+E07000049,East Dorset District
+E07000050,North Dorset District
+E07000053,Weymouth and Portland District (B)
+E07000063,Lewes District
+E07000064,Rother District
+E07000065,Wealden District
+E07000061,Eastbourne District (B)
+E07000062,Hastings District (B)
+E07000068,Brentwood District (B)
+E07000075,Rochford District
+E07000072,Epping Forest District
+E07000076,Tendring District
+E07000077,Uttlesford District
+E07000070,Chelmsford District (B)
+E07000071,Colchester District (B)
+E07000074,Maldon District (B)
+E07000067,Braintree District
+E07000073,Harlow District
+E07000066,Basildon District (B)
+E07000069,Castle Point District (B)
+E07000080,Forest of Dean District
+E07000079,Cotswold District
+E07000082,Stroud District
+E07000083,Tewkesbury District (B)
+E07000081,Gloucester District (B)
+E07000078,Cheltenham District (B)
+E07000084,Basingstoke and Deane District (B)
+E07000091,New Forest District
+E07000086,Eastleigh District (B)
+E07000085,East Hampshire District
+E07000094,Winchester District (B)
+E07000093,Test Valley District
+E07000089,Hart District
+E07000088,Gosport District (B)
+E07000087,Fareham District (B)
+E07000090,Havant District (B)
+E07000092,Rushmoor District (B)
+E07000102,Three Rivers District
+E07000098,Hertsmere District (B)
+E07000095,Broxbourne District (B)
+E07000096,Dacorum District (B)
+E07000242,East Hertfordshire District
+E07000240,St. Albans District (B)
+E07000241,Welwyn Hatfield District (B)
+E07000099,North Hertfordshire District
+E07000103,Watford District (B)
+E07000243,Stevenage District (B)
+E07000116,Tunbridge Wells District (B)
+E07000112,Shepway District
+E07000111,Sevenoaks District
+E07000115,Tonbridge and Malling District (B)
+E07000114,Thanet District
+E07000105,Ashford District (B)
+E07000106,Canterbury District (B)
+E07000108,Dover District
+E07000110,Maidstone District (B)
+E07000113,Swale District (B)
+E07000107,Dartford District (B)
+E07000109,Gravesham District (B)
+E07000127,West Lancashire District (B)
+E07000121,Lancaster District (B)
+E07000118,Chorley District (B)
+E07000126,South Ribble District (B)
+E07000125,Rossendale District (B)
+E07000119,Fylde District (B)
+E07000123,Preston District (B)
+E07000128,Wyre District (B)
+E07000122,Pendle District (B)
+E07000124,Ribble Valley District (B)
+E07000120,Hyndburn District (B)
+E07000117,Burnley District (B)
+E07000132,Hinckley and Bosworth District (B)
+E07000134,North West Leicestershire District
+E07000133,Melton District (B)
+E07000131,Harborough District
+E07000129,Blaby District
+E07000130,Charnwood District (B)
+E07000135,Oadby and Wigston District (B)
+E07000142,West Lindsey District
+E07000141,South Kesteven District
+E07000140,South Holland District
+E07000136,Boston District (B)
+E07000139,North Kesteven District
+E07000137,East Lindsey District
+E07000138,Lincoln District (B)
+E07000147,North Norfolk District
+E07000145,Great Yarmouth District (B)
+E07000149,South Norfolk District
+E07000146,King's Lynn and West Norfolk District (B)
+E07000143,Breckland District
+E07000148,Norwich District (B)
+E07000155,South Northamptonshire District
+E07000152,East Northamptonshire District
+E07000151,Daventry District
+E07000156,Wellingborough District (B)
+E07000153,Kettering District (B)
+E07000154,Northampton District (B)
+E07000150,Corby District (B)
+E07000168,Scarborough District (B)
+E07000169,Selby District
+E07000163,Craven District
+E07000166,Richmondshire District
+E07000165,Harrogate District (B)
+E07000167,Ryedale District
+E07000164,Hambleton District
+E07000171,Bassetlaw District
+E07000176,Rushcliffe District (B)
+E07000173,Gedling District (B)
+E07000170,Ashfield District
+E07000175,Newark and Sherwood District
+E07000172,Broxtowe District (B)
+E07000174,Mansfield District
+E07000180,Vale of White Horse District
+E07000179,South Oxfordshire District
+E07000177,Cherwell District
+E07000181,West Oxfordshire District
+E07000178,Oxford District (B)
+E07000191,West Somerset District
+E07000187,Mendip District
+E07000190,Taunton Deane District (B)
+E07000189,South Somerset District
+E07000188,Sedgemoor District
+E07000198,Staffordshire Moorlands District
+E07000196,South Staffordshire District
+E07000194,Lichfield District
+E07000195,Newcastle-under-Lyme District (B)
+E07000197,Stafford District (B)
+E07000193,East Staffordshire District (B)
+E07000192,Cannock Chase District
+E07000199,Tamworth District (B)
+E07000206,Waveney District
+E07000200,Babergh District
+E07000205,Suffolk Coastal District
+E07000204,St. Edmundsbury District (B)
+E07000201,Forest Heath District
+E07000203,Mid Suffolk District
+E07000202,Ipswich District (B)
+E07000216,Waverley District (B)
+E07000215,Tandridge District
+E07000217,Woking District (B)
+E07000214,Surrey Heath District (B)
+E07000212,Runnymede District (B)
+E07000209,Guildford District (B)
+E07000211,Reigate and Banstead District (B)
+E07000210,Mole Valley District
+E07000207,Elmbridge District (B)
+E07000213,Spelthorne District (B)
+E07000208,Epsom and Ewell District (B)
+E07000218,North Warwickshire District (B)
+E07000220,Rugby District (B)
+E07000222,Warwick District
+E07000221,Stratford-on-Avon District
+E07000219,Nuneaton and Bedworth District (B)
+E07000224,Arun District
+E07000223,Adur District
+E07000225,Chichester District
+E07000228,Mid Sussex District
+E07000227,Horsham District
+E07000229,Worthing District (B)
+E07000226,Crawley District (B)
+E07000235,Malvern Hills District
+E07000239,Wyre Forest District
+E07000238,Wychavon District
+E07000234,Bromsgrove District
+E07000237,Worcester District (B)
+E07000236,Redditch District (B)
+E09000021,Kingston upon Thames London Boro
+E09000008,Croydon London Boro
+E09000006,Bromley London Boro
+E09000018,Hounslow London Boro
+E09000009,Ealing London Boro
+E09000016,Havering London Boro
+E09000017,Hillingdon London Boro
+E09000015,Harrow London Boro
+E09000005,Brent London Boro
+E09000003,Barnet London Boro
+E09000022,Lambeth London Boro
+E09000028,Southwark London Boro
+E09000023,Lewisham London Boro
+E09000011,Greenwich London Boro
+E09000004,Bexley London Boro
+E09000010,Enfield London Boro
+E09000031,Waltham Forest London Boro
+E09000026,Redbridge London Boro
+E09000029,Sutton London Boro
+E09000027,Richmond upon Thames London Boro
+E09000024,Merton London Boro
+E09000032,Wandsworth London Boro
+E09000013,Hammersmith and Fulham London Boro
+E09000020,Kensington and Chelsea London Boro
+E09000033,City of Westminster London Boro
+E09000007,Camden London Boro
+E09000030,Tower Hamlets London Boro
+E09000019,Islington London Boro
+E09000012,Hackney London Boro
+E09000014,Haringey London Boro
+E09000025,Newham London Boro
+E09000002,Barking and Dagenham London Boro
+E09000001,City and County of the City of London
+E08000016,Barnsley District (B)
+E08000025,Birmingham District (B)
+E08000001,Bolton District (B)
+E08000032,Bradford District (B)
+E08000002,Bury District (B)
+E08000033,Calderdale District (B)
+E08000031,City of Wolverhampton District (B)
+E08000026,Coventry District (B)
+E08000017,Doncaster District (B)
+E08000027,Dudley District (B)
+E08000037,Gateshead District (B)
+E08000034,Kirklees District (B)
+E08000011,Knowsley District (B)
+E08000035,Leeds District (B)
+E08000012,Liverpool District (B)
+E08000003,Manchester District (B)
+E08000021,Newcastle upon Tyne District (B)
+E08000022,North Tyneside District (B)
+E08000004,Oldham District (B)
+E08000005,Rochdale District (B)
+E08000018,Rotherham District (B)
+E08000006,Salford District (B)
+E08000028,Sandwell District (B)
+E08000014,Sefton District (B)
+E08000019,Sheffield District (B)
+E08000029,Solihull District (B)
+E08000023,South Tyneside District (B)
+E08000007,Stockport District (B)
+E08000013,St. Helens District (B)
+E08000024,Sunderland District (B)
+E08000008,Tameside District (B)
+E08000009,Trafford District (B)
+E08000036,Wakefield District (B)
+E08000030,Walsall District (B)
+E08000010,Wigan District (B)
+E08000015,Wirral District (B)
+W06000011,Abertawe - Swansea
+S12000041,Angus
+E06000022,Bath and North East Somerset
+E06000055,Bedford (B)
+E06000008,Blackburn with Darwen (B)
+E06000009,Blackpool (B)
+W06000019,Blaenau Gwent - Blaenau Gwent
+E06000028,Bournemouth (B)
+E06000036,Bracknell Forest (B)
+W06000014,Bro Morgannwg - the Vale of Glamorgan
+W06000018,Caerffili - Caerphilly
+W06000022,Casnewydd - Newport
+W06000012,Castell-nedd Port Talbot - Neath Port Talbot
+E06000056,Central Bedfordshire
+E06000049,Cheshire East (B)
+E06000050,Cheshire West and Chester (B)
+E06000023,City of Bristol (B)
+E06000015,City of Derby (B)
+E06000010,City of Kingston upon Hull (B)
+E06000016,City of Leicester (B)
+E06000018,City of Nottingham (B)
+E06000031,City of Peterborough (B)
+E06000045,City of Southampton (B)
+E06000021,City of Stoke-on-Trent (B)
+S12000005,Clackmannanshire
+W06000003,Conwy - Conwy
+E06000047,County Durham
+E06000019,County of Herefordshire
+E06000005,Darlington (B)
+S12000042,Dundee City
+S12000008,East Ayrshire
+S12000045,East Dunbartonshire
+S12000011,East Renfrewshire
+E06000011,East Riding of Yorkshire
+S12000014,Falkirk
+S12000046,Glasgow City
+E06000006,Halton (B)
+E06000001,Hartlepool (B)
+S12000018,Inverclyde
+E06000032,Luton (B)
+E06000035,Medway (B)
+W06000024,Merthyr Tudful - Merthyr Tydfil
+E06000002,Middlesbrough (B)
+S12000019,Midlothian
+E06000042,Milton Keynes (B)
+E06000012,North East Lincolnshire (B)
+S12000044,North Lanarkshire
+E06000013,North Lincolnshire (B)
+W06000013,Pen-y-bont ar Ogwr - Bridgend
+S12000024,Perth and Kinross
+E06000029,Poole (B)
+W06000023,Powys - Powys
+E06000038,Reading (B)
+E06000003,Redcar and Cleveland (B)
+S12000038,Renfrewshire
+W06000016,Rhondda Cynon Taf - Rhondda Cynon Taf
+E06000017,Rutland
+S12000026,Scottish Borders
+E06000051,Shropshire
+W06000004,Sir Ddinbych - Denbighshire
+W06000010,Sir Gaerfyrddin - Carmarthenshire
+W06000005,Sir y Fflint - Flintshire
+E06000039,Slough (B)
+E06000033,Southend-on-Sea (B)
+E06000025,South Gloucestershire
+S12000029,South Lanarkshire
+S12000030,Stirling
+E06000004,Stockton-on-Tees (B)
+E06000030,Swindon (B)
+E06000020,Telford and Wrekin (B)
+E06000043,The City of Brighton and Hove (B)
+E06000034,Thurrock (B)
+W06000020,Tor-faen - Torfaen
+E06000027,Torbay (B)
+E06000007,Warrington (B)
+E06000037,West Berkshire
+S12000039,West Dunbartonshire
+S12000040,West Lothian
+E06000054,Wiltshire
+E06000040,Windsor and Maidenhead (B)
+E06000041,Wokingham (B)
+W06000006,Wrecsam - Wrexham
+E06000014,York (B)
+E07000144,Broadland District
+E07000044,South Hams District
+E07000046,Torridge District
+E06000046,Isle of Wight
+W06000001,Sir Ynys Mon - Isle of Anglesey
+W06000002,Gwynedd - Gwynedd
+W06000015,Caerdydd - Cardiff
+W06000008,Sir Ceredigion - Ceredigion
+W06000021,Sir Fynwy - Monmouthshire
+W06000009,Sir Benfro - Pembrokeshire
+E06000024,North Somerset
+S12000017,Highland
+S12000020,Moray
+S12000023,Orkney Islands
+S12000013,Na h-Eileanan an Iar
+S12000035,Argyll and Bute
+S12000034,Aberdeenshire
+S12000015,Fife
+S12000033,Aberdeen City
+S12000036,City of Edinburgh
+S12000010,East Lothian
+S12000027,Shetland Islands
+S12000021,North Ayrshire
+S12000006,Dumfries and Galloway
+E06000044,City of Portsmouth (B)
+E06000026,City of Plymouth (B)
+S12000028,South Ayrshire
+E06000057,Northumberland
+E06000052,Cornwall
+E06000053,Isles of Scilly

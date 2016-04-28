@@ -16,7 +16,7 @@ cat data/ft/paCodes.csv | sed s/"Anglesey"/"Isle of Anglesey"/1 | sed s/"Comhair
 
 #Add Gibraltar and Northern Ireland to GSS dataset
 echo "9999,G99999999,Gibraltar" >>data/ft/gssCodes2.csv
-echo "8888,N88888888,Northern Ireland" >>data/ft/gssCodes2.csv
+echo "8888,N92000002,Northern Ireland" >>data/ft/gssCodes2.csv
 
 #join datasets and clean up column order to make master lookup
 csvjoin -c 2,3 data/ft/paCodes2.csv data/ft/gssCodes2.csv | csvcut -c 1,4,3,2 | csvsort -c 4 >data/ft/lookup.csv
@@ -38,3 +38,8 @@ do
 	mkdir site/area/$area
 	touch site/area/$area/index.md
 done
+
+#get NOMIS populatiuon data for local authorities and regions
+curl -s https://www.nomisweb.co.uk/query/getFile.aspx?filename=185384310.csv 
+cat data/ons/areapop.csv | tail -n +7 | grep -v "^$" | sed s/".*\:"/\"/g | csvcut -c 2,1,3- | sed s/"mnemonic"/"code"/1 >data/ft/populations.csv
+
