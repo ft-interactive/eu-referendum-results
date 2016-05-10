@@ -30,7 +30,7 @@ This is the main element of the results page and remains stuck to the top of the
 
 ## What is included in this data?
 
-The map serves two 
+The map serves two purposes: show any emerging geographical pattern, and to show at a glance which voting areas have not yet delivered their results.
 
 ![Map](img/map.png)
 
