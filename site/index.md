@@ -23,7 +23,17 @@ twitterCopy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 
 Big number: XX% vote [Remain/Leave]
 
-![Map](img/mainbar.png)
+![Mainbar](img/mainbar.png)
+
+## How are the markets reacting?
+
+###GBP-EUR
+![GBPEUR](img/gbpeur.png)
+[Tearsheet](http://markets.ft.com/research/Markets/Tearsheets/Summary?s=EURGBP)
+
+###GBP-USD
+![GBPEUR](img/gbpusd.png)
+[Tearsheet](http://markets.ft.com/research/Markets/Tearsheets/Summary?s=USDGBP)
 
 ## What is included in this data?
 
@@ -33,9 +43,11 @@ x of 382 voting areas have reported their results, accounting for about y% of th
 
 ## What is the regional breakdown of the vote (so far)
 
-![Regional bar charts](img/recent.png)
+![Regional bar charts](img/regional.png)
 
 ## What are the most recently-added results?
+
+During the count, this section shows the x most recently-added local results, where x is controllable from Bertha. When x or fewer areas remain, the remaining areas are all displayed, with the unreported areas greyed out. This will allow us to highlight contested or uncertain areas if this occurs. This section will disappear when all areas are accounted for.
 
 ![Local version of bar chart showing x recent results](img/recent.png)
 
