@@ -1,0 +1,10 @@
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+*.log
+
+node_modules
+npm-debug.log
+
+dump.rdb
+bundle.js
