@@ -43,7 +43,7 @@
       </a>
     </header>
     <main class="article" role="main">
-        <h1 class="article__headline--mega">PIES!</h1>
+        <h1 class="article__headline--mega">TABLE!</h1>
     </main>
     <div class="chart"></div>
 	<footer class="o-footer o-footer--theme-light" data-o-component="o-footer">
@@ -136,7 +136,27 @@
 
     
     d3.json('dummyresult/regional.json',function(regionaldata){
-      d3.select('.chart')
+        var width = 600, height = 20;
+        d3.select('.chart')
+            .append('table')
+                .attr('class','regional-results')
+                .selectAll('tr')
+            .data(regionaldata)
+                .enter()
+            .append('tr')
+                .attr('class','regional-result')
+            .call(function(rows){
+                rows.append('td')
+                    .text(function(d){
+                        console.log(d);
+                        return d.region_id;
+                    });
+                    
+                rows.append('td')
+                    .append('svg')
+                        .attr('width',width)
+                        .attr('height',height)
+            })            
     })
 
 </script>
