@@ -2,23 +2,21 @@ console.log('regional results');
 
 d3.json('dummyresult/regional.json', drawRegionalResultTable);
 
-function drawRegionalResultTable(results){
+function drawRegionalResultTable(results) {
+
+	var max = d3.max(results, function (d) {
+		return Math.abs(d.remain_abs - d.leave_abs);
+	})
+
 	var color = d3.scale.linear()
-	    .domain([-10, 0, 10])
+	    .domain([-max, 0, max])
 	    .range(["blue", "cyan", "green"]);
-	 
-	// color(-1)   // "#ff0000" red
-	// color(-0.5) // "#ff8080" pinkish
-	// color(0)    // "#ffffff" white
-	// color(0.5)  // "#80c080" getting greener
-	// color(0.7)  // "#4da64d" almost there..
-	// color(1)    // "#008000" totally green!
 
 	d3.select('.regional-result')
 		.append('table')
 		.selectAll('tr')
 		.data(results.sort(function (first, second) {
-			return (second.remain_pct - second.leave_pct) - (first.remain_pct - first.leave_pct)
+			return (second.remain_abs - second.leave_abs) - (first.remain_abs - first.leave_abs)
 		}))
 		.call(function(join){
 			console.log('join', join.enter())
@@ -51,36 +49,32 @@ function drawRegionalResultTable(results){
 				})
 				.append('div')
 				.attr('class', function (d) {
-					return d.remain_pct - d.leave_pct > 0 ? 'push-right' : 'push-left';
+					return d.remain_pct - d.leave_pct > 0 ? 'result-text push-right' : 'result-text push-left';
 				})
 				.text(function (d) {
-					return Math.abs(d.remain_abs - d.leave_abs).toLocaleString();
+					return 'remain: ' +  d.remain_abs.toLocaleString()
+						 + ' leave:' + d.leave_abs.toLocaleString()
+						 + ' diff:' + Math.abs(d.remain_abs - d.leave_abs).toLocaleString()
+						 + ' remain_pct:' + d.remain_pct.toLocaleString()
+						 + ' leave_pct:' + d.leave_pct.toLocaleString()
+						 + ' diff_pct:' + Math.abs(d.remain_pct - d.leave_pct).toLocaleString();
 				});
 
 			difference
 				.append('li')
 				.attr('class', function (d) {
-					return d.remain_pct - d.leave_pct > 0 ? 'right-item item' : 'left-item item' ;
+					return d.remain_abs - d.leave_abs > 0 ? 'right-item item' : 'left-item item' ;
 				})
 				.append('div')
 				.attr('class', function (d) {
-					return d.remain_pct - d.leave_pct > 0 ? 'result-bar push-left' : 'result-bar push-right';
+					return d.remain_abs - d.leave_abs > 0 ? 'result-bar push-left' : 'result-bar push-right';
 				})
 				.style('background', function (d) {
-					return color(d.remain_pct - d.leave_pct);
+					return color(d.remain_abs - d.leave_abs);
 				})
 				.style('width', function (d) {
-					return Math.abs(d.remain_pct - d.leave_pct) + '%'
+					return Math.abs((d.remain_abs - d.leave_abs)/max)*100 + '%'
 				});
-
-			// differenceCell
-			// 	.append('div')
-			// 	.attr('class', function (d) {
-			// 		return d.remain_pct - d.leave_pct > 0 ? 'right_bar' : 'left_bar'
-			// 	})
-			// 	.style('width', function (d) {
-			// 		return Math.abs(d.remain_pct - d.leave_pct) + '%'
-			// 	});
 		});
 		
 }
