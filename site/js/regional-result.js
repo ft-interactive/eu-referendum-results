@@ -1,8 +1,16 @@
 
 // What % of the td do we want the bars to take up
 var BAR_WIDTH = 100;
+var REGIONS;
 
-d3.json('dummyresult/regional.json', drawRegionalResultTable);
+d3.csv('../data/ons/regions.csv', function (csv) {
+
+	REGIONS = csv;
+
+	d3.json('dummyresult/regional.json', drawRegionalResultTable);
+})
+
+
 
 function drawRegionalResultTable(results) {
 
@@ -23,8 +31,7 @@ function drawRegionalResultTable(results) {
 	    .domain([min, min/NARROW_PCT, max/NARROW_PCT, max])
 	    .range([LEAVE_COLOR, LEAVE_NARROW_COLOR, STAY_NARROW_COLOR, STAY_COLOR]);
 
-	var table = d3.select('.regional-result')
-		.append('table');
+	var table = d3.select('.regional-result').append('table');
 
 	table
 		.selectAll('tr')
@@ -38,7 +45,10 @@ function drawRegionalResultTable(results) {
 				.attr('width', '30%')
 				.attr('class', 'region')
 				.text(function (d) {
-					return d.region_id;
+					var region = REGIONS.find(function (region) {
+						return region.id === d.region_id;
+					});
+					return region.name;
 				});
 
 			rows.append('td')
@@ -59,7 +69,7 @@ function drawRegionalResultTable(results) {
 			difference
 				.append('li')
 				.attr('class', 'buffer');
-				
+
 			difference
 				.append('li')
 				.attr('class', function (d) {
@@ -88,7 +98,6 @@ function drawRegionalResultTable(results) {
 				.style('width', function (d) {
 					return Math.abs((d.remain_abs - d.leave_abs)/maxAbsolute)*BAR_WIDTH + '%'
 				});
-	
 			}
 		);
 }
