@@ -1,0 +1,17 @@
+table {
+	border: 1px solid black;
+	width: 500px;
+}
+
+tr {
+	background: pink;
+}
+
+.right_bar {
+	background: blue;
+	height: 20px;
+}
+.left_bar {
+	background: green;
+	height: 20px;
+}

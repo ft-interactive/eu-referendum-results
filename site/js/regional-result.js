@@ -14,7 +14,16 @@ function drawRegionalResultTable(results){
         .call(function(join){
         	console.log('join', join.enter())
 
-            var rows = join.enter().append('tr').text(function (d) {
+            var rows = join.enter()
+            .append('tr')
+            .append('div')
+            .style('width', function (d) {
+            	return Math.abs(d.leave_pct - d.remain_pct) + '%'
+            })
+            .attr('class', function (d) {
+            	return d.leave_pct - d.remain_pct > 0 ? 'right_bar' : 'left_bar'
+            })
+            .text(function (d) {
             	return d.leave_pct - d.remain_pct
             })
         });
