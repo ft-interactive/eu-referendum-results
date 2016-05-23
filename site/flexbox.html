@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<style type="text/css">
+
+		.container {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			
+			-webkit-flex-flow: nowrap;
+			justify-content: space-around;
+		}
+
+		.left-item {
+			order: 1;
+		}
+		.right-item {
+			order: 2;
+		}
+
+		.result-bar {
+			position: absolute;
+			background: blue;
+			display: inline-block;
+			height: 20px;
+		}
+		.result-text {
+			background: blue;
+			position: absolute;
+		}
+		.push-left {
+			left: 0;
+		}
+		.push-right {
+			right: 0;
+			text-align: right;
+		}
+		.regional-result {
+			background: white;
+		}
+
+		table {
+		    border-collapse: collapse;
+			width: 100%;
+		}
+
+		th, td {
+		    border: 1px solid #ccc;
+		}
+
+		.region {
+		}
+		.result {
+			text-align: center;
+		}
+		.difference {
+			padding: 0 10px;
+			font-weight: bold;
+			text-align: right;
+			display: inline-block;
+		}
+		.item {
+			position: relative;
+			width: 50%;
+		}
+	</style>
+</head>
+<body>
+	<table>
+
+
+		<tr>
+			<td width="30%" class="region">E12000009</td>
+			<td width="10%" class="result">STAY</td>
+			<td width="60%">
+				<ul class="container">
+					<li class="left-item item">
+						<div class="push-right">111728</div>
+					</li>
+					<li class="right-item item">
+						<div class="result-bar push-left" style="width: 17%;"></div>
+					</li>
+				</ul>
+			</td>
+		</tr>
+
+		<tr>
+			<td width="30%" class="region">E12000009</td>
+			<td width="10%" class="result">STAY</td>
+			<td width="60%">
+				<ul class="container">
+					<li class="right-item item">
+						<div class="push-left">111728</div>
+					</li>
+					<li class="left-item item">
+						<div class="result-bar push-right" style="width: 37%;"></div>
+					</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
