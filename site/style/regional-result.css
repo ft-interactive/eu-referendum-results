@@ -17,14 +17,15 @@ ul.container {
 
 .left-item {
 	order: 1;
+	border-right: 1px solid black;
 }
 .right-item {
 	order: 2;
+	border-left: 1px solid black;
 }
 
 .result-bar {
 	position: absolute;
-	background: blue;
 	display: inline-block;
 	height: 20px;
 	border: 1px solid black;

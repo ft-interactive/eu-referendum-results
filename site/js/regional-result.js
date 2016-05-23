@@ -3,7 +3,16 @@ console.log('regional results');
 d3.json('dummyresult/regional.json', drawRegionalResultTable);
 
 function drawRegionalResultTable(results){
-	var dataJoin = 
+	var color = d3.scale.linear()
+	    .domain([-10, 0, 10])
+	    .range(["blue", "cyan", "green"]);
+	 
+	// color(-1)   // "#ff0000" red
+	// color(-0.5) // "#ff8080" pinkish
+	// color(0)    // "#ffffff" white
+	// color(0.5)  // "#80c080" getting greener
+	// color(0.7)  // "#4da64d" almost there..
+	// color(1)    // "#008000" totally green!
 
 	d3.select('.regional-result')
 		.append('table')
@@ -45,7 +54,7 @@ function drawRegionalResultTable(results){
 					return d.remain_pct - d.leave_pct > 0 ? 'push-right' : 'push-left';
 				})
 				.text(function (d) {
-					return Math.abs(d.remain_abs - d.leave_abs);
+					return Math.abs(d.remain_abs - d.leave_abs).toLocaleString();
 				});
 
 			difference
@@ -56,6 +65,9 @@ function drawRegionalResultTable(results){
 				.append('div')
 				.attr('class', function (d) {
 					return d.remain_pct - d.leave_pct > 0 ? 'result-bar push-left' : 'result-bar push-right';
+				})
+				.style('background', function (d) {
+					return color(d.remain_pct - d.leave_pct);
 				})
 				.style('width', function (d) {
 					return Math.abs(d.remain_pct - d.leave_pct) + '%'
