@@ -1,19 +1,12 @@
 
 // What % of the td do we want the bars to take up
-var BAR_WIDTH = 70;
-var LEAVE_LABEL = 'LEAVE';
-var STAY_LABEL = 'STAY'
-var STAY_COLOR = '#093967'
-var LEAVE_COLOR = '#1F5F66'
-var LEAVE_NARROW_COLOR = '#6AADB3';
-var STAY_NARROW_COLOR = '#6386C4';
-var NARROW_PCT = 10; // Switch to NARROW_COLOR at 50% + NARROW_PCT
+var BAR_WIDTH = 100;
 
 d3.json('dummyresult/regional.json', drawRegionalResultTable);
 
 function drawRegionalResultTable(results) {
 
-	// Largest margin = widest bar
+	// maxAbsolute is the largest bar we have in either direction
 	var maxAbsolute = d3.max(results, function (d) {
 		return Math.abs(d.remain_abs - d.leave_abs);
 	});
@@ -32,18 +25,6 @@ function drawRegionalResultTable(results) {
 
 	var table = d3.select('.regional-result')
 		.append('table');
-
-	var headerRow = table
-		.append('tr')
-
-	headerRow
-		.append('th')
-		.attr('colspan', 2)
-		.text('Regional results');
-	headerRow
-		.append('th')
-		.attr('colspan', 2)
-		.text('Difference');
 
 	table
 		.selectAll('tr')
@@ -77,6 +58,10 @@ function drawRegionalResultTable(results) {
 
 			difference
 				.append('li')
+				.attr('class', 'buffer');
+				
+			difference
+				.append('li')
 				.attr('class', function (d) {
 					return d.remain_pct - d.leave_pct > 0 ? 'left-item item' : 'right-item item' ;
 				})
@@ -106,5 +91,4 @@ function drawRegionalResultTable(results) {
 	
 			}
 		);
-		
 }
