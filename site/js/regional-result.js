@@ -1,16 +1,34 @@
-console.log('regional results');
+
+// What % of the td do we want the bars to take up
+var BAR_WIDTH = 70;
+var LEAVE_LABEL = 'LEAVE';
+var STAY_LABEL = 'STAY'
+var STAY_COLOR = '#093967'
+var LEAVE_COLOR = '#1F5F66'
+var LEAVE_NARROW_COLOR = '#6AADB3';
+var STAY_NARROW_COLOR = '#6386C4';
+var NARROW_PCT = 10; // Switch to NARROW_COLOR at 50% + NARROW_PCT
 
 d3.json('dummyresult/regional.json', drawRegionalResultTable);
 
 function drawRegionalResultTable(results) {
 
-	var max = d3.max(results, function (d) {
+	// Largest margin = widest bar
+	var maxAbsolute = d3.max(results, function (d) {
 		return Math.abs(d.remain_abs - d.leave_abs);
-	})
+	});
+
+	var max = d3.max(results, function (d) {
+		return d.remain_abs - d.leave_abs;
+	});
+
+	var min = d3.min(results, function (d) {
+		return d.remain_abs - d.leave_abs;
+	});
 
 	var color = d3.scale.linear()
-	    .domain([-max, 0, max])
-	    .range(["blue", "cyan", "green"]);
+	    .domain([min, min/NARROW_PCT, max/NARROW_PCT, max])
+	    .range([LEAVE_COLOR, LEAVE_NARROW_COLOR, STAY_NARROW_COLOR, STAY_COLOR]);
 
 	d3.select('.regional-result')
 		.append('table')
@@ -18,9 +36,7 @@ function drawRegionalResultTable(results) {
 		.data(results.sort(function (first, second) {
 			return (second.remain_abs - second.leave_abs) - (first.remain_abs - first.leave_abs)
 		}))
-		.call(function(join){
-			console.log('join', join.enter())
-
+		.call(function(join) {
 			var rows = join.enter().append('tr');
 
 			rows.append('td')
@@ -33,8 +49,11 @@ function drawRegionalResultTable(results) {
 			rows.append('td')
 				.attr('width', '10%')
 				.attr('class', 'result')
+				.style('background', function (d) {
+					return color(d.remain_abs - d.leave_abs);
+				})
 				.text(function (d) {
-					return d.remain_abs > d.leave_abs ? 'STAY' : 'LEAVE';
+					return d.remain_abs > d.leave_abs ? STAY_LABEL : LEAVE_LABEL;
 				});
 
 			var difference = rows.append('td')
@@ -52,12 +71,7 @@ function drawRegionalResultTable(results) {
 					return d.remain_pct - d.leave_pct > 0 ? 'result-text push-right' : 'result-text push-left';
 				})
 				.text(function (d) {
-					return 'remain: ' +  d.remain_abs.toLocaleString()
-						 + ' leave:' + d.leave_abs.toLocaleString()
-						 + ' diff:' + Math.abs(d.remain_abs - d.leave_abs).toLocaleString()
-						 + ' remain_pct:' + d.remain_pct.toLocaleString()
-						 + ' leave_pct:' + d.leave_pct.toLocaleString()
-						 + ' diff_pct:' + Math.abs(d.remain_pct - d.leave_pct).toLocaleString();
+					return Math.abs(d.remain_abs - d.leave_abs).toLocaleString();
 				});
 
 			difference
@@ -73,8 +87,10 @@ function drawRegionalResultTable(results) {
 					return color(d.remain_abs - d.leave_abs);
 				})
 				.style('width', function (d) {
-					return Math.abs((d.remain_abs - d.leave_abs)/max)*100 + '%'
+					return Math.abs((d.remain_abs - d.leave_abs)/maxAbsolute)*BAR_WIDTH + '%'
 				});
-		});
+	
+			}
+		);
 		
 }

@@ -65,6 +65,7 @@ th, td {
 }
 .result {
 	text-align: center;
+	color: white;
 }
 .difference {
 	padding: 0 10px;
