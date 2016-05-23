@@ -30,8 +30,22 @@ function drawRegionalResultTable(results) {
 	    .domain([min, min/NARROW_PCT, max/NARROW_PCT, max])
 	    .range([LEAVE_COLOR, LEAVE_NARROW_COLOR, STAY_NARROW_COLOR, STAY_COLOR]);
 
-	d3.select('.regional-result')
-		.append('table')
+	var table = d3.select('.regional-result')
+		.append('table');
+
+	var headerRow = table
+		.append('tr')
+
+	headerRow
+		.append('th')
+		.attr('colspan', 2)
+		.text('Regional results');
+	headerRow
+		.append('th')
+		.attr('colspan', 2)
+		.text('Difference');
+
+	table
 		.selectAll('tr')
 		.data(results.sort(function (first, second) {
 			return (second.remain_abs - second.leave_abs) - (first.remain_abs - first.leave_abs)
