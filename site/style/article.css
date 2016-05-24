@@ -7,7 +7,8 @@ body {
   background-color: #fff1e0;
   margin: 0;
   border: 0;
-  font-family: MetricWeb, sans-serif; }
+  font-family: MetricWeb, sans-serif;
+}
 
 .o-header--light {
   border-bottom: 1px solid #e9decf; }
