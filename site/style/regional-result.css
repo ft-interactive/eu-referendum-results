@@ -14,7 +14,9 @@ table {
 	-ms-font-feature-settings: 'tnum';
 }
 
-div {
+.result-text {
+	line-height: 25px;
+	font-weight: 600;
 	font-family: MetricWeb, sans-serif;
 	font-size: 14px;
 	color: #505050;
@@ -101,11 +103,6 @@ ul.container {
 .right-item
 .result-text {
 	padding-left: 6px;
-}
-
-.result-text {
-	line-height: 25px;
-	font-weight: 600;
 }
 
 .push-left {
