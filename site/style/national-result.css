@@ -1,3 +1,6 @@
+.national-result {
+	background: white;
+}
 .national-container {
 	width: 100%;
 }
@@ -7,12 +10,8 @@
 	line-height: 35px;
 	font-size: 30px;
 	padding-left: 10px;
+    box-sizing: border-box;
 }
-
-.national-result {
-	background: white;
-}
-
 .winner {
 	font-size: 150%;
 }
