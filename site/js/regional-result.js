@@ -1,6 +1,3 @@
-
-// What % of the td do we want the bars to take up
-var BAR_WIDTH = 100;
 var REGION_NAMES;
 
 d3.csv('../data/ons/regions.csv', function (csv) {
@@ -85,7 +82,7 @@ function drawRegionalResultTable(results) {
 						return Math.abs(d.remain_abs - d.leave_abs);
 					});
 
-					return Math.abs((d.remain_abs - d.leave_abs)/maxAbsolute)*BAR_WIDTH + '%'
+					return Math.abs((d.remain_abs - d.leave_abs)/maxAbsolute) * 100 + '%'
 				});
 			
 			// Margin % column

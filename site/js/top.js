@@ -57,8 +57,6 @@ addScript('https://h2.ft.com/polyfill/v2/polyfill.min.js');
 // Shared variables
 var STAY_COLOR = '#093967';
 var LEAVE_COLOR = '#6AADB3';
-var STAY_ALT_COLOR = '#6386C4';
-var LEAVE_ALT_COLOR = '#1F5F66';
 var LEAVE_LABEL = 'LEAVE';
 var STAY_LABEL = 'STAY';
 var NARROW_PCT = 10; // Switch to NARROW_COLOR at 50% + NARROW_PCT
