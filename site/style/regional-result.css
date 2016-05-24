@@ -34,10 +34,12 @@ th {
 
 .region {
 	padding-left: 5px;
+	width: 30%;
 }
-.result,
+.margin,
 .turnout {
 	text-align: center;
+	width: 10%;
 }
 .difference {
 	padding: 0 10px;
@@ -51,7 +53,12 @@ th {
 	flex-basis: 50%;
 }
 
+.result {
+	width: 60%;
+}
+
 ul.container {
+
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -113,4 +120,12 @@ ul.container {
         opacity:0;
         visibility: collapse;       
     } 
+
+	.region {
+		width: 45%;
+	}
+
+    .result {
+    	width: 55%;
+    }
 }

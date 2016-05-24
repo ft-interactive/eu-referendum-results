@@ -20,7 +20,7 @@ function drawRegionalResultTable(results) {
 
 			// Region name
 			rows.append('td')
-				.attr('width', '30%')
+				// .attr('width', '30%')
 				.attr('class', 'region')
 				.text(function (d) {
 					var region = REGION_NAMES.find(function (region) {
@@ -31,15 +31,16 @@ function drawRegionalResultTable(results) {
 
 			// Margin % column
 			rows.append('td')
-				.attr('width', '10%')
-				.attr('class', 'result')
+				// .attr('width', '10%')
+				.attr('class', 'margin')
 				.text(function (d) {
 					return Math.round(Math.abs(d.remain_pct - d.leave_pct)) + '%';
 				});
 
 			// Result column
 			var difference = rows.append('td')
-				.attr('width', '60%')
+				.attr('class', 'result')
+				// .attr('width', '60%')
 				.append('ul')
 				.attr('class', 'container');
 
@@ -87,7 +88,7 @@ function drawRegionalResultTable(results) {
 			
 			// Turnout % column
 			rows.append('td')
-				.attr('width', '10%')
+				// .attr('width', '10%')
 				.attr('class', 'turnout')
 				.text(function (d) {
 					return Math.round(d.turnout_pct) + '%';
