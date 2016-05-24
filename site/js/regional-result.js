@@ -85,10 +85,10 @@ function drawRegionalResultTable(results) {
 					return Math.abs((d.remain_abs - d.leave_abs)/maxAbsolute) * 100 + '%'
 				});
 			
-			// Margin % column
+			// Turnout % column
 			rows.append('td')
 				.attr('width', '10%')
-				.attr('class', 'result')
+				.attr('class', 'turnout')
 				.text(function (d) {
 					return Math.round(d.turnout_pct) + '%';
 				});
@@ -112,5 +112,6 @@ function makeHeaders (table) {
 		.text('Difference')
 	row
 		.append('th')
+		.attr('class', 'turnout')
 		.text('Turnout')
 }
