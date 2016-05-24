@@ -2,7 +2,7 @@
 	background: white;
 }
 table {
-    border-collapse: collapse;
+	border-collapse: collapse;
 	width: 100%;
 	font-family: MetricWeb, sans-serif;
 	font-size: 14px;
@@ -20,9 +20,9 @@ div {
 }
 
 th, td {
-    border-bottom: 1px solid #ccc;
-    padding: 0;
-    margin: 0;
+	border-bottom: 1px solid #ccc;
+	padding: 0;
+	margin: 0;
 }
 
 th {
@@ -112,20 +112,20 @@ ul.container {
 }
 
 @media only screen and (max-device-width: 480px) {
-    th.turnout,
-    td.turnout {
-        display:none;
-        width:0;
-        height:0;
-        opacity:0;
-        visibility: collapse;       
-    } 
+	th.turnout,
+	td.turnout {
+		display:none;
+		width:0;
+		height:0;
+		opacity:0;
+		visibility: collapse;       
+	} 
 
 	.region {
 		width: 45%;
 	}
 
-    .result {
-    	width: 55%;
-    }
+	.result {
+		width: 55%;
+	}
 }
