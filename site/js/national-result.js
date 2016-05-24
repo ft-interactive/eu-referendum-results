@@ -21,22 +21,4 @@ function drawNationalResults(error, data) {
 		.text(LEAVE_LABEL + ' ' + Math.round(data.leave_pct) + '%')
 		.style('background-color', LEAVE_COLOR)
 		.style('width', data.leave_pct * MAX_BAR_WIDTH / winner  + '%');
-
-
-	// national
-	// 	.selectAll('div')
-	// 	.data(results)
-	// 	.text(function (d) {
-	// 		console.log('text',d)
-	// 		return d.leave_abs
-	// 	})
-		// .call(function(join) {
-		// 	console.log('join', join)
-		// 	join.enter()
-		// 		.append('div')
-		// 		.style('border', '1px solid red')
-				// .text(function (d) {
-				// 	return d.leave_abs
-				// })		
-		// });
 }
