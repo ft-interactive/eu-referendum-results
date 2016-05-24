@@ -1,16 +1,14 @@
 
 // What % of the td do we want the bars to take up
 var BAR_WIDTH = 100;
-var REGIONS;
+var REGION_NAMES;
 
 d3.csv('../data/ons/regions.csv', function (csv) {
 
-	REGIONS = csv;
+	REGION_NAMES = csv;
 
 	d3.json('dummyresult/regional.json', drawRegionalResultTable);
 })
-
-
 
 function drawRegionalResultTable(results) {
 
@@ -19,14 +17,13 @@ function drawRegionalResultTable(results) {
 		return Math.abs(d.remain_abs - d.leave_abs);
 	});
 
+	// Color domain
 	var max = d3.max(results, function (d) {
 		return d.remain_abs - d.leave_abs;
 	});
-
 	var min = d3.min(results, function (d) {
 		return d.remain_abs - d.leave_abs;
 	});
-
 	var color = d3.scale.linear()
 	    .domain([min, min/NARROW_PCT, max/NARROW_PCT, max])
 	    .range([LEAVE_COLOR, LEAVE_NARROW_COLOR, STAY_NARROW_COLOR, STAY_COLOR]);
@@ -41,16 +38,18 @@ function drawRegionalResultTable(results) {
 		.call(function(join) {
 			var rows = join.enter().append('tr');
 
+			// Region name
 			rows.append('td')
 				.attr('width', '30%')
 				.attr('class', 'region')
 				.text(function (d) {
-					var region = REGIONS.find(function (region) {
+					var region = REGION_NAMES.find(function (region) {
 						return region.id === d.region_id;
 					});
 					return region.name;
 				});
 
+			// LEAVE/REMAIN column
 			rows.append('td')
 				.attr('width', '10%')
 				.attr('class', 'result')
@@ -61,15 +60,18 @@ function drawRegionalResultTable(results) {
 					return d.remain_abs > d.leave_abs ? STAY_LABEL : LEAVE_LABEL;
 				});
 
+			// Result column
 			var difference = rows.append('td')
 				.attr('width', '60%')
 				.append('ul')
 				.attr('class', 'container');
 
+			// Space
 			difference
 				.append('li')
 				.attr('class', 'buffer');
 
+			// Margin in number
 			difference
 				.append('li')
 				.attr('class', function (d) {
@@ -83,6 +85,7 @@ function drawRegionalResultTable(results) {
 					return Math.abs(d.remain_abs - d.leave_abs).toLocaleString();
 				});
 
+			// Bar
 			difference
 				.append('li')
 				.attr('class', function (d) {
