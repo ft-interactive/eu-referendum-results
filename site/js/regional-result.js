@@ -4,34 +4,17 @@ var BAR_WIDTH = 100;
 var REGION_NAMES;
 
 d3.csv('../data/ons/regions.csv', function (csv) {
-
 	REGION_NAMES = csv;
 
 	d3.json('dummyresult/regional.json', drawRegionalResultTable);
 })
 
 function drawRegionalResultTable(results) {
-
-	// maxAbsolute is the largest bar we have in either direction
-	var maxAbsolute = d3.max(results, function (d) {
-		return Math.abs(d.remain_abs - d.leave_abs);
-	});
-
-	// Color domain
-	var max = d3.max(results, function (d) {
-		return d.remain_abs - d.leave_abs;
-	});
-	var min = d3.min(results, function (d) {
-		return d.remain_abs - d.leave_abs;
-	});
-	var color = d3.scale.linear()
-	    .domain([min, min/NARROW_PCT, max/NARROW_PCT, max])
-	    .range([LEAVE_COLOR, LEAVE_NARROW_COLOR, STAY_NARROW_COLOR, STAY_COLOR]);
-
 	var table = d3.select('.regional-result').append('table');
+	makeHeaders(table);
 
 	table
-		.selectAll('tr')
+		.selectAll('table>tr')
 		.data(results.sort(function (first, second) {
 			return (second.remain_abs - second.leave_abs) - (first.remain_abs - first.leave_abs)
 		}))
@@ -49,15 +32,12 @@ function drawRegionalResultTable(results) {
 					return region.name;
 				});
 
-			// LEAVE/REMAIN column
+			// Margin % column
 			rows.append('td')
 				.attr('width', '10%')
 				.attr('class', 'result')
-				.style('background', function (d) {
-					return color(d.remain_abs - d.leave_abs);
-				})
 				.text(function (d) {
-					return d.remain_abs > d.leave_abs ? STAY_LABEL : LEAVE_LABEL;
+					return Math.round(Math.abs(d.remain_pct - d.leave_pct)) + '%';
 				});
 
 			// Result column
@@ -66,12 +46,7 @@ function drawRegionalResultTable(results) {
 				.append('ul')
 				.attr('class', 'container');
 
-			// Space
-			difference
-				.append('li')
-				.attr('class', 'buffer');
-
-			// Margin in number
+			// Margin Absolute number
 			difference
 				.append('li')
 				.attr('class', function (d) {
@@ -96,11 +71,49 @@ function drawRegionalResultTable(results) {
 					return d.remain_abs - d.leave_abs > 0 ? 'result-bar push-left' : 'result-bar push-right';
 				})
 				.style('background', function (d) {
+
+					var color = d3.scale.threshold()
+					    .domain([0])
+					    .range([LEAVE_COLOR,STAY_COLOR]);
+
 					return color(d.remain_abs - d.leave_abs);
 				})
 				.style('width', function (d) {
+
+					// maxAbsolute is the largest bar we have in either direction
+					var maxAbsolute = d3.max(results, function (d) {
+						return Math.abs(d.remain_abs - d.leave_abs);
+					});
+
 					return Math.abs((d.remain_abs - d.leave_abs)/maxAbsolute)*BAR_WIDTH + '%'
+				});
+			
+			// Margin % column
+			rows.append('td')
+				.attr('width', '10%')
+				.attr('class', 'result')
+				.text(function (d) {
+					return Math.round(d.turnout_pct) + '%';
 				});
 			}
 		);
+}
+
+function makeHeaders (table) {
+	var row = table
+		.append('thead')
+		.append('tr');
+
+	row
+		.append('th')
+		.text('Region name')
+	row
+		.append('th')
+		.text('Margin')
+	row
+		.append('th')
+		.text('Difference')
+	row
+		.append('th')
+		.text('Turnout')
 }

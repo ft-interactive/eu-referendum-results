@@ -4,6 +4,10 @@ table {
 	font-family: MetricWeb, sans-serif;
 	font-size: 14px;
 	color: #505050;
+	margin: 20px 0;
+	-webkit-font-feature-settings: 'tnum';
+	-moz-font-feature-settings: 'tnum';
+	-ms-font-feature-settings: 'tnum';
 }
 
 div {
@@ -18,11 +22,18 @@ th, td {
     margin: 0;
 }
 
+th {
+/*	height: 25px;
+*/	background: #ddd;
+	font-weight: 500;
+	padding: 5px;
+}
+
 .region {
+	padding-left: 5px;
 }
 .result {
 	text-align: center;
-	color: white;
 }
 .difference {
 	padding: 0 10px;
@@ -33,7 +44,7 @@ th, td {
 .item {
 	position: relative;
 	height: 25px;
-	flex-basis: 40%;
+	flex-basis: 50%;
 }
 
 ul.container {
@@ -51,17 +62,12 @@ ul.container {
 	justify-content: space-around;
 }
 
-.buffer {
-	order: 1;
-	flex-grow: 2;
-	flex-basis: auto;
-}
 .left-item {
-	order: 2;
+	order: 1;
 	border-right: 1px solid black;
 }
 .right-item {
-	order: 3;
+	order: 2;
 	border-left: 1px solid black;
 }
 
