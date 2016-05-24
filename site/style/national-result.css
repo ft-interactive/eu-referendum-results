@@ -1,0 +1,18 @@
+.national-container {
+	width: 100%;
+}
+.total-bar {
+	height: 35px;
+	color: white;
+	line-height: 35px;
+	font-size: 30px;
+	padding-left: 10px;
+}
+
+.national-result {
+	background: white;
+}
+
+.winner {
+	font-size: 150%;
+}

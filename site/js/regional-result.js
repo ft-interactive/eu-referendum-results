@@ -16,6 +16,7 @@ function drawRegionalResultTable(results) {
 			return (second.remain_abs - second.leave_abs) - (first.remain_abs - first.leave_abs)
 		}))
 		.call(function(join) {
+			console.log('regional join', join)
 			var rows = join.enter().append('tr');
 
 			// Region name
