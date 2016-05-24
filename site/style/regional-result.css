@@ -1,6 +1,7 @@
 .regional-result {
 	background: white;
 }
+
 table {
 	border-collapse: collapse;
 	width: 100%;
@@ -26,8 +27,7 @@ th, td {
 }
 
 th {
-/*	height: 25px;
-*/	background: #ddd;
+	background: #ddd;
 	font-weight: 500;
 	padding: 5px;
 }
@@ -36,17 +36,20 @@ th {
 	padding-left: 5px;
 	width: 30%;
 }
+
 .margin,
 .turnout {
 	text-align: center;
 	width: 10%;
 }
+
 .difference {
 	padding: 0 10px;
 	font-weight: bold;
 	text-align: right;
 	display: inline-block;
 }
+
 .item {
 	position: relative;
 	height: 25px;
@@ -77,6 +80,7 @@ ul.container {
 	order: 1;
 	border-right: 1px solid black;
 }
+
 .right-item {
 	order: 2;
 	border-left: 1px solid black;
@@ -88,6 +92,7 @@ ul.container {
 	height: 21px;
 	margin: 2px 0;
 }
+
 .left-item
 .result-text {
 	padding-right: 6px;
@@ -106,6 +111,7 @@ ul.container {
 .push-left {
 	left: 0;
 }
+
 .push-right {
 	right: 0;
 	text-align: right;
