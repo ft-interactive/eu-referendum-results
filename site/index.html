@@ -30,6 +30,8 @@
     <link href="https://plus.google.com/113457471429583444041/" rel="publisher" />
     <meta property="fb:page_id" content="8860325749" />
 		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3-queue.v2.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
     <script src="js/top.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -83,7 +85,7 @@
 
 						 <!-- market reaction  -->
 							<div class="market-reaction o-grid-row"> MARKET REACTION SPARKLINES </div>
-							
+
               <div class="o-typography-flyline">
                 <a href="#" class="o-typography-flyline__link">EU Referendum</a>
               </div>
@@ -98,18 +100,20 @@
           <!-- National resslt bar chart -->
 					<div class="national-result o-grid-row graphic"></div>
 					<script src="js/national-result.js"></script>
-					
+
 					<!-- regional result table and bars -->
 					<div class="regional-result o-grid-row graphic"></div>
           <script src="js/regional-result.js"></script>
-					
+
 					<!-- local results map + comparison bars -->
 					<div class="local-results o-grid-row"></div>
           <script src="js/local-result.js"></script>
-					
+          <link rel="stylesheet" href="style/local-result.css">
+
+
 					<!-- turnout-->
 					<div class="turnout o-grid-row"></div>
-					
+
 					<!-- demographic breakdown -->
 					<div class="demographics o-grid-row"></div>
         </div>
