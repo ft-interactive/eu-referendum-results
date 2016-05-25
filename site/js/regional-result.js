@@ -11,7 +11,7 @@ d3.csv('../data/ons/regions.csv', function (csv) {
 		})	
 	}
 	else {
-		// d3.json('dummyresult/regional.json', drawRegionalResultTable);
+		d3.json('dummyresult/regional.json', drawRegionalResultTable);
 	} 
 	
 })

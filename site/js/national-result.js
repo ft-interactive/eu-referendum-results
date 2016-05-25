@@ -7,7 +7,7 @@ if (RANDOM) {
 	});
 }
 else {
-	// d3.json('dummyresult/national.json', drawNationalResults);
+	d3.json('dummyresult/national.json', drawNationalResults);
 } 
 
 
