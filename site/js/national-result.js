@@ -1,4 +1,5 @@
 var MAX_BAR_WIDTH = 100;
+
 var RANDOM = true;
 
 if (RANDOM) {
@@ -9,7 +10,6 @@ if (RANDOM) {
 else {
 	d3.json('dummyresult/national.json', drawNationalResults);
 } 
-
 
 function drawNationalResults(error, data) {
 	console.log('national', error, data)
