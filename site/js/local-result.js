@@ -19,9 +19,10 @@ queue
 function ready(error, uk, localResultsData) {
   if (error) return console.error(error);
 
-  const allUkLocalBoundaries = uk.objects['clipped-local-authority-boundaries']
-  const localBoundaries = topojson.feature(uk, allUkLocalBoundaries);
-  const londonRegions = localBoundaries.features.filter(data => data.id.startsWith('E09'))
+  const allUkLocalBoundaries = uk.objects
+  const localBoundaries = topojson.feature(uk, allUkLocalBoundaries.gb);
+  const northernIrelandBoundary = topojson.feature(uk, allUkLocalBoundaries.ni);
+  const londonRegions = localBoundaries.features.filter(data => data.properties.region === 'E12000007')
 
   const findResultRegion = (regionId) => localResultsData.filter((result) => result.local_id === regionId);
 
@@ -30,11 +31,10 @@ function ready(error, uk, localResultsData) {
   const legend_labels = ["< 45%", "45-50%", "50-55%", "> 55%"]
   const color = d3.scale.threshold()
     .domain(color_domain)
-    .range(["#188CE0",
-            "#60659B",
-            "#A83E56",
-            "#F11712"]);
-
+    .range(["#6C3A2B",
+            "#915635",
+            "#B3763F",
+            "#D19948"]);
 
   // Create Projection and Path for UK
   const ukProjection = d3.geo.albers()
@@ -73,7 +73,7 @@ function ready(error, uk, localResultsData) {
   .center([0, 51.4])
   .rotate([0, 0])
   .parallels([50, 60])
-  .scale(30000)
+  .scale(20000)
   .translate([width / 2, height / 2]);
 
   const londonPath = d3.geo.path()
@@ -86,7 +86,7 @@ function ready(error, uk, localResultsData) {
   londonMap.enter()
       .append("path")
       // .append("g")
-      // .attr('transform', 'translate(20,20)')
+      .attr('transform', 'translate(50, -10)')
       .attr('class','london')
       .attr("d", londonPath);
 
@@ -98,7 +98,7 @@ function ready(error, uk, localResultsData) {
   var legend = svg.selectAll("g.legend")
     .data(ext_color_domain)
     .enter().append("g")
-    .attr('transform', 'translate(20,20)')
+    .attr('transform', 'translate(0 , -50)')
     .attr("class", "legend");
 
   var ls_w = 20, ls_h = 20;
