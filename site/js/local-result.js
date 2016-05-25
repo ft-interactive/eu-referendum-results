@@ -12,17 +12,22 @@ const svg = d3.select(".local-results").append("svg")
   .attr("height", height);
 
 queue
-  .defer(d3.json, "geodata/small-local-authorities.topojson")
+  .defer(d3.json, "geodata/referendum-result-areas.topojson")
   .defer(d3.json, "dummyresult/local.json")
   .await(ready);
 
 function ready(error, uk, localResultsData) {
   if (error) return console.error(error);
 
-  const allUkLocalBoundaries = uk.objects
-  const localBoundaries = topojson.feature(uk, allUkLocalBoundaries.gb);
-  const northernIrelandBoundary = topojson.feature(uk, allUkLocalBoundaries.ni);
-  const londonRegions = localBoundaries.features.filter(data => data.properties.region === 'E12000007')
+  const greatBritainBoundary = topojson.feature(uk, uk.objects.gb);
+  const northernIrelandBoundary = topojson.feature(uk, uk.objects.ni);
+
+  const ukFeaturesExcShetland = greatBritainBoundary.features
+    .concat(northernIrelandBoundary.features)
+    .filter(data => data.id !== 'S12000027');
+
+  const shetlandFeatures = greatBritainBoundary.features.filter(data => data.id === 'S12000027')
+  const londonFeatures = greatBritainBoundary.features.filter(data => data.properties.region === 'E12000007')
 
   const findResultRegion = (regionId) => localResultsData.filter((result) => result.local_id === regionId);
 
@@ -31,10 +36,11 @@ function ready(error, uk, localResultsData) {
   const legend_labels = ["< 45%", "45-50%", "50-55%", "> 55%"]
   const color = d3.scale.threshold()
     .domain(color_domain)
-    .range(["#6C3A2B",
-            "#915635",
-            "#B3763F",
-            "#D19948"]);
+    .range(["#fc9272",
+      "#de2d26",
+      "#3182bd",
+      "#9ecae1"
+    ]);
 
   // Create Projection and Path for UK
   const ukProjection = d3.geo.albers()
@@ -51,48 +57,58 @@ function ready(error, uk, localResultsData) {
 
   // Draw whole UK Map
   const ukMap = svg.selectAll(".local-results")
-    .data(localBoundaries.features)
+    .data(ukFeaturesExcShetland)
 
   ukMap.enter()
-      .append("path")
-      .attr('class','local-results')
-      .attr("d", path);
+    .append("path")
+    .attr('class', 'local-results')
+    .attr("d", path);
 
   ukMap.style("fill", data => {
-    return color(findResultRegion(data.id)[0].remain_pct)
+    // color(findResultRegion(data.id)[0].remain_pct)
+    return data.id.startsWith('E09') ? "black" : color(findResultRegion(data.id)[0].remain_pct)
   });
 
   // Draw borders between countries
   svg.append("path")
-  .datum(topojson.mesh(uk, allUkLocalBoundaries, (a, b) => a.id[0] !== b.id[0]))
-  .attr("d", path)
-  .attr("class", "country-boundary");
+    .datum(topojson.mesh(uk, uk.objects, (a, b) => a.id[0] !== b.id[0]))
+    .attr("d", path)
+    .attr("class", "country-boundary");
 
   // Create Projection and Path for London
   const londonProjection = d3.geo.albers()
-  .center([0, 51.4])
-  .rotate([0, 0])
-  .parallels([50, 60])
-  .scale(20000)
-  .translate([width / 2, height / 2]);
+    .center([0, 51.4])
+    .rotate([0, 0])
+    .parallels([50, 60])
+    .scale(20000)
+    .translate([width / 2, height / 2]);
 
   const londonPath = d3.geo.path()
-  .projection(londonProjection);
+    .projection(londonProjection);
 
   // Draw London Map
   const londonMap = svg.selectAll("g.london")
-    .data(londonRegions)
+    .data(londonFeatures)
 
   londonMap.enter()
-      .append("path")
-      // .append("g")
-      .attr('transform', 'translate(50, -10)')
-      .attr('class','london')
-      .attr("d", londonPath);
+    .append("path")
+    .attr('transform', 'translate(50, -60)')
+    .attr('class', 'london')
+    .attr("d", londonPath);
 
-  londonMap.style("fill", data => {
-    return color(findResultRegion(data.id)[0].remain_pct)
-  });
+  londonMap.style("fill", data => color(findResultRegion(data.id)[0].remain_pct))
+
+  // Draw Shetland Map
+  const shetlandMap = svg.selectAll("g.shetland")
+    .data(shetlandFeatures)
+
+  shetlandMap.enter()
+    .append("path")
+    .attr('transform', 'translate(0, 180)')
+    .attr('class', 'shetland')
+    .attr("d", path);
+
+  shetlandMap.style("fill", data => color(findResultRegion(data.id)[0].remain_pct))
 
   // Draw legend
   var legend = svg.selectAll("g.legend")
@@ -101,18 +117,27 @@ function ready(error, uk, localResultsData) {
     .attr('transform', 'translate(0 , -50)')
     .attr("class", "legend");
 
-  var ls_w = 20, ls_h = 20;
+  var ls_w = 20,
+    ls_h = 20;
 
   legend.append("rect")
     .attr("x", 20)
-    .attr("y", function(d, i){ return height - (i*ls_h) - 2*ls_h;})
+    .attr("y", function(d, i) {
+      return height - (i * ls_h) - 2 * ls_h;
+    })
     .attr("width", ls_w)
     .attr("height", ls_h)
-    .style("fill", function(d, i) { return color(d); })
+    .style("fill", function(d, i) {
+      return color(d);
+    })
     .style("opacity", 0.8);
 
   legend.append("text")
     .attr("x", 50)
-    .attr("y", function(d, i){ return height - (i*ls_h) - ls_h - 4;})
-      .text(function(d, i){ return legend_labels[i]; });
+    .attr("y", function(d, i) {
+      return height - (i * ls_h) - ls_h - 4;
+    })
+    .text(function(d, i) {
+      return legend_labels[i];
+    });
 };
