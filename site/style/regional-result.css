@@ -1,5 +1,9 @@
+.regional-result {
+	background: white;
+}
+
 table {
-    border-collapse: collapse;
+	border-collapse: collapse;
 	width: 100%;
 	font-family: MetricWeb, sans-serif;
 	font-size: 14px;
@@ -10,44 +14,56 @@ table {
 	-ms-font-feature-settings: 'tnum';
 }
 
-div {
+.result-text {
+	line-height: 25px;
+	font-weight: 600;
 	font-family: MetricWeb, sans-serif;
 	font-size: 14px;
 	color: #505050;
 }
 
 th, td {
-    border-bottom: 1px solid #ccc;
-    padding: 0;
-    margin: 0;
+	border-bottom: 1px solid #ccc;
+	padding: 0;
+	margin: 0;
 }
 
 th {
-/*	height: 25px;
-*/	background: #ddd;
+	background: #ddd;
 	font-weight: 500;
 	padding: 5px;
 }
 
 .region {
 	padding-left: 5px;
+	width: 30%;
 }
-.result {
+
+.margin,
+.turnout {
 	text-align: center;
+	width: 10%;
 }
+
 .difference {
 	padding: 0 10px;
 	font-weight: bold;
 	text-align: right;
 	display: inline-block;
 }
+
 .item {
 	position: relative;
 	height: 25px;
 	flex-basis: 50%;
 }
 
+.result {
+	width: 60%;
+}
+
 ul.container {
+
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -66,6 +82,7 @@ ul.container {
 	order: 1;
 	border-right: 1px solid black;
 }
+
 .right-item {
 	order: 2;
 	border-left: 1px solid black;
@@ -77,6 +94,7 @@ ul.container {
 	height: 21px;
 	margin: 2px 0;
 }
+
 .left-item
 .result-text {
 	padding-right: 6px;
@@ -87,18 +105,30 @@ ul.container {
 	padding-left: 6px;
 }
 
-.result-text {
-	line-height: 25px;
-	font-weight: 600;
-}
-
 .push-left {
 	left: 0;
 }
+
 .push-right {
 	right: 0;
 	text-align: right;
 }
-.regional-result {
-	background: white;
+
+@media only screen and (max-device-width: 480px) {
+	th.turnout,
+	td.turnout {
+		display:none;
+		width:0;
+		height:0;
+		opacity:0;
+		visibility: collapse;       
+	} 
+
+	.region {
+		width: 45%;
+	}
+
+	.result {
+		width: 55%;
+	}
 }
