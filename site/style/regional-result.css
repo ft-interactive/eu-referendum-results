@@ -3,6 +3,7 @@
 }
 
 table {
+	table-layout: auto;
 	border-collapse: collapse;
 	width: 100%;
 	font-family: MetricWeb, sans-serif;
@@ -12,14 +13,6 @@ table {
 	-webkit-font-feature-settings: 'tnum';
 	-moz-font-feature-settings: 'tnum';
 	-ms-font-feature-settings: 'tnum';
-}
-
-.result-text {
-	line-height: 25px;
-	font-weight: 600;
-	font-family: MetricWeb, sans-serif;
-	font-size: 14px;
-	color: #505050;
 }
 
 th, td {
@@ -35,14 +28,29 @@ th {
 }
 
 .region {
-	padding-left: 5px;
-	width: 30%;
+    padding: 0 5px;
+	white-space: nowrap;
 }
 
-.margin,
-.turnout {
+.result {
 	text-align: center;
-	width: 10%;
+	width: 10px;
+}
+
+.margin {
+	width: 60%;
+}
+
+td.turnout {
+	color: white;
+	text-align: right;
+	width: 20px;
+	padding: 0 10px;
+}
+
+th.turnout {
+	text-align: center;
+	padding: 0;
 }
 
 .difference {
@@ -53,17 +61,13 @@ th {
 }
 
 .item {
-	position: relative;
 	height: 25px;
 	flex-basis: 50%;
 }
 
-.result {
-	width: 60%;
-}
-
 ul.container {
 
+	position: relative;
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -114,6 +118,17 @@ ul.container {
 	text-align: right;
 }
 
+
+
+.result-text {
+	line-height: 25px;
+	font-weight: 600;
+	font-family: MetricWeb, sans-serif;
+	font-size: 14px;
+	color: #505050;
+}
+
+
 @media only screen and (max-device-width: 480px) {
 	th.turnout,
 	td.turnout {
@@ -126,9 +141,10 @@ ul.container {
 
 	.region {
 		width: 45%;
+		white-space: normal;
 	}
 
-	.result {
+	.margin {
 		width: 55%;
 	}
 }

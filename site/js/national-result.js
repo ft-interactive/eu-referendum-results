@@ -1,6 +1,15 @@
 var MAX_BAR_WIDTH = 100;
 
-d3.json('dummyresult/national.json', drawNationalResults);
+var RANDOM = true;
+
+if (RANDOM) {
+	d3.xhr('http://localhost:8082/all', function (data) {
+		drawNationalResults(false, JSON.parse(data.response).national)
+	});
+}
+else {
+	d3.json('dummyresult/national.json', drawNationalResults);
+} 
 
 function drawNationalResults(error, data) {
 	console.log('national', error, data)
