@@ -71,9 +71,13 @@ function ready(error, uk, localResultsData) {
 
   // Draw borders between countries
   svg.append("path")
-    .datum(topojson.mesh(uk, uk.objects, (a, b) => a.id[0] !== b.id[0]))
+    .datum(topojson.mesh(uk, uk.objects.gb, (a, b) => a.id[0] !== b.id[0]))
     .attr("d", path)
-    .attr("class", "country-boundary");
+    .attr("class", "country-boundary")
+    .style("fill", "none")
+    .style("stroke", "black")
+    .style("stroke-dasharray", "5,5");
+
 
   // Create Projection and Path for London
   const londonProjection = d3.geo.albers()
@@ -121,6 +125,12 @@ function ready(error, uk, localResultsData) {
     .style("fill", "none")
     .style("stroke-width", 2);
 
+  // Label London box
+  svg.append("text")
+    .attr("x", 410)
+    .attr("y", 400)
+    .text("London")
+
   // Draw box around Shetland
   svg.append("rect")
     .attr("x", 375)
@@ -131,15 +141,21 @@ function ready(error, uk, localResultsData) {
     .style("fill", "none")
     .style("stroke-width", 2);
 
+  // Label Shetland box
+  svg.append("text")
+    .attr("x", 375)
+    .attr("y", 170)
+    .text("Shetland")
+
   // Draw legend
-  var legend = svg.selectAll("g.legend")
+  const legend = svg.selectAll("g.legend")
     .data(ext_color_domain)
     .enter().append("g")
     .attr('transform', 'translate(0 , -50)')
     .attr("class", "legend");
 
-  var ls_w = 20,
-    ls_h = 20;
+  const ls_w = 20;
+  const ls_h = 20;
 
   legend.append("rect")
     .attr("x", 20)
