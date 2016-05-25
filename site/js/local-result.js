@@ -110,6 +110,27 @@ function ready(error, uk, localResultsData) {
 
   shetlandMap.style("fill", data => color(findResultRegion(data.id)[0].remain_pct))
 
+
+  // Draw box around London
+  svg.append("rect")
+    .attr("x", 410)
+    .attr("y", 405)
+    .attr("height", 165)
+    .attr("width", 200)
+    .style("stroke", "black")
+    .style("fill", "none")
+    .style("stroke-width", 2);
+
+  // Draw box around Shetland
+  svg.append("rect")
+    .attr("x", 375)
+    .attr("y", 175)
+    .attr("height", 135)
+    .attr("width", 80)
+    .style("stroke", "black")
+    .style("fill", "none")
+    .style("stroke-width", 2);
+
   // Draw legend
   var legend = svg.selectAll("g.legend")
     .data(ext_color_domain)
