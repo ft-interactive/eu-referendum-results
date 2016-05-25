@@ -13,14 +13,13 @@ function drawRegionalResultTable(results) {
 	table
 		.selectAll('table>tr')
 		.data(results.sort(function (first, second) {
-			return (second.remain_abs - second.leave_abs) - (first.remain_abs - first.leave_abs)
+			return getAbs(second) - getAbs(first)
 		}))
 		.call(function(join) {
 			var rows = join.enter().append('tr');
 
 			// Region name
 			rows.append('td')
-				.attr('width', '30%')
 				.attr('class', 'region')
 				.text(function (d) {
 					var region = REGION_NAMES.find(function (region) {
@@ -31,15 +30,14 @@ function drawRegionalResultTable(results) {
 
 			// Margin % column
 			rows.append('td')
-				.attr('width', '10%')
-				.attr('class', 'result')
+				.attr('class', 'margin')
 				.text(function (d) {
-					return Math.round(Math.abs(d.remain_pct - d.leave_pct)) + '%';
+					return Math.round(Math.abs(getPct(d))) + '%';
 				});
 
 			// Result column
 			var difference = rows.append('td')
-				.attr('width', '60%')
+				.attr('class', 'result')
 				.append('ul')
 				.attr('class', 'container');
 
@@ -47,53 +45,64 @@ function drawRegionalResultTable(results) {
 			difference
 				.append('li')
 				.attr('class', function (d) {
-					return d.remain_pct - d.leave_pct > 0 ? 'left-item item' : 'right-item item' ;
+					return getPct(d) > 0 ? 'left-item item' : 'right-item item' ;
 				})
 				.append('div')
 				.attr('class', function (d) {
-					return d.remain_pct - d.leave_pct > 0 ? 'result-text push-right' : 'result-text push-left';
+					return getPct(d) > 0 ? 'result-text push-right' : 'result-text push-left';
 				})
 				.text(function (d) {
-					return Math.abs(d.remain_abs - d.leave_abs).toLocaleString();
+					return Math.abs(getAbs(d)).toLocaleString();
 				});
 
 			// Bar
 			difference
 				.append('li')
 				.attr('class', function (d) {
-					return d.remain_abs - d.leave_abs > 0 ? 'right-item item' : 'left-item item' ;
+					return getAbs(d) > 0 ? 'right-item item' : 'left-item item' ;
 				})
 				.append('div')
 				.attr('class', function (d) {
-					return d.remain_abs - d.leave_abs > 0 ? 'result-bar push-left' : 'result-bar push-right';
+					return getAbs(d) > 0 ? 'result-bar push-left' : 'result-bar push-right';
 				})
 				.style('background', function (d) {
 
 					var color = d3.scale.threshold()
 					    .domain([0])
-					    .range([LEAVE_COLOR,STAY_COLOR]);
+					    .range([LOSE_BLUE,WIN_BLUE]);
 
-					return color(d.remain_abs - d.leave_abs);
+					return color(getAbs(d));
 				})
 				.style('width', function (d) {
 
 					// maxAbsolute is the largest bar we have in either direction
 					var maxAbsolute = d3.max(results, function (d) {
-						return Math.abs(d.remain_abs - d.leave_abs);
+						return Math.abs(getAbs(d));
 					});
 
-					return Math.abs((d.remain_abs - d.leave_abs)/maxAbsolute) * 100 + '%'
+					return Math.abs((getAbs(d))/maxAbsolute) * 100 + '%'
 				});
 			
-			// Margin % column
+			// Turnout % column
 			rows.append('td')
-				.attr('width', '10%')
-				.attr('class', 'result')
+				.attr('class', 'turnout')
 				.text(function (d) {
 					return Math.round(d.turnout_pct) + '%';
 				});
 			}
 		);
+}
+
+function getPct (d) {
+	var winner_pct = WINNER === 'remain' ? d.remain_pct : d.leave_pct;
+	var loser_pct = WINNER === 'remain' ? d.leave_pct : d.remain_pct;
+	return winner_pct - loser_pct;
+}
+
+function getAbs (d) {
+	var winner_abs = WINNER === 'remain' ? d.remain_abs : d.leave_abs;
+	var loser_abs = WINNER === 'remain' ? d.leave_abs : d.remain_abs;
+	return winner_abs - loser_abs;
 }
 
 function makeHeaders (table) {
@@ -112,5 +121,6 @@ function makeHeaders (table) {
 		.text('Difference')
 	row
 		.append('th')
+		.attr('class', 'turnout')
 		.text('Turnout')
 }
