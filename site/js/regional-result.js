@@ -1,10 +1,27 @@
 var REGION_NAMES;
 
+var RANDOM = true;
+
 d3.csv('../data/ons/regions.csv', function (csv) {
 	REGION_NAMES = csv;
 
-	d3.json('dummyresult/regional.json', drawRegionalResultTable);
+	if (RANDOM) {
+		d3.xhr('http://localhost:8082/all', function (data) {
+			drawRegionalResultTable(JSON.parse(data.response).regional)
+		})	
+	}
+	else {
+		// d3.json('dummyresult/regional.json', drawRegionalResultTable);
+	} 
+	
 })
+
+d3.xhr('http://localhost:8082/all', function (all) {
+	console.log('all', all)
+}).on('load', function (data) {
+	console.log('data', data, JSON.parse(data.response).regional)
+})
+
 
 function drawRegionalResultTable(results) {
 	var table = d3.select('.regional-result').append('table');
