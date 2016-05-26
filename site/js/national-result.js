@@ -1,7 +1,6 @@
 'use strict';
 
 d3.xhr('http://localhost:8082/all', function (data) {
-	console.log('data', data)
 
 	if (data) {
 		drawNationalResults(false, JSON.parse(data.response).national);
@@ -22,7 +21,12 @@ function drawNationalResults(error, data) {
 	for (let result of ['leave', 'remain']) {
 
 		let thisPct = data[result + '_pct'];
-		let resultLabel = RESULT_LABEL[result] + ' ' + (Math.round(thisPct) === 50 ? Math.round(thisPct*10)/10 : Math.round(thisPct)) + '%';
+
+		// Decimals on 50-50
+		// let resultLabel = RESULT_LABEL[result] + ' ' + (Math.round(thisPct) === 50 ? Math.round(thisPct*10)/10 : Math.round(thisPct)) + '%';
+		
+		// No decimals
+		let resultLabel = RESULT_LABEL[result] + ' ' + Math.round(thisPct) === 50 + '%';
 		
 		container
 			.append('li')
