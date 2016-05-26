@@ -11,7 +11,7 @@ d3.csv('../data/ons/regions.csv', function (csv) {
 		else {
 			d3.json('dummyresult/regional.json', drawRegionalResultTable);
 		}
-	})	
+	});
 });
 
 function drawRegionalResultTable(results) {
@@ -36,7 +36,7 @@ function drawRegionalResultTable(results) {
 	table
 		.selectAll('table>tr')
 		.data(results.sort(function (first, second) {
-			return getAbsMargin(second) - getAbsMargin(first)
+			return getAbsMargin(second) - getAbsMargin(first);
 		}))
 		.call(function(join) {
 			let rows = join.enter().append('tr');
@@ -80,10 +80,10 @@ function drawRegionalResultTable(results) {
 
 					// text for dark blue bar, winning side
 					if (getAbsMargin(d) > 0) {
-						return Math.round(min * 100 / (max+min)) + '%'
+						return Math.round(min * 100 / (max+min)) + '%';
 					}
 					else {					
-						return Math.round(max * 100 / (max+min)) + '%'
+						return Math.round(max * 100 / (max+min)) + '%';
 					}
 				})
 				.attr('class', function (d) {
@@ -103,12 +103,12 @@ function drawRegionalResultTable(results) {
 				.style('flex-basis', function (d) {
 					// dark blue bar, winning side
 					if (getAbsMargin(d) > 0) {
-						console.log('d', Math.round(max * 100 / (max+min)))
-						return Math.round(max * 100 / (max+min)) + '%'
+						console.log('d', Math.round(max * 100 / (max+min)));
+						return Math.round(max * 100 / (max+min)) + '%';
 					}
 					else {					
-						console.log('d',Math.round(min * 100 / (max+min)))
-						return Math.round(min * 100 / (max+min)) + '%'
+						console.log('d',Math.round(min * 100 / (max+min)));
+						return Math.round(min * 100 / (max+min)) + '%';
 					}
 				})
 				.attr('class', function (d) {
@@ -121,8 +121,8 @@ function drawRegionalResultTable(results) {
 				.style('right', function (d) {
 					// light blue bar, losing side
 					if (getAbsMargin(d) < 0) {
-						console.log('d', Math.round(max * 100 / (max+min)))
-						return Math.round(max * 100 / (max+min)) + '%'
+						console.log('d', Math.round(max * 100 / (max+min)));
+						return Math.round(max * 100 / (max+min)) + '%';
 					}
 				})
 				.style('background-color', function (d) {
@@ -135,7 +135,7 @@ function drawRegionalResultTable(results) {
 				})
 				.style('width', function (d) {
 					// relative to ul
-					return Math.abs((getAbsMargin(d))/maxAbsolute) * 100 / 2 + '%'
+					return Math.abs((getAbsMargin(d))/maxAbsolute) * 100 / 2 + '%';
 				})
 				// .style('left', function (d) {
 				// 	return getAbsMargin(d) > 0 ? '500' : '';

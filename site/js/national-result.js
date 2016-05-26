@@ -1,7 +1,7 @@
 'use strict';
 
 d3.xhr('http://localhost:8082/all', function (data) {
-	console.log('data', data)
+	console.log('data', data);
 
 	if (data) {
 		drawNationalResults(false, JSON.parse(data.response).national);
@@ -13,7 +13,7 @@ d3.xhr('http://localhost:8082/all', function (data) {
 
 function drawNationalResults(error, data) {
 
-	let winningPct = Math.max(data.leave_pct, data.remain_pct);
+	let winningPct = Math.round(Math.max(data.leave_pct, data.remain_pct));
 
 	let result = d3.select('.national-result').append('div');
 
@@ -21,15 +21,14 @@ function drawNationalResults(error, data) {
 
 	for (let result of ['leave', 'remain']) {
 
-		let thisPct = data[result + '_pct'];
-		let resultLabel = RESULT_LABEL[result] + ' ' + (Math.round(thisPct) === 50 ? Math.round(thisPct*10)/10 : Math.round(thisPct)) + '%';
+		let thisPct = Math.round(data[`${result}_pct`]);
 		
 		container
 			.append('li')
 			.attr('class', 'national-item' + (winningPct === thisPct ? ' win' : ' lose'))
 			.append('div')
 			.attr('class', 'total-bar')
-			.text(resultLabel)
+			.text(`${window.RESULT_LABEL[result]} ${thisPct}'%`)
 			.style('background-color', winningPct === thisPct ? WIN_BLUE : LOSE_BLUE)
 			.style('width', thisPct * 100 / winningPct + '%');
 
