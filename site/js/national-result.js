@@ -1,39 +1,40 @@
-var MAX_BAR_WIDTH = 100;
+'use strict';
 
-var RANDOM = true;
+d3.xhr('http://localhost:8082/all', function (data) {
+	console.log('data', data)
 
-if (RANDOM) {
-	d3.xhr('http://localhost:8082/all', function (data) {
-		drawNationalResults(false, JSON.parse(data.response).national)
-	});
-}
-else {
-	d3.json('dummyresult/national.json', drawNationalResults);
-} 
+	if (data) {
+		drawNationalResults(false, JSON.parse(data.response).national);
+	}
+	else {
+		d3.json('dummyresult/national.json', drawNationalResults);
+	}
+});
 
 function drawNationalResults(error, data) {
-	console.log('national', error, data)
-	var result = d3.select('.national-result').append('div');
 
-	var winningPct = Math.max(data.leave_pct, data.remain_pct);
+	let winningPct = Math.max(data.leave_pct, data.remain_pct);
 
-	var container = result.append('ul').attr('class', 'national-container');
+	let result = d3.select('.national-result').append('div');
 
-	for (var result of ['leave', 'remain']) {
+	let container = result.append('ul').attr('class', 'national-container');
 
-		var thisPct = data[result + '_pct'];
+	for (let result of ['leave', 'remain']) {
 
+		let thisPct = data[result + '_pct'];
+		let resultLabel = RESULT_LABEL[result] + ' ' + (Math.round(thisPct) === 50 ? Math.round(thisPct*10)/10 : Math.round(thisPct)) + '%';
+		
 		container
 			.append('li')
 			.attr('class', 'national-item' + (winningPct === thisPct ? ' win' : ' lose'))
 			.append('div')
 			.attr('class', 'total-bar')
-			.text(RESULT_LABEL[result] + ' ' + Math.round(thisPct) + '%')
+			.text(resultLabel)
 			.style('background-color', winningPct === thisPct ? WIN_BLUE : LOSE_BLUE)
-			.style('width', thisPct * MAX_BAR_WIDTH / winningPct + '%');
+			.style('width', thisPct * 100 / winningPct + '%');
 
 		if (winningPct === thisPct) {
-			WINNER = result;
+			window.WINNER = result;
 		}
 	}
 }
