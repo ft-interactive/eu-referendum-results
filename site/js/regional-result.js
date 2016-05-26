@@ -77,14 +77,7 @@ function drawRegionalResultTable(results) {
 			difference
 				.append('li')
 				.style('flex-basis', function (d) {
-
-					// text for dark blue bar, winning side
-					if (getAbsMargin(d) > 0) {
-						return Math.round(min * 100 / (max+min)) + '%';
-					}
-					else {					
-						return Math.round(max * 100 / (max+min)) + '%';
-					}
+					return calculateFlexBasis(d, 'text', max, min);
 				})
 				.attr('class', function (d) {
 					return getAbsMargin(d) > 0 ? 'left-item item' : 'right-item item' ;
@@ -101,15 +94,7 @@ function drawRegionalResultTable(results) {
 			difference
 				.append('li')
 				.style('flex-basis', function (d) {
-					// dark blue bar, winning side
-					if (getAbsMargin(d) > 0) {
-						console.log('d', Math.round(max * 100 / (max+min)));
-						return Math.round(max * 100 / (max+min)) + '%';
-					}
-					else {					
-						console.log('d',Math.round(min * 100 / (max+min)));
-						return Math.round(min * 100 / (max+min)) + '%';
-					}
+					return calculateFlexBasis(d, 'bar', max, min);
 				})
 				.attr('class', function (d) {
 					return getAbsMargin(d) > 0 ? 'right-item item' : 'left-item item' ;
@@ -119,11 +104,16 @@ function drawRegionalResultTable(results) {
 					return 'result-bar' + ' ' + (getAbsMargin(d) > 0 ? '' : 'push-right');
 				})
 				.style('right', function (d) {
+
+					let right;
+
 					// light blue bar, losing side
 					if (getAbsMargin(d) < 0) {
-						console.log('d', Math.round(max * 100 / (max+min)));
-						return Math.round(max * 100 / (max+min)) + '%';
+						right = Math.round(max * 100 / (max+min)) + '%';
 					}
+
+					// Make sure neither side is too small
+					return right < 10 ? 10 : right;
 				})
 				.style('background-color', function (d) {
 
@@ -169,6 +159,35 @@ function getAbsMargin (d) {
 	let winner_abs = WINNER === 'remain' ? d.remain_abs : d.leave_abs;
 	let loser_abs = WINNER === 'remain' ? d.leave_abs : d.remain_abs;
 	return winner_abs - loser_abs;
+}
+
+/**
+ * Calculates the width (flexBasis) of both sides of the Margin colum
+ * by generating a % value off of the largest bar on each side
+ *
+ * Example:
+ *    Largest bar on the right (max) is a 242,084 margin
+ *    Largest bar on the left (min) is a 61,463 margin
+ *	  100% width is 303,547 so
+ * 		- winning side will have a flexBasis of 80% (242,084 * 100 / 303,547)
+ *		- losing side will have a flexBasis of 20% (61,463 * 100 / 303,547)
+ **/
+function calculateFlexBasis (d, type, max, min) {
+
+	let flexBasis;
+
+	if (getAbsMargin(d) > 0) {
+		flexBasis = Math.round((type === 'bar' ? max : min) * 100 / (max+min));
+	}
+	else {					
+		flexBasis = Math.round((type === 'bar' ? min : max) * 100 / (max+min));
+	}
+
+	// Make sure neither side is too small
+	flexBasis = flexBasis < 10 ? 10 : flexBasis;
+	flexBasis = flexBasis > 90 ? 90 : flexBasis;
+
+	return `${flexBasis}%`;
 }
 
 function makeHeaders (table) {
