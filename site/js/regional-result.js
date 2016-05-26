@@ -61,7 +61,7 @@ function drawRegionalResultTable(results) {
 
 					return color(getAbsMargin(d));
 				})
-				.style('color', 'white');
+				.style('color', 'white')
 				.text(function (d) {
 					let winner_pct = d.remain_pct > d.leave_pct ? d.remain_pct : d.leave_pct;
 					return Math.round(winner_pct) + '%';
