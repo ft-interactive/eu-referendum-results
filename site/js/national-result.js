@@ -33,7 +33,6 @@ function drawNationalResults(error, data) {
 			.attr('class', 'national-item' + (winningPct === thisPct ? ' win' : ' lose'))
 			.append('div')
 			.attr('class', 'total-bar')
-			.text(`${window.RESULT_LABEL[result]} ${thisPct}'%`)
 			.text(resultLabel)
 			.style('background-color', winningPct === thisPct ? WIN_BLUE : LOSE_BLUE)
 			.style('width', thisPct * 100 / winningPct + '%');
