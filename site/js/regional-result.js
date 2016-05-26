@@ -1,56 +1,51 @@
-var REGION_NAMES;
-
-var RANDOM = true;
+let REGION_NAMES;
 
 d3.csv('../data/ons/regions.csv', function (csv) {
 	REGION_NAMES = csv;
 
-	if (RANDOM) {
-		d3.xhr('http://localhost:8082/all', function (data) {
-			drawRegionalResultTable(JSON.parse(data.response).regional)
-		})	
-	}
-	else {
-		d3.json('dummyresult/regional.json', drawRegionalResultTable);
-	} 
-	
-})
+	d3.xhr('http://localhost:8082/all', function (data) {
 
-d3.xhr('http://localhost:8082/all', function (all) {
-	console.log('all', all)
-}).on('load', function (data) {
-	console.log('data', data, JSON.parse(data.response).regional)
-})
-
+		if (data) {
+			drawRegionalResultTable(JSON.parse(data.response).regional);
+		}
+		else {
+			d3.json('dummyresult/regional.json', drawRegionalResultTable);
+		}
+	});
+});
 
 function drawRegionalResultTable(results) {
-	var table = d3.select('.regional-result').append('table');
+	let table = d3.select('.regional-result').append('table');
 	makeHeaders(table);
 
 	// maxAbsolute is the largest bar we have in either direction
-	var maxAbsolute = d3.max(results, function (d) {
-		return Math.abs(getAbs(d));
+	let maxAbsolute = d3.max(results, function (d) {
+		return Math.abs(getAbsMargin(d));
 	});
-	var max = d3.max(results, function (d) {
-		return getAbs(d);
+
+	// Largest winning bar
+	let max = d3.max(results, function (d) {
+		return getAbsMargin(d);
 	});
-	var min = Math.abs(d3.min(results, function (d) {
-		return getAbs(d);
+
+	// Largest losing bar
+	let min = Math.abs(d3.min(results, function (d) {
+		return getAbsMargin(d);
 	}));
 
 	table
 		.selectAll('table>tr')
 		.data(results.sort(function (first, second) {
-			return getAbs(second) - getAbs(first)
+			return getAbsMargin(second) - getAbsMargin(first);
 		}))
 		.call(function(join) {
-			var rows = join.enter().append('tr');
+			let rows = join.enter().append('tr');
 
 			// Region name
 			rows.append('td')
 				.attr('class', 'region')
 				.text(function (d) {
-					var region = REGION_NAMES.find(function (region) {
+					let region = REGION_NAMES.find(function (region) {
 						return region.id === d.region_id;
 					});
 					return region.name;
@@ -59,32 +54,21 @@ function drawRegionalResultTable(results) {
 			// Result % column
 			rows.append('td')
 				.attr('class', 'result')
-
-				// COLORS
 				.style('background-color', function (d) {
-					var color = d3.scale.threshold()
+					let color = d3.scale.threshold()
 					    .domain([0])
 					    .range([LOSE_BLUE,WIN_BLUE]);
 
-					return color(getAbs(d));
+					return color(getAbsMargin(d));
 				})
 				.style('color', 'white')
-
-				// GLOBAL WINNER % ONLY 
-				// .text(function (d) {
-				// 	var winner_pct = WINNER === 'remain' ? d.remain_pct : d.leave_pct;
-				// 	console.log(winner_pct, WINNER, d.remain_pct, d.leave_pct)
-				// 	return Math.round(winner_pct) + '%';
-				// });
-
-				// REGIONAL WINNER % FOR EACH
 				.text(function (d) {
-					var winner_pct = d.remain_pct > d.leave_pct ? d.remain_pct : d.leave_pct;
+					let winner_pct = d.remain_pct > d.leave_pct ? d.remain_pct : d.leave_pct;
 					return Math.round(winner_pct) + '%';
 				});
 
 			// Result column
-			var difference = rows.append('td')
+			let difference = rows.append('td')
 				.attr('class', 'margin')
 				.append('ul')
 				.attr('class', 'container');
@@ -95,81 +79,74 @@ function drawRegionalResultTable(results) {
 				.style('flex-basis', function (d) {
 
 					// text for dark blue bar, winning side
-					if (getAbs(d) > 0) {
-						console.log('d', Math.round(max * 100 / (max+min)))
-						return Math.round(min * 100 / (max+min)) + '%'
+					if (getAbsMargin(d) > 0) {
+						return Math.round(min * 100 / (max+min)) + '%';
 					}
 					else {					
-						console.log('d',Math.round(min * 100 / (max+min)))
-						return Math.round(max * 100 / (max+min)) + '%'
+						return Math.round(max * 100 / (max+min)) + '%';
 					}
 				})
 				.attr('class', function (d) {
-					return getAbs(d) > 0 ? 'left-item item' : 'right-item item' ;
+					return getAbsMargin(d) > 0 ? 'left-item item' : 'right-item item' ;
 				})
 				.append('div')
 				.attr('class', function (d) {
-					return getAbs(d) > 0 ? 'result-text push-right' : 'result-text push-left';
+					return getAbsMargin(d) > 0 ? 'result-text push-right' : 'result-text push-left';
 				})
 				.text(function (d) {
-					return Math.abs(getAbs(d)).toLocaleString();
+					return Math.abs(getAbsMargin(d)).toLocaleString();
 				});
 
-			// Bar
+			// Margin Bar
 			difference
 				.append('li')
 				.style('flex-basis', function (d) {
 					// dark blue bar, winning side
-					if (getAbs(d) > 0) {
-						console.log('d', Math.round(max * 100 / (max+min)))
-						return Math.round(max * 100 / (max+min)) + '%'
+					if (getAbsMargin(d) > 0) {
+						console.log('d', Math.round(max * 100 / (max+min)));
+						return Math.round(max * 100 / (max+min)) + '%';
 					}
 					else {					
-						console.log('d',Math.round(min * 100 / (max+min)))
-						return Math.round(min * 100 / (max+min)) + '%'
+						console.log('d',Math.round(min * 100 / (max+min)));
+						return Math.round(min * 100 / (max+min)) + '%';
 					}
 				})
 				.attr('class', function (d) {
-					return getAbs(d) > 0 ? 'right-item item' : 'left-item item' ;
+					return getAbsMargin(d) > 0 ? 'right-item item' : 'left-item item' ;
 				})
 				.append('div')
 				.attr('class', function (d) {
-					return 'result-bar' + ' ' + (getAbs(d) > 0 ? '' : 'push-right');
+					return 'result-bar' + ' ' + (getAbsMargin(d) > 0 ? '' : 'push-right');
 				})
 				.style('right', function (d) {
 					// light blue bar, losing side
-					if (getAbs(d) < 0) {
-						console.log('d', Math.round(max * 100 / (max+min)))
-						return Math.round(max * 100 / (max+min)) + '%'
+					if (getAbsMargin(d) < 0) {
+						console.log('d', Math.round(max * 100 / (max+min)));
+						return Math.round(max * 100 / (max+min)) + '%';
 					}
 				})
 				.style('background-color', function (d) {
 
-					var color = d3.scale.threshold()
+					let color = d3.scale.threshold()
 					    .domain([0])
 					    .range([LOSE_BLUE,WIN_BLUE]);
 
-					return color(getAbs(d));
+					return color(getAbsMargin(d));
 				})
 				.style('width', function (d) {
 					// relative to ul
-					return Math.abs((getAbs(d))/maxAbsolute) * 100 / 2 + '%'
-				})
+					return Math.abs((getAbsMargin(d))/maxAbsolute) * 100 / 2 + '%';
+				});
 				// .style('left', function (d) {
-				// 	return getAbs(d) > 0 ? '500' : '';
+				// 	return getAbsMargin(d) > 0 ? '500' : '';
 				// });
 			
 
-			var maxTurnout = d3.max(results, function (d) {
+			let maxTurnout = d3.max(results, function (d) {
 				return d.turnout_abs;
 			});
 
-			console.log(maxTurnout);
-			var grayscale = d3.scale.threshold()
-			    .domain([1000000, 2000000, 3000000])
-			    .range(['white','grey','black']);
-
-			var grayscale = d3.scale.linear()
+			let grayscale = d3.scale.linear()
 			    .domain([0,maxTurnout])
 			    .range(['#ccc','#222']);
 
@@ -178,7 +155,7 @@ function drawRegionalResultTable(results) {
 				.style('text-align', 'right')
 				.attr('class', 'turnout')
 				.style('background-color', function (d) {
-					return grayscale(d.turnout_abs) 
+					return grayscale(d.turnout_abs) ;
 				})
 				.text(function (d) {
 					// return (Math.round(d.turnout_abs/100000)/10).toLocaleString().replace('0.', '.') + 'M';
@@ -188,34 +165,28 @@ function drawRegionalResultTable(results) {
 		);
 }
 
-function getAbs (d) {
-	var winner_abs = WINNER === 'remain' ? d.remain_abs : d.leave_abs;
-	var loser_abs = WINNER === 'remain' ? d.leave_abs : d.remain_abs;
+function getAbsMargin (d) {
+	let winner_abs = WINNER === 'remain' ? d.remain_abs : d.leave_abs;
+	let loser_abs = WINNER === 'remain' ? d.leave_abs : d.remain_abs;
 	return winner_abs - loser_abs;
 }
 
-function getPct (d) {
-	var winner_pct = WINNER === 'remain' ? d.remain_pct : d.leave_pct;
-	var loser_pct = WINNER === 'remain' ? d.leave_pct : d.remain_pct;
-	return winner_pct - loser_pct;
-}
-
 function makeHeaders (table) {
-	var row = table
+	let row = table
 		.append('thead')
 		.append('tr');
 
 	row
 		.append('th')
-		.text('Region name')
+		.text('Region name');
 	row
 		.append('th')
-		.text('Result**')
+		.text('Result**');
 	row
 		.append('th')
-		.text('Margin')
+		.text('Margin');
 	row
 		.append('th')
 		.attr('class', 'turnout')
-		.text('Votes')
+		.text('Votes');
 }
