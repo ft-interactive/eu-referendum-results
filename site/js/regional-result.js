@@ -136,7 +136,7 @@ function drawRegionalResultTable(results) {
 				.style('width', function (d) {
 					// relative to ul
 					return Math.abs((getAbsMargin(d))/maxAbsolute) * 100 / 2 + '%';
-				})
+				});
 				// .style('left', function (d) {
 				// 	return getAbsMargin(d) > 0 ? '500' : '';
 				// });
@@ -155,7 +155,7 @@ function drawRegionalResultTable(results) {
 				.style('text-align', 'right')
 				.attr('class', 'turnout')
 				.style('background-color', function (d) {
-					return grayscale(d.turnout_abs) 
+					return grayscale(d.turnout_abs) ;
 				})
 				.text(function (d) {
 					// return (Math.round(d.turnout_abs/100000)/10).toLocaleString().replace('0.', '.') + 'M';
@@ -178,15 +178,15 @@ function makeHeaders (table) {
 
 	row
 		.append('th')
-		.text('Region name')
+		.text('Region name');
 	row
 		.append('th')
-		.text('Result**')
+		.text('Result**');
 	row
 		.append('th')
-		.text('Margin')
+		.text('Margin');
 	row
 		.append('th')
 		.attr('class', 'turnout')
-		.text('Votes')
+		.text('Votes');
 }
