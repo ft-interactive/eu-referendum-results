@@ -9,7 +9,8 @@ const width = 960,
 
 const svg = d3.select(".local-results").append("svg")
   .attr("width", width)
-  .attr("height", height);
+  .attr("height", height)
+  // .attr('viewBox', '0 0 '+width+' '+height);
 
 queue
   .defer(d3.json, "geodata/referendum-result-areas.topojson")
@@ -18,6 +19,8 @@ queue
 
 function ready(error, uk, localResultsData) {
   if (error) return console.error(error);
+
+  const ukMapScale = 5000
 
   const greatBritainBoundary = topojson.feature(uk, uk.objects.gb);
   const northernIrelandBoundary = topojson.feature(uk, uk.objects.ni);
@@ -33,7 +36,6 @@ function ready(error, uk, localResultsData) {
 
   const color_domain = [45, 50, 55, 100]
   const ext_color_domain = [0, 45, 50, 55]
-  const legend_labels = ["< 45%", "45-50%", "50-55%", "> 55%"]
   const color = d3.scale.threshold()
     .domain(color_domain)
     .range(["#fc9272",
@@ -47,7 +49,7 @@ function ready(error, uk, localResultsData) {
     .center([0, 55.4])
     .rotate([0, 0])
     .parallels([50, 60])
-    .scale(6000)
+    .scale(ukMapScale)
     .translate([width / 2, height / 2]);
 
 
@@ -56,7 +58,7 @@ function ready(error, uk, localResultsData) {
 
 
   // Draw whole UK Map
-  const ukMap = svg.selectAll(".local-results")
+  const ukMap = svg.append('g').selectAll(".local-results")
     .data(ukFeaturesExcShetland)
 
   ukMap.enter()
@@ -66,7 +68,7 @@ function ready(error, uk, localResultsData) {
 
   ukMap.style("fill", data => {
     // color(findResultRegion(data.id)[0].remain_pct)
-    return data.id.startsWith('E09') ? "black" : color(findResultRegion(data.id)[0].remain_pct)
+    return data.id.startsWith('E09') ? "white" : color(findResultRegion(data.id)[0].remain_pct)
   });
 
   // Draw borders between countries
@@ -79,73 +81,79 @@ function ready(error, uk, localResultsData) {
     .style("stroke-dasharray", "5,5");
 
 
-  // Create Projection and Path for London
+  // Create London projection and path
   const londonProjection = d3.geo.albers()
-    .center([0, 51.4])
+    .center([-0.1, 51.5])
     .rotate([0, 0])
     .parallels([50, 60])
     .scale(20000)
-    .translate([width / 2, height / 2]);
+    .translate([100,83]);
 
   const londonPath = d3.geo.path()
     .projection(londonProjection);
 
   // Draw London Map
-  const londonMap = svg.selectAll("g.london")
-    .data(londonFeatures)
+  const londonMap = svg
+    .append('g')
+    .attr('transform', 'translate(420, 410)')
+    .attr('class', 'london-map');
 
-  londonMap.enter()
-    .append("path")
-    .attr('transform', 'translate(50, -60)')
-    .attr('class', 'london')
-    .attr("d", londonPath);
+  londonMap.call((parent) => {
+    parent.append('text')
+      .text('london')
+      .attr('transform', 'translate(0, -5)');
 
-  londonMap.style("fill", data => color(findResultRegion(data.id)[0].remain_pct))
+    parent.append('rect')
+      .attr("width", 200)
+      .attr("height", 165)
+      .style("stroke", "black")
+      .style("fill", "none")
+      .style("stroke-width", 2);
+
+    parent.selectAll('path')
+      .data(londonFeatures)
+      .enter()
+      .append("path")
+      .attr("d", londonPath)
+      .style("fill", data => color(findResultRegion(data.id)[0].remain_pct));
+  });
+
+  // Create Shetland projection and path
+  const shetlandProjection = d3.geo.albers()
+    .center([-1.2, 60.3])
+    .rotate([0, 0])
+    .parallels([50, 60])
+    .scale(ukMapScale)
+    .translate([40,68]);
+
+  const shetlandPath = d3.geo.path()
+    .projection(shetlandProjection);
 
   // Draw Shetland Map
-  const shetlandMap = svg.selectAll("g.shetland")
-    .data(shetlandFeatures)
+  const shetlandMap = svg
+    .append("g")
+    .attr('transform', 'translate(380, 220)')
+    .attr("class", 'shetland-map')
 
-  shetlandMap.enter()
-    .append("path")
-    .attr('transform', 'translate(0, 180)')
-    .attr('class', 'shetland')
-    .attr("d", path);
+  shetlandMap.call((parent) => {
+    parent.append('text')
+      .text('shetland')
+      .attr('transform', 'translate(0, -5)');
 
-  shetlandMap.style("fill", data => color(findResultRegion(data.id)[0].remain_pct))
+    parent.append('rect')
+      .attr("width", 75)
+      .attr("height", 125)
+      .style("stroke", "black")
+      .style("fill", "none")
+      .style("stroke-width", 2);
 
-
-  // Draw box around London
-  svg.append("rect")
-    .attr("x", 410)
-    .attr("y", 405)
-    .attr("height", 165)
-    .attr("width", 200)
-    .style("stroke", "black")
-    .style("fill", "none")
-    .style("stroke-width", 2);
-
-  // Label London box
-  svg.append("text")
-    .attr("x", 410)
-    .attr("y", 400)
-    .text("London")
-
-  // Draw box around Shetland
-  svg.append("rect")
-    .attr("x", 375)
-    .attr("y", 175)
-    .attr("height", 135)
-    .attr("width", 80)
-    .style("stroke", "black")
-    .style("fill", "none")
-    .style("stroke-width", 2);
-
-  // Label Shetland box
-  svg.append("text")
-    .attr("x", 375)
-    .attr("y", 170)
-    .text("Shetland")
+    parent.selectAll('path')
+      .data(shetlandFeatures)
+      .enter()
+      .append("path")
+      .attr("d", shetlandPath)
+      .style("fill", data => color(findResultRegion(data.id)[0].remain_pct));
+  });
 
   // Draw legend
   const legend = svg.selectAll("g.legend")
@@ -160,7 +168,7 @@ function ready(error, uk, localResultsData) {
   legend.append("rect")
     .attr("x", 20)
     .attr("y", function(d, i) {
-      return height - (i * ls_h) - 2 * ls_h;
+      return (height - (i * ls_h) - 2 * ls_h) - 250;
     })
     .attr("width", ls_w)
     .attr("height", ls_h)
@@ -169,12 +177,20 @@ function ready(error, uk, localResultsData) {
     })
     .style("opacity", 0.8);
 
+  const legendTitle = "% vote for remain"
+  const legendLabels = ["< 45%", "45-50%", "50-55%", "> 55%"]
+
   legend.append("text")
     .attr("x", 50)
     .attr("y", function(d, i) {
-      return height - (i * ls_h) - ls_h - 4;
+      return (height - (i * ls_h) - ls_h - 4) - 250;
     })
     .text(function(d, i) {
-      return legend_labels[i];
+      return legendLabels[i];
     });
+
+  legend.append("text")
+    .attr("x", 20)
+    .attr("y", 800)
+    .text(legendTitle)
 };
