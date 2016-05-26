@@ -66,10 +66,24 @@ function ready(error, uk, localResultsData) {
     .attr('class', 'local-results')
     .attr("d", path);
 
-  ukMap.style("fill", data => {
-    // color(findResultRegion(data.id)[0].remain_pct)
-    return data.id.startsWith('E09') ? "white" : color(findResultRegion(data.id)[0].remain_pct)
-  });
+  const fillCorrectColor = (data) => {
+    // Fill transparent if London
+    if (data.id.startsWith('E09')) {
+      return "transparent"
+    }
+    // Fill with color if we have result data for the region
+    if (findResultRegion(data.id)[0] && findResultRegion(data.id)[0].remain_pct) {
+      return color(findResultRegion(data.id)[0].remain_pct)
+    }
+    // Fill transparent if not London and no results data
+    return "transparent"
+  }
+
+  ukMap
+    .style("fill", fillCorrectColor)
+    // .style("background", data => {
+    //   if (data.id.startsWith('E09')) {"repeating-linear-gradient(135deg,transparent,rgba(0,0,0,.2) 1px,transparent 2px,transparent 4px)"}
+    // });
 
   // Draw borders between countries
   svg.append("path")
@@ -156,41 +170,51 @@ function ready(error, uk, localResultsData) {
   });
 
   // Draw legend
-  const legend = svg.selectAll("g.legend")
-    .data(ext_color_domain)
-    .enter().append("g")
-    .attr('transform', 'translate(0 , -50)')
-    .attr("class", "legend");
+  const legend = svg
+    .append("g")
+    .attr("class", "legend")
+    .attr('transform', 'translate(0 , 0)')
+    // .enter()
+    // .selectAll("g.legend")
 
-  const ls_w = 20;
-  const ls_h = 20;
+  legend.call((parent) => {
+    const ls_w = 20;
+    const ls_h = 20;
+    const legendTitle = "% votes to remain"
+    const legendLabels = ["< 45%", "45-50%", "50-55%", "> 55%"]
 
-  legend.append("rect")
-    .attr("x", 20)
-    .attr("y", function(d, i) {
-      return (height - (i * ls_h) - 2 * ls_h) - 250;
-    })
-    .attr("width", ls_w)
-    .attr("height", ls_h)
-    .style("fill", function(d, i) {
-      return color(d);
-    })
-    .style("opacity", 0.8);
+    parent.selectAll("rect")
+      .data(ext_color_domain)
+      .enter()
+      .append("rect")
+      .attr("x", 20)
+      .attr("y", function(d, i) {
+        return (height - (i * ls_h) - 2 * ls_h) - 250;
+      })
+      .attr("width", ls_w)
+      .attr("height", ls_h)
+      .style("fill", function(d, i) {
+        return color(d);
+      })
+      .style("opacity", 0.8);
 
-  const legendTitle = "% vote for remain"
-  const legendLabels = ["< 45%", "45-50%", "50-55%", "> 55%"]
+    parent.selectAll("text")
+      .data(ext_color_domain)
+      .enter()
+      .append("text")
+      .attr("x", 50)
+      .attr("y", function(d, i) {
+        return (height - (i * ls_h) - ls_h - 4) - 250;
+      })
+      .text(function(d, i) {
+        return legendLabels[i];
+      });
 
-  legend.append("text")
-    .attr("x", 50)
-    .attr("y", function(d, i) {
-      return (height - (i * ls_h) - ls_h - 4) - 250;
-    })
-    .text(function(d, i) {
-      return legendLabels[i];
-    });
+    parent.append("text")
+      .attr("x", 20)
+      .attr("y", 800)
+      .text(legendTitle)
+  })
 
-  legend.append("text")
-    .attr("x", 20)
-    .attr("y", 800)
-    .text(legendTitle)
+
 };
