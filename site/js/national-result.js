@@ -26,7 +26,7 @@ function drawNationalResults(error, data) {
 		// let resultLabel = RESULT_LABEL[result] + ' ' + (Math.round(thisPct) === 50 ? Math.round(thisPct*10)/10 : Math.round(thisPct)) + '%';
 		
 		// No decimals
-		let resultLabel = RESULT_LABEL[result] + ' ' + Math.round(thisPct) === 50 + '%';
+		let resultLabel = RESULT_LABEL[result] + ' ' + Math.round(thisPct) + '%';
 		
 		container
 			.append('li')
