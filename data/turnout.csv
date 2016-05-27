@@ -1,0 +1,10 @@
+type,election,turnout,registered voters,date,notes,url
+general election,general election 1970,72,39313242,1970-06-18,registered voters calculated from turnout,
+general election,General Election 2015,66.1,46432194,2015-05-07,registered voters calculated from turnout,
+referendum,AV Referendum,42.2,45684501,2011-05-05,,
+referendum,EC Membership 1975,65,39851068,1975-06-05,registered voters calculated from turnout,
+referendum,Scotish independence 2014,84.59,4283392,2014-09-18,,
+referendum,Northern Ireland Sovereignty 1973,58.66,1030084,1973-03-08,,
+referendum,Belfast agreement referendum 1998,81.1,1175935,1998-05-22,registered voters calculated from turnout,
+london mayoral,London Mayoral Election 2012,38.1,5372924,2012-05-03,registered voters calculated from turnout,
+european parliament,European Parliament election 2014,35.6,46476860,2014-05-22,registered voters calculated from turnout,
