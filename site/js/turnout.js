@@ -1,5 +1,7 @@
 'use strict';
 
+const ELECTION_TYPE_COLORS = {};
+
 d3.xhr('http://localhost:8082/all', function (data) {
 	if (data) {
 		drawTurnout(Math.round(JSON.parse(data.response).national.turnout_pct));
@@ -11,7 +13,7 @@ d3.xhr('http://localhost:8082/all', function (data) {
 
 function drawTurnout(brexitTurnout) {
 
-	d3.csv('../data/turnout.csv', function (result) {
+	d3.csv('../data/turnout_all.csv', function (result) {
 
 		// Sort by date, ascending
 		result.sort(function (a, b) {
@@ -22,22 +24,73 @@ function drawTurnout(brexitTurnout) {
 			.append('div')
 			.attr('id', 'turnoutChart');
 
-		let turnout = ['Turnout'];
 		let date = ['x'];
-		let election = ['election'];
+		let type = ['type'];
+		let electionName = {};
+
+		let generalElection = ['General Election'];
+		let referendum = ['Referendum'];
+		let londonMayoral = ['London Mayoral'];
+		let europeanParliament = ['European Parliament'];
+		let other = ['Other'];
+
+		let categoryColors = d3.scale.category10();
 
 		for (const row in result) {
-			turnout.push(result[row].turnout);
 			date.push(result[row].date);
-			election.push(result[row].election);
+			type.push(result[row].type);
+
+			let rowDate = new Date(result[row].date);
+
+			electionName[`${rowDate.getFullYear()}${rowDate.getMonth()}${rowDate.getDate()}`] = result[row].election;
+
+			if (result[row].type === 'general election') {
+				generalElection.push(result[row].turnout);
+				referendum.push('');
+				londonMayoral.push('');
+				europeanParliament.push('');
+				other.push('');
+			}
+			else if (result[row].type === 'referendum'){
+				referendum.push(result[row].turnout);
+				generalElection.push('');
+				londonMayoral.push('');
+				europeanParliament.push('');
+				other.push('');
+			}
+			else if (result[row].type === 'london mayoral'){
+				londonMayoral.push(result[row].turnout);
+				generalElection.push('');
+				referendum.push('');
+				europeanParliament.push('');
+				other.push('');
+			}
+			else if (result[row].type === 'european parliament'){
+				europeanParliament.push(result[row].turnout);
+				generalElection.push('');
+				referendum.push('');
+				londonMayoral.push('');
+				other.push('');
+			}
+			else{
+				other.push(result[row].turnout);
+				generalElection.push('');
+				referendum.push('');
+				londonMayoral.push('');
+				europeanParliament.push('');
+			}
 		}
+
+		// Add brexit at the end
+		referendum.push(brexitTurnout);
+		date.push('2016-06-23');
+		electionName['2016523'] = 'UK EU Referendum';
 
 		let chart = c3.generate({
 			bindto: '#turnoutChart',
 			point: {
 				r: function(d) {
-					// return turnout[d.index + 1]/10 + '%';
-					return d.value/2;
+					return 5;
 				},
 				focus: {
 					expand: {
@@ -45,19 +98,12 @@ function drawTurnout(brexitTurnout) {
 					}
 				}
 			},
-			legend: {
-				show: false
-			},
 			data: {
 				type: 'scatter',
-				colors: {
-					Turnout: window.LOSE_BLUE
-				},
 				x: 'x',
-				columns: [date, turnout],
-				axes: {
-				},
-				types: {
+				columns: [date, generalElection, referendum, londonMayoral, europeanParliament],
+				onclick: function (d, element) {
+					console.log('turnout', d.value);
 				}
 			},
 			axis: {
@@ -67,21 +113,26 @@ function drawTurnout(brexitTurnout) {
 						position: 'inner-bottom'
 					},
 					padding: {
-						top: 0, bottom: 0
+						top: 0
 					},
 					max: 100,
-					min: 30
+					min: 30,
+					tick: {
+						format: function (x) {
+							return `${x}%`;
+						}
+					},
 				},
 				x: {
 					label: { 
 						text: 'Election year',
 					},
 					tick: {
-						type: 'timeseries',
-						rotate: 0,
+						rotate: 45,
 						multiline: false,
 					},
-					type: 'category'
+					// type: 'category',
+					type: 'timeseries'
 				}
 			},
 
@@ -97,7 +148,8 @@ function drawTurnout(brexitTurnout) {
 			tooltip: {
 				format: {
 					title: function (d) {
-						return election[d];
+						let date = new Date(d);
+						return  electionName[`${date.getFullYear()}${date.getMonth()}${date.getDate()}`];
 					},
 					value: function (value, ratio, id) {
 						return `${Math.round(value)}%`;
@@ -106,5 +158,4 @@ function drawTurnout(brexitTurnout) {
 			}
 		});
 	});
-
 }
