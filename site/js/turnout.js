@@ -96,7 +96,7 @@ function drawTurnout(brexitTurnout) {
 			bindto: '#turnoutChart',
 			point: {
 				r: function(d) {
-					return 5;
+					return 6;
 				},
 				focus: {
 					expand: {
@@ -111,7 +111,14 @@ function drawTurnout(brexitTurnout) {
 				onclick: function (data) {
 
 					console.log('new threshold', data.value);
+
+					let name = electionName[`${data.x.getFullYear()}${data.x.getMonth()}${data.x.getDate()}`];
 					let threshold = +data.value;
+
+					let brexitTitle = `UK EU Referendum Turnout`;
+					let title = `Black areas had a lower turnout than the <br><b>${name}</b> (${Math.round(threshold)}%)`;
+
+					d3.select('#map-title').html(name === 'UK EU Referendum' ? brexitTitle : title);
 
 					map.fillScale(function(d) {
 						if(d.turnout_pct < threshold) return '#000';
