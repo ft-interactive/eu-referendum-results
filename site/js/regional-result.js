@@ -1,4 +1,5 @@
 let REGION_NAMES;
+const TURNOUT_IN_THOUSANDS = true;
 
 d3.csv('../data/ons/regions.csv', function (csv) {
 	REGION_NAMES = csv;
@@ -54,14 +55,6 @@ function drawRegionalResultTable(results) {
 			// Result % column
 			rows.append('td')
 				.attr('class', 'result')
-				.style('background-color', function (d) {
-					let color = d3.scale.threshold()
-					    .domain([0])
-					    .range([LOSE_BLUE,WIN_BLUE]);
-
-					return color(getAbsMargin(d));
-				})
-				.style('color', 'white')
 				.text(function (d) {
 					let winner_pct = d.remain_pct > d.leave_pct ? d.remain_pct : d.leave_pct;
 					return Math.round(winner_pct) + '%';
@@ -90,8 +83,10 @@ function drawRegionalResultTable(results) {
 					return Math.abs(getAbsMargin(d)).toLocaleString();
 				});
 
-			// Margin Bar
+			// Margin bars
 			difference
+
+				// Left and right sub-columns of Margin column
 				.append('li')
 				.style('flex-basis', function (d) {
 					return calculateFlexBasis(d, 'bar', max, min);
@@ -99,17 +94,19 @@ function drawRegionalResultTable(results) {
 				.attr('class', function (d) {
 					return getAbsMargin(d) > 0 ? 'right-item item' : 'left-item item' ;
 				})
+
+				// The bar
 				.append('div')
 				.attr('class', function (d) {
-					return 'result-bar' + ' ' + (getAbsMargin(d) > 0 ? '' : 'push-right');
+					return `result-bar ${(getAbsMargin(d) > 0 ? '' : 'push-right')}`;
 				})
 				.style('right', function (d) {
 
 					let right;
 
-					// light blue bar, losing side
+					// Losing side gets right-alighed by full size of left column
 					if (getAbsMargin(d) < 0) {
-						right = Math.round(max * 100 / (max+min)) + '%';
+						right = `${Math.round(max * 100 / (max+min))}%`;
 					}
 
 					// Make sure neither side is too small
@@ -124,32 +121,25 @@ function drawRegionalResultTable(results) {
 					return color(getAbsMargin(d));
 				})
 				.style('width', function (d) {
-					// relative to ul
-					return Math.abs((getAbsMargin(d))/maxAbsolute) * 100 / 2 + '%';
+
+					// relative to full ul, so divide by 2
+					return `${Math.abs((getAbsMargin(d))/maxAbsolute) * 100 / 2}%`;
 				});
-				// .style('left', function (d) {
-				// 	return getAbsMargin(d) > 0 ? '500' : '';
-				// });
 			
 
 			let maxTurnout = d3.max(results, function (d) {
 				return d.turnout_abs;
 			});
 
-			let grayscale = d3.scale.linear()
-			    .domain([0,maxTurnout])
-			    .range(['#ccc','#222']);
-
 			// Turnout column
 			rows.append('td')
 				.style('text-align', 'right')
 				.attr('class', 'turnout')
-				.style('background-color', function (d) {
-					return grayscale(d.turnout_abs) ;
-				})
 				.text(function (d) {
-					// return (Math.round(d.turnout_abs/100000)/10).toLocaleString().replace('0.', '.') + 'M';
-					return (Math.round(d.turnout_abs/1000)/1).toLocaleString() + 'K';
+
+					return TURNOUT_IN_THOUSANDS ? 
+						(Math.round(d.turnout_abs/1000)/1).toLocaleString() + 'K' :
+						(Math.round(d.turnout_abs/100000)/10).toLocaleString().replace('0.', '.') + 'M';
 				});
 			}
 		);
