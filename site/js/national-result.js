@@ -1,5 +1,8 @@
 'use strict';
 
+let NATIONAL_BAR_WIDTH = 50;
+let DECIMALS_ON_50_50 = false;
+
 d3.xhr('http://localhost:8082/all', function (data) {
 
 	if (data) {
@@ -21,21 +24,29 @@ function drawNationalResults(error, data) {
 	for (let result of ['leave', 'remain']) {
 
 		let thisPct = data[result + '_pct'];
+		let resultLabel;
 
-		// Decimals on 50-50
-		// let resultLabel = RESULT_LABEL[result] + ' ' + (Math.round(thisPct) === 50 ? Math.round(thisPct*10)/10 : Math.round(thisPct)) + '%';
+		if (DECIMALS_ON_50_50) {
+			resultLabel = `${RESULT_LABEL[result]} ${(Math.round(thisPct) === 50 ? Math.round(thisPct*10)/10 : Math.round(thisPct))}%`;
+		}
+		else {
+			resultLabel = `${RESULT_LABEL[result]} ${Math.round(thisPct)}%`;
+		}
 		
-		// No decimals
-		let resultLabel = RESULT_LABEL[result] + ' ' + Math.round(thisPct) + '%';
-		
-		container
+		let barContainer = container
 			.append('li')
-			.attr('class', 'national-item' + (winningPct === thisPct ? ' win' : ' lose'))
+			.attr('class', 'national-item' + (winningPct === thisPct ? ' win' : ' lose'));
+
+		barContainer
 			.append('div')
 			.attr('class', 'total-bar')
-			.text(resultLabel)
 			.style('background-color', winningPct === thisPct ? WIN_BLUE : LOSE_BLUE)
-			.style('width', thisPct * 100 / winningPct + '%');
+			.style('width', `${thisPct}%`);
+
+		barContainer
+			.append('div')
+			.attr('class', 'total-bar-label')
+			.text(resultLabel);
 
 		if (winningPct === thisPct) {
 			window.WINNER = result;
