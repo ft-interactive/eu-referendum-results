@@ -44,6 +44,10 @@ function ready(error, uk, localResultsData) {
       "#9ecae1"
     ]);
 
+  const countryBorderColor = "#E9DECF";
+  const noDataFillColor = "#F6E9D8";
+  const insetBoxColor = "#E9DECF";
+
   // Create Projection and Path for UK
   const ukProjection = d3.geo.albers()
     .center([0, 55.4])
@@ -76,23 +80,29 @@ function ready(error, uk, localResultsData) {
       return color(findResultRegion(data.id)[0].remain_pct)
     }
     // Fill transparent if not London and no results data
-    return "transparent"
+    return noDataFillColor
   }
 
   ukMap
     .style("fill", fillCorrectColor)
-    // .style("background", data => {
-    //   if (data.id.startsWith('E09')) {"repeating-linear-gradient(135deg,transparent,rgba(0,0,0,.2) 1px,transparent 2px,transparent 4px)"}
-    // });
 
-  // Draw borders between countries
+
+  // Draw borders excluding London
   svg.append("path")
+    .datum(topojson.mesh(uk, uk.objects.gb, (a, b) => a.properties.region !== 'E12000007'))
+    .attr("d", path)
+    .attr("class", "country-boundary")
+    .style("stroke", "black")
+    .style("stroke-width", "0.1px")
+    .style("fill", "none")
+
+    // Draw borders between countries
+    svg.append("path")
     .datum(topojson.mesh(uk, uk.objects.gb, (a, b) => a.id[0] !== b.id[0]))
     .attr("d", path)
     .attr("class", "country-boundary")
     .style("fill", "none")
-    .style("stroke", "black")
-    .style("stroke-dasharray", "5,5");
+    .style("stroke", countryBorderColor)
 
 
   // Create London projection and path
@@ -114,13 +124,13 @@ function ready(error, uk, localResultsData) {
 
   londonMap.call((parent) => {
     parent.append('text')
-      .text('london')
+      .text('London')
       .attr('transform', 'translate(0, -5)');
 
     parent.append('rect')
       .attr("width", 200)
       .attr("height", 165)
-      .style("stroke", "black")
+      .style("stroke", insetBoxColor)
       .style("fill", "none")
       .style("stroke-width", 2);
 
@@ -129,7 +139,9 @@ function ready(error, uk, localResultsData) {
       .enter()
       .append("path")
       .attr("d", londonPath)
-      .style("fill", data => color(findResultRegion(data.id)[0].remain_pct));
+      .style("fill", data => color(findResultRegion(data.id)[0].remain_pct))
+      .style("stroke", "black")
+      .style("stroke-width", "0.1px")
   });
 
   // Create Shetland projection and path
@@ -151,13 +163,13 @@ function ready(error, uk, localResultsData) {
 
   shetlandMap.call((parent) => {
     parent.append('text')
-      .text('shetland')
+      .text('Shetland')
       .attr('transform', 'translate(0, -5)');
 
     parent.append('rect')
       .attr("width", 75)
       .attr("height", 125)
-      .style("stroke", "black")
+      .style("stroke", insetBoxColor)
       .style("fill", "none")
       .style("stroke-width", 2);
 
@@ -166,7 +178,9 @@ function ready(error, uk, localResultsData) {
       .enter()
       .append("path")
       .attr("d", shetlandPath)
-      .style("fill", data => color(findResultRegion(data.id)[0].remain_pct));
+      .style("fill", data => color(findResultRegion(data.id)[0].remain_pct))
+      .style("stroke", "black")
+      .style("stroke-width", "0.1px");
   });
 
   // Draw legend
