@@ -31,8 +31,9 @@
 
     <link href="https://plus.google.com/113457471429583444041/" rel="publisher" />
     <meta property="fb:page_id" content="8860325749" />
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3-queue.v2.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
     <script src="lib/c3.min.js" charset="utf-8"></script>
     <script src="js/top.js"></script>
     <script>
@@ -87,7 +88,7 @@
 
 						 <!-- market reaction  -->
 							<div class="market-reaction o-grid-row"> MARKET REACTION SPARKLINES </div>
-							
+
               <div class="o-typography-flyline">
                 <a href="#" class="o-typography-flyline__link">EU Referendum</a>
               </div>
@@ -102,20 +103,25 @@
           <!-- National resslt bar chart -->
 					<div class="national-result o-grid-row graphic"></div>
 					<script src="js/national-result.js"></script>
-					
+
 					<!-- regional result table and bars -->
 					<div class="regional-result o-grid-row graphic"></div>
           <script src="js/regional-result.js"></script>
-					
+
 					<!-- local results map + comparison bars -->
 					<div class="local-results o-grid-row"></div>
           <script src="js/local-result.js"></script>
 					
           <h2 class="o-typography-heading1">[Turnout Title]</h2>
 					<!-- turnout-->
-					<div class="turnout-results o-grid-row graphic"></div>
+					<div o-grid-row graphic">
+            <div class="turnout-results" style="position: absolute; left: 50px; z-index: 1000"></div> 
+            <div class="turnout-map" style="position: absolute; right: 50px;"></div>     
+            <div style="height: 600px"></div>
+          </div>
+          <script src="js/uk-map.js"></script>
           <script src="js/turnout.js"></script>
-					
+				
 					<!-- demographic breakdown -->
 					<div class="demographics o-grid-row"></div>
         </div>

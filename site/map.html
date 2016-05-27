@@ -1,0 +1,98 @@
+<html>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3-queue.v2.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/d3-queue.v2.min.js"></script>
+    <script src="js/uk-map.js"></script>
+    <style>
+    .land{
+        fill:#999;
+        stroke: #333;
+        stroke-width: 2px;
+    }
+    
+    svg{
+        border: 1px solid black;
+    }
+    input{
+        width:100%;
+    }
+    </style>
+    <body>
+    <h1>Test the map module</h1> 
+    <input type="range" name="" value="50" max="60" min="40">   
+    </body>
+    <script>
+        var map = referendumMap()
+            .id(function(d){
+                return d.local_id;
+            })
+            .fillScale(function(d){
+                if(d.turnout_pct < 50) return '#000';
+                return '#FFF';
+            });
+        
+        var mapframe = d3.select('body')
+            .append('svg')
+                .attr('width', 400)
+                .attr('height', 550)
+        
+        d3_queue.queue()
+            .defer(d3.json, "geodata/referendum-result-areas.topojson")
+            .defer(d3.json, "dummyresult/local.json")
+            .await(ready);
+        
+        function ready( error, topology, results ){
+
+// sort out the data
+            var uk = topojson.feature( topology, topology.objects.gb );
+            var ukLand = topojson.merge( topology, topology.objects.gb.geometries.concat(topology.objects.ni.geometries).filter(function(d){
+                return d.id != 'S12000027';
+            }) );
+            
+            var londonLand = topojson.merge( topology, topology.objects.gb.geometries.filter(function(d){
+                return d.properties.region == 'E12000007'; 
+            }) );
+            
+            var shetlandLand = topojson.merge( topology, topology.objects.gb.geometries.filter(function(d){
+                return d.id == 'S12000027'; 
+            }) );
+            
+            uk.features = uk.features.concat( topojson.feature(topology, topology.objects.ni).features );
+
+// do the drawing
+            
+            mapframe.append('path')
+                .attr('class','land')
+                .attr('d', map.land(ukLand) )
+            
+            mapframe.append('path')
+                .attr('class','land')
+                .attr('d', map.land(londonLand, 'london') )
+                
+            mapframe.append('path')
+                .attr('class','land')
+                .attr('d', map.land(shetlandLand, 'shetland') )
+            
+            map.features( uk.features );
+            mapframe.selectAll('path.area').data(results)
+                .call(map);
+
+//on an input event from the slider change the colour scale for the map                
+            d3.select('input').on('input',function(){
+                var threshold = +this.value;
+                console.log('threshold', threshold)
+                map.fillScale(function(d){
+                    if(d.turnout_pct < threshold) return '#000';
+                    return '#FFF';
+                });
+                
+                mapframe.selectAll('path.area').data(results)
+                    .call(map);
+            })
+
+
+        };
+         
+    </script>
+</html>

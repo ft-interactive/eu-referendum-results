@@ -2,6 +2,8 @@
 
 const ELECTION_TYPE_COLORS = {};
 
+let map, mapframe, mapResults;
+
 d3.xhr('http://localhost:8082/all', function (data) {
 	if (data) {
 		drawTurnout(Math.round(JSON.parse(data.response).national.turnout_pct));
@@ -87,6 +89,10 @@ function drawTurnout(brexitTurnout) {
 		electionName['2016523'] = 'UK EU Referendum';
 
 		let chart = c3.generate({
+			size: {
+			    height: 500,
+			    width: 600
+			},
 			bindto: '#turnoutChart',
 			point: {
 				r: function(d) {
@@ -102,8 +108,18 @@ function drawTurnout(brexitTurnout) {
 				type: 'scatter',
 				x: 'x',
 				columns: [date, generalElection, referendum, londonMayoral, europeanParliament],
-				onclick: function (d, element) {
-					console.log('turnout', d.value);
+				onclick: function (data) {
+
+					console.log('new threshold', data.value);
+					let threshold = +data.value;
+
+					map.fillScale(function(d) {
+						if(d.turnout_pct < threshold) return '#000';
+						return '#FFF';
+					});
+					
+					mapframe.selectAll('path.area').data(mapResults)
+						.call(map);
 				}
 			},
 			axis: {
@@ -159,3 +175,81 @@ function drawTurnout(brexitTurnout) {
 		});
 	});
 }
+
+
+
+function updateMap() {
+		map = referendumMap()
+			.id(function(d){
+				return d.local_id;
+			})
+			.fillScale(function(d){
+				if(d.turnout_pct < 50) return '#000';
+				return '#FFF';
+			});
+		
+		mapframe = d3.select('.turnout-map')
+			.append('svg')
+				.attr('width', 400)
+				.attr('height', 550);
+		
+		d3_queue.queue()
+			.defer(d3.json, "geodata/referendum-result-areas.topojson")
+			.defer(d3.json, "dummyresult/local.json")
+			.await(ready);
+		
+		function ready( error, topology, results ){
+
+			mapResults = results;
+
+// sort out the data
+			let uk = topojson.feature( topology, topology.objects.gb );
+			let ukLand = topojson.merge( topology, topology.objects.gb.geometries.concat(topology.objects.ni.geometries).filter(function(d){
+				return d.id != 'S12000027';
+			}) );
+			
+			let londonLand = topojson.merge( topology, topology.objects.gb.geometries.filter(function(d){
+				return d.properties.region == 'E12000007'; 
+			}) );
+			
+			let shetlandLand = topojson.merge( topology, topology.objects.gb.geometries.filter(function(d){
+				return d.id == 'S12000027'; 
+			}) );
+			
+			uk.features = uk.features.concat( topojson.feature(topology, topology.objects.ni).features );
+
+// do the drawing
+			
+			mapframe.append('path')
+				.attr('class','land')
+				.attr('d', map.land(ukLand) );
+			
+			mapframe.append('path')
+				.attr('class','land')
+				.attr('d', map.land(londonLand, 'london') );
+				
+			mapframe.append('path')
+				.attr('class','land')
+				.attr('d', map.land(shetlandLand, 'shetland') );
+			
+			map.features( uk.features );
+			mapframe.selectAll('path.area').data(results)
+				.call(map);
+
+//on an input event from the slider change the colour scale for the map                
+			// d3.select('input').on('input',function(){
+			// 	let threshold = +this.value;
+			// 	map.fillScale(function(d){
+			// 		if(d.turnout_pct < threshold) return '#000';
+			// 		return '#FFF';
+			// 	});
+				
+			// 	mapframe.selectAll('path.area').data(results)
+			// 		.call(map);
+			// });
+
+
+		};
+};
+
+updateMap();
