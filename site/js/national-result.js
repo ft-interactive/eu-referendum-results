@@ -1,8 +1,4 @@
-'use strict';
 console.log('nation');
-
-var NATIONAL_BAR_WIDTH = 60;
-var DECIMALS_ON_50_50 = true;
 
 // TODO Shared variables
 var leaveColour = '#093967';
@@ -10,11 +6,9 @@ var remainColour = '#6AADB3';
 var leaveLabel = 'LEAVE';
 var remainLabel = 'REMAIN';
 
-var NARROW_PCT = 10; // Switch to NARROW_COLOR at 50% + NARROW_PCT
-
+//end shared
 
 d3.json('dummyresult/national.json', function(data){
-	
 	//TODO shared data processing
 	var nationalResultArray = [
 		{
@@ -30,15 +24,21 @@ d3.json('dummyresult/national.json', function(data){
 			colour:remainColour,
 		}
 	];
+	
 	drawNationalResults(nationalResultArray);
+	addNationalSummary(nationalResultArray);
 });
 
+function addNationalSummary(data) {
+	d3.select('#national-summary')
+		.html(	
+			'The leave camp won the day by a XXX margin of N percent (N votes). '+  
+			'<a href="">Turnout</a> was XXX at N% (N voters). There was XXX <a href="">variation between reporting areas</a> PLACE in REGION voting XX% to remain, PLACE in REGION XX% to leave.' 
+		)
+}
 
 function drawNationalResults(data) {	 
-	console.log(data);
-//	var winningPct = Math.max(data.leave_pct, data.remain_pct);
-	d3.select('.national-result')
-		.append('div')
+	d3.select('.national-result-bars')
 		.append('ul')
 			.attr('class', 'national-container')
 		.selectAll('li')
@@ -51,7 +51,7 @@ function drawNationalResults(data) {
 				if(i==0) return 'national-item win';
 				return 'national-item lose';							
 			})
-			.call(function(parent){
+			.call(function(parent){	
 				
 				parent.append('div')
 					.attr('class', 'total-bar')
@@ -63,5 +63,5 @@ function drawNationalResults(data) {
 					.text(function(d){
 						return d.label;
 					});
-				});
+			});
 }

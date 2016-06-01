@@ -1,46 +1,83 @@
 let REGION_NAMES;
 const TURNOUT_IN_THOUSANDS = true;
 // Shared variables
+console.log('regions');
+
+// TODO Shared variables
 var leaveColour = '#093967';
 var remainColour = '#6AADB3';
-var RESULT_LABEL = {
-  leave: 'LEAVE',
-  remain: 'REMAIN'
-}
-var NARROW_PCT = 10; // Switch to NARROW_COLOR at 50% + NARROW_PCT
+var leaveLabel = 'LEAVE';
+var remainLabel = 'REMAIN';
 
-d3.csv('../data/ons/regions.csv', function (csv) {
-	REGION_NAMES = csv;
+//end shared
 
-	d3.xhr('http://localhost:8082/all', function (data) {
+var tableStructure = [{
+		heading:'Region',
+		class:'',
+		HTMLaccessor:function(d){ return d.name },
+	},
+	{
+		heading:'Leave',
+		class:'table-number',
+		HTMLaccessor:function(d){ return d.leave_pct.toFixed(1) + '%'; },
+	},
+	{
+		heading:'Remain',
+		class:'table-number',
+		HTMLaccessor:function(d){ return d.remain_pct.toFixed(1) + '%'; },
+	},
+	{
+		heading:'Margin',
+		class:'',
+		HTMLaccessor:function(d){ return d.leave_abs +' vs '+ d.remain_abs; },
+	},
+	{
+		heading:'Turnout',
+		class:'table-number',
+		HTMLaccessor:function(d){ console.log(d); return d.turnout_abs + ' (' + d.turnout_pct.toFixed(1) + '%)'; }
+	}];
+	
+d3.json('dummyresult/regional-named.json', drawRegionalResultTable);
 
-		if (data) {
-			drawRegionalResultTable(JSON.parse(data.response).regional);
-		}
-		else {
-			d3.json('dummyresult/regional.json', drawRegionalResultTable);
-		}
+
+function drawRegionalResultTable(regionalResults) {
+	console.log(regionalResults)
+	var domain = d3.extent(regionalResults, function(d){
+		return d.remain_abs - d.leave_abs;
 	});
-});
-
-function drawRegionalResultTable(results) {
-	let table = d3.select('.regional-result').append('table');
-	makeHeaders(table);
-
-	// maxAbsolute is the largest bar we have in either direction
-	let maxAbsolute = d3.max(results, function (d) {
-		return Math.abs(getAbsMargin(d));
-	});
-
-	// Largest winning bar
-	let max = d3.max(results, function (d) {
-		return getAbsMargin(d);
-	});
-
-	// Largest losing bar
-	let min = Math.abs(d3.min(results, function (d) {
-		return getAbsMargin(d);
-	}));
+	
+	var table = d3.select('.regional-result')
+		.append('table');
+	
+	//heading	
+	table.append('thead').append('tr')
+		.selectAll('td')
+			.data(tableStructure)
+		.enter()
+			.append('th')
+			.attr('class',function(d){ return d.class; })
+			.text(function(d){ return d.heading; })
+	
+	//rows
+	table.append('tbody')
+		.selectAll('tr')
+			.data(regionalResults)
+		.enter()
+			.append('tr')
+		.call(function(parent){
+			parent
+				.selectAll('td')
+					.data(tableStructure)
+				.enter()
+					.append('td')
+					.attr('class', function(d){
+						return d.class;
+					})
+					.html(function(d, i ,j){
+						return d.HTMLaccessor( regionalResults[j] );
+					})
+		});
+	
 
 	table
 		.selectAll('table>tr')

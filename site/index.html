@@ -87,29 +87,37 @@
               <script>if (cutsTheMustard) addScript('https://origami-build.ft.com/v2/bundles/js?modules=o-share@^2', true, true)</script>
 
 						 <!-- market reaction  -->
-							<div class="market-reaction o-grid-row"> MARKET REACTION SPARKLINES </div>
+							<div class="market-reaction o-grid-row">
+                <p data-o-grid-colspan="12">MARKET REACTION SPARKLINES</p> 
+              </div>
 
               <div class="o-typography-flyline">
                 <a href="#" class="o-typography-flyline__link">EU Referendum</a>
               </div>
 
               <h1 class="o-typography-heading1">Britons vote to stay in the EU</h1>
+              
+              <div class="o-grid-row">
+                <div class="national-result-bars graphic" data-o-grid-colspan="center" ></div>
+              </div>
+              
+              <div class="o-grid-row national-result-summary">
+                <p id="national-summary" class="o-typography-body" data-o-grid-colspan="12">
+                </p>
+              </div>
+              
             </header>
           </div>
         </div>
 
         <div class="article-body o-typography-body-wrapper o-grid-container">
 
-          <!-- National resslt bar chart -->
-					<div class="national-result o-grid-row graphic"></div>
-          <div class="national-result">
-             <p class="national-detail">
-             </p>
-          </div>
-
 					<!-- regional result table and bars -->
-					<!-- <div class="regional-result o-grid-row graphic"></div>
-          <script src="js/regional-result.js"></script>
+					
+          <div class="regional-result o-grid-row graphic">
+            
+          </div>
+          
 
 					<!-- local results map + comparison bars -->
 					<!-- <div class="local-results o-grid-row"></div>
@@ -215,4 +223,5 @@
   </body>
 
   <script src="js/national-result.js"></script>
+  <script src="js/regional-result.js"></script>
 </html>

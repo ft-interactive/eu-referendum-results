@@ -41,6 +41,10 @@ th {
 	width: 60%;
 }
 
+td.table-number{
+	text-align: right;
+}
+
 td.turnout {
 	text-align: right;
 	width: 20px;
