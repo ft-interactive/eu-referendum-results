@@ -73,7 +73,7 @@ function referendumMap(){
                 return ukPath(feature);
             });
             
-        parent.attr('fill',fillScale);
+        parent.transition().attr('fill',fillScale);
     }
     
     map.id = function(f){
