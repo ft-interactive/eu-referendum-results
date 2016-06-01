@@ -53,12 +53,3 @@ if (cutsTheMustard) {
 // browsers (just to get basics like the HTML5 Shiv), and a special one (with
 // things like Promise) for CTM browsers.
 addScript('https://h2.ft.com/polyfill/v2/polyfill.min.js');
-
-// Shared variables
-var WIN_BLUE = '#093967';
-var LOSE_BLUE = '#6AADB3';
-var RESULT_LABEL = {
-  leave: 'LEAVE',
-  remain: 'REMAIN'
-}
-var NARROW_PCT = 10; // Switch to NARROW_COLOR at 50% + NARROW_PCT

@@ -1,55 +1,67 @@
 'use strict';
+console.log('nation');
 
-let NATIONAL_BAR_WIDTH = 50;
-let DECIMALS_ON_50_50 = false;
+var NATIONAL_BAR_WIDTH = 60;
+var DECIMALS_ON_50_50 = true;
 
-d3.xhr('http://localhost:8082/all', function (data) {
+// TODO Shared variables
+var leaveColour = '#093967';
+var remainColour = '#6AADB3';
+var leaveLabel = 'LEAVE';
+var remainLabel = 'REMAIN';
 
-	if (data) {
-		drawNationalResults(false, JSON.parse(data.response).national);
-	}
-	else {
-		d3.json('dummyresult/national.json', drawNationalResults);
-	}
+var NARROW_PCT = 10; // Switch to NARROW_COLOR at 50% + NARROW_PCT
+
+
+d3.json('dummyresult/national.json', function(data){
+	
+	//TODO shared data processing
+	var nationalResultArray = [
+		{
+			label:leaveLabel + ' ' + d3.round(data.leave_pct,1) + '%',
+			value_pct:data.leave_pct,
+			value_abs:data.leave_abs,
+			colour:leaveColour,
+		},
+		{
+			label:remainLabel + ' ' + d3.round(data.remain_pct,1) + '%',
+			value_pct:data.remain_pct,
+			value_abs:data.remain_abs,
+			colour:remainColour,
+		}
+	];
+	drawNationalResults(nationalResultArray);
 });
 
-function drawNationalResults(error, data) {
 
-	let winningPct = Math.max(data.leave_pct, data.remain_pct);
-
-	let result = d3.select('.national-result').append('div');
-
-	let container = result.append('ul').attr('class', 'national-container');
-
-	for (let result of ['leave', 'remain']) {
-
-		let thisPct = data[result + '_pct'];
-		let resultLabel;
-
-		if (DECIMALS_ON_50_50) {
-			resultLabel = `${RESULT_LABEL[result]} ${(Math.round(thisPct) === 50 ? Math.round(thisPct*10)/10 : Math.round(thisPct))}%`;
-		}
-		else {
-			resultLabel = `${RESULT_LABEL[result]} ${Math.round(thisPct)}%`;
-		}
-		
-		let barContainer = container
+function drawNationalResults(data) {	 
+	console.log(data);
+//	var winningPct = Math.max(data.leave_pct, data.remain_pct);
+	d3.select('.national-result')
+		.append('div')
+		.append('ul')
+			.attr('class', 'national-container')
+		.selectAll('li')
+			.data( data.sort(function(a,b){
+				return (b.value_pct - a.value_pct);
+			}) )
+		.enter()
 			.append('li')
-			.attr('class', 'national-item' + (winningPct === thisPct ? ' win' : ' lose'));
-
-		barContainer
-			.append('div')
-			.attr('class', 'total-bar')
-			.style('background-color', winningPct === thisPct ? WIN_BLUE : LOSE_BLUE)
-			.style('width', `${thisPct}%`);
-
-		barContainer
-			.append('div')
-			.attr('class', 'total-bar-label')
-			.text(resultLabel);
-
-		if (winningPct === thisPct) {
-			window.WINNER = result;
-		}
-	}
+			.attr('class', function(d,i){
+				if(i==0) return 'national-item win';
+				return 'national-item lose';							
+			})
+			.call(function(parent){
+				
+				parent.append('div')
+					.attr('class', 'total-bar')
+					.style('background-color', function(d){ return d.colour; })
+					.style('width', function(d){ return d.value_pct + '%'; });
+					
+				parent.append('div')
+					.attr('class', 'total-bar-label')
+					.text(function(d){
+						return d.label;
+					});
+				});
 }

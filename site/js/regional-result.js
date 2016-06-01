@@ -1,5 +1,13 @@
 let REGION_NAMES;
 const TURNOUT_IN_THOUSANDS = true;
+// Shared variables
+var leaveColour = '#093967';
+var remainColour = '#6AADB3';
+var RESULT_LABEL = {
+  leave: 'LEAVE',
+  remain: 'REMAIN'
+}
+var NARROW_PCT = 10; // Switch to NARROW_COLOR at 50% + NARROW_PCT
 
 d3.csv('../data/ons/regions.csv', function (csv) {
 	REGION_NAMES = csv;
