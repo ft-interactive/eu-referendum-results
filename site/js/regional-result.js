@@ -17,6 +17,11 @@ var tableStructure = [{
 		HTMLaccessor:function(d){ return d.name },
 	},
 	{
+		heading:'Margin',
+		class:'',
+		HTMLaccessor:function(d){ return d.leave_abs +' vs '+ d.remain_abs; },
+	},
+	{
 		heading:'Leave',
 		class:'table-number',
 		HTMLaccessor:function(d){ 
@@ -37,11 +42,6 @@ var tableStructure = [{
 			}
 			return spanOpen + d.remain_pct.toFixed(1) + '%</div>'; 
 		},
-	},
-	{
-		heading:'Margin',
-		class:'',
-		HTMLaccessor:function(d){ return d.leave_abs +' vs '+ d.remain_abs; },
 	},
 	{
 		heading:'Turnout',
