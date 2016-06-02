@@ -57,6 +57,42 @@ d3.json('dummyresult/regional-named.json', function(regionalResults){
 		.range([0,plotHeight])
 		.domain([0, regionalResults.length])
 	
+	var chartLayout = regionalResults.map(function(d, i){
+		var x = barScale(d.margin_abs);
+		var w = barScale( 0 ) - barScale( d.margin_abs );
+		var fill = leaveColour;
+		var valueAnchor = 'start';
+		var valueDx = 5;
+						
+		if(d.margin_abs > 0){
+			x = barScale( 0 );
+			w = barScale( d.margin_abs ) - barScale( 0 );
+			fill = remainColour;
+			valueAnchor = 'end';
+			valueDx = -5;
+		}
+						 
+		return {
+			groupTransform: 'translate(0, ' + regionScale(i) + ')',
+			barX: x,
+			barY: regionScale(0.1),
+			barWidth: w,
+			barHeight: regionScale(0.8),
+			barFill: fill,
+			valueLabel: commas( Math.abs(d.margin_abs) ),
+			valueLabelAnchor: valueAnchor,
+			valueLabelDx: valueDx,
+			valueLabelDy: regionScale(0.7),
+			regionLabel: d.name,
+			underline:{
+				x1:-margin.left,
+				y1:regionScale(1),
+				x2:plotWidth,
+				y2:regionScale(1),
+			},
+		}
+	})
+	
 	var svg = d3.select('.regional-result.graphic')
 		.append('svg')
 			.attr({
