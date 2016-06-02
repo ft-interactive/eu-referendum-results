@@ -56,6 +56,7 @@
 
 .vote-figure{
 	font-weight: 600;
+	font-feature-settings: "tnum";
 	font-size: 1.1rem;
 }
 

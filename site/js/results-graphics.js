@@ -118,7 +118,7 @@ d3.json('dummyresult/regional-named.json', function(regionalResults){
 						if(d.margin_abs < 0 ) return 5;
 						return -5;
 					})
-					.attr('dy',regionScale(0.8))
+					.attr('dy',regionScale(0.7))
 					.text(function(d){
 						return commas( Math.abs(d.margin_abs) );
 					}) //number label
@@ -126,7 +126,7 @@ d3.json('dummyresult/regional-named.json', function(regionalResults){
 				parent.append('text')
 					.attr('text-anchor','end')
 					.attr('class','region-label')
-					.attr('dy',regionScale(0.8))
+					.attr('dy',regionScale(0.7))
 					.attr('dx',-5)
 					.text(function(d){
 						return d.name;
@@ -172,14 +172,14 @@ function addNationalSummary(data) {
 
 function drawNationalResults(data) {	 
 	d3.select('.national-result-bars')
-		.append('ul')
+		.append('div')
 			.attr('class', 'national-container')
-		.selectAll('li')
+		.selectAll('div')
 			.data( data.sort(function(a,b){
 				return (b.value_pct - a.value_pct);
 			}) )
 		.enter()
-			.append('li')
+			.append('div')
 			.attr('class', function(d,i){
 				if(i==0) return 'national-item win';
 				return 'national-item lose';							
