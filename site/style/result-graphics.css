@@ -47,4 +47,18 @@
 
 .regional-axis{
 	stroke:#000;
+	stroke-opacity:0.2;
+}
+
+.bar-header{
+	font-size: 1.5rem;
+}
+
+.vote-figure{
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+
+.region-label{
+	font-size: 1.2rem;
 }
