@@ -15,4 +15,46 @@
 		<rect x="0" y="0" width="{{width}}" height="{{height}}" fill="{{background}}"></rect>
 	{% endif %}
 
+	{% for chart in charts %}
+		<g transform="translate({{chart.x}},{{chart.y}})">
+
+			<!-- Plot area -->
+			<g transform="translate({{chart.margin.left}},{{chart.margin.top}})">
+
+				<!-- Y axis rule -->
+				<line x1="0" y1="0" x2="0" y2="{{chart.plotArea.height}}" stroke="#6a6a6a" stroke-width="2"></line>
+
+				<!-- Data -->
+				<path d="{{chart.data}}" fill="none" stroke="#ca4050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+			</g>
+
+			<!-- Y axis label -->
+			<text
+				transform="translate({{chart.margin.left - 8}}, {{chart.margin.top + (chart.plotArea.height / 2)}})"
+				font-family="MetricWeb"
+				font-size="14"
+				text-anchor="end"
+				alignment-baseline="middle"
+				fill="#6a6a6a">
+				{% for line in chart.yLabel | split('\n') -%}
+					<tspan x="0" dy="{{loop.index0 * 14}}">{{line}}</tspan>
+				{%- endfor %}
+			</text>
+
+			<!-- X axis time label -->
+			{% if loop.first %}
+				<text
+					transform="translate({{chart.margin.left}}, 12)"
+					font-family="MetricWeb"
+					font-size="12"
+					text-anchor="middle"
+					fill="#6a6a6a">
+					{{chart.xLabel}}
+				</text>
+			{% endif %}
+
+		</g>
+	{% endfor %}
+
 </svg>

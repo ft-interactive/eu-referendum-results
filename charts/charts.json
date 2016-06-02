@@ -2,17 +2,17 @@
 	{
 		"name": "example-1",
 		"width": 600,
-		"height": 300,
-		"background": "#0f0",
-		"spacing": 20,
+		"height": 100,
+		"background": null,
+		"spacing": 10,
 		"layout": "horizontal"
 	},
 	{
 		"name": "example-2",
-		"width": 300,
-		"height": 600,
-		"background": "#f00",
-		"spacing": 20,
+		"width": 250,
+		"height": 400,
+		"background": null,
+		"spacing": 0,
 		"layout": "vertical"
 	}
 ]

@@ -1,6 +1,6 @@
 'use strict';
 
-const buildChartData = require('./lib/build-chart-data');
+const buildChartsData = require('./lib/build-charts-data');
 const fs = require('fs');
 const handleError = require('./lib/handle-error');
 const nunjucks = require('nunjucks');
@@ -20,17 +20,20 @@ console.log(`Creating directory "${buildDirectory}"`);
 exec(`mkdir -p "${buildDirectory}"`);
 
 // Configure nunjucks
-nunjucks.configure(path.resolve(__dirname, 'views'));
+const nunjucksEnv = nunjucks.configure(path.resolve(__dirname, 'views'));
+nunjucksEnv.addFilter('split', (string, separator) => {
+	return string.split(separator || '');
+});
 
 // Generate the charts
 chartsConfig.forEach(chartConfig => {
 
 	console.log(`Generating chart "${chartConfig.name}"`);
-	const chartData = buildChartData(chartConfig, data);
-	const chartSvg = nunjucks.render('chart.svg', chartData);
+	const chartData = buildChartsData(chartConfig, data);
+	const chartSvg = nunjucks.render('charts.svg', chartData);
 
 	const chartFilePath = path.join(buildDirectory, `${chartConfig.name}.svg`);
 	console.log(`Saving chart "${chartFilePath}"`);
-	fs.writeFileSync(chartFilePath, chartSvg)
+	fs.writeFileSync(chartFilePath, chartSvg);
 
 });
