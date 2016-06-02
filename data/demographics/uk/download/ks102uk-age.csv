@@ -1,0 +1,465 @@
+
+"KS102UK - Age Structure"
+"ONS Crown Copyright Reserved [from Nomis on 27 May 2016]"
+"Analysis   :","standard"
+"Date       :","2011"
+"Rural Urban:","Total"
+
+"Area","mnemonic","Mean Age","%","Median Age","%"
+
+"ualad09:Darlington","E06000005",40.2,-,41.0,-
+"ualad09:County Durham","E06000047",41.0,-,42.0,-
+"ualad09:Hartlepool","E06000001",39.8,-,40.0,-
+"ualad09:Middlesbrough","E06000002",37.8,-,37.0,-
+"ualad09:Northumberland","E06000057",42.8,-,45.0,-
+"ualad09:Redcar and Cleveland","E06000003",41.5,-,43.0,-
+"ualad09:Stockton-on-Tees","E06000004",39.1,-,39.0,-
+"ualad09:Gateshead","E08000037",40.5,-,40.0,-
+"ualad09:Newcastle upon Tyne","E08000021",36.9,-,33.0,-
+"ualad09:North Tyneside","E08000022",40.9,-,41.0,-
+"ualad09:South Tyneside","E08000023",41.2,-,42.0,-
+"ualad09:Sunderland","E08000024",40.4,-,41.0,-
+"ualad09:Blackburn with Darwen","E06000008",36.2,-,35.0,-
+"ualad09:Blackpool","E06000009",41.3,-,42.0,-
+"ualad09:Cheshire East","E06000049",42.0,-,43.0,-
+"ualad09:Cheshire West and Chester","E06000050",41.3,-,42.0,-
+"ualad09:Halton","E06000006",38.9,-,39.0,-
+"ualad09:Warrington","E06000007",39.5,-,40.0,-
+"ualad09:Allerdale","E07000026",43.1,-,45.0,-
+"ualad09:Barrow-in-Furness","E07000027",41.3,-,42.0,-
+"ualad09:Carlisle","E07000028",41.3,-,42.0,-
+"ualad09:Copeland","E07000029",42.1,-,44.0,-
+"ualad09:Eden","E07000030",44.1,-,46.0,-
+"ualad09:South Lakeland","E07000031",45.4,-,48.0,-
+"ualad09:Bolton","E08000001",38.4,-,38.0,-
+"ualad09:Bury","E08000002",39.2,-,40.0,-
+"ualad09:Manchester","E08000003",33.2,-,29.0,-
+"ualad09:Oldham","E08000004",37.4,-,37.0,-
+"ualad09:Rochdale","E08000005",37.9,-,38.0,-
+"ualad09:Salford","E08000006",37.4,-,35.0,-
+"ualad09:Stockport","E08000007",40.8,-,41.0,-
+"ualad09:Tameside","E08000008",39.1,-,39.0,-
+"ualad09:Trafford","E08000009",39.3,-,39.0,-
+"ualad09:Wigan","E08000010",39.6,-,40.0,-
+"ualad09:Burnley","E07000117",39.4,-,39.0,-
+"ualad09:Chorley","E07000118",40.5,-,41.0,-
+"ualad09:Fylde","E07000119",44.9,-,47.0,-
+"ualad09:Hyndburn","E07000120",38.7,-,39.0,-
+"ualad09:Lancaster","E07000121",40.2,-,40.0,-
+"ualad09:Pendle","E07000122",38.9,-,39.0,-
+"ualad09:Preston","E07000123",36.9,-,35.0,-
+"ualad09:Ribble Valley","E07000124",42.5,-,44.0,-
+"ualad09:Rossendale","E07000125",39.6,-,40.0,-
+"ualad09:South Ribble","E07000126",40.8,-,42.0,-
+"ualad09:West Lancashire","E07000127",41.2,-,42.0,-
+"ualad09:Wyre","E07000128",44.7,-,47.0,-
+"ualad09:Knowsley","E08000011",39.1,-,40.0,-
+"ualad09:Liverpool","E08000012",37.7,-,35.0,-
+"ualad09:Sefton","E08000014",42.5,-,44.0,-
+"ualad09:St. Helens","E08000013",40.7,-,41.0,-
+"ualad09:Wirral","E08000015",41.4,-,42.0,-
+"ualad09:East Riding of Yorkshire","E06000011",43.5,-,45.0,-
+"ualad09:Kingston upon Hull, City of","E06000010",37.5,-,36.0,-
+"ualad09:North East Lincolnshire","E06000012",40.2,-,41.0,-
+"ualad09:North Lincolnshire","E06000013",40.8,-,42.0,-
+"ualad09:York","E06000014",39.5,-,38.0,-
+"ualad09:Craven","E07000163",44.5,-,47.0,-
+"ualad09:Hambleton","E07000164",43.5,-,46.0,-
+"ualad09:Harrogate","E07000165",42.0,-,43.0,-
+"ualad09:Richmondshire","E07000166",40.0,-,40.0,-
+"ualad09:Ryedale","E07000167",44.6,-,47.0,-
+"ualad09:Scarborough","E07000168",44.2,-,46.0,-
+"ualad09:Selby","E07000169",40.9,-,42.0,-
+"ualad09:Barnsley","E08000016",40.4,-,41.0,-
+"ualad09:Doncaster","E08000017",39.8,-,40.0,-
+"ualad09:Rotherham","E08000018",40.2,-,41.0,-
+"ualad09:Sheffield","E08000019",37.9,-,36.0,-
+"ualad09:Bradford","E08000032",36.2,-,34.0,-
+"ualad09:Calderdale","E08000033",39.6,-,40.0,-
+"ualad09:Kirklees","E08000034",38.4,-,38.0,-
+"ualad09:Leeds","E08000035",37.6,-,35.0,-
+"ualad09:Wakefield","E08000036",40.2,-,41.0,-
+"ualad09:Derby","E06000015",37.6,-,36.0,-
+"ualad09:Leicester","E06000016",34.8,-,31.0,-
+"ualad09:Nottingham","E06000018",34.8,-,30.0,-
+"ualad09:Rutland","E06000017",42.4,-,43.0,-
+"ualad09:Amber Valley","E07000032",41.8,-,43.0,-
+"ualad09:Bolsover","E07000033",41.0,-,42.0,-
+"ualad09:Chesterfield","E07000034",41.4,-,42.0,-
+"ualad09:Derbyshire Dales","E07000035",44.5,-,47.0,-
+"ualad09:Erewash","E07000036",40.8,-,41.0,-
+"ualad09:High Peak","E07000037",41.1,-,43.0,-
+"ualad09:North East Derbyshire","E07000038",43.3,-,45.0,-
+"ualad09:South Derbyshire","E07000039",39.5,-,40.0,-
+"ualad09:Blaby","E07000129",40.9,-,42.0,-
+"ualad09:Charnwood","E07000130",39.3,-,39.0,-
+"ualad09:Harborough","E07000131",41.6,-,43.0,-
+"ualad09:Hinckley and Bosworth","E07000132",41.7,-,43.0,-
+"ualad09:Melton","E07000133",41.7,-,43.0,-
+"ualad09:North West Leicestershire","E07000134",40.8,-,42.0,-
+"ualad09:Oadby and Wigston","E07000135",41.0,-,41.0,-
+"ualad09:Boston","E07000136",41.5,-,42.0,-
+"ualad09:East Lindsey","E07000137",45.8,-,49.0,-
+"ualad09:Lincoln","E07000138",37.4,-,34.0,-
+"ualad09:North Kesteven","E07000139",42.7,-,44.0,-
+"ualad09:South Holland","E07000140",43.4,-,45.0,-
+"ualad09:South Kesteven","E07000141",41.8,-,43.0,-
+"ualad09:West Lindsey","E07000142",43.1,-,45.0,-
+"ualad09:Corby","E07000150",37.5,-,37.0,-
+"ualad09:Daventry","E07000151",40.9,-,43.0,-
+"ualad09:East Northamptonshire","E07000152",40.4,-,42.0,-
+"ualad09:Kettering","E07000153",39.5,-,40.0,-
+"ualad09:Northampton","E07000154",37.1,-,36.0,-
+"ualad09:South Northamptonshire","E07000155",41.1,-,43.0,-
+"ualad09:Wellingborough","E07000156",39.6,-,40.0,-
+"ualad09:Ashfield","E07000170",40.0,-,41.0,-
+"ualad09:Bassetlaw","E07000171",41.5,-,43.0,-
+"ualad09:Broxtowe","E07000172",41.4,-,42.0,-
+"ualad09:Gedling","E07000173",41.4,-,42.0,-
+"ualad09:Mansfield","E07000174",40.2,-,41.0,-
+"ualad09:Newark and Sherwood","E07000175",41.6,-,43.0,-
+"ualad09:Rushcliffe","E07000176",41.2,-,42.0,-
+"ualad09:Herefordshire, County of","E06000019",43.0,-,44.0,-
+"ualad09:Shropshire","E06000051",42.6,-,44.0,-
+"ualad09:Stoke-on-Trent","E06000021",38.5,-,38.0,-
+"ualad09:Telford and Wrekin","E06000020",38.1,-,38.0,-
+"ualad09:Cannock Chase","E07000192",39.6,-,40.0,-
+"ualad09:East Staffordshire","E07000193",39.8,-,40.0,-
+"ualad09:Lichfield","E07000194",42.2,-,44.0,-
+"ualad09:Newcastle-under-Lyme","E07000195",40.8,-,41.0,-
+"ualad09:South Staffordshire","E07000196",43.2,-,45.0,-
+"ualad09:Stafford","E07000197",41.8,-,43.0,-
+"ualad09:Staffordshire Moorlands","E07000198",43.4,-,45.0,-
+"ualad09:Tamworth","E07000199",38.6,-,39.0,-
+"ualad09:North Warwickshire","E07000218",41.7,-,43.0,-
+"ualad09:Nuneaton and Bedworth","E07000219",39.7,-,40.0,-
+"ualad09:Rugby","E07000220",40.0,-,40.0,-
+"ualad09:Stratford-on-Avon","E07000221",43.8,-,46.0,-
+"ualad09:Warwick","E07000222",39.7,-,39.0,-
+"ualad09:Birmingham","E08000025",35.3,-,32.0,-
+"ualad09:Coventry","E08000026",36.8,-,34.0,-
+"ualad09:Dudley","E08000027",40.5,-,41.0,-
+"ualad09:Sandwell","E08000028",37.4,-,36.0,-
+"ualad09:Solihull","E08000029",41.3,-,42.0,-
+"ualad09:Walsall","E08000030",38.8,-,38.0,-
+"ualad09:Wolverhampton","E08000031",38.5,-,37.0,-
+"ualad09:Bromsgrove","E07000234",42.6,-,44.0,-
+"ualad09:Malvern Hills","E07000235",44.9,-,47.0,-
+"ualad09:Redditch","E07000236",38.6,-,38.0,-
+"ualad09:Worcester","E07000237",38.3,-,37.0,-
+"ualad09:Wychavon","E07000238",43.5,-,45.0,-
+"ualad09:Wyre Forest","E07000239",42.7,-,44.0,-
+"ualad09:Bedford","E06000055",38.9,-,39.0,-
+"ualad09:Central Bedfordshire","E06000056",39.6,-,40.0,-
+"ualad09:Luton","E06000032",34.8,-,32.0,-
+"ualad09:Peterborough","E06000031",36.9,-,35.0,-
+"ualad09:Southend-on-Sea","E06000033",40.2,-,40.0,-
+"ualad09:Thurrock","E06000034",36.8,-,36.0,-
+"ualad09:Cambridge","E07000008",35.6,-,31.0,-
+"ualad09:East Cambridgeshire","E07000009",40.2,-,40.0,-
+"ualad09:Fenland","E07000010",42.1,-,43.0,-
+"ualad09:Huntingdonshire","E07000011",39.9,-,41.0,-
+"ualad09:South Cambridgeshire","E07000012",40.1,-,41.0,-
+"ualad09:Basildon","E07000066",39.1,-,39.0,-
+"ualad09:Braintree","E07000067",40.0,-,41.0,-
+"ualad09:Brentwood","E07000068",41.6,-,43.0,-
+"ualad09:Castle Point","E07000069",43.2,-,45.0,-
+"ualad09:Chelmsford","E07000070",40.1,-,40.0,-
+"ualad09:Colchester","E07000071",38.9,-,38.0,-
+"ualad09:Epping Forest","E07000072",41.1,-,42.0,-
+"ualad09:Harlow","E07000073",38.2,-,37.0,-
+"ualad09:Maldon","E07000074",43.0,-,45.0,-
+"ualad09:Rochford","E07000075",42.3,-,44.0,-
+"ualad09:Tendring","E07000076",45.7,-,48.0,-
+"ualad09:Uttlesford","E07000077",40.6,-,42.0,-
+"ualad09:Broxbourne","E07000095",39.1,-,39.0,-
+"ualad09:Dacorum","E07000096",39.4,-,40.0,-
+"ualad09:East Hertfordshire","E07000242",39.5,-,40.0,-
+"ualad09:Hertsmere","E07000098",39.4,-,39.0,-
+"ualad09:North Hertfordshire","E07000099",40.2,-,40.0,-
+"ualad09:St Albans","E07000240",38.9,-,39.0,-
+"ualad09:Stevenage","E07000243",37.8,-,37.0,-
+"ualad09:Three Rivers","E07000102",40.0,-,41.0,-
+"ualad09:Watford","E07000103",36.5,-,35.0,-
+"ualad09:Welwyn Hatfield","E07000241",38.0,-,36.0,-
+"ualad09:Breckland","E07000143",42.6,-,44.0,-
+"ualad09:Broadland","E07000144",43.9,-,45.0,-
+"ualad09:Great Yarmouth","E07000145",42.1,-,43.0,-
+"ualad09:King`s Lynn and West Norfolk","E07000146",43.5,-,45.0,-
+"ualad09:North Norfolk","E07000147",47.5,-,51.0,-
+"ualad09:Norwich","E07000148",37.4,-,34.0,-
+"ualad09:South Norfolk","E07000149",43.0,-,45.0,-
+"ualad09:Babergh","E07000200",43.1,-,45.0,-
+"ualad09:Forest Heath","E07000201",38.7,-,37.0,-
+"ualad09:Ipswich","E07000202",38.0,-,36.0,-
+"ualad09:Mid Suffolk","E07000203",42.4,-,44.0,-
+"ualad09:St Edmundsbury","E07000204",41.0,-,41.0,-
+"ualad09:Suffolk Coastal","E07000205",44.2,-,46.0,-
+"ualad09:Waveney","E07000206",43.9,-,45.0,-
+"ualad09:Camden","E09000007",35.7,-,33.0,-
+"ualad09:City of London","E09000001",41.4,-,39.0,-
+"ualad09:Hackney","E09000012",32.4,-,30.0,-
+"ualad09:Hammersmith and Fulham","E09000013",34.7,-,32.0,-
+"ualad09:Haringey","E09000014",34.2,-,32.0,-
+"ualad09:Islington","E09000019",34.5,-,31.0,-
+"ualad09:Kensington and Chelsea","E09000020",37.8,-,36.0,-
+"ualad09:Lambeth","E09000022",33.7,-,31.0,-
+"ualad09:Lewisham","E09000023",34.6,-,33.0,-
+"ualad09:Newham","E09000025",31.3,-,29.0,-
+"ualad09:Southwark","E09000028",33.7,-,32.0,-
+"ualad09:Tower Hamlets","E09000030",30.9,-,29.0,-
+"ualad09:Wandsworth","E09000032",34.5,-,32.0,-
+"ualad09:Westminster","E09000033",36.7,-,34.0,-
+"ualad09:Barking and Dagenham","E09000002",33.4,-,32.0,-
+"ualad09:Barnet","E09000003",36.8,-,35.0,-
+"ualad09:Bexley","E09000004",38.8,-,39.0,-
+"ualad09:Brent","E09000005",35.0,-,32.0,-
+"ualad09:Bromley","E09000006",39.9,-,40.0,-
+"ualad09:Croydon","E09000008",36.4,-,35.0,-
+"ualad09:Ealing","E09000009",35.4,-,33.0,-
+"ualad09:Enfield","E09000010",35.9,-,34.0,-
+"ualad09:Greenwich","E09000011",34.6,-,33.0,-
+"ualad09:Harrow","E09000015",37.6,-,36.0,-
+"ualad09:Havering","E09000016",40.4,-,40.0,-
+"ualad09:Hillingdon","E09000017",36.4,-,35.0,-
+"ualad09:Hounslow","E09000018",35.2,-,33.0,-
+"ualad09:Kingston upon Thames","E09000021",37.0,-,35.0,-
+"ualad09:Merton","E09000024",36.3,-,34.0,-
+"ualad09:Redbridge","E09000026",35.6,-,34.0,-
+"ualad09:Richmond upon Thames","E09000027",38.3,-,38.0,-
+"ualad09:Sutton","E09000029",38.3,-,38.0,-
+"ualad09:Waltham Forest","E09000031",34.4,-,32.0,-
+"ualad09:Bracknell Forest","E06000036",37.4,-,37.0,-
+"ualad09:Brighton and Hove","E06000043",37.4,-,35.0,-
+"ualad09:Isle of Wight","E06000046",44.4,-,46.0,-
+"ualad09:Medway","E06000035",37.7,-,37.0,-
+"ualad09:Milton Keynes","E06000042",36.1,-,35.0,-
+"ualad09:Portsmouth","E06000044",36.5,-,34.0,-
+"ualad09:Reading","E06000038",35.3,-,33.0,-
+"ualad09:Slough","E06000039",33.5,-,32.0,-
+"ualad09:Southampton","E06000045",36.1,-,32.0,-
+"ualad09:West Berkshire","E06000037",39.4,-,40.0,-
+"ualad09:Windsor and Maidenhead","E06000040",39.8,-,40.0,-
+"ualad09:Wokingham","E06000041",39.4,-,40.0,-
+"ualad09:Aylesbury Vale","E07000004",39.1,-,40.0,-
+"ualad09:Chiltern","E07000005",41.6,-,44.0,-
+"ualad09:South Bucks","E07000006",41.8,-,43.0,-
+"ualad09:Wycombe","E07000007",38.9,-,39.0,-
+"ualad09:Eastbourne","E07000061",42.8,-,43.0,-
+"ualad09:Hastings","E07000062",40.2,-,41.0,-
+"ualad09:Lewes","E07000063",43.7,-,45.0,-
+"ualad09:Rother","E07000064",47.2,-,50.0,-
+"ualad09:Wealden","E07000065",44.0,-,46.0,-
+"ualad09:Basingstoke and Deane","E07000084",38.7,-,39.0,-
+"ualad09:East Hampshire","E07000085",42.0,-,44.0,-
+"ualad09:Eastleigh","E07000086",40.1,-,41.0,-
+"ualad09:Fareham","E07000087",42.6,-,44.0,-
+"ualad09:Gosport","E07000088",39.8,-,40.0,-
+"ualad09:Hart","E07000089",40.0,-,41.0,-
+"ualad09:Havant","E07000090",42.3,-,44.0,-
+"ualad09:New Forest","E07000091",45.2,-,47.0,-
+"ualad09:Rushmoor","E07000092",36.6,-,36.0,-
+"ualad09:Test Valley","E07000093",41.4,-,43.0,-
+"ualad09:Winchester","E07000094",40.9,-,42.0,-
+"ualad09:Ashford","E07000105",39.6,-,40.0,-
+"ualad09:Canterbury","E07000106",40.0,-,39.0,-
+"ualad09:Dartford","E07000107",37.8,-,37.0,-
+"ualad09:Dover","E07000108",42.1,-,44.0,-
+"ualad09:Gravesham","E07000109",38.7,-,39.0,-
+"ualad09:Maidstone","E07000110",40.1,-,41.0,-
+"ualad09:Sevenoaks","E07000111",41.4,-,43.0,-
+"ualad09:Shepway","E07000112",42.4,-,43.0,-
+"ualad09:Swale","E07000113",39.6,-,40.0,-
+"ualad09:Thanet","E07000114",41.9,-,43.0,-
+"ualad09:Tonbridge and Malling","E07000115",39.8,-,41.0,-
+"ualad09:Tunbridge Wells","E07000116",39.6,-,40.0,-
+"ualad09:Cherwell","E07000177",38.9,-,39.0,-
+"ualad09:Oxford","E07000178",34.3,-,29.0,-
+"ualad09:South Oxfordshire","E07000179",40.9,-,42.0,-
+"ualad09:Vale of White Horse","E07000180",40.8,-,41.0,-
+"ualad09:West Oxfordshire","E07000181",41.1,-,42.0,-
+"ualad09:Elmbridge","E07000207",39.8,-,40.0,-
+"ualad09:Epsom and Ewell","E07000208",40.0,-,40.0,-
+"ualad09:Guildford","E07000209",39.0,-,38.0,-
+"ualad09:Mole Valley","E07000210",42.7,-,44.0,-
+"ualad09:Reigate and Banstead","E07000211",39.9,-,40.0,-
+"ualad09:Runnymede","E07000212",39.7,-,39.0,-
+"ualad09:Spelthorne","E07000213",40.4,-,41.0,-
+"ualad09:Surrey Heath","E07000214",40.2,-,41.0,-
+"ualad09:Tandridge","E07000215",41.3,-,43.0,-
+"ualad09:Waverley","E07000216",41.5,-,42.0,-
+"ualad09:Woking","E07000217",38.7,-,38.0,-
+"ualad09:Adur","E07000223",43.0,-,44.0,-
+"ualad09:Arun","E07000224",45.5,-,47.0,-
+"ualad09:Chichester","E07000225",44.5,-,46.0,-
+"ualad09:Crawley","E07000226",36.8,-,35.0,-
+"ualad09:Horsham","E07000227",42.1,-,44.0,-
+"ualad09:Mid Sussex","E07000228",41.0,-,42.0,-
+"ualad09:Worthing","E07000229",42.2,-,42.0,-
+"ualad09:Bath and North East Somerset","E06000022",40.3,-,40.0,-
+"ualad09:Bournemouth","E06000028",40.0,-,38.0,-
+"ualad09:Bristol, City of","E06000023",36.5,-,33.0,-
+"ualad09:Cornwall","E06000052",43.3,-,45.0,-
+"ualad09:Isles of Scilly","E06000053",44.7,-,46.0,-
+"ualad09:North Somerset","E06000024",42.6,-,44.0,-
+"ualad09:Plymouth","E06000026",39.0,-,38.0,-
+"ualad09:Poole","E06000029",42.1,-,42.0,-
+"ualad09:South Gloucestershire","E06000025",39.8,-,40.0,-
+"ualad09:Swindon","E06000030",38.1,-,38.0,-
+"ualad09:Torbay","E06000027",44.2,-,46.0,-
+"ualad09:Wiltshire","E06000054",40.8,-,42.0,-
+"ualad09:East Devon","E07000040",46.9,-,49.0,-
+"ualad09:Exeter","E07000041",38.1,-,35.0,-
+"ualad09:Mid Devon","E07000042",42.3,-,44.0,-
+"ualad09:North Devon","E07000043",43.3,-,45.0,-
+"ualad09:South Hams","E07000044",45.3,-,48.0,-
+"ualad09:Teignbridge","E07000045",44.6,-,47.0,-
+"ualad09:Torridge","E07000046",44.6,-,47.0,-
+"ualad09:West Devon","E07000047",44.6,-,47.0,-
+"ualad09:Christchurch","E07000048",47.1,-,49.0,-
+"ualad09:East Dorset","E07000049",46.9,-,49.0,-
+"ualad09:North Dorset","E07000050",42.8,-,44.0,-
+"ualad09:Purbeck","E07000051",44.9,-,47.0,-
+"ualad09:West Dorset","E07000052",46.2,-,49.0,-
+"ualad09:Weymouth and Portland","E07000053",42.8,-,44.0,-
+"ualad09:Cheltenham","E07000078",39.5,-,38.0,-
+"ualad09:Cotswold","E07000079",44.2,-,46.0,-
+"ualad09:Forest of Dean","E07000080",43.0,-,45.0,-
+"ualad09:Gloucester","E07000081",38.2,-,38.0,-
+"ualad09:Stroud","E07000082",42.3,-,44.0,-
+"ualad09:Tewkesbury","E07000083",42.4,-,44.0,-
+"ualad09:Mendip","E07000187",41.9,-,43.0,-
+"ualad09:Sedgemoor","E07000188",42.4,-,44.0,-
+"ualad09:South Somerset","E07000189",42.9,-,44.0,-
+"ualad09:Taunton Deane","E07000190",41.8,-,43.0,-
+"ualad09:West Somerset","E07000191",47.7,-,51.0,-
+"ualad09:Anglesey","W06000001",43.4,-,45.0,-
+"ualad09:Gwynedd","W06000002",41.6,-,42.0,-
+"ualad09:Conwy","W06000003",44.6,-,46.0,-
+"ualad09:Denbighshire","W06000004",42.4,-,44.0,-
+"ualad09:Flintshire","W06000005",40.6,-,41.0,-
+"ualad09:Wrexham","W06000006",39.8,-,40.0,-
+"ualad09:Powys","W06000023",43.9,-,46.0,-
+"ualad09:Ceredigion","W06000008",41.7,-,42.0,-
+"ualad09:Pembrokeshire","W06000009",42.9,-,45.0,-
+"ualad09:Carmarthenshire","W06000010",42.3,-,44.0,-
+"ualad09:Swansea","W06000011",40.1,-,39.0,-
+"ualad09:Neath Port Talbot","W06000012",41.3,-,42.0,-
+"ualad09:Bridgend","W06000013",40.7,-,41.0,-
+"ualad09:The Vale of Glamorgan","W06000014",40.9,-,42.0,-
+"ualad09:Cardiff","W06000015",36.5,-,33.0,-
+"ualad09:Rhondda, Cynon, Taff","W06000016",39.8,-,40.0,-
+"ualad09:Merthyr Tydfil","W06000024",39.7,-,40.0,-
+"ualad09:Caerphilly","W06000018",39.5,-,40.0,-
+"ualad09:Blaenau Gwent","W06000019",40.5,-,41.0,-
+"ualad09:Torfaen","W06000020",40.4,-,41.0,-
+"ualad09:Monmouthshire","W06000021",43.0,-,45.0,-
+"ualad09:Newport","W06000022",38.8,-,38.0,-
+"ualad09:Aberdeen City","S12000033",38.7,-,36.0,-
+"ualad09:Aberdeenshire","S12000034",40.4,-,42.0,-
+"ualad09:Angus","S12000041",42.4,-,44.0,-
+"ualad09:Argyll and Bute","S12000035",43.9,-,46.0,-
+"ualad09:Clackmannanshire","S12000005",40.2,-,41.0,-
+"ualad09:Dumfries and Galloway","S12000006",43.6,-,46.0,-
+"ualad09:Dundee City","S12000042",39.3,-,38.0,-
+"ualad09:East Ayrshire","S12000008",40.9,-,42.0,-
+"ualad09:East Dunbartonshire","S12000045",42.2,-,44.0,-
+"ualad09:East Lothian","S12000010",41.0,-,42.0,-
+"ualad09:East Renfrewshire","S12000011",41.0,-,43.0,-
+"ualad09:Edinburgh, City of","S12000036",38.5,-,36.0,-
+"ualad09:Eilean Siar","S12000013",43.7,-,46.0,-
+"ualad09:Falkirk","S12000014",40.1,-,41.0,-
+"ualad09:Fife","S12000015",40.8,-,42.0,-
+"ualad09:Glasgow City","S12000046",38.0,-,36.0,-
+"ualad09:Highland","S12000017",41.9,-,44.0,-
+"ualad09:Inverclyde","S12000018",41.5,-,43.0,-
+"ualad09:Midlothian","S12000019",40.4,-,42.0,-
+"ualad09:Moray","S12000020",41.2,-,42.0,-
+"ualad09:North Ayrshire","S12000021",41.6,-,43.0,-
+"ualad09:North Lanarkshire","S12000044",39.0,-,39.0,-
+"ualad09:Orkney Islands","S12000023",42.6,-,45.0,-
+"ualad09:Perth and Kinross","S12000024",42.6,-,44.0,-
+"ualad09:Renfrewshire","S12000038",40.6,-,42.0,-
+"ualad09:Scottish Borders","S12000026",43.5,-,46.0,-
+"ualad09:Shetland Islands","S12000027",40.1,-,41.0,-
+"ualad09:South Ayrshire","S12000028",43.5,-,45.0,-
+"ualad09:South Lanarkshire","S12000029",40.7,-,42.0,-
+"ualad09:Stirling","S12000030",40.2,-,41.0,-
+"ualad09:West Dunbartonshire","S12000039",40.3,-,41.0,-
+"ualad09:West Lothian","S12000040",38.2,-,39.0,-
+"ualad09:Antrim","95AA",36.7,-,36.0,-
+"ualad09:Ards","95BB",40.0,-,41.0,-
+"ualad09:Armagh","95CC",37.1,-,36.0,-
+"ualad09:Ballymena","95DD",39.2,-,39.0,-
+"ualad09:Ballymoney","95EE",37.7,-,37.0,-
+"ualad09:Banbridge","95FF",37.1,-,37.0,-
+"ualad09:Belfast","95GG",37.3,-,35.0,-
+"ualad09:Carrickfergus","95HH",39.2,-,40.0,-
+"ualad09:Castlereagh","95II",40.1,-,41.0,-
+"ualad09:Coleraine","95JJ",39.3,-,39.0,-
+"ualad09:Cookstown","95KK",36.0,-,34.0,-
+"ualad09:Craigavon","95LL",36.6,-,35.0,-
+"ualad09:Derry","95MM",35.8,-,35.0,-
+"ualad09:Down","95NN",37.8,-,38.0,-
+"ualad09:Dungannon","95OO",35.6,-,34.0,-
+"ualad09:Fermanagh","95PP",38.2,-,38.0,-
+"ualad09:Larne","95QQ",40.1,-,41.0,-
+"ualad09:Limavady","95RR",36.6,-,36.0,-
+"ualad09:Lisburn","95SS",37.1,-,37.0,-
+"ualad09:Magherafelt","95TT",35.6,-,34.0,-
+"ualad09:Moyle","95UU",39.5,-,40.0,-
+"ualad09:Newry and Mourne","95VV",35.6,-,34.0,-
+"ualad09:Newtownabbey","95WW",38.2,-,38.0,-
+"ualad09:North Down","95XX",40.9,-,41.0,-
+"ualad09:Omagh","95YY",36.6,-,36.0,-
+"ualad09:Strabane","95ZZ",37.2,-,37.0,-
+"scotcouncil2011:Clackmannanshire","S12000005",40.2,-,41.0,-
+"scotcouncil2011:Dumfries and Galloway","S12000006",43.6,-,46.0,-
+"scotcouncil2011:East Ayrshire","S12000008",40.9,-,42.0,-
+"scotcouncil2011:East Lothian","S12000010",41.0,-,42.0,-
+"scotcouncil2011:East Renfrewshire","S12000011",41.0,-,43.0,-
+"scotcouncil2011:Eilean Siar","S12000013",43.7,-,46.0,-
+"scotcouncil2011:Falkirk","S12000014",40.1,-,41.0,-
+"scotcouncil2011:Fife","S12000015",40.8,-,42.0,-
+"scotcouncil2011:Highland","S12000017",41.9,-,44.0,-
+"scotcouncil2011:Inverclyde","S12000018",41.5,-,43.0,-
+"scotcouncil2011:Midlothian","S12000019",40.4,-,42.0,-
+"scotcouncil2011:Moray","S12000020",41.2,-,42.0,-
+"scotcouncil2011:North Ayrshire","S12000021",41.6,-,43.0,-
+"scotcouncil2011:Orkney Islands","S12000023",42.6,-,45.0,-
+"scotcouncil2011:Perth and Kinross","S12000024",42.6,-,44.0,-
+"scotcouncil2011:Scottish Borders","S12000026",43.5,-,46.0,-
+"scotcouncil2011:Shetland Islands","S12000027",40.1,-,41.0,-
+"scotcouncil2011:South Ayrshire","S12000028",43.5,-,45.0,-
+"scotcouncil2011:South Lanarkshire","S12000029",40.7,-,42.0,-
+"scotcouncil2011:Stirling","S12000030",40.2,-,41.0,-
+"scotcouncil2011:Aberdeen City","S12000033",38.7,-,36.0,-
+"scotcouncil2011:Aberdeenshire","S12000034",40.4,-,42.0,-
+"scotcouncil2011:Argyll and Bute","S12000035",43.9,-,46.0,-
+"scotcouncil2011:City of Edinburgh","S12000036",38.5,-,36.0,-
+"scotcouncil2011:Renfrewshire","S12000038",40.6,-,42.0,-
+"scotcouncil2011:West Dunbartonshire","S12000039",40.3,-,41.0,-
+"scotcouncil2011:West Lothian","S12000040",38.2,-,39.0,-
+"scotcouncil2011:Angus","S12000041",42.4,-,44.0,-
+"scotcouncil2011:Dundee City","S12000042",39.3,-,38.0,-
+"scotcouncil2011:North Lanarkshire","S12000044",39.0,-,39.0,-
+"scotcouncil2011:East Dunbartonshire","S12000045",42.2,-,44.0,-
+"scotcouncil2011:Glasgow City","S12000046",38.0,-,36.0,-
+"gor:North East","E12000001",40.3,-,41.0,-
+"gor:North West","E12000002",39.5,-,39.0,-
+"gor:Yorkshire and The Humber","E12000003",39.4,-,39.0,-
+"gor:East Midlands","E12000004",40.0,-,40.0,-
+"gor:West Midlands","E12000005",39.3,-,39.0,-
+"gor:East","E12000006",40.2,-,40.0,-
+"gor:London","E12000007",35.6,-,33.0,-
+"gor:South East","E12000008",40.0,-,40.0,-
+"gor:South West","E12000009",41.6,-,42.0,-
+"gor:Wales","W92000004",40.6,-,41.0,-
+"gor:Scotland","S92000003",40.3,-,41.0,-
+"gor:Northern Ireland","N92000002",37.6,-,37.0,-
+
+
+
+
+"-","These figures are missing."
+
