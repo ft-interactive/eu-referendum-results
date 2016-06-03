@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en-GB" class="core">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://origami-build.ft.com/">
+    <link rel="preconnect" href="https://cdn.polyfill.io/">
+
+    <!--
+      TODO: FILL IN THESE MANDATORY TAGS AND
+            REMOVE THIS COMMENT
+
+    <title>@@TITLE</title>
+    <meta name="twitter:title" content="@@TITLE">
+    <meta property="og:title" content="@@TITLE">
+
+    <meta name="description" content="@@DESCRIPTION">
+    <meta name="twitter:description" content="@@DESCRIPTION">
+    <meta property="og:description" content="@@DESCRIPTION">
+
+    <link rel="canonical" href="@@URL">
+    <meta name="twitter:url" content="@@URL">
+    <meta property="og:url" content="@@URL">
+
+    <link rel="image_src" href="@@IMAGE">
+    <meta name="twitter:image" content="@@IMAGE">
+    <meta property="og:image" content="@@IMAGE">
+    -->
+
+
+    <!--
+      TODO: Select Twitter card type -
+            "summary" or "summary_large_image"
+
+            Twitter card docs:
+            https://dev.twitter.com/cards/markup
+    -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ft">
+
+
+    <!--
+    TODO optional author info
+    <meta name="twitter:creator" content="@individual_account">
+    <meta property="article:author" content="">
+    -->
+
+
+    <script>
+        /* eslint-disable */
+        // global addScript function
+        function addScript(src, async, defer, cb) {
+        if ((!async && !defer) || (typeof async === 'function' && !defer)) {
+            document.write('<script src="' + src + '">\x3c/script>');
+            if (typeof cb === 'function') {
+            cb();
+            }
+        } else {
+            var script = document.createElement('script');
+            script.src = src;
+            script.async = !!async;
+            if (defer) script.defer = !!defer;
+            var oldScript = document.getElementsByTagName('script')[0];
+            if (!cb && typeof defer === 'function') {
+            cb = defer;
+            }
+
+            if (typeof cb === 'function') {
+            if (script.hasOwnProperty('onreadystatechange')) {
+                script.onreadystatechange = function() {
+                if (script.readyState === 'loaded') {
+                    cb();
+                }
+                };
+            } else {
+                script.onload = cb;
+            }
+            }
+            oldScript.parentNode.appendChild(script);
+            return script;
+        }
+        }
+
+        // product-specific cuts-the-mustard test (customise for your needs)
+        var cutsTheMustard = (
+        'querySelector' in document &&
+        'localStorage' in window &&
+        'addEventListener' in window
+        );
+
+        // set the root element to .core or .enhanced as appropriate
+        if (cutsTheMustard) {
+        document.documentElement.className = (
+            document.documentElement.className.replace(/\bcore\b/g, 'enhanced')
+        );
+        }
+
+        // add a polyfill.io script.
+        // see polyfill.io for how to add non-default polyfills to this.
+        // Note: you may also want to add this conditionally - a basic one for non-CTM
+        // browsers (just to get basics like the HTML5 Shiv), and a special one (with
+        // things like Promise) for CTM browsers.
+        addScript('https://cdn.polyfill.io/v2/polyfill.min.js');    
+    </script>
+
+    <link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=o-fonts@^2.1.2,o-grid@^4.0.10">
+    <link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=ig-article@^1.0.0-alpha.3">
+
+
+    <style>
+    .core .o--if-js,
+    .enhanced .o--if-no-js {
+        display: none !important;
+    }
+    </style>
+
+
+    <link rel="stylesheet" href="style/result-graphics.css">
+
+    <link href="https://plus.google.com/113457471429583444041/" rel="publisher" />
+    <meta property="fb:page_id" content="8860325749" />
+    <link rel="shortcut icon" href="https://ig.ft.com/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://ig.ft.com/apple-touch-icon.png">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="index,follow">
+    <meta name="copyright" content="Financial Times">
+    <meta name="theme-color" content="#fff1e0" />
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-35229645-1', 'auto');
+    ga('require','displayfeatures');
+    ga('send', 'pageview');
+    </script>
+
+  </head>
+  <body>
+
+    <!--
+      REPLACE THIS COMMENT WITH A TRACKING SNIPPET
+      http://ft-interactive.github.io/tracking-snippet-generator/
+    -->
+
+    <link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=o-header@^5">
+    <header class="o-header o-header--minimal o-header--light" data-o-component="o-header" data-o-header--js="">
+    <div class="o-header__container">
+        <div class="o-header__inner">
+        <div class="o-header__bottom" data-o-header-suggestions="">
+            <div class="o-header__masthead-mobile">
+            <a href="http://www.ft.com/" title="Go to Financial Times homepage"><span>Financial Times</span></a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </header>
+
+    <main role="main">
+      <article>
+
+        <div class="o-grid-container">
+          <div class="o-grid-row">
+            <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
+              <header class="section-head" data-o-griddle="lb">
+                    <div class="section-head__share">
+                    <div class="o-share o-share--vertical o-share--muted"
+                        data-o-share-links="twitter facebook"
+                        data-o-share-links="{{links}}"
+                        data-o-share-url="{{url}}"
+                        data-o-share-title="{{title}}"
+                        data-o-share-titleExtra="{{titleExtra}}"
+                        data-o-share-summary="{{summary}}"
+                        data-o-share-relatedTwitterAccounts="@ft"
+                        data-o-component="o-share">
+                    </div>
+                    </div>
+
+                <div class="flyline">
+                <a href="#" class="flyline__link">EU Referendum</a>
+                </div>
+
+                <h1 class="headline">
+                    {{ headline }}
+                </h1>
+                <div class="standfirst">
+                    {{ nationalResultChart }}
+                </div>
+                <p class="standfirst">
+                Political language is designed to make lies sound truthful and murder respectable, and to give an appearance of solidity to pure wind
+                </p>
+
+                <p>
+                <time class="timestamp" data-o-component="o-date"
+                        datetime="2016-05-24T10:11:22Z">Tuesday, 24 May, 2016</time>
+                <span class="byline">by <a href="#">Author one</a> and <a href="#">Author two</a></span>
+                </p>
+              </header>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-body body">
+            <div class="o-grid-row">
+                <h2 class="o-typography-subhead">Where the vote was swung</h2>
+                <p class="o-typography-body">Which areas had the greatest effect on the outcome?</p>
+                {{ regionalBreakdownChart }}
+            </div>
+        </div>
+
+      </article>
+    </main>
+
+    <script>if (cutsTheMustard) addScript('https://origami-build.ft.com/v2/bundles/js?modules=ig-article@^1.0.0-alpha.3', true, false);</script>
+
+    <link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=o-footer@^4">
+    <footer class="footer" role="contentinfo">
+    <div class="o-footer o-footer--theme-light" data-o-component="o-footer">
+        <div class="o-footer__container">
+        <nav class="o-footer__row o-footer__nav">
+            <div class="o-footer__col o-footer__col--full-width">
+            <h3 class="o-footer__title">Sections</h3>
+            <ul class="o-footer__row o-footer__section-list">
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com">Home</a></li>
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com/world/uk">UK</a></li>
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com/world">World</a></li>
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com/companies">Companies</a></li>
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com/markets">Markets</a></li>
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com/global-economy">Global Economy</a></li>
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com/lex">Lex</a></li>
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com/comment">Comment</a></li>
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com/management">Management</a></li>
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com/personal-finance">Personal Finance</a></li>
+                <li class="o-footer__link o-footer__section-link o-footer__col"><a href="http://www.ft.com/life-arts">Life &amp; Arts</a></li>
+            </ul>
+            <div class="o-footer__divider"></div>
+            </div>
+        </nav>
+        <div class="o-footer__row o-footer__link-lists">
+            <nav class="o-footer__col o-footer__link-list">
+            <h3 class="o-footer__title">Tools</h3>
+            <ul>
+                <li class="o-footer__link"><a href="http://portfolio.ft.com/">Portfolio</a></li>
+                <li class="o-footer__link"><a href="http://lexicon.ft.com/">Lexicon</a></li>
+                <li class="o-footer__link"><a href="http://www.ft.com/topics">Topics</a></li>
+                <li class="o-footer__link"><a href="http://markets.ft.com/alerts/keyword.asp">Alerts Hub</a></li>
+                <li class="o-footer__link"><a href="http://nbe.ft.com/nbe/profile.cfm?segid=70121">Daily Briefings</a></li>
+            </ul>
+            </nav>
+            <nav class="o-footer__col o-footer__link-list">
+            <h3 class="o-footer__title">Services</h3>
+            <ul>
+                <li class="o-footer__link"><a href="http://www.ft.com/corporate">Corporate subscriptions</a></li>
+                <li class="o-footer__link"><a href="http://www.ft.com/syndication">Syndication</a></li>
+                <li class="o-footer__link"><a href="https://www.ft-live.com/">Conferences</a></li>
+            </ul>
+            </nav>
+            <nav class="o-footer__col o-footer__link-list">
+            <h3 class="o-footer__title">Support</h3>
+            <ul>
+                <li class="o-footer__link"><a href="http://www.ft.com/help">Help</a></li>
+                <li class="o-footer__link"><a href="http://www.ft.com/aboutus">About us</a></li>
+                <li class="o-footer__link"><a href="http://aboutus.ft.com/careers/">Jobs</a></li>
+                <li class="o-footer__link"><a href="http://aboutus.ft.com/contact-us">Contact us</a></li>
+            </ul>
+            </nav>
+            <nav class="o-footer__col o-footer__link-list">
+            <h3 class="o-footer__title">Legal &amp; Advertising</h3>
+            <ul>
+                <li class="o-footer__link"><a href="http://www.ft.com/advertising">Advertise with the FT</a></li>
+                <li class="o-footer__link"><a href="http://www.ft.com/servicestools/help/terms">Terms &amp; conditions</a></li>
+                <li class="o-footer__link"><a href="http://www.ft.com/servicestools/help/privacy">Cookie &amp; privacy policy</a></li>
+                <li class="o-footer__link"><a href="http://www.ft.com/servicestools/help/copyright">Copyright</a></li>
+            </ul>
+            </nav>
+        </div>
+        <div class="o-footer__row o-footer__copyright">
+            <div class="o-footer__col o-footer__col--full-width">
+            <span>&#xA9; THE FINANCIAL TIMES LTD 2016.</span>
+            <span><abbr title="Financial Times">FT</abbr> and &#x2018;Financial Times&#x2019; are trademarks of The Financial Times Ltd.</span>
+            </div>
+        </div>
+        </div>
+        <div class="o-footer__brand">
+        <div class="o-footer__container">
+            <div class="o-footer__row">
+            <div class="o-footer__col o-footer__col--full-width">
+                <div class="o-footer__brand-logo" aria-label="A Nikkei Company"></div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </footer>
+    <script id="topo-data" type="application/json">
+        {{ topoData }}
+    </script>
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.bundle.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

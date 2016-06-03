@@ -1,0 +1,10 @@
+<div class="national-result-bars graphic">
+    <div class="national-container">
+        {% for row in results %}
+        <div class="national-item{% if loop.index == 1 %} win{% endif %}">
+            <div class="total-bar" style="width: {{ row.value_pct }}%; background-color: {{ row.colour }};"></div>
+            <div class="total-bar-label">{{ row.label }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
