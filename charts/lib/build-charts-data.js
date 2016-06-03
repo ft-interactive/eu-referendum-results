@@ -3,6 +3,7 @@
 const assertHexColor = require('./assert-hex-color');
 const assertNumeric = require('./assert-numeric');
 const d3Array = require('d3-array');
+const d3Format = require('d3-format');
 const d3Scale = require('d3-scale');
 const d3Shape = require('d3-shape');
 
@@ -50,20 +51,25 @@ function buildChartData(config, chart) {
 		top: 20,
 		left: 50,
 		bottom: 0,
-		right: 10
+		right: 50
 	};
 	chart.plotArea = {
 		width: chart.width - chart.margin.left - chart.margin.right,
 		height: chart.height - chart.margin.top - chart.margin.bottom
 	};
 
-	const valueDomain = d3Array.extent(chart.series, point => {
+	const firstValue = chart.series[0].value;
+	const lastValue = chart.series[chart.series.length - 1].value;
+
+	const valueExtent = d3Array.extent(chart.series, point => {
 		return (point ? point.value : null);
 	}).reverse();
 	// Pad the value domain with the difference of its values
-	const valueDomainDiff = valueDomain[0] - valueDomain[1];
-	valueDomain[0] += valueDomainDiff;
-	valueDomain[1] -= valueDomainDiff;
+	const valueExtentDiff = valueExtent[0] - valueExtent[1];
+	const valueDomain = [
+		valueExtent[0] + valueExtentDiff,
+		valueExtent[1] - valueExtentDiff
+	];
 
 	const dateDomain = [
 		new Date(chart.series[0].date),
@@ -91,6 +97,17 @@ function buildChartData(config, chart) {
 	// Add data start/end circles
 	chart.startY = yScale(chart.series[0].value);
 	chart.endY = yScale(chart.series[chart.series.length - 1].value);
+
+	// Add the end value labels
+	chart.endValue = {};
+	if (chart.type === 'index') {
+		chart.endValue.label = d3Format.format(',.1f')(lastValue)
+	} else {
+		chart.endValue.label = (chart.symbol || '') + d3Format.format('.3f')(lastValue)
+	}
+
+	const percentageChange = ((lastValue - firstValue) / lastValue) * 100;
+	chart.endValue.diff = d3Format.format(',.1f')(percentageChange) + '%';
 
 	return chart;
 }

@@ -26,6 +26,7 @@
 
 				<!-- Y axis rule -->
 				<line x1="0" y1="0" x2="0" y2="{{chart.plotArea.height}}" stroke="#6a6a6a" stroke-width="2"/>
+				<polygon points="-5,0 5,0 0,7" fill="#6a6a6a"/>
 
 				<!-- Data -->
 				<path d="{{chart.data}}" fill="none" stroke="#ca4050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -60,6 +61,19 @@
 					{{chart.xLabel}}
 				</text>
 			{% endif %}
+
+			<!-- End value label -->
+			<g transform="translate({{chart.margin.left + chart.plotArea.width + 12}}, {{chart.margin.top + chart.endY}})">
+				<text
+					font-family="MetricWeb"
+					font-size="14"
+					text-anchor="start"
+					alignment-baseline="middle"
+					fill="#ccc">
+					<tspan x="0" dy="0">{{chart.endValue.label}}</tspan>
+					<tspan x="0" dy="15" fill="#ca4050">{{chart.endValue.diff}}</tspan>
+				</text>
+			</g>
 
 		</g>
 	{% endfor %}

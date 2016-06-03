@@ -4,6 +4,7 @@
 			"type": "currency",
 			"yLabel": "£ vs $",
 			"xLabel": "12pm",
+			"symbol": "$",
 			"series": [
 				{
 					"date": "2016-01-01T00:00:00Z",
@@ -31,6 +32,7 @@
 			"type": "currency",
 			"yLabel": "£ vs €",
 			"xLabel": "12pm",
+			"symbol": "€",
 			"series": [
 				{
 					"date": "2016-01-01T00:00:00Z",
