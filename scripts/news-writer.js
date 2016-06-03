@@ -16,11 +16,6 @@ module.exports = function (national, local, regional){
     let headline = '';
     let winner = '';
     
-   
-    let turnoutStatement = '';
-    let regionalDifferencesStatement = '';
-
-    
     let margin = national.leave_pct - national.remain_pct;
     let votes_margin = national.leave_abs - national.remain_abs;
     if(margin > 0){
@@ -31,11 +26,13 @@ module.exports = function (national, local, regional){
         headline = 'Britons vote to remain in the EU';
     }
     
-    let marginStatement = `The ${winner} camp won the day by a ${marginDescription(margin)}, ${Math.abs(margin).toFixed(1)}% ( ${commas( Math.abs(votes_margin) )} votes )`
+    let marginStatement = `The ${winner} camp won the day by a ${marginDescription(margin)}, ${Math.abs(margin).toFixed(1)}% ( ${commas( Math.abs(votes_margin) )} votes )`;
+    let contraryPlacesStatement = 'CONTRARY PLACES';
+    let turnoutStatement = 'TURNOUT STATEMENTS';
     
     return {
         headline: headline,
-        standfirstList: `<ul><li>${marginStatement}</li><li>standfirstList</li><li>standfirstList</li><li>standfirstList</li></ul>`,
+        standfirstList: `<ul class="o-typography-body o-typography-list"><li>${marginStatement}</li><li>${contraryPlacesStatement}</li><li>${turnoutStatement}</li></ul>`,
     }
 }
 
