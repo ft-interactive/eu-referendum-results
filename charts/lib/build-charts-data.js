@@ -35,7 +35,7 @@ function buildChartData(config, chart) {
 	if (config.layout === 'horizontal') {
 		const availableWidth = config.width - (config.spacing * (config.maxCharts - 1));
 		const chartWidth = (availableWidth / config.maxCharts);
-		chart.x = chart.index * (chartWidth + config.spacing);
+		chart.x = Math.floor(chart.index * (chartWidth + config.spacing));
 		chart.y = 0;
 		chart.width = chartWidth;
 		chart.height = config.height;
@@ -43,7 +43,7 @@ function buildChartData(config, chart) {
 		const availableHeight = config.height - (config.spacing * (config.maxCharts - 1));
 		const chartHeight = (availableHeight / config.maxCharts);
 		chart.x = 0;
-		chart.y = chart.index * (chartHeight + config.spacing);
+		chart.y = Math.floor(chart.index * (chartHeight + config.spacing));
 		chart.width = config.width;
 		chart.height = chartHeight;
 	}
@@ -54,8 +54,8 @@ function buildChartData(config, chart) {
 		right: 50
 	};
 	chart.plotArea = {
-		width: chart.width - chart.margin.left - chart.margin.right,
-		height: chart.height - chart.margin.top - chart.margin.bottom
+		width: Math.floor(chart.width - chart.margin.left - chart.margin.right),
+		height: Math.floor(chart.height - chart.margin.top - chart.margin.bottom)
 	};
 
 	const firstValue = chart.series[0].value;
@@ -91,12 +91,12 @@ function buildChartData(config, chart) {
 	}
 	chart.data = buildLine
 		.x(point => xScale(new Date(point.date)))
-		.y(point => yScale(point.value))
+		.y(point => Math.floor(yScale(point.value)))
 		(chart.series);
 
 	// Add data start/end circles
-	chart.startY = yScale(chart.series[0].value);
-	chart.endY = yScale(chart.series[chart.series.length - 1].value);
+	chart.startY = Math.floor(yScale(chart.series[0].value));
+	chart.endY = Math.floor(yScale(chart.series[chart.series.length - 1].value));
 
 	// Add the end value labels
 	chart.endValue = {};
