@@ -12,7 +12,7 @@
 	{% endif %}
 
 	{% if background %}
-		<rect x="0" y="0" width="{{width}}" height="{{height}}" fill="{{background}}"></rect>
+		<rect x="0" y="0" width="{{width}}" height="{{height}}" fill="{{background}}"/>
 	{% endif %}
 
 	{% for chart in charts %}
@@ -21,17 +21,24 @@
 			<!-- Plot area -->
 			<g transform="translate({{chart.margin.left}},{{chart.margin.top}})">
 
+				<!-- Opening value rule -->
+				<line x1="0" y1="{{chart.startY}}" x2="{{chart.plotArea.width}}" y2="{{chart.startY}}" stroke="#6a6a6a" stroke-width="2"/>
+
 				<!-- Y axis rule -->
-				<line x1="0" y1="0" x2="0" y2="{{chart.plotArea.height}}" stroke="#6a6a6a" stroke-width="2"></line>
+				<line x1="0" y1="0" x2="0" y2="{{chart.plotArea.height}}" stroke="#6a6a6a" stroke-width="2"/>
 
 				<!-- Data -->
-				<path d="{{chart.data}}" fill="none" stroke="#ca4050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+				<path d="{{chart.data}}" fill="none" stroke="#ca4050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+				<!-- Start/end circles -->
+				<circle cx="0" cy="{{chart.startY}}" r="5" fill="#272727" stroke="#ccc" stroke-width="2"/>
+				<circle cx="{{chart.plotArea.width}}" cy="{{chart.endY}}" r="5" fill="#272727" stroke="#ca4050" stroke-width="2"/>
 
 			</g>
 
 			<!-- Y axis label -->
 			<text
-				transform="translate({{chart.margin.left - 8}}, {{chart.margin.top + (chart.plotArea.height / 2)}})"
+				transform="translate({{chart.margin.left - 12}}, {{chart.margin.top + (chart.plotArea.height / 2)}})"
 				font-family="MetricWeb"
 				font-size="14"
 				text-anchor="end"

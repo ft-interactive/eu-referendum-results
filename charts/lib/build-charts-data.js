@@ -50,14 +50,16 @@ function buildChartData(config, chart) {
 		top: 20,
 		left: 50,
 		bottom: 0,
-		right: 0
+		right: 10
 	};
 	chart.plotArea = {
 		width: chart.width - chart.margin.left - chart.margin.right,
 		height: chart.height - chart.margin.top - chart.margin.bottom
 	};
 
-	const valueDomain = d3Array.extent(chart.series, point => point.value).reverse();
+	const valueDomain = d3Array.extent(chart.series, point => {
+		return (point ? point.value : null);
+	}).reverse();
 	// Pad the value domain with the difference of its values
 	const valueDomainDiff = valueDomain[0] - valueDomain[1];
 	valueDomain[0] += valueDomainDiff;
@@ -77,10 +79,18 @@ function buildChartData(config, chart) {
 		.range([0, chart.plotArea.width]);
 
 	// Add chart data
-	chart.data = d3Shape.line()
+	const buildLine = d3Shape.line();
+	if (chart.type === 'index') {
+		buildLine.defined(point => typeof point.value === 'number');
+	}
+	chart.data = buildLine
 		.x(point => xScale(new Date(point.date)))
 		.y(point => yScale(point.value))
 		(chart.series);
+
+	// Add data start/end circles
+	chart.startY = yScale(chart.series[0].value);
+	chart.endY = yScale(chart.series[chart.series.length - 1].value);
 
 	return chart;
 }
