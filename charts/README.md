@@ -25,7 +25,15 @@ You can generate charts with:
 node .
 ```
 
+This will generate charts and save them to the `build` folder.
+
 Each chart is configured using `charts.json`. This specifies width, height, and other properties for each chart.
+
+The data comes from `data/sample.json`. You can specify a different JSON file using a command-line argument:
+
+```sh
+node . data/example.json
+```
 
 
 

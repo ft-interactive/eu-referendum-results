@@ -12,7 +12,11 @@ process.on('uncaughtException', handleError);
 
 // Load the chart config and data
 const chartsConfig = require('./charts.json');
-const data = require('./data/sample.json'); // TODO use real data
+let dataPath = process.argv[2] || './data/sample.json';
+if (dataPath[0] !== '/') {
+	dataPath = path.join(__dirname, dataPath);
+}
+const data = require(dataPath);
 
 // Create the build directory
 const buildDirectory = path.join(__dirname, 'build');
