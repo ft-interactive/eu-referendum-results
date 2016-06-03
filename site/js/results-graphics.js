@@ -81,9 +81,12 @@ d3.json('dummyresult/regional-named.json', function(regionalResults){
 			barFill: fill,
 			valueLabel: commas( Math.abs(d.margin_abs) ),
 			valueLabelAnchor: valueAnchor,
+			valueLabelTransform: 'translate(' + barScale(0) + ',0)',
 			valueLabelDx: valueDx,
 			valueLabelDy: regionScale(0.7),
 			regionLabel: d.name,
+			regionLabelDx:-5,
+			regionLabelDy:regionScale(0.7),
 			underline:{
 				x1:-margin.left,
 				y1:regionScale(1),
@@ -104,69 +107,39 @@ d3.json('dummyresult/regional-named.json', function(regionalResults){
 			.attr('transform','translate('+margin.left+','+margin.top+')');
 	
 	svg.selectAll('g')
-		.data(regionalResults)
+		.data(chartLayout)
 		.enter()
 			.append('g')
-			.attr('transform',function(d, i){
-				return 'translate(0, ' + regionScale(i) + ')'
-			})
+			.attr('transform',function(d){ return d.groupTransform; })
 			.call(function(parent){
 				parent.append('line')
-					.attr({
-						x1:-margin.left,
-						y1:regionScale(1),
-						x2:plotWidth,
-						y2:regionScale(1),
-						'class':'regional-axis',
-					})
+					.attr('class','regional-axis')
+					.attr('x1', function(d){ return d.underline.x1; })
+					.attr('y1', function(d){ return d.underline.y1; })
+					.attr('x2', function(d){ return d.underline.x2; })
+					.attr('y2', function(d){ return d.underline.y2; });
 						
 				parent.append('rect') //bar
-					.attr('x', function(d){
-						console.log(barScale(d.margin_abs));
-						if(d.margin_abs > 0){
-							return barScale( 0 );
-						}
-						return barScale(d.margin_abs);
-					})
-					.attr('y',regionScale(0.1))
-					.attr('width', function(d){
-						if(d.margin_abs < 0){
-							return barScale( 0 ) - barScale( d.margin_abs );
-						}
-						return barScale( d.margin_abs ) - barScale( 0 );
-					})
-					.attr( 'height', regionScale(0.8) )
-					.attr( 'fill', function(d){
-						if(d.margin_abs > 0){
-							return remainColour;							
-						}
-						return leaveColour;
-					});
+					.attr('x', function(d){ return d.barX; })
+					.attr('y', function(d){ return d.barY; })
+					.attr('width', function(d){ return d.barWidth; })
+					.attr( 'height', function(d){ return d.barHeight; })
+					.attr( 'fill', function(d){ return d.barFill; });
 					
 				parent.append('text')
 					.attr('class','vote-figure')
-					.attr('text-anchor', function(d){
-						if(d.margin_abs < 0 ) return 'start';
-						return 'end';
-					})
-					.attr('transform','translate(' + barScale(0) + ',0)')
-					.attr('dx',function(d){
-						if(d.margin_abs < 0 ) return 5;
-						return -5;
-					})
-					.attr('dy',regionScale(0.7))
-					.text(function(d){
-						return commas( Math.abs(d.margin_abs) );
-					}) //number label
+					.attr('text-anchor', function(d){ return d.valueLabelAnchor; })
+					.attr('transform',function(d){ return d.valueLabelTransform; })
+					.attr('dx',function(d){ return d.valueLabelDx; })
+					.attr('dy',function(d){ return d.valueLabelDy; })
+					.text(function(d){ return d.valueLabel; }); //number label
 					
 				parent.append('text')
 					.attr('text-anchor','end')
 					.attr('class','region-label')
-					.attr('dy',regionScale(0.7))
-					.attr('dx',-5)
-					.text(function(d){
-						return d.name;
-					}) //area name 
+					.attr('dy',function(d){ return d.regionLabelDy; })
+					.attr('dx',function(d){ return d.regionLabelDx; })
+					.text(function(d){ return d.regionLabel; }); //area name 
 			});
 	
 	svg.append('line')
