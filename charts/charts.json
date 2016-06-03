@@ -1,0 +1,18 @@
+[
+	{
+		"name": "example-1",
+		"width": 600,
+		"height": 100,
+		"background": null,
+		"spacing": 10,
+		"layout": "horizontal"
+	},
+	{
+		"name": "example-2",
+		"width": 250,
+		"height": 400,
+		"background": null,
+		"spacing": 0,
+		"layout": "vertical"
+	}
+]
