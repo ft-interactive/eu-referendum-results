@@ -1,13 +1,13 @@
-id,name
-E12000001,North East
-E12000002,North West
-E12000003,Yorkshire and The Humber
-E12000004,East Midlands
-E12000005,West Midlands
-E12000006,East of England
-E12000007,London
-E12000008,South East
-E12000009,South West
-W08000001,Wales
-N07000001,Northern Ireland
-S12000001,Scotland
+id,name,short_name,tiny_name
+E12000001,North East,NE England,NE Eng
+E12000002,North West,NW England,NW Eng
+E12000003,Yorkshire and The Humber,Yorks & Humber,Yorks & Hum.
+E12000004,East Midlands,E Midlands,E Mids
+E12000005,West Midlands,W Midlands,W Mids
+E12000006,East of England,East England,East Eng
+E12000007,London,London,Lond
+E12000008,South East,SE England,SE Eng
+E12000009,South West,SW England,SW Eng
+W08000001,Wales,Wales,Wales
+N07000001,Northern Ireland,N Ireland,NI
+S12000001,Scotland,Scotland,Scot
