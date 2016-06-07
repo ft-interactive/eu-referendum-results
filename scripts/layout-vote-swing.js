@@ -16,7 +16,7 @@ module.exports = function(regionalResult){
 	let width = 800;
 	let height = 400;
 	let margin = {
-		top:50, left:180, bottom:5, right:5,
+		top:0, left:180, bottom:5, right:5,
 	}
 	let plotWidth = width - (margin.left + margin.right);
 	let plotHeight = height - (margin.top + margin.bottom);

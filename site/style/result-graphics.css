@@ -43,7 +43,23 @@
 	padding: 0 10px;
 }
 
+/* summary text*/
+
+.leave-highlight, 
+.remain-highlight{
+	font-weight: bold;
+}
+
+.leave-highlight{
+	color:#093967;
+}
+
+.remain-highlight{
+	color:#6AADB3;
+}
+
 /* regional results */
+
 
 .regional-axis{
 	stroke:#000;

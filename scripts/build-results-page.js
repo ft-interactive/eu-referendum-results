@@ -5,6 +5,7 @@ const dataLocation = '../site/dummyresult/';
 //dependencies
 const fs = require('fs');
 const nunjucks = require('nunjucks');
+const d3 = require('d3');
 
 const layoutVoteSwing = require('./layout-vote-swing.js');
 const layoutNationalBars = require('./layout-national-bars.js');
@@ -13,10 +14,10 @@ const topoData = require('./geodata/referendum-result-areas.json');
 
 const regionalResults = loadLocalJSON( dataLocation + 'regional-named.json' );
 const nationalResults = loadLocalJSON( dataLocation + 'national.json' );
+const localResuls = loadLocalJSON( dataLocation + 'local.json');
+const lookupByID = makeLookup( loadLocalCSV( './data/names.csv' ), 'ons_id');
 
-const words = writer(nationalResults, regionalResults);
-
-//console.log(words);
+const words = writer(nationalResults, regionalResults, localResuls, lookupByID);
 
 nunjucks.configure('templates', { autoescape: false });
 
@@ -34,13 +35,21 @@ const context = {
     regionalBreakdownChart: regionalBreakdownChart,
 };
 
-console.log( context.headline )
-console.log( context.standfirstList )
-
 const indexHTML = nunjucks.render( 'index.html', context );
 
 fs.writeFileSync( outputLocation + 'test.html', indexHTML );
 
 function loadLocalJSON(filename){
     return JSON.parse( fs.readFileSync( filename, 'utf-8' ) );
+}
+
+function loadLocalCSV(filename){
+    return d3.csv.parse( fs.readFileSync( filename, 'utf-8') );
+}
+
+function makeLookup(array, key){
+    return array.reduce(function(prev, current, i, a){
+        prev[ current[key] ] = current;
+        return prev;
+    }, {});
 }
