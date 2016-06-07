@@ -41,13 +41,13 @@ const indexHTML = nunjucks.render( 'index.html', context );
 fs.writeFileSync( outputLocation + 'index.html', indexHTML );
 
 //Javascript build
+const writeStream = fs.createWriteStream(outputLocation + 'js/bundle.js')
 const browserify = require('browserify');
-let b = browserify();
-b.add('./browser-js/main.js');
-
-let writeStream = fs.createWriteStream(outputLocation+'js/bundle.js')
-
-b.bundle().pipe(writeStream);
+browserify('./browser-js/main.js')
+    .bundle()
+    .pipe(writeStream);
+    
+//utitlity functions
 
 function loadLocalJSON(filename){
     return JSON.parse( fs.readFileSync( filename, 'utf-8' ) );
