@@ -204,9 +204,17 @@
 
         <div class="section-body body">
             <div class="o-grid-row">
-                <h2 class="o-typography-subhead">Where the vote was swung</h2>
-                <p class="o-typography-body">Which areas have had the greatest effect on the outcome?</p>
-                {{ regionalBreakdownChart }}
+                <div data-o-grid-colspan="12">
+                    <h2 class="o-typography-subhead">Where the vote was swung</h2>
+                    <p class="o-typography-body">Which areas have had the greatest effect on the outcome?</p>
+                    {{ regionalBreakdownChart }}
+                </div>
+            </div>
+            <div class="o-grid-row">
+                <div data-o-grid-colspan="12">
+                    <h2 class="o-typography-subhead">How the vote varied accross the country</h2>
+                    <div class="map" data-topology-id="topo-data"></div>
+                </div>
             </div>
         </div>
 
@@ -298,7 +306,7 @@
         {{ topoData }}
     </script>
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.bundle.js"></script>
+    <script src="js/bundle.js"></script>
     <!-- endbuild -->
   </body>
 </html>

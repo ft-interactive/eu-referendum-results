@@ -7,6 +7,8 @@ const fs = require('fs');
 const nunjucks = require('nunjucks');
 const d3 = require('d3');
 
+//HTML build
+
 const layoutVoteSwing = require('./layout-vote-swing.js');
 const layoutNationalBars = require('./layout-national-bars.js');
 const writer = require('./news-writer.js');
@@ -25,7 +27,6 @@ nunjucks.configure('templates', { autoescape: false });
 const nationalResultChart = nunjucks.render('national-result-chart.html', layoutNationalBars( nationalResults));
 const regionalBreakdownChart = nunjucks.render('vote-swing.svg', layoutVoteSwing( regionalResults ));
 
-
 const context = {
     datetime: String(new Date()),
     headline: words.headline,
@@ -37,7 +38,16 @@ const context = {
 
 const indexHTML = nunjucks.render( 'index.html', context );
 
-fs.writeFileSync( outputLocation + 'test.html', indexHTML );
+fs.writeFileSync( outputLocation + 'index.html', indexHTML );
+
+//Javascript build
+const browserify = require('browserify');
+let b = browserify();
+b.add('./browser-js/main.js');
+
+let writeStream = fs.createWriteStream(outputLocation+'js/bundle.js')
+
+b.bundle().pipe(writeStream);
 
 function loadLocalJSON(filename){
     return JSON.parse( fs.readFileSync( filename, 'utf-8' ) );

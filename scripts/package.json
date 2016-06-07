@@ -10,6 +10,7 @@
   "author": "tom.pearson@ft.com",
   "license": "ISC",
   "dependencies": {
+    "browserify": "^13.0.1",
     "d3": "^3.5.17",
     "nunjucks": "^2.4.2"
   }

@@ -58,6 +58,10 @@
 	color:#6AADB3;
 }
 
+.inline-value{
+	font-feature-settings: "tnum";
+}
+
 /* regional results */
 
 

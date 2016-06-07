@@ -21,26 +21,24 @@ module.exports = function (national, regional, local, lookupByID){
         headline = 'Britons vote to remain in the EU';
     }
 
-    let marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, ${Math.abs(margin).toFixed(1)}% ( ${commas( Math.abs(votes_margin) )} votes )`;
+    let marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value">${Math.abs(margin).toFixed(1)}</span>% ( <span class="inline-value">${commas( Math.abs(votes_margin) )}</span> votes )`;
     
     let mostLeave = 'The places which voted most strongly to <span class="leave-highlight">leave</span> were: ' + getMostLeave( local, 3 ).map(function(d){
         let name =  lookupByID[d.local_id].name;
-        return name + ' ('+d3.round(d.leave_pct,1)+'%)';
+        return name + ' (<span class="inline-value">'+d3.round(d.leave_pct,1)+'</span>%)';
     }).join(', ');;
     
     let mostRemain = 'The places which voted most strongly to <span class="remain-highlight">remain</span> were: ' + getMostRemain( local, 3 ).map(function(d){
         let name =  lookupByID[d.local_id].name;
-        return name + ' ('+d3.round(d.remain_pct,1)+'%)';
+        return name + ' (<span class="inline-value">'+d3.round(d.remain_pct,1)+'</span>%)';
     }).join(', ');
 
 
     let turnoutExtent = 'from ' + getTurnoutExtent(local).map(function(d,i){
-        return d3.round(d.turnout_pct,1) + '% (' + lookupByID[d.local_id].name + ')';
+        return '<span class="inline-value">' + d3.round(d.turnout_pct,1) + '</span>% (' + lookupByID[d.local_id].name + ')';
     }).join(' to '); 
-    
-    console.log( turnoutExtent );
 
-    let turnoutStatement = 'Overall turnout was ' + turnoutDescription(national.turnout_pct) + ' at '+d3.round(national.turnout_pct,1)+'% locally it varied ' + turnoutExtent;
+    let turnoutStatement = 'Overall turnout was ' + turnoutDescription(national.turnout_pct) + ' at <span class="inline-value">'+d3.round(national.turnout_pct,1)+'</span>% locally it varied ' + turnoutExtent;
     
     return {
         headline: headline,
@@ -65,7 +63,6 @@ const turnoutDescription = d3.scale.threshold()
             'strong' ]);
 
 function getTurnoutExtent(data){
-    console.log(data);
     let sorted = data.sort(function(a,b){
         return b.turnout_pct - a.turnout_pct;
     });
