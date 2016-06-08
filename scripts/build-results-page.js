@@ -32,6 +32,7 @@ const context = {
     headline: words.headline,
     standfirstList: words.standfirstList,
     topoData: JSON.stringify(topoData),
+    localResultData: JSON.stringify(localResuls),
     nationalResultChart: nationalResultChart,
     regionalBreakdownChart: regionalBreakdownChart,
 };
