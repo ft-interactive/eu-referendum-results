@@ -67,6 +67,9 @@ module.exports = function (){
         parent.enter()
             .append('path')
             .attr('class','area')
+            .attr('id', function(d){
+                return 'area-'+idAccessor(d);
+            })
             .attr('d',function(d){
                 var feature = features[ idAccessor(d) ];
                 if( isLondon(d) ) {

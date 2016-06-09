@@ -104,3 +104,15 @@
 	shape-rendering:crispEdges;
 	fill:none;
 }
+
+.highlight-background{
+	stroke-width:6px;
+	stroke:#FFF;
+	fill:none;
+}
+
+.highlight-foreground{
+	stroke-width:2px;
+	stroke:#000;
+	fill:none;
+}

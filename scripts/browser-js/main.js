@@ -92,4 +92,37 @@ mapframe.selectAll('.area').data(localResults)
 
 selectionDispatcher.on('select.map', function(d){
     console.log('selected', d);
+    var bounds = d3.select('#area-' + d.local_id).node().getBBox();
+    console.log(bounds);
+    var highlightData = [{
+            cx:bounds.x + bounds.width/2,
+            cy:bounds.y + bounds.height/2,
+            r:Math.max(bounds.height/2, bounds.width/2),
+        }];
+    
+    var join = mapframe.selectAll('g.highlight-area')
+        .data(highlightData);
+    
+    join.enter()
+        .append('g').attr('class', 'highlight-area')
+        .call(function(parent){
+            parent.append('circle').attr('class','highlight-background');
+            parent.append('circle').attr('class','highlight-foreground');
+        });
+    
+    join.transition().select('circle.highlight-background')
+        .attr('r',function(d){ return d.r; })
+        .attr('cx',function(d){ return d.cx; })
+        .attr('cy',function(d){ return d.cy; });
+    
+    join.transition().select('circle.highlight-foreground')
+        .attr('r',function(d){ return d.r; })
+        .attr('cx',function(d){ return d.cx; })
+        .attr('cy',function(d){ return d.cy; });
+
+    selectArea(d.local_id, d.region_id);
 });
+
+function selectArea(area, region){
+    console.log(area, region);
+}
