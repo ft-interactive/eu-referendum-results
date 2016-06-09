@@ -94,7 +94,8 @@
 .area{
 	stroke-width:0.2;
 	stroke: #fff1e0;
-	stroke-opacity:0.2
+	stroke-opacity:0.2;
+	cursor: pointer;
 }
 
 .map-frame{
@@ -106,12 +107,14 @@
 }
 
 .highlight-background{
+	pointer-events: none;
 	stroke-width:6px;
 	stroke:#FFF;
 	fill:none;
 }
 
 .highlight-foreground{
+	pointer-events: none;
 	stroke-width:2px;
 	stroke:#000;
 	fill:none;
