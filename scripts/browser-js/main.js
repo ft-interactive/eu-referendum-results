@@ -2,8 +2,15 @@ var d3 = require('d3');
 var topojson = require('topojson');
 var map = require('./map.js')();
 var colour = require('../colours.json');
+var find = require('lodash/find');
 var topology = JSON.parse( d3.select('#topo-data').text() );
 var localResults = JSON.parse( d3.select('#local-result-data').text() );
+var regionalResults = JSON.parse( d3.select('#regional-result-data').text() );
+var nationalResults = JSON.parse( d3.select('#national-result-data').text() );
+
+console.log(regionalResults);
+console.log(nationalResults);
+
 var mapWidth=400, mapHeight = 600;
 
 var selectionDispatcher = d3.dispatch('select');
@@ -54,6 +61,7 @@ mapframe.append('rect')
 
 mapframe.append('text')
     .text('London')
+    .attr('class','map-label')
     .attr('transform','translate(260,155)');
 
 mapframe.append('rect')
@@ -67,6 +75,7 @@ mapframe.append('rect')
 
 mapframe.append('text')
     .text('Shetland')
+    .attr('class','map-label')
     .attr('transform','translate(20,125)');
 
 // do the land drawing
@@ -82,13 +91,47 @@ mapframe.append('path')
     .attr('class','land')
     .attr('d', map.land(shetlandLand, 'shetland') )
 
-//draw the areas for which we have results
+//add the areas for which we have results
 map.features( uk.features );
 mapframe.selectAll('.area').data(localResults)
     .call(map)
     .on('click', function(d,i){ 
         selectionDispatcher.select(d);
     });
+
+//add the svg for the local area chart
+var localframe = d3.select('.location-data')
+    .append('svg')
+        .attr({
+            'class': 'local-result-chart',
+            'width': mapWidth,
+            'height': mapWidth,
+            'viewBox': '0 0 ' + mapWidth + ' ' + mapWidth,
+            'style':'width:100%; height:100%;',
+        })
+
+
+selectionDispatcher.on('select.local-context', function(localResult){
+    var regionResult = find(regionalResults, function(e){
+        return e.region_id === localResult.region_id ;
+    });
+    var contextResults = [
+        {
+            title:'National',
+            data:nationalResults,
+        },
+        {
+            title:regionResult.name,
+            data:regionResult,
+        },
+        {
+            title:localResult.name,
+            data:localResult,
+        }
+    ]
+
+    console.log(contextResults);
+})
 
 selectionDispatcher.on('select.map', function(d){
     var bounds = d3.select('#area-' + d.local_id).node().getBBox();
@@ -117,10 +160,4 @@ selectionDispatcher.on('select.map', function(d){
         .attr('r', function(d){ return d.r; })
         .attr('cx', function(d){ return d.cx; })
         .attr('cy', function(d){ return d.cy; });
-
-    selectArea(d.local_id, d.region_id);
 });
-
-function selectArea(area, region){
-    console.log(area, region);
-}
