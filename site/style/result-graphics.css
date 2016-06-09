@@ -83,7 +83,7 @@
 
 /*map*/
 .land{
-	fill: url('#diagonal-stripe-1');
+	fill: url('#lightstripe');
 	fill-opacity:0.2;
 	stroke: #000;
 	stroke-opacity:0.1;

@@ -87,5 +87,9 @@ map.features( uk.features );
 mapframe.selectAll('.area').data(localResults)
     .call(map)
     .on('click', function(d,i){ 
-        console.log(d); 
+        selectionDispatcher.select(d);
     });
+
+selectionDispatcher.on('select.map', function(d){
+    console.log('selected', d);
+});
