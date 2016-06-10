@@ -122,3 +122,9 @@
 .map-label{
 
 }
+
+/* local result */
+.local-bar-axis{
+	stroke-width:1px;
+	stroke:#000;
+}

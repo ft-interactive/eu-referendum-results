@@ -100,16 +100,30 @@ mapframe.selectAll('.area').data(localResults)
     });
 
 //add the svg for the local area chart
+var localChartWidth = 400;
+var localChartHeight = 400;
+var localBarHeight = 30;
+var localBarGap = 20;
+var localChartMargin = {
+    top: 20, left: 20, bottom: 20, right:20,
+};
+
 var localframe = d3.select('.location-data')
     .append('svg')
         .attr({
             'class': 'local-result-chart',
-            'width': mapWidth,
-            'height': mapWidth,
-            'viewBox': '0 0 ' + mapWidth + ' ' + mapWidth,
-            'style':'width:100%; height:100%;',
+            'width': localChartWidth,
+            'height': localChartHeight,
+            'viewBox': '0 0 ' + localChartWidth + ' ' + localChartHeight,
+            'style': 'width: 100%; height: 100%;',
         })
+    .append('g')
+        .attr('transform','translate('+localChartMargin.left+','+localChartMargin.top+')');
 
+//create the scales for the local area chart
+var barValueScale = d3.scale.linear()
+    .range([0, localChartWidth-(localChartMargin.left+localChartMargin.right)])
+    .domain([0, 100]);
 
 selectionDispatcher.on('select.local-context', function(localResult){
     var regionResult = find(regionalResults, function(e){
@@ -117,21 +131,77 @@ selectionDispatcher.on('select.local-context', function(localResult){
     });
     var contextResults = [
         {
-            title:'National',
-            data:nationalResults,
+            title:'LOCAL NAME',
+            data:localResult,
         },
         {
             title:regionResult.name,
             data:regionResult,
         },
         {
-            title:localResult.name,
-            data:localResult,
-        }
-    ]
+            title:'National',
+            data:nationalResults,
+        },
+    ];
+
+    localframe.append('line')
+                .attr('x1', barValueScale(50))
+                .attr('y1', 0)
+                .attr('x2', barValueScale(50))
+                .attr('y2', (localBarHeight+localBarGap) * contextResults.length - localBarGap)
+                .attr('class', 'local-bar-axis');
+
+    localframe.selectAll('g.context-bar')
+        .data(contextResults)
+            .enter()
+        .append('g')
+            .attr('class','context-bar')
+            .attr('transform',function(d,i){ return 'translate(0,' +(i*(localBarHeight+localBarGap))+ ')'; })
+        .call(function(parent){
+
+            parent.append('text')
+                .attr('class', 'bar-title');
+
+            parent.append('text')
+                .attr('class','bar-value-label');
+
+            parent.append('rect');
+        });
+    
+    localframe.selectAll('g.context-bar')
+        .call(function(parent){
+            parent.select('text.bar-title')
+                .text(function(d){ return d.title + ' ' +d3.round(d.data.leave_pct,1)+'%'; });
+
+            // parent.select('text.bar-value-label')
+            //     .text(function(d){ return d3.round(d.data.leave_pct,1)+'%'; });
+            
+            parent.transition()
+                .select('rect')
+                    .attr('x', function(d){
+                        if(d.data.leave_pct < 50){ 
+                            return barValueScale( d.data.leave_pct ); 
+                        }
+                        return barValueScale( 50 );
+                    })
+                    .attr('y',0)
+                    .attr('width',function(d){
+                        if(d.data.leave_pct < 50){ 
+                            return Math.abs( barValueScale( d.data.leave_pct - 50 )); 
+                        }
+                        return Math.abs( barValueScale( 50 - d.data.leave_pct ));
+                    })
+                    .attr('height', localBarHeight)
+                    .attr('fill', function(d){
+                        if(d.data.leave_pct > 50){
+                            return colour.leaveColour;
+                        }
+                        return colour.remainColour;
+                    });
+        });
 
     console.log(contextResults);
-})
+});
 
 selectionDispatcher.on('select.map', function(d){
     var bounds = d3.select('#area-' + d.local_id).node().getBBox();
