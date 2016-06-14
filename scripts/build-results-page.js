@@ -2,29 +2,28 @@
 
 //config
 const outputLocation = '../site/';
-const dataLocation = '../site/dummyresult/';
+const dumyDataLocation = '../site/dummyresult/old/';
+const resultsLocation = '../site/dummyresult/';
 
 //dependencies
 const fs = require('fs');
 const nunjucks = require('nunjucks');
 const d3 = require('d3');
 
-//HTML build
-
 const layoutVoteSwing = require('./layout-vote-swing.js');
 const layoutNationalBars = require('./layout-national-bars.js');
 const writer = require('./news-writer.js');
 const topoData = require('./geodata/referendum-result-areas.json');
 
-const regionalResults = loadLocalJSON( dataLocation + 'regional-named.json' );
-const nationalResults = loadLocalJSON( dataLocation + 'national.json' );
-const localResuls = loadLocalJSON( dataLocation + 'local.json');
+//HTML build
+const regionalResults = loadLocalJSON( dumyDataLocation + 'regional-named.json' );
+const nationalResults = loadLocalJSON( resultsLocation + 'running-totals.json' );
+const localResuls = loadLocalJSON( dumyDataLocation + 'local.json');
 const lookupByID = makeLookup( loadLocalCSV( './data/names.csv' ), 'ons_id');
 
 const words = writer(nationalResults, regionalResults, localResuls, lookupByID);
 
 nunjucks.configure('templates', { autoescape: false });
-
 
 const nationalResultChart = nunjucks.render('national-result-chart.html', layoutNationalBars( nationalResults));
 const regionalBreakdownChart = nunjucks.render('vote-swing.svg', layoutVoteSwing( regionalResults ));

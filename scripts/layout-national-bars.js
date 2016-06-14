@@ -5,15 +5,15 @@ const colours = require('./colours.json')
 module.exports = function(data){
     const nationalResultArray = [
 		{
-			label:'LEAVE ' + d3.round(data.leave_pct,1) + '%',
-			value_pct:data.leave_pct,
-			value_abs:data.leave_abs,
+			label:'LEAVE ' + d3.round(data.leave_percentage_share,1) + '%',
+			value_pct:data.leave_percentage_share,
+			value_abs:data.leave_votes,
 			colour:colours.leaveColour,
 		},
 		{
-			label:'REMAIN ' + d3.round(data.remain_pct,1) + '%',
-			value_pct:data.remain_pct,
-			value_abs:data.remain_abs,
+			label:'REMAIN ' + d3.round(data.remain_percentage_share,1) + '%',
+			value_pct:data.remain_percentage_share,
+			value_abs:data.remain_votes,
 			colour:colours.remainColour,
 		}
 	]
