@@ -24,18 +24,18 @@ module.exports = function (national, regional, local, lookupByID){
     let marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value">${Math.abs(margin).toFixed(1)}</span>% ( <span class="inline-value">${commas( Math.abs(votes_margin) )}</span> votes )`;
     
     let mostLeave = 'The places which voted most strongly to <span class="leave-highlight">leave</span> were: ' + getMostLeave( local, 3 ).map(function(d){
-        let name =  lookupByID[d.local_id].name;
-        return name + ' (<span class="inline-value">'+d3.round(d.leave_pct,1)+'</span>%)';
+        let name =  lookupByID[d.ons_id].name;
+        return name + ' (<span class="inline-value">'+d3.round(d.leave_percentage_share,1)+'</span>%)';
     }).join(', ');;
     
     let mostRemain = 'The places which voted most strongly to <span class="remain-highlight">remain</span> were: ' + getMostRemain( local, 3 ).map(function(d){
-        let name =  lookupByID[d.local_id].name;
-        return name + ' (<span class="inline-value">'+d3.round(d.remain_pct,1)+'</span>%)';
+        let name =  lookupByID[d.ons_id].name;
+        return name + ' (<span class="inline-value">'+d3.round(d.remain_percentage_share,1)+'</span>%)';
     }).join(', ');
 
 
     let turnoutExtent = 'from ' + getTurnoutExtent(local).map(function(d,i){
-        return '<span class="inline-value">' + d3.round(d.turnout_pct,1) + '</span>% (' + lookupByID[d.local_id].name + ')';
+        return '<span class="inline-value">' + d3.round(d.turnout_pct,1) + '</span>% (' + lookupByID[d.ons_id].name + ')';
     }).join(' to '); 
 
     //let turnoutStatement = 'Overall turnout was ' + turnoutDescription(national.turnout_pct) + ' at <span class="inline-value">'+d3.round(national.turnout_pct,1)+'</span>% locally it varied ' + turnoutExtent;
@@ -75,14 +75,14 @@ function getTurnoutExtent(data){
 
 function getMostLeave(data, n){
     let sorted = data.sort(function(a,b){
-        return b.leave_pct - a.leave_pct;
+        return b.leave_percentage_share - a.leave_percentage_share;
     });
     return sorted.slice(0, n);
 }
 
 function getMostRemain(data, n){
     let sorted = data.sort(function(a,b){
-        return b.remain_pct - a.remain_pct;
+        return b.remain_percentage_share - a.remain_percentage_share;
     });
     return sorted.slice(0, n);
 }
