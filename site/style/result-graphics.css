@@ -1,0 +1,130 @@
+/* national results */
+.total-bar {
+	height: 35px;
+    box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.total-bar-label {
+	font-family: MetricWeb, sans-serif;
+	vertical-align: top;
+	display: inline-block;
+	line-height: 35px;
+	padding: 0 10px;
+}
+
+.national-item {
+	display: block;
+}
+
+.win {
+	font-size: 140%;
+	order: 1;
+}
+
+.lose {
+	font-size: 100%;
+	order: 2;
+}
+
+.total-bar {
+	height: 35px;
+    box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.total-bar-label {
+	font-family: MetricWeb, sans-serif;
+	vertical-align: top;
+	display: inline-block;
+	line-height: 35px;
+	padding: 0 10px;
+}
+
+/* summary text*/
+.leave-highlight, 
+.remain-highlight{
+	font-weight: bold;
+}
+
+.leave-highlight{
+	color:#093967;
+}
+
+.remain-highlight{
+	color:#6AADB3;
+}
+
+.inline-value{
+	font-feature-settings: "tnum";
+}
+
+/* regional results */
+.regional-axis{
+	stroke:#000;
+	stroke-opacity:0.2;
+}
+
+.bar-header{
+	font-size: 1.5rem;
+}
+
+.vote-figure{
+	font-weight: 600;
+	font-feature-settings: "tnum";
+	font-size: 1.1rem;
+}
+
+.region-label{
+	font-size: 1.2rem;
+}
+
+/*map*/
+.land{
+	fill: url('#lightstripe');
+	fill-opacity:0.2;
+	stroke: #000;
+	stroke-opacity:0.1;
+	stroke-width:6px;
+	stroke-linejoin: round;
+}
+
+.area{
+	stroke-width:0.2;
+	stroke: #fff1e0;
+	stroke-opacity:0.2;
+	cursor: pointer;
+}
+
+.map-frame{
+	stroke:#000;
+	stroke-width:1px;
+	stroke-opacity:0.5;
+	fill:none;
+}
+
+.highlight-background{
+	pointer-events: none;
+	stroke-width:6px;
+	stroke:#FFF;
+	fill:none;
+}
+
+.highlight-foreground{
+	pointer-events: none;
+	stroke-width:2px;
+	stroke:#000;
+	fill:none;
+}
+
+.map-label{
+
+}
+
+/* local result */
+.local-bar-axis{
+	stroke-width:1px;
+	stroke:#000;
+}

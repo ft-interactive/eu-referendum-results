@@ -1,0 +1,60 @@
+
+<svg width="{{width}}" height="{{height}}" viewBox="0 0 {{width}} {{height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet">
+
+	{% if metricEmbed %}
+		<style>
+			@font-face{src:url("https://origami-build.ft.com/v2/files/o-fonts-assets@1.3.0/MetricWeb-Thin.woff?#iefix") format("woff");font-family:MetricWeb;font-weight:100;font-style:normal}@font-face{src:url(//build.origami.ft.com/v2/files/o-fonts-assets@1.3.0/MetricWeb-Light.woff?#iefix) format("woff");font-family:MetricWeb;font-weight:200;font-style:normal}
+			@font-face{src:url("https://origami-build.ft.com/v2/files/o-fonts-assets@1.3.0/MetricWeb-LightItalic.woff?#iefix") format("woff");font-family:MetricWeb;font-weight:200;font-style:italic}@font-face{src:url(//build.origami.ft.com/v2/files/o-fonts-assets@1.3.0/MetricWeb-Regular.woff?#iefix) format("woff");font-family:MetricWeb;font-weight:400;font-style:normal}
+			@font-face{src:url("https://origami-build.ft.com/v2/files/o-fonts-assets@1.3.0/MetricWeb-RegularItalic.woff?#iefix") format("woff");font-family:MetricWeb;font-weight:400;font-style:italic}@font-face{src:url(//build.origami.ft.com/v2/files/o-fonts-assets@1.3.0/MetricWeb-Medium.woff?#iefix) format("woff");font-family:MetricWeb;font-weight:500;font-style:normal}
+			@font-face{src:url("https://origami-build.ft.com/v2/files/o-fonts-assets@1.3.0/MetricWeb-Semibold.woff?#iefix") format("woff");font-family:MetricWeb;font-weight:600;font-style:normal}@font-face{src:url(//build.origami.ft.com/v2/files/o-fonts-assets@1.3.0/MetricWeb-Bold.woff?#iefix) format("woff");font-family:MetricWeb;font-weight:700;font-style:normal}
+			@font-face{src:url("https://origami-build.ft.com/v2/files/o-fonts-assets@1.3.0/MetricWeb-BoldItalic.woff?#iefix") format("woff");font-family:MetricWeb;font-weight:700;font-style:italic}@font-face{src:url(//build.origami.ft.com/v2/files/o-fonts-assets@1.3.0/FinancierDisplayWeb-LightItalic.woff?#iefix) format("woff");font-family:FinancierDisplayWeb;font-weight:200;font-style:italic}
+		</style>
+	{% endif %}
+
+	{% if background %}
+		<rect x="0" y="0" width="{{width}}" height="{{height}}" fill="{{background}}"></rect>
+	{% endif %}
+
+	{% for chart in charts %}
+		<g transform="translate({{chart.x}},{{chart.y}})">
+
+			<!-- Plot area -->
+			<g transform="translate({{chart.margin.left}},{{chart.margin.top}})">
+
+				<!-- Y axis rule -->
+				<line x1="0" y1="0" x2="0" y2="{{chart.plotArea.height}}" stroke="#6a6a6a" stroke-width="2"></line>
+
+				<!-- Data -->
+				<path d="{{chart.data}}" fill="none" stroke="#ca4050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+			</g>
+
+			<!-- Y axis label -->
+			<text
+				transform="translate({{chart.margin.left - 8}}, {{chart.margin.top + (chart.plotArea.height / 2)}})"
+				font-family="MetricWeb"
+				font-size="14"
+				text-anchor="end"
+				alignment-baseline="middle"
+				fill="#6a6a6a">
+				{% for line in chart.yLabel | split('\n') -%}
+					<tspan x="0" dy="{{loop.index0 * 14}}">{{line}}</tspan>
+				{%- endfor %}
+			</text>
+
+			<!-- X axis time label -->
+			{% if loop.first %}
+				<text
+					transform="translate({{chart.margin.left}}, 12)"
+					font-family="MetricWeb"
+					font-size="12"
+					text-anchor="middle"
+					fill="#6a6a6a">
+					{{chart.xLabel}}
+				</text>
+			{% endif %}
+
+		</g>
+	{% endfor %}
+
+</svg>

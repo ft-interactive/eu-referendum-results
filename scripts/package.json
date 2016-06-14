@@ -1,0 +1,21 @@
+{
+  "name": "results-builder",
+  "version": "1.0.0",
+  "description": "build the eu referendum results page html,svg etc.",
+  "main": "build-results-page.js",
+  "scripts": {
+    "start": "node build-results-page.js",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tom.pearson@ft.com",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^13.0.1",
+    "d3": "^3.5.17",
+    "nunjucks": "^2.4.2"
+  },
+  "devDependencies": {
+    "lodash": "^4.12.0"
+  }
+}

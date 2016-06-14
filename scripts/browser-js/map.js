@@ -1,6 +1,7 @@
-//requirements: d3, topojson
+var topojson = require('topojson');
+var d3 = require('d3');
 
-function referendumMap(){
+module.exports = function (){
     console.log('hello map');
     var width = 600;
     var height = 600;
@@ -8,7 +9,7 @@ function referendumMap(){
     var ukCenter = [300, 250];
     var londonCenter = [340, 100];
     var shetlandCenter = [40, 70]; 
-   
+
     var ukProjection = d3.geo.albers()
         .center([0, 55.4])
         .rotate([0, 0])
@@ -31,6 +32,10 @@ function referendumMap(){
         .translate(shetlandCenter);
     
     var fillScale = function(d){
+        return '#00F';
+    }
+
+    var strokeScale = function(d){
         return '#00F';
     }
     
@@ -62,6 +67,9 @@ function referendumMap(){
         parent.enter()
             .append('path')
             .attr('class','area')
+            .attr('id', function(d){
+                return 'area-'+idAccessor(d);
+            })
             .attr('d',function(d){
                 var feature = features[ idAccessor(d) ];
                 if( isLondon(d) ) {
@@ -74,19 +82,26 @@ function referendumMap(){
             });
             
         parent.attr('fill',fillScale);
+        parent.attr('stroke',strokeScale);
     }
     
     map.id = function(f){
         if(!f) return idAccessor;
         idAccessor = f;
         return map;
-    }
+    };
     
     map.fillScale = function(f){
         if(!f) return fillScale;
         fillScale = f;
         return map;
-    }
+    };
+
+    map.strokeScale = function(f){
+        if(!f) return strokeScale;
+        strokeScale = f;
+        return map;
+    };
     
     map.features = function(a){
         if(a === undefined || a.length === undefined || a.length == 0) return features;
@@ -94,7 +109,7 @@ function referendumMap(){
             features[d.id] = d;
         });
         return map;
-    }
+    };
     
     map.land = function(x, projection){
         if(projection == 'london'){
@@ -104,19 +119,19 @@ function referendumMap(){
             return shetlandPath(x);
         }
         return ukPath(x);
-    }
+    };
     
     map.londonCenter = function(a){
         if(!a) return londonCenter;
         londonCenter = a;
         return map;
-    }
+    };
     
     map.shetlandCenter = function(a){
         if(!a) return shetlandCenter;
         shetlandCenter = a;
         return map;
-    }
+    };
     
     return map;
-}
+};
