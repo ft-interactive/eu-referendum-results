@@ -172,9 +172,6 @@ selectionDispatcher.on('select.local-context', function(localResult){
         .call(function(parent){
             parent.select('text.bar-title')
                 .text(function(d){ return d.title + ' ' +d3.round(d.data.leave_pct,1)+'%'; });
-
-            // parent.select('text.bar-value-label')
-            //     .text(function(d){ return d3.round(d.data.leave_pct,1)+'%'; });
             
             parent.transition()
                 .select('rect')
@@ -199,8 +196,6 @@ selectionDispatcher.on('select.local-context', function(localResult){
                         return colour.remainColour;
                     });
         });
-
-    console.log(contextResults);
 });
 
 selectionDispatcher.on('select.map', function(d){
