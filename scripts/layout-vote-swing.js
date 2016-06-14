@@ -9,7 +9,7 @@ const commas = d3.format('0,000');
 module.exports = function(regionalResult){
 
     regionalResult = regionalResult.map(function(d){
-		d.margin_abs = d.remain_abs - d.leave_abs
+		d.margin_abs = d.remain_votes - d.leave_votes;
 		return d;
 	}).sort(function(a,b){
 		return a.margin_abs - b.margin_abs;
@@ -18,7 +18,7 @@ module.exports = function(regionalResult){
 	let width = 800;
 	let height = 400;
 	let margin = {
-		top:0, left:180, bottom:5, right:5,
+		top:50, left:180, bottom:5, right:5,
 	}
 	let plotWidth = width - (margin.left + margin.right);
 	let plotHeight = height - (margin.top + margin.bottom);
@@ -61,7 +61,7 @@ module.exports = function(regionalResult){
 			valueLabelTransform: 'translate(' + barScale(0) + ',0)',
 			valueLabelDx: valueDx,
 			valueLabelDy: regionScale(0.7),
-			regionLabel: d.name,
+			regionLabel: d.short_name,
 			regionLabelDx:-5,
 			regionLabelDy:regionScale(0.7),
 			underline:{
@@ -78,5 +78,8 @@ module.exports = function(regionalResult){
         width: width,
         height: height,
         margin: margin,
+		axisLineX:barScale(0),
+		axisLineYStart:-margin.top,
+		axisLineYEnd:height,
     };
 };

@@ -16,7 +16,7 @@ const writer = require('./news-writer.js');
 const topoData = require('./geodata/referendum-result-areas.json');
 
 //HTML build
-const regionalResults = loadLocalJSON( dumyDataLocation + 'regional-named.json' );
+const regionalResults = loadLocalJSON( resultsLocation + 'regions.json' );
 const nationalResults = loadLocalJSON( resultsLocation + 'running-totals.json' );
 const localResuls = loadLocalJSON( dumyDataLocation + 'local.json');
 const lookupByID = makeLookup( loadLocalCSV( './data/names.csv' ), 'ons_id');
@@ -32,7 +32,7 @@ const context = {
     datetime: String(new Date()),
     headline: words.headline,
     standfirstList: words.standfirstList,
-    topoData: JSON.stringify(topoData),
+    topoData: JSON.stringify( topoData ),
     localResultData: JSON.stringify( localResuls ),
     regionalResultData: JSON.stringify( regionalResults ),
     nationalResultData: JSON.stringify( nationalResults ),

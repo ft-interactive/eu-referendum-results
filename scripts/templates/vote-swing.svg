@@ -10,8 +10,8 @@
             <text text-anchor="end" class="region-label" dy="{{ row.regionLabelDy }}" dx="{{ row.regionLabelDx }}">{{ row.regionLabel }}</text>
         </g>
     {% endfor %}
-        <line class="regional-axis" x1="422.95881521064723" y1="-50" x2="422.95881521064723" y2="345"></line>
-        <text transform="translate(422.95881521064723,0)" class="bar-header" text-anchor="end" dy="-25" dx="-10">☜ leave votes </text>        
-        <text transform="translate(422.95881521064723,0)" class="bar-header" text-anchor="start" dy="-25" dx="10">remain votes ☞</text>
+        <line class="regional-axis" x1="{{ axisLineX }}" y1="{{axisLineYStart}}" x2="{{axisLineX}}" y2="{{axisLineYEnd}}"></line>
+        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="end" dy="-25" dx="-10">☜ leave votes </text>        
+        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="start" dy="-25" dx="10">remain votes ☞</text>
     </g>
 </svg>
