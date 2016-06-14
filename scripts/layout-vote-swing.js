@@ -1,8 +1,10 @@
+'use strict';
+
 const d3 = require('d3');
 const colours = require('./colours.json');
-var leaveLabel = 'LEAVE';
-var remainLabel = 'REMAIN';
-var commas = d3.format('0,000');
+const leaveLabel = 'LEAVE';
+const remainLabel = 'REMAIN';
+const commas = d3.format('0,000');
 
 module.exports = function(regionalResult){
 

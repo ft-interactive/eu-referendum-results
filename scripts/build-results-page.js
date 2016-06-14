@@ -1,3 +1,5 @@
+'use strict';
+
 //config
 const outputLocation = '../site/';
 const dataLocation = '../site/dummyresult/';
