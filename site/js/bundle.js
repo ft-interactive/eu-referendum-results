@@ -177,14 +177,14 @@ selectionDispatcher.on('select.local-context', function(localResult){
             parent.transition()
                 .select('rect')
                     .attr('x', function(d){
-                        if(d.data.leave_pct < 50){ 
+                        if(d.data.leave_percentage_share < 50){ 
                             return barValueScale( d.data.leave_percentage_share ); 
                         }
                         return barValueScale( 50 );
                     })
                     .attr('y',0)
                     .attr('width',function(d){
-                        if(d.data.leave_pct < 50){ 
+                        if(d.data.leave_percentage_share < 50){ 
                             return Math.abs( barValueScale( d.data.leave_percentage_share - 50 )); 
                         }
                         return Math.abs( barValueScale( 50 - d.data.leave_percentage_share ));
