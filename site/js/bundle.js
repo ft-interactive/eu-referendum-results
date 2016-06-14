@@ -91,7 +91,9 @@ mapframe.append('path')
 
 //add the areas for which we have results
 map.features( uk.features );
-mapframe.selectAll('.area').data(localResults)
+mapframe.selectAll('.area').data(localResults.filter(function(d){
+        return d.remain_percentage_share != null;
+    }))
     .call(map)
     .on('click', function(d,i){ 
         selectionDispatcher.select(d);
@@ -124,16 +126,17 @@ var barValueScale = d3.scale.linear()
     .domain([0, 100]);
 
 selectionDispatcher.on('select.local-context', function(localResult){
+    console.log(localResult)
     var regionResult = find(regionalResults, function(e){
-        return e.region_id === localResult.region_id ;
+        return e.id === localResult.region_id ;
     });
     var contextResults = [
         {
-            title:'LOCAL NAME',
+            title:localResult.name,
             data:localResult,
         },
         {
-            title:regionResult.name,
+            title:regionResult.short_name,
             data:regionResult,
         },
         {
@@ -197,7 +200,7 @@ selectionDispatcher.on('select.local-context', function(localResult){
 });
 
 selectionDispatcher.on('select.map', function(d){
-    var bounds = d3.select('#area-' + d.local_id).node().getBBox();
+    var bounds = d3.select('#area-' + d.ons_id).node().getBBox();
     var highlightData = [{
             cx:bounds.x + bounds.width/2,
             cy:bounds.y + bounds.height/2,

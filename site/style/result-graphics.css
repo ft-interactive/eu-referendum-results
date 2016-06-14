@@ -1,17 +1,23 @@
 /* national results */
 .total-bar {
-	height: 35px;
     box-sizing: border-box;
 	display: inline-block;
 	vertical-align: top;
 }
 
+
 .total-bar-label {
+	font-weight: 200;
 	font-family: MetricWeb, sans-serif;
+	font-size: 2rem;
 	vertical-align: top;
 	display: inline-block;
-	line-height: 35px;
 	padding: 0 10px;
+}
+
+
+.national-figure{
+	font-weight:600;
 }
 
 .national-item {
@@ -19,12 +25,10 @@
 }
 
 .win {
-	font-size: 140%;
 	order: 1;
 }
 
 .lose {
-	font-size: 100%;
 	order: 2;
 }
 
@@ -33,6 +37,7 @@
     box-sizing: border-box;
 	display: inline-block;
 	vertical-align: top;
+	margin-bottom:4px;
 }
 
 .total-bar-label {
