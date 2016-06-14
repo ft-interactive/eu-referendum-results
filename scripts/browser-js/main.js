@@ -8,9 +8,6 @@ var localResults = JSON.parse( d3.select('#local-result-data').text() );
 var regionalResults = JSON.parse( d3.select('#regional-result-data').text() );
 var nationalResults = JSON.parse( d3.select('#national-result-data').text() );
 
-console.log(regionalResults);
-console.log(nationalResults);
-
 var mapWidth=400, mapHeight = 600;
 
 var selectionDispatcher = d3.dispatch('select');
@@ -33,10 +30,10 @@ uk.features = uk.features.concat( topojson.feature(topology, topology.objects.ni
 
 //set up map basics
 map.id(function(d){
-        return d.local_id;
+        return d.ons_id;
     })
     .fillScale(function(d){
-        if(d.leave_pct <= 50) return colour.remainColour;
+        if(d.leave_percentage_share <= 50) return colour.remainColour;
         return colour.leaveColour;
     });
 
@@ -145,11 +142,11 @@ selectionDispatcher.on('select.local-context', function(localResult){
     ];
 
     localframe.append('line')
-                .attr('x1', barValueScale(50))
-                .attr('y1', 0)
-                .attr('x2', barValueScale(50))
-                .attr('y2', (localBarHeight+localBarGap) * contextResults.length - localBarGap)
-                .attr('class', 'local-bar-axis');
+        .attr('x1', barValueScale(50))
+        .attr('y1', 0)
+        .attr('x2', barValueScale(50))
+        .attr('y2', (localBarHeight+localBarGap) * contextResults.length - localBarGap)
+        .attr('class', 'local-bar-axis');
 
     localframe.selectAll('g.context-bar')
         .data(contextResults)
@@ -171,26 +168,26 @@ selectionDispatcher.on('select.local-context', function(localResult){
     localframe.selectAll('g.context-bar')
         .call(function(parent){
             parent.select('text.bar-title')
-                .text(function(d){ return d.title + ' ' +d3.round(d.data.leave_pct,1)+'%'; });
+                .text(function(d){ return d.title + ' ' +d3.round(d.data.leave_percentage_share,1)+'%'; });
             
             parent.transition()
                 .select('rect')
                     .attr('x', function(d){
                         if(d.data.leave_pct < 50){ 
-                            return barValueScale( d.data.leave_pct ); 
+                            return barValueScale( d.data.leave_percentage_share ); 
                         }
                         return barValueScale( 50 );
                     })
                     .attr('y',0)
                     .attr('width',function(d){
                         if(d.data.leave_pct < 50){ 
-                            return Math.abs( barValueScale( d.data.leave_pct - 50 )); 
+                            return Math.abs( barValueScale( d.data.leave_percentage_share - 50 )); 
                         }
-                        return Math.abs( barValueScale( 50 - d.data.leave_pct ));
+                        return Math.abs( barValueScale( 50 - d.data.leave_percentage_share ));
                     })
                     .attr('height', localBarHeight)
                     .attr('fill', function(d){
-                        if(d.data.leave_pct > 50){
+                        if(d.data.leave_percentage_share > 50){
                             return colour.leaveColour;
                         }
                         return colour.remainColour;
