@@ -11,8 +11,8 @@ module.exports = function (national, regional, local, lookupByID){
     let headline = '';
     let winner = '';
     
-    let margin = national.leave_pct - national.remain_pct;
-    let votes_margin = national.leave_abs - national.remain_abs;
+    let margin = national.leave_percentage_share - national.remain_percentage_share;
+    let votes_margin = national.leave_votes - national.remain_votes;
     if(margin > 0){
         winner = 'leave';
         headline = 'Britons vote to leave the EU';
@@ -38,11 +38,11 @@ module.exports = function (national, regional, local, lookupByID){
         return '<span class="inline-value">' + d3.round(d.turnout_pct,1) + '</span>% (' + lookupByID[d.local_id].name + ')';
     }).join(' to '); 
 
-    let turnoutStatement = 'Overall turnout was ' + turnoutDescription(national.turnout_pct) + ' at <span class="inline-value">'+d3.round(national.turnout_pct,1)+'</span>% locally it varied ' + turnoutExtent;
-    
+    //let turnoutStatement = 'Overall turnout was ' + turnoutDescription(national.turnout_pct) + ' at <span class="inline-value">'+d3.round(national.turnout_pct,1)+'</span>% locally it varied ' + turnoutExtent;
+    //removed turnout statement <li>${turnoutStatement}</li>
     return {
         headline: headline,
-        standfirstList: `<ul class="o-typography-body o-typography-list"><li>${marginStatement}</li><li>${mostLeave}</li><li>${mostRemain}</li><li>${turnoutStatement}</li></ul>`,
+        standfirstList: `<ul class="o-typography-body o-typography-list"><li>${marginStatement}</li><li>${mostLeave}</li><li>${mostRemain}</li></ul>`,
     };
 };
 
