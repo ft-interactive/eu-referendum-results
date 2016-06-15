@@ -4,6 +4,10 @@
 		"width": 600,
 		"height": 100,
 		"background": null,
+		"lineStroke": "#ff00ff",
+		"text": "#333333",
+		"textSize": "12",
+		"axisStroke": "#00ff00",
 		"spacing": 10,
 		"layout": "horizontal"
 	},
@@ -12,6 +16,10 @@
 		"width": 250,
 		"height": 400,
 		"background": null,
+		"lineStroke": "#ff0000",
+		"text": "#333333",
+		"textSize": "12",
+		"axisStroke": "#cccccc",
 		"spacing": 0,
 		"layout": "vertical"
 	}

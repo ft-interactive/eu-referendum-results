@@ -13,6 +13,9 @@ function buildChartsData(config, data) {
 	config = verifyChartConfig(config);
 	config.maxCharts = 3;
 
+	// Check what's in data.charts and via a setting, only send the ones through
+	// to the map function that we want to build for the charts
+
 	data.charts = data.charts.map((chart, index) => {
 		chart.index = index;
 		return buildChartData(config, chart);
@@ -22,6 +25,10 @@ function buildChartsData(config, data) {
 		width: config.width,
 		height: config.height,
 		background: config.background,
+		lineStroke: config.lineStroke,
+		text: config.text,
+		axisStroke: config.axisStroke,
+		textSize: config.textSize,
 		spacing: config.spacing,
 		layout: config.layout,
 		charts: data.charts,
@@ -109,6 +116,12 @@ function buildChartData(config, chart) {
 	const percentageChange = ((lastValue - firstValue) / lastValue) * 100;
 	chart.endValue.diff = d3Format.format(',.1f')(percentageChange) + '%';
 
+	if (percentageChange < 0) {
+		chart.diffColor = '#ca4050'; // Red
+	} else {
+		chart.diffColor = '#09a25c'; // Green: 03ac7a
+	}
+
 	return chart;
 }
 
@@ -128,9 +141,34 @@ function verifyChartConfig(config) {
 		}
 	}
 
+	if (config.lineStroke) {
+		assertHexColor(config.lineStroke, 'The chart line stroke color must be a hex color');
+		if (config.lineStroke.indexOf('#') !== 0) {
+			config.lineStroke = `#${config.lineStroke}`;
+		}
+	}
+
+	if (config.axisStroke) {
+		assertHexColor(config.axisStroke, 'The chart axis stroke color must be a hex color');
+		if (config.axisStroke.indexOf('#') !== 0) {
+			config.axisStroke = `#${config.axisStroke}`;
+		}
+	}
+
+	if (config.text) {
+		assertHexColor(config.text, 'The chart text color must be a hex color');
+		if (config.text.indexOf('#') !== 0) {
+			config.text = `#${config.text}`;
+		}
+	}
+
 	// Validate/sanitize the spacing
 	assertNumeric(config.spacing, 'The chart spacing must be a number');
 	config.spacing = Math.abs(parseInt(config.spacing, 10));
+
+	// Font Size
+	assertNumeric(config.textSize, 'The chart text size must be a number');
+	config.textSize = Math.abs(parseInt(config.textSize, 10));
 
 	// Validate/sanitize the layout
 	const allowedLayouts = [
