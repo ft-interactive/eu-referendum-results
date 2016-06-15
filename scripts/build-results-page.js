@@ -20,7 +20,6 @@ const regionalResults = loadLocalJSON( resultsLocation + 'regions.json' );
 const nationalResults = loadLocalJSON( resultsLocation + 'running-totals.json' );
 const localResuls = loadLocalJSON( resultsLocation + 'voting-areas.json');
 const lookupByID = makeLookup( loadLocalCSV( './data/names.csv' ), 'ons_id');
-
 const words = writer(nationalResults, regionalResults, localResuls, lookupByID);
 
 nunjucks.configure('templates', { autoescape: false });

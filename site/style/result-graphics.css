@@ -1,3 +1,12 @@
+.footnote{
+	line-height: 16px;	
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: .3em;
+    margin-bottom: .8em;
+}
+
 /* national results */
 .total-bar {
     box-sizing: border-box;
@@ -66,11 +75,26 @@
 	font-feature-settings: "tnum";
 }
 
+.place-detail{
+	font-weight: 200;
+	padding-left: 20px
+}
+
+.standfirst-list{
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.standfirst-list li{
+	padding-bottom: 10px;
+}
+
+/* regional results */
+
 .count-incomplete{
 	fill-opacity: 0.5;
 }
 
-/* regional results */
 .regional-axis{
 	stroke:#000;
 	stroke-opacity:0.2;

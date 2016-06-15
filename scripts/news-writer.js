@@ -25,13 +25,13 @@ module.exports = function (national, regional, local, lookupByID){
     
     let mostLeave = 'The places which voted most strongly to <span class="leave-highlight">leave</span> were: ' + getMostLeave( local, 3 ).map(function(d){
         let name =  lookupByID[d.ons_id].name;
-        return name + ' (<span class="inline-value">'+d3.round(d.leave_percentage_share,1)+'</span>%)';
-    }).join(', ');;
+        return '<br><span class="place-detail">' + name + ' <span class="inline-value"><b>'+d3.round(d.leave_percentage_share,1)+'</b></span>%</span>';
+    }).join('');
     
     let mostRemain = 'The places which voted most strongly to <span class="remain-highlight">remain</span> were: ' + getMostRemain( local, 3 ).map(function(d){
         let name =  lookupByID[d.ons_id].name;
-        return name + ' (<span class="inline-value">'+d3.round(d.remain_percentage_share,1)+'</span>%)';
-    }).join(', ');
+        return '<br><span class="place-detail">' + name + ' <span class="inline-value"><b>'+d3.round(d.remain_percentage_share,1)+'</b></span>%</span>';
+    }).join('');
 
 
     let turnoutExtent = 'from ' + getTurnoutExtent(local).map(function(d,i){
@@ -42,7 +42,7 @@ module.exports = function (national, regional, local, lookupByID){
     //removed turnout statement <li>${turnoutStatement}</li>
     return {
         headline: headline,
-        standfirstList: `<ul class="o-typography-body o-typography-list"><li>${marginStatement}</li><li>${mostLeave}</li><li>${mostRemain}</li></ul>`,
+        standfirstList: `<ul class="standfirst-list"><li>${marginStatement}</li><li>${mostLeave}</li><li>${mostRemain}</li></ul>`,
     };
 };
 

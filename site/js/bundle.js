@@ -367,8 +367,8 @@ module.exports = function (){
 };
 },{"d3":4,"topojson":115}],3:[function(require,module,exports){
 module.exports={
-    "leaveColour":"#093967",
-    "remainColour":"#6AADB3"
+    "leaveColour":"#2fad89",
+    "remainColour":"#4366af"
 }
 },{}],4:[function(require,module,exports){
 !function() {
