@@ -1,5 +1,5 @@
-var topojson = require('topojson');
-var d3 = require('d3');
+//var topojson = require('topojson');
+//var d3 = require('d3');
 
 module.exports = function (){
     console.log('hello map');

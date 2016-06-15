@@ -1,11 +1,14 @@
-var d3 = require('d3');
-var topojson = require('topojson');
+//var d3 = require('d3');
+//var topojson = require('topojson');
 var map = require('./map.js')();
 var colour = require('../colours.json');
 var find = require('lodash/find');
 var topology = JSON.parse( d3.select('#topo-data').text() );
+
 var localResults = JSON.parse( d3.select('#local-result-data').text() );
+
 var regionalResults = JSON.parse( d3.select('#regional-result-data').text() );
+
 var nationalResults = JSON.parse( d3.select('#national-result-data').text() );
 
 var mapWidth=400, mapHeight = 600;
@@ -91,7 +94,7 @@ mapframe.append('path')
 //add the areas for which we have results
 map.features( uk.features );
 mapframe.selectAll('.area').data(localResults.filter(function(d){
-        return d.remain_percentage_share != null;
+        return d.state > 2;
     }))
     .call(map)
     .on('click', function(d,i){ 
