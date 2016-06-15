@@ -12,14 +12,23 @@ module.exports = buildChartsData;
 function buildChartsData(config, data) {
 	config = verifyChartConfig(config);
 	config.maxCharts = 3;
+	let chartData = data.charts;
+
+	chartData = chartData.filter((chart) => {
+		if (config.show.indexOf(chart.symbol) >= 0) {
+			return chart;
+		}
+	});
 
 	// Check what's in data.charts and via a setting, only send the ones through
 	// to the map function that we want to build for the charts
-
-	data.charts = data.charts.map((chart, index) => {
+	chartData = chartData.map((chart, index) => {
 		chart.index = index;
+
 		return buildChartData(config, chart);
 	});
+
+
 
 	return {
 		width: config.width,
@@ -31,7 +40,7 @@ function buildChartsData(config, data) {
 		textSize: config.textSize,
 		spacing: config.spacing,
 		layout: config.layout,
-		charts: data.charts,
+		charts: chartData,
 		metricEmbed: true
 	};
 }
@@ -110,7 +119,7 @@ function buildChartData(config, chart) {
 	if (chart.type === 'index') {
 		chart.endValue.label = d3Format.format(',.1f')(lastValue)
 	} else {
-		chart.endValue.label = (chart.symbol || '') + d3Format.format('.3f')(lastValue)
+		chart.endValue.label = (chart.symbolLabel || '') + d3Format.format('.3f')(lastValue)
 	}
 
 	const percentageChange = ((lastValue - firstValue) / lastValue) * 100;

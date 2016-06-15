@@ -9,7 +9,12 @@
 		"textSize": "12",
 		"axisStroke": "#00ff00",
 		"spacing": 10,
-		"layout": "horizontal"
+		"layout": "horizontal",
+		"show": [
+			"USDEUR",
+			"GBPEUR",
+			"FTSE:FSI"
+		]
 	},
 	{
 		"name": "example-2",
@@ -21,6 +26,11 @@
 		"textSize": "12",
 		"axisStroke": "#cccccc",
 		"spacing": 0,
-		"layout": "vertical"
+		"layout": "vertical",
+		"show": [
+			"GBPUSD",
+			"USDEUR",
+			"FTSE:FSI"
+		]
 	}
 ]

@@ -34,6 +34,7 @@ chartsConfig.forEach(chartConfig => {
 
 	console.log(`Generating chart "${chartConfig.name}"`);
 	const chartData = buildChartsData(chartConfig, data);
+
 	const chartSvg = nunjucks.render('charts.svg', chartData);
 
 	const chartFilePath = path.join(buildDirectory, `${chartConfig.name}.svg`);
