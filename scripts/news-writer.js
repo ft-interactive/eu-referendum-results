@@ -4,10 +4,7 @@ const d3 = require('d3');
 const commas = d3.format('0,000');
 
 module.exports = function (national, regional, local, lookupByID){
-    
-    // console.log(national);
-    // console.log(local);
-    // console.log(regional);        
+ 
     let headline = '';
     let winner = '';
     
