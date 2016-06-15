@@ -1,17 +1,32 @@
+.footnote{
+	line-height: 16px;	
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: .3em;
+    margin-bottom: .8em;
+}
+
 /* national results */
 .total-bar {
-	height: 35px;
     box-sizing: border-box;
 	display: inline-block;
 	vertical-align: top;
 }
 
+
 .total-bar-label {
+	font-weight: 200;
 	font-family: MetricWeb, sans-serif;
+	font-size: 2rem;
 	vertical-align: top;
 	display: inline-block;
-	line-height: 35px;
 	padding: 0 10px;
+}
+
+
+.national-figure{
+	font-weight:600;
 }
 
 .national-item {
@@ -19,12 +34,10 @@
 }
 
 .win {
-	font-size: 140%;
 	order: 1;
 }
 
 .lose {
-	font-size: 100%;
 	order: 2;
 }
 
@@ -33,6 +46,7 @@
     box-sizing: border-box;
 	display: inline-block;
 	vertical-align: top;
+	margin-bottom:4px;
 }
 
 .total-bar-label {
@@ -61,7 +75,26 @@
 	font-feature-settings: "tnum";
 }
 
+.place-detail{
+	font-weight: 200;
+	padding-left: 20px
+}
+
+.standfirst-list{
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.standfirst-list li{
+	padding-bottom: 10px;
+}
+
 /* regional results */
+
+.count-incomplete{
+	fill-opacity: 0.5;
+}
+
 .regional-axis{
 	stroke:#000;
 	stroke-opacity:0.2;

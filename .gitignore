@@ -7,6 +7,5 @@ node_modules
 npm-debug.log
 
 dump.rdb
-bundle.js
 
 charts/build

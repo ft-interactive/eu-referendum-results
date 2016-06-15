@@ -1,7 +1,7 @@
+'use strict';
+
 const d3 = require('d3');
 const commas = d3.format('0,000');
-
-
 
 module.exports = function (national, regional, local, lookupByID){
     
@@ -11,8 +11,8 @@ module.exports = function (national, regional, local, lookupByID){
     let headline = '';
     let winner = '';
     
-    let margin = national.leave_pct - national.remain_pct;
-    let votes_margin = national.leave_abs - national.remain_abs;
+    let margin = national.leave_percentage_share - national.remain_percentage_share;
+    let votes_margin = national.leave_votes - national.remain_votes;
     if(margin > 0){
         winner = 'leave';
         headline = 'Britons vote to leave the EU';
@@ -24,25 +24,25 @@ module.exports = function (national, regional, local, lookupByID){
     let marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value">${Math.abs(margin).toFixed(1)}</span>% ( <span class="inline-value">${commas( Math.abs(votes_margin) )}</span> votes )`;
     
     let mostLeave = 'The places which voted most strongly to <span class="leave-highlight">leave</span> were: ' + getMostLeave( local, 3 ).map(function(d){
-        let name =  lookupByID[d.local_id].name;
-        return name + ' (<span class="inline-value">'+d3.round(d.leave_pct,1)+'</span>%)';
-    }).join(', ');;
+        let name =  lookupByID[d.ons_id].name;
+        return '<br><span class="place-detail">' + name + ' <span class="inline-value"><b>'+d3.round(d.leave_percentage_share,1)+'</b></span>%</span>';
+    }).join('');
     
     let mostRemain = 'The places which voted most strongly to <span class="remain-highlight">remain</span> were: ' + getMostRemain( local, 3 ).map(function(d){
-        let name =  lookupByID[d.local_id].name;
-        return name + ' (<span class="inline-value">'+d3.round(d.remain_pct,1)+'</span>%)';
-    }).join(', ');
+        let name =  lookupByID[d.ons_id].name;
+        return '<br><span class="place-detail">' + name + ' <span class="inline-value"><b>'+d3.round(d.remain_percentage_share,1)+'</b></span>%</span>';
+    }).join('');
 
 
     let turnoutExtent = 'from ' + getTurnoutExtent(local).map(function(d,i){
-        return '<span class="inline-value">' + d3.round(d.turnout_pct,1) + '</span>% (' + lookupByID[d.local_id].name + ')';
+        return '<span class="inline-value">' + d3.round(d.turnout_pct,1) + '</span>% (' + lookupByID[d.ons_id].name + ')';
     }).join(' to '); 
 
-    let turnoutStatement = 'Overall turnout was ' + turnoutDescription(national.turnout_pct) + ' at <span class="inline-value">'+d3.round(national.turnout_pct,1)+'</span>% locally it varied ' + turnoutExtent;
-    
+    //let turnoutStatement = 'Overall turnout was ' + turnoutDescription(national.turnout_pct) + ' at <span class="inline-value">'+d3.round(national.turnout_pct,1)+'</span>% locally it varied ' + turnoutExtent;
+    //removed turnout statement <li>${turnoutStatement}</li>
     return {
         headline: headline,
-        standfirstList: `<ul class="o-typography-body o-typography-list"><li>${marginStatement}</li><li>${mostLeave}</li><li>${mostRemain}</li><li>${turnoutStatement}</li></ul>`,
+        standfirstList: `<ul class="standfirst-list"><li>${marginStatement}</li><li>${mostLeave}</li><li>${mostRemain}</li></ul>`,
     };
 };
 
@@ -75,14 +75,14 @@ function getTurnoutExtent(data){
 
 function getMostLeave(data, n){
     let sorted = data.sort(function(a,b){
-        return b.leave_pct - a.leave_pct;
+        return b.leave_percentage_share - a.leave_percentage_share;
     });
     return sorted.slice(0, n);
 }
 
 function getMostRemain(data, n){
     let sorted = data.sort(function(a,b){
-        return b.remain_pct - a.remain_pct;
+        return b.remain_percentage_share - a.remain_percentage_share;
     });
     return sorted.slice(0, n);
 }

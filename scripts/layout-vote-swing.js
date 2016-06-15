@@ -1,13 +1,30 @@
+'use strict';
+
 const d3 = require('d3');
 const colours = require('./colours.json');
-var leaveLabel = 'LEAVE';
-var remainLabel = 'REMAIN';
-var commas = d3.format('0,000');
+const leaveLabel = 'LEAVE';
+const remainLabel = 'REMAIN';
+const commas = d3.format('0,000');
+
+const state = {
+  // No data
+  NONE: 0,
+  // Partial reports
+  TURNOUT: 1,
+  RUNNING_TOTAL: 1,
+  // We know the outcome (Leave/Remain) but data is incomplete
+  OUTCOME: 2,
+  // we know the outcome and have all the data
+  RESULT: 3,
+  // we have the outcome but we have a message
+  // from the PA saying corrections will follow
+  RESULT_OLD: 4
+}
 
 module.exports = function(regionalResult){
 
     regionalResult = regionalResult.map(function(d){
-		d.margin_abs = d.remain_abs - d.leave_abs
+		d.margin_abs = d.remain_votes - d.leave_votes;
 		return d;
 	}).sort(function(a,b){
 		return a.margin_abs - b.margin_abs;
@@ -16,7 +33,7 @@ module.exports = function(regionalResult){
 	let width = 800;
 	let height = 400;
 	let margin = {
-		top:0, left:180, bottom:5, right:5,
+		top:50, left:180, bottom:5, right:5,
 	}
 	let plotWidth = width - (margin.left + margin.right);
 	let plotHeight = height - (margin.top + margin.bottom);
@@ -46,7 +63,14 @@ module.exports = function(regionalResult){
 			valueAnchor = 'end';
 			valueDx = -5;
 		}
-						 
+		//if state is less than 3 then that means the counts of sub areas are incomplete
+		let rowClass = 'count-complete';
+		let valueLabel = commas( Math.abs(d.margin_abs) );
+		if(d.state < state.RESULT){
+			rowClass = 'count-incomplete';
+			valueLabel = valueLabel += ' *';
+		}	 
+
 		return {
 			groupTransform: 'translate(0, ' + regionScale(i) + ')',
 			barX: x,
@@ -54,12 +78,13 @@ module.exports = function(regionalResult){
 			barWidth: w,
 			barHeight: regionScale(0.8),
 			barFill: fill,
-			valueLabel: commas( Math.abs(d.margin_abs) ),
+			completeClass: rowClass , 
+			valueLabel: valueLabel,
 			valueLabelAnchor: valueAnchor,
 			valueLabelTransform: 'translate(' + barScale(0) + ',0)',
 			valueLabelDx: valueDx,
 			valueLabelDy: regionScale(0.7),
-			regionLabel: d.name,
+			regionLabel: d.short_name,
 			regionLabelDx:-5,
 			regionLabelDy:regionScale(0.7),
 			underline:{
@@ -76,5 +101,8 @@ module.exports = function(regionalResult){
         width: width,
         height: height,
         margin: margin,
+		axisLineX:barScale(0),
+		axisLineYStart:-margin.top,
+		axisLineYEnd:height,
     };
 };

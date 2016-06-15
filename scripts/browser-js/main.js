@@ -8,9 +8,6 @@ var localResults = JSON.parse( d3.select('#local-result-data').text() );
 var regionalResults = JSON.parse( d3.select('#regional-result-data').text() );
 var nationalResults = JSON.parse( d3.select('#national-result-data').text() );
 
-console.log(regionalResults);
-console.log(nationalResults);
-
 var mapWidth=400, mapHeight = 600;
 
 var selectionDispatcher = d3.dispatch('select');
@@ -33,10 +30,10 @@ uk.features = uk.features.concat( topojson.feature(topology, topology.objects.ni
 
 //set up map basics
 map.id(function(d){
-        return d.local_id;
+        return d.ons_id;
     })
     .fillScale(function(d){
-        if(d.leave_pct <= 50) return colour.remainColour;
+        if(d.leave_percentage_share <= 50) return colour.remainColour;
         return colour.leaveColour;
     });
 
@@ -93,7 +90,9 @@ mapframe.append('path')
 
 //add the areas for which we have results
 map.features( uk.features );
-mapframe.selectAll('.area').data(localResults)
+mapframe.selectAll('.area').data(localResults.filter(function(d){
+        return d.remain_percentage_share != null;
+    }))
     .call(map)
     .on('click', function(d,i){ 
         selectionDispatcher.select(d);
@@ -126,16 +125,17 @@ var barValueScale = d3.scale.linear()
     .domain([0, 100]);
 
 selectionDispatcher.on('select.local-context', function(localResult){
+    console.log(localResult)
     var regionResult = find(regionalResults, function(e){
-        return e.region_id === localResult.region_id ;
+        return e.id === localResult.region_id ;
     });
     var contextResults = [
         {
-            title:'LOCAL NAME',
+            title:localResult.name,
             data:localResult,
         },
         {
-            title:regionResult.name,
+            title:regionResult.short_name,
             data:regionResult,
         },
         {
@@ -145,11 +145,11 @@ selectionDispatcher.on('select.local-context', function(localResult){
     ];
 
     localframe.append('line')
-                .attr('x1', barValueScale(50))
-                .attr('y1', 0)
-                .attr('x2', barValueScale(50))
-                .attr('y2', (localBarHeight+localBarGap) * contextResults.length - localBarGap)
-                .attr('class', 'local-bar-axis');
+        .attr('x1', barValueScale(50))
+        .attr('y1', 0)
+        .attr('x2', barValueScale(50))
+        .attr('y2', (localBarHeight+localBarGap) * contextResults.length - localBarGap)
+        .attr('class', 'local-bar-axis');
 
     localframe.selectAll('g.context-bar')
         .data(contextResults)
@@ -171,26 +171,26 @@ selectionDispatcher.on('select.local-context', function(localResult){
     localframe.selectAll('g.context-bar')
         .call(function(parent){
             parent.select('text.bar-title')
-                .text(function(d){ return d.title + ' ' +d3.round(d.data.leave_pct,1)+'%'; });
+                .text(function(d){ return d.title + ' ' +d3.round(d.data.leave_percentage_share,1)+'%'; });
             
             parent.transition()
                 .select('rect')
                     .attr('x', function(d){
-                        if(d.data.leave_pct < 50){ 
-                            return barValueScale( d.data.leave_pct ); 
+                        if(d.data.leave_percentage_share < 50){ 
+                            return barValueScale( d.data.leave_percentage_share ); 
                         }
                         return barValueScale( 50 );
                     })
                     .attr('y',0)
                     .attr('width',function(d){
-                        if(d.data.leave_pct < 50){ 
-                            return Math.abs( barValueScale( d.data.leave_pct - 50 )); 
+                        if(d.data.leave_percentage_share < 50){ 
+                            return Math.abs( barValueScale( d.data.leave_percentage_share - 50 )); 
                         }
-                        return Math.abs( barValueScale( 50 - d.data.leave_pct ));
+                        return Math.abs( barValueScale( 50 - d.data.leave_percentage_share ));
                     })
                     .attr('height', localBarHeight)
                     .attr('fill', function(d){
-                        if(d.data.leave_pct > 50){
+                        if(d.data.leave_percentage_share > 50){
                             return colour.leaveColour;
                         }
                         return colour.remainColour;
@@ -199,7 +199,7 @@ selectionDispatcher.on('select.local-context', function(localResult){
 });
 
 selectionDispatcher.on('select.map', function(d){
-    var bounds = d3.select('#area-' + d.local_id).node().getBBox();
+    var bounds = d3.select('#area-' + d.ons_id).node().getBBox();
     var highlightData = [{
             cx:bounds.x + bounds.width/2,
             cy:bounds.y + bounds.height/2,
