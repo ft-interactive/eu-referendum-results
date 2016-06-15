@@ -281,7 +281,7 @@ pa_id,ons_id,my_society_id,name,ons_regional_id,region_name
 102,E07000049,2294,East Dorset,E12000009,South West and Gibraltar
 121,E07000041,2290,Exeter,E12000009,South West and Gibraltar
 128,E07000080,2321,Forest of Dean,E12000009,South West and Gibraltar
-132,G99999999,9999,Gibraltar,E12000009,South West and Gibraltar
+132,G99999999,999999999,Gibraltar,E12000009,South West and Gibraltar
 134,E07000081,2325,Gloucester,E12000009,South West and Gibraltar
 168,E06000053,2251,Isles of Scilly,E12000009,South West and Gibraltar
 194,E07000187,2428,Mendip,E12000009,South West and Gibraltar
