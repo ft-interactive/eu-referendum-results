@@ -103,7 +103,7 @@ function buildChartData(config, chart) {
 	// Add chart data
 	const buildLine = d3Shape.line();
 	if (chart.type === 'index') {
-		buildLine.defined(point => typeof point.value === 'number');
+		buildLine.defined(point => point.end !== true); // Change this function to check for end value
 	}
 	chart.data = buildLine
 		.x(point => xScale(new Date(point.date)))
