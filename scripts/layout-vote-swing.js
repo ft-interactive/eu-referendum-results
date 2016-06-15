@@ -6,6 +6,21 @@ const leaveLabel = 'LEAVE';
 const remainLabel = 'REMAIN';
 const commas = d3.format('0,000');
 
+const state = {
+  // No data
+  NONE: 0,
+  // Partial reports
+  TURNOUT: 1,
+  RUNNING_TOTAL: 1,
+  // We know the outcome (Leave/Remain) but data is incomplete
+  OUTCOME: 2,
+  // we know the outcome and have all the data
+  RESULT: 3,
+  // we have the outcome but we have a message
+  // from the PA saying corrections will follow
+  RESULT_OLD: 4
+}
+
 module.exports = function(regionalResult){
 
     regionalResult = regionalResult.map(function(d){
@@ -48,7 +63,14 @@ module.exports = function(regionalResult){
 			valueAnchor = 'end';
 			valueDx = -5;
 		}
-						 
+		//if state is less than 3 then that means the counts of sub areas are incomplete
+		let rowClass = 'count-complete';
+		let valueLabel = commas( Math.abs(d.margin_abs) );
+		if(d.state < state.RESULT){
+			rowClass = 'count-incomplete';
+			valueLabel = valueLabel += ' *';
+		}	 
+
 		return {
 			groupTransform: 'translate(0, ' + regionScale(i) + ')',
 			barX: x,
@@ -56,7 +78,8 @@ module.exports = function(regionalResult){
 			barWidth: w,
 			barHeight: regionScale(0.8),
 			barFill: fill,
-			valueLabel: commas( Math.abs(d.margin_abs) ),
+			completeClass: rowClass , 
+			valueLabel: valueLabel,
 			valueLabelAnchor: valueAnchor,
 			valueLabelTransform: 'translate(' + barScale(0) + ',0)',
 			valueLabelDx: valueDx,

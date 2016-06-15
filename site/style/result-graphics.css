@@ -66,6 +66,10 @@
 	font-feature-settings: "tnum";
 }
 
+.count-incomplete{
+	fill-opacity: 0.5;
+}
+
 /* regional results */
 .regional-axis{
 	stroke:#000;
