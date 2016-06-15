@@ -35,6 +35,14 @@
 				<circle cx="0" cy="{{chart.startY}}" r="4" fill="#272727" stroke="#eee" stroke-width="1"/>
 				<circle cx="{{chart.plotArea.width}}" cy="{{chart.endY}}" r="4" fill="#272727" stroke="#ca4050" stroke-width="1"/>
 
+				{% if chart.subPathEndY %}
+					<circle cx="{{chart.subPathEndX}}" cy="{{chart.subPathEndY}}" r="4" fill="#272727" stroke="#ca4050" stroke-width="1"/>
+				{% endif %}
+
+				{% if chart.subPathStartY %}
+					<circle cx="{{chart.subPathStartX}}" cy="{{chart.subPathStartY}}" r="4" fill="#272727" stroke="#eee" stroke-width="1"/>
+				{% endif %}
+
 			</g>
 
 			<!-- Y axis label -->

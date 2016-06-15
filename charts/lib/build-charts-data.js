@@ -28,8 +28,6 @@ function buildChartsData(config, data) {
 		return buildChartData(config, chart);
 	});
 
-
-
 	return {
 		width: config.width,
 		height: config.height,
@@ -103,12 +101,36 @@ function buildChartData(config, chart) {
 	// Add chart data
 	const buildLine = d3Shape.line();
 	if (chart.type === 'index') {
-		buildLine.defined(point => point.end !== true); // Change this function to check for end value
+		buildLine.defined(point => point.end !== true);
 	}
 	chart.data = buildLine
 		.x(point => xScale(new Date(point.date)))
 		.y(point => Math.floor(yScale(point.value)))
 		(chart.series);
+
+	if (chart.type === 'index') {
+		const gapEnd = chart.series.filter(point => {
+			if (point.end === true) {
+				return true;
+			}
+		});
+
+		const gapStart = chart.series.map((point, index, series) => {
+			if (point.end === true) {
+				return series[index+1];
+			} else {
+				return false;
+			}
+		}).filter(a => a);
+
+		if (gapStart.length > 0) {
+			chart.subPathEndY = yScale(gapEnd[0].value);
+			chart.subPathEndX = xScale(new Date(gapEnd[0].date));
+
+			chart.subPathStartY = yScale(gapStart[0].value);
+			chart.subPathStartX = xScale(new Date(gapStart[0].date));
+		}
+	}
 
 	// Add data start/end circles
 	chart.startY = Math.floor(yScale(chart.series[0].value));
