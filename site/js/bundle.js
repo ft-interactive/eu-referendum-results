@@ -105,10 +105,10 @@ mapframe.selectAll('.area').data(localResults.filter(function(d){
 //add the svg for the local area chart
 var localChartWidth = 400;
 var localChartHeight = 400;
-var localBarHeight = 30;
-var localBarGap = 20;
+var localBarHeight = 60;
+var localBarGap = 50;
 var localChartMargin = {
-    top: 20, left: 20, bottom: 20, right:20,
+    top: 30, left: 0, bottom: 20, right:0,
 };
 
 var localframe = d3.select('.location-data')
@@ -132,10 +132,11 @@ var barValueScale = d3.scale.linear()
     .domain([0, 100]);
 
 selectionDispatcher.on('select.local-context', function(localResult){
-    console.log(localResult)
+
     var regionResult = find(regionalResults, function(e){
         return e.id === localResult.region_id ;
     });
+
     var contextResults = [
         {
             title:localResult.name,
@@ -151,12 +152,7 @@ selectionDispatcher.on('select.local-context', function(localResult){
         },
     ];
 
-    localframe.select('line.local-bar-axis')
-        .attr('x1', barValueScale(50))
-        .attr('y1', 0)
-        .attr('x2', barValueScale(50))
-        .attr('y2', (localBarHeight+localBarGap) * contextResults.length - localBarGap)
-        .attr('class', 'local-bar-axis');
+    
 
     localframe.selectAll('g.context-bar')
         .data(contextResults)
@@ -181,6 +177,13 @@ selectionDispatcher.on('select.local-context', function(localResult){
             parent.append('rect').attr('class', 'bar-leave');
             parent.append('rect').attr('class', 'bar-remain');
         });
+    
+    localframe.select('line.local-bar-axis')
+        .attr('x1', barValueScale(50))
+        .attr('y1', 0)
+        .attr('x2', barValueScale(50))
+        .attr('y2', (localBarHeight+localBarGap) * contextResults.length - localBarGap)
+        .attr('class', 'local-bar-axis');
     
     localframe.selectAll('g.context-bar')
         .call(function(parent){
@@ -208,23 +211,14 @@ selectionDispatcher.on('select.local-context', function(localResult){
                 });
 
             parent.select('text.bar-leave-value')
-                .text(function(d){
-                    return d.data.leave_percentage_share + '% leave ';
+                .html(function(d){
+                    return '<tspan class="leave-highlight">'+d3.round(d.data.leave_percentage_share, 1) + '%</tspan> LEAVE ';
                 })
 
             parent.select('text.bar-remain-value')
-                .text(function(d){
-                    return 'remain ' + d.data.remain_percentage_share + '%';
-                })
-                    // .attr('cx', function(d){ return barValueScale( d.data.leave_percentage_share ); })
-                    // .attr('cy',0)
-                    // .attr('r', 20)
-                    // .attr('fill', function(d){
-                    //     if(d.data.leave_percentage_share > 50){
-                    //         return colour.leaveColour;
-                    //     }
-                    //     return colour.remainColour;
-                    // });
+                .html(function(d){
+                    return 'REMAIN <tspan class="remain-highlight">' + d3.round(d.data.remain_percentage_share, 1) + '%</tspan>';
+                });
         });
 });
 
