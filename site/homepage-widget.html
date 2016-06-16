@@ -4,8 +4,10 @@
   }
   .national-result-holder {
     width: 600px;
-    height: 117px;
+    height: 118px;
+    background: url('https://ig.ft.com/static/sites/uk-referendum-results-june-2016/brexit-widget-backgroundb.png') no-repeat top center;
     font-family: sans-serif;
+    color: #333333;
   }
 
   .widget-title {
@@ -16,13 +18,33 @@
   .bars-holder {
     height: 81px;
     width: 100%;
-    background-color: #e9decf;
+    padding: 10px 0 0 10px;
+  }
+  .total-bar {
+    height: 24px;
+    display: inline-block;
+  }
+  .total-bar-label {
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+  }
+  .national-item {
+    height: 26px;
+  }
+  .national-figure,
+  .reported-areas {
+    font-weight: bold;
+  }
+  .link-holder {
+    margin-top: 5px;
   }
   .link-holder a {
     font-size: 12px;
     color: #2e6e9e;
     float: right;
     text-decoration: none;
+    transition: color 0.3s;
   }
   .link-holder a:after {
     content: " ";
@@ -33,12 +55,34 @@
     height: 12px;
     margin: 0;
 }
+.link-holder a:hover {
+  color: #000000;
+  transition: color 0s;
+}
+.footnote {
+  font-size: 11px;
+  margin-top: 2px;
+  color: #74736C;
+}
+.reported-areas{
+  color: #333333;
+}
 </style>
 <div class="national-result-holder">
   <h1 class="widget-title">UK’s EU referendum</h1>
   <div class="bars-holder">
-    <div class="total-bar" style="width: 49.19%; background-color: #333;"></div>
-    <div class="total-bar-label"></div>
+  
+    <div class="national-item win">
+        <div class="total-bar" style="width: 50.81%; background-color: #2fad89;"></div>
+        <div class="total-bar-label"><span class="national-figure">50.8%</span> LEAVE</div>
+    </div>
+  
+    <div class="national-item">
+        <div class="total-bar" style="width: 49.19%; background-color: #4366af;"></div>
+        <div class="total-bar-label"><span class="national-figure">49.2%</span> REMAIN</div>
+    </div>
+  
+   <figcaption class="footnote"><span class="reported-areas">148</span> of 382 voting areas counted. Updated 12:21PM, June 16 2016 </figcaption>
   </div>
-  <p class="link-holder"><a href="">Full results</a></p>
+  <div class="link-holder"><a href="">Full results</a></div>
 </div>

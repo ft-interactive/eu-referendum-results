@@ -4,8 +4,10 @@
   }
   .national-result-holder {
     width: 600px;
-    height: 117px;
+    height: 118px;
+    background: url('https://ig.ft.com/static/sites/uk-referendum-results-june-2016/brexit-widget-backgroundb.png') no-repeat top center;
     font-family: sans-serif;
+    color: #333333;
   }
 
   .widget-title {
@@ -16,13 +18,33 @@
   .bars-holder {
     height: 81px;
     width: 100%;
-    background-color: #e9decf;
+    padding: 10px 0 0 10px;
+  }
+  .total-bar {
+    height: 24px;
+    display: inline-block;
+  }
+  .total-bar-label {
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+  }
+  .national-item {
+    height: 26px;
+  }
+  .national-figure,
+  .reported-areas {
+    font-weight: bold;
+  }
+  .link-holder {
+    margin-top: 5px;
   }
   .link-holder a {
     font-size: 12px;
     color: #2e6e9e;
     float: right;
     text-decoration: none;
+    transition: color 0.3s;
   }
   .link-holder a:after {
     content: " ";
@@ -33,12 +55,29 @@
     height: 12px;
     margin: 0;
 }
+.link-holder a:hover {
+  color: #000000;
+  transition: color 0s;
+}
+.footnote {
+  font-size: 11px;
+  margin-top: 2px;
+  color: #74736C;
+}
+.reported-areas{
+  color: #333333;
+}
 </style>
 <div class="national-result-holder">
   <h1 class="widget-title">UK’s EU referendum</h1>
   <div class="bars-holder">
-    <div class="total-bar" style="width: {{ remain_percentage_share }}%; background-color: #333;"></div>
-    <div class="total-bar-label">{{ row.label }}</div>
+  {% for row in orderedData.results %}
+    <div class="national-item{% if loop.index == 1 %} win{% endif %}">
+        <div class="total-bar" style="width: {{ row.value_pct }}%; background-color: {{ row.colour }};"></div>
+        <div class="total-bar-label">{{ row.label }}</div>
+    </div>
+  {% endfor %}
+   <figcaption class="footnote"><span class="reported-areas">{{ orderedData.reportedVotingAreas }}</span> of {{ orderedData.totalVotingAreas }} voting areas counted. Updated {{ orderedData.formattedDate }} </figcaption>
   </div>
-  <p class="link-holder"><a href="">Full results</a></p>
+  <div class="link-holder"><a href="">Full results</a></div>
 </div>
