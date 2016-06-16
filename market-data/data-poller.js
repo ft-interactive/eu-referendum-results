@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const http = require('http');
 const csvParse = require('csv-parse/lib/sync');
 const logger = require('./lib/logger')('brexit-market-data-generator');
@@ -140,7 +141,7 @@ const publishData = (data, cb) => {
 	data.forEach(d => {
 		if (validateSeries(d)) {
 
-			const filename = `${config.output_dir}${d.basic.symbol}.csv`;
+			const filename = path.join(config.output_dir, d.basic.symbol + '.csv');
 			const newSeriesCSV = generateTimeSeriesCSV(d.timeSeries.timeSeriesData);
 			let currentSeriesCSV;
 

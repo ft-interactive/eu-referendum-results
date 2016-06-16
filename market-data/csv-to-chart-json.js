@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const csvParse = require('csv-parse/lib/sync');
 const logger = require('./lib/logger')('brexit-market-data-to-chart-json');
 
@@ -170,7 +171,7 @@ const generateChartJson = (data, cb) => {
 	let output;
 	let seriesData;
 	let range;
-	const fileName = config.output_directory + 'brexit-market-chart-data.json';
+	const fileName = path.join(config.output_directory, 'brexit-market-chart-data.json');
 
 	try {
 		range = getTimeRange();
