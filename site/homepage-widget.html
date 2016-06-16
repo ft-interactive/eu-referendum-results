@@ -1,6 +1,44 @@
 <style>
+  * {
+    box-sizing: border-box;
+  }
+  .national-result-holder {
+    width: 600px;
+    height: 117px;
+    font-family: sans-serif;
+  }
 
+  .widget-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  .bars-holder {
+    height: 81px;
+    width: 100%;
+    background-color: #e9decf;
+  }
+  .link-holder a {
+    font-size: 12px;
+    color: #2e6e9e;
+    float: right;
+    text-decoration: none;
+  }
+  .link-holder a:after {
+    content: " ";
+    background: url('https://image.webservices.ft.com/v1/images/raw/fticon:arrow-right?height=36&tint=2e6e9e,2e6e9e&source=ig') no-repeat center center;
+    background-size: 12px 12px;
+    float: right;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+}
 </style>
-<div>
-HELLO!!!!    
+<div class="national-result-holder">
+  <h1 class="widget-title">UK’s EU referendum</h1>
+  <div class="bars-holder">
+    <div class="total-bar" style="width: 49.19%; background-color: #333;"></div>
+    <div class="total-bar-label"></div>
+  </div>
+  <p class="link-holder"><a href="">Full results</a></p>
 </div>
