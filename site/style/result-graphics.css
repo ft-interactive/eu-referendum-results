@@ -157,6 +157,11 @@
 }
 
 /* local result */
+.bar-background{
+	fill:#000;
+	fill-opacity: 0.2
+}
+
 .bar-title{
 	font-size: 26px;
 }

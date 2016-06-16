@@ -1,6 +1,7 @@
 //var d3 = require('d3');
 //var topojson = require('topojson');
 var map = require('./map.js')();
+var localBarCharts = require('./local-result-bars.js');
 var colour = require('../colours.json');
 var find = require('lodash/find');
 var topology = JSON.parse( d3.select('#topo-data').text() );
@@ -101,37 +102,12 @@ mapframe.selectAll('.area').data(localResults.filter(function(d){
         selectionDispatcher.select(d);
     });
 
-//add the svg for the local area chart
-var localChartWidth = 400;
-var localChartHeight = 400;
-var localBarHeight = 60;
-var localBarGap = 50;
-var localChartMargin = {
-    top: 30, left: 0, bottom: 20, right:0,
-};
+//local area chart
 
-var localframe = d3.select('.location-data')
-    .append('svg')
-        .attr({
-            'class': 'local-result-chart',
-            'width': localChartWidth,
-            'height': localChartHeight,
-            'viewBox': '0 0 ' + localChartWidth + ' ' + localChartHeight,
-            'style': 'width: 100%; height: 100%;',
-        })
-    .append('g')
-        .attr('transform','translate('+localChartMargin.left+','+localChartMargin.top+')');
+var bars = localBarCharts();
+    
 
-localframe.append('line')
-    .attr('class', 'local-bar-axis hidden');
-
-//create the scales for the local area chart
-var barValueScale = d3.scale.linear()
-    .range([0, localChartWidth-(localChartMargin.left+localChartMargin.right)])
-    .domain([0, 100]);
-
-selectionDispatcher.on('select.local-context', function(localResult){
-
+function updateBars(localResult){
     var regionResult = find(regionalResults, function(e){
         return e.id === localResult.region_id ;
     });
@@ -151,75 +127,14 @@ selectionDispatcher.on('select.local-context', function(localResult){
         },
     ];
 
+    bars.data(contextResults);
     
+    d3.select('.location-data')
+        .call(bars);
+}
 
-    localframe.selectAll('g.context-bar')
-        .data(contextResults)
-            .enter()
-        .append('g')
-            .attr('class','context-bar')
-            .attr('transform',function(d,i){ return 'translate(0,' +(i*(localBarHeight+localBarGap))+ ')'; })
-        .call(function(parent){
-            
-            parent.append('text').attr('class', 'bar-title');
-            parent.append('text')
-                .attr('class', 'bar-remain-value')
-                .attr('y',localBarHeight)
-                .attr('dy',2);
 
-            parent.append('text')
-                .attr('class', 'bar-leave-value')
-                .attr('y',localBarHeight)
-                .attr('x',barValueScale(100))
-                .attr('dy',2)
-                .attr('text-anchor', 'end');
-
-            parent.append('rect').attr('class', 'bar-leave');
-            parent.append('rect').attr('class', 'bar-remain');
-            parent.append('line')
-                .attr('x1', barValueScale(50))
-                .attr('y1', 0)
-                .attr('x2', barValueScale(50))
-                .attr('y2', (localBarHeight))
-                .attr('class', 'local-bar-axis');
-        });
-    
-    localframe.selectAll('g.context-bar')
-        .call(function(parent){
-            parent.select('text.bar-title')
-                .text(function(d){ return d.title; });
-            
-            parent.transition()
-                .select('rect.bar-remain')
-                .attr({
-                    x:0,
-                    y:5,
-                    width: function(d){ return barValueScale( d.data.remain_percentage_share ); },
-                    height: localBarHeight/2,
-                    fill: colour.remainColour,
-                });
-
-            parent.transition()
-                .select('rect.bar-leave')
-                .attr({
-                    x:function(d){ return barValueScale( d.data.remain_percentage_share ); },
-                    y:5,
-                    width: function(d){ return barValueScale( d.data.leave_percentage_share ); },
-                    height: localBarHeight/2,
-                    fill: colour.leaveColour,
-                });
-
-            parent.select('text.bar-leave-value')
-                .html(function(d){
-                    return '<tspan class="leave-highlight">'+d3.round(d.data.leave_percentage_share, 1) + '%</tspan> LEAVE ';
-                })
-
-            parent.select('text.bar-remain-value')
-                .html(function(d){
-                    return 'REMAIN <tspan class="remain-highlight">' + d3.round(d.data.remain_percentage_share, 1) + '%</tspan>';
-                });
-        });
-});
+selectionDispatcher.on('select.local-context', updateBars);
 
 selectionDispatcher.on('select.map', function(d){
     var bounds = d3.select('#area-' + d.ons_id).node().getBBox();
