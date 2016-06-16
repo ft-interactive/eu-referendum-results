@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReferendumResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ReferendumResult.xsd" revision="1" declarationTime="2016-03-22T15:06:28+00:00">
+  <Referendum name="EU" date="2016-06-23">
+    <VotingArea number="187" name="Maidstone" electorate="112999">
+      <Proposition text="Should the UK remain a member of the EU or leave the EU?" turnout="56388" percentageTurnout="49.90" winningAnswerText="Leave the EU" majority="1034" percentageMajority="1.83">
+        <Answer winning="false" text="Remain a member of the EU" shortText="Remain Test" votes="27677" percentageShare="49.08" />
+        <Answer winning="true" text="Leave the EU" shortText="Leave Test" votes="28711" percentageShare="50.92" />
+      </Proposition>
+    </VotingArea>
+  </Referendum>
+</ReferendumResult>
+

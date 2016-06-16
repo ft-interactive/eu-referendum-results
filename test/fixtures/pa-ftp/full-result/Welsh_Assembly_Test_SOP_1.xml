@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostStateOfParties numberOfResults="1" totalNumberOfConstituencies="40" totalVotes="30792">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W" />
+  <Parties>
+    <Party paId="8624" name="Labour" abbreviation="Lab" totalSeats="1" totalVotes="13938" percentageShare="45.27" percentageChange="-5.58" />
+    <Party paId="8623" name="Conservative" abbreviation="C" totalVotes="7911" percentageShare="25.69" percentageChange="+10.01" />
+    <Party paId="8627" name="Plaid Cymru" abbreviation="PC" totalVotes="4011" percentageShare="13.03" percentageChange="-0.43" />
+    <Party paId="8626" name="Liberal Democrat" abbreviation="LD" totalVotes="3292" percentageShare="10.69" percentageChange="-7.18" />
+    <Party paId="8651" name="No description" abbreviation="ND" totalVotes="1640" percentageShare="5.33" percentageChange="+3.18" />
+  </Parties>
+  <ConstituenciesIncluded>
+    <Constituency number="31" name="Pontypridd" />
+  </ConstituenciesIncluded>
+</FirstPastThePostStateOfParties>
+

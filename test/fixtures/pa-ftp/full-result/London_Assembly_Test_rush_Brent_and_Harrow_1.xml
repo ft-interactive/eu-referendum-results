@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="3" name="Brent &amp; Harrow" electorate="379896" gainOrHold="gain" winningPartyAbbreviation="C" winningPartyName="Conservative" sittingPartyAbbreviation="Lab" sittingPartyName="Labour" change="true" paStyleMessageText="Conservative gain from Labour in Brent &amp; Harrow">
+      <Candidate elected="*" paId="171966" sex="M" firstName="Michael" surname="Davis Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate previousSittingMember="*" paId="171967" sex="M" firstName="Chris" surname="Watts Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171968" sex="M" firstName="Mark" surname="McCabe Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="171969" sex="M" firstName="Matthew" surname="Graham Test">
+        <Party paId="8571" name="Green" abbreviation="Green" />
+      </Candidate>
+      <Candidate paId="171970" sex="M" firstName="Tony" surname="Davies Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

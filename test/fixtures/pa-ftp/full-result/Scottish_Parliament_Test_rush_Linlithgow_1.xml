@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="56" name="Linlithgow" electorate="65025" gainOrHold="gain" winningPartyAbbreviation="C" winningPartyName="Conservative" sittingPartyAbbreviation="SNP" sittingPartyName="Scottish National Party" change="true" paStyleMessageText="Conservative gain from Scottish National Party in Linlithgow">
+      <Candidate elected="*" paId="171398" sex="M" firstName="Derek" surname="Smith Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171399" sex="M" firstName="Simon" surname="Bennett Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171400" sex="F" firstName="Jennifer" surname="Green Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171401" sex="M" firstName="Clive" surname="Gardner Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" />
+      </Candidate>
+      <Candidate paId="171402" sex="M" firstName="Brian" surname="Lloyd Test">
+        <Party paId="8491" name="National Front" abbreviation="Nat Front" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

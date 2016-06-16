@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="37" name="Ettrick, Roxburgh &amp; Berwickshire" electorate="54327" gainOrHold="gain" winningPartyAbbreviation="SNP" winningPartyName="Scottish National Party" sittingPartyAbbreviation="C" sittingPartyName="Conservative" change="true" paStyleMessageText="Scottish National Party gain from Conservative in Ettrick, Roxburgh &amp; Berwickshire">
+      <Candidate previousSittingMember="+" paId="171314" sex="M" firstName="Bill" surname="Harvey Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="171315" sex="M" firstName="Ken" surname="Brown Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171316" sex="F" firstName="Judith" surname="Bradley Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate elected="*" paId="171317" sex="M" firstName="Carl" surname="Boyd Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" />
+      </Candidate>
+      <Candidate paId="171318" sex="M" firstName="Paul" surname="Skinner Test">
+        <Party paId="8494" name="No Description" abbreviation="ND" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

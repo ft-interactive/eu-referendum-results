@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="60" name="Motherwell &amp; Wishaw" electorate="53610" gainOrHold="gain" winningPartyAbbreviation="SNP" winningPartyName="Scottish National Party" sittingPartyAbbreviation="Lab" sittingPartyName="Labour" change="true" paStyleMessageText="Scottish National Party gain from Labour in Motherwell &amp; Wishaw">
+      <Candidate paId="171417" sex="M" firstName="Geoffrey" surname="Stevens Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="171418" sex="M" firstName="David" surname="Dunn Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171419" sex="M" firstName="Alan" surname="Roberts Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate elected="*" paId="171420" sex="M" firstName="Gordon" surname="Clarke Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" />
+      </Candidate>
+      <Candidate paId="171422" sex="F" firstName="Dawn" surname="MacDonald Test">
+        <Party paId="8450" name="All Scotland Pensioners Party" abbreviation="Pensioners" />
+      </Candidate>
+      <Candidate paId="171421" sex="M" firstName="Tom" surname="Green Test">
+        <Party paId="8507" name="Scottish Christian Party" abbreviation="SCP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

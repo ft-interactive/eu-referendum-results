@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostStateOfParties numberOfResults="16" totalNumberOfConstituencies="73" totalVotes="521352">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S" />
+  <Parties>
+    <Party paId="8447" name="Scottish National Party" abbreviation="SNP" totalSeats="11" gains="5" losses="5" totalVotes="235826" percentageShare="45.23" percentageChange="-1.89" />
+    <Party paId="8446" name="Liberal Democrat" abbreviation="LD" totalSeats="2" gains="2" losses="1" totalVotes="117035" percentageShare="22.45" percentageChange="+14.20" />
+    <Party paId="8443" name="Conservative" abbreviation="C" totalSeats="2" gains="2" totalVotes="88711" percentageShare="17.02" percentageChange="+3.53" />
+    <Party paId="8444" name="Labour" abbreviation="Lab" totalSeats="1" gains="1" losses="4" totalVotes="73469" percentageShare="14.09" percentageChange="-15.39" />
+    <Party paId="8465" name="Independent" abbreviation="Ind" totalVotes="1744" percentageShare="0.33" percentageChange="-0.47" />
+    <Party paId="8520" name="UK Independence Party" abbreviation="UKIP" totalVotes="1511" percentageShare="0.29" percentageChange="-0.29" />
+    <Party paId="8507" name="Scottish Christian Party" abbreviation="SCP" totalVotes="742" percentageShare="0.14" percentageChange="-0.01" />
+    <Party paId="-9999" name="Others" abbreviation="Others" totalVotes="2314" percentageShare="0.44" />
+  </Parties>
+  <ConstituenciesIncluded>
+    <Constituency number="13" name="Caithness, Sutherland &amp; Ross" />
+    <Constituency number="22" name="Cunninghame South" />
+    <Constituency number="23" name="Dumbarton" />
+    <Constituency number="25" name="Dundee City East" />
+    <Constituency number="33" name="Edinburgh Northern &amp; Leith" />
+    <Constituency number="34" name="Edinburgh Pentlands" />
+    <Constituency number="38" name="Falkirk East" />
+    <Constituency number="41" name="Fife North East" />
+    <Constituency number="47" name="Glasgow Pollok" />
+    <Constituency number="50" name="Glasgow Southside" />
+    <Constituency number="53" name="Inverness &amp; Nairn" />
+    <Constituency number="56" name="Linlithgow" />
+    <Constituency number="59" name="Moray" />
+    <Constituency number="62" name="Orkney Islands" />
+    <Constituency number="65" name="Perthshire South &amp; Kinross-shire" />
+    <Constituency number="68" name="Rutherglen" />
+  </ConstituenciesIncluded>
+</FirstPastThePostStateOfParties>
+

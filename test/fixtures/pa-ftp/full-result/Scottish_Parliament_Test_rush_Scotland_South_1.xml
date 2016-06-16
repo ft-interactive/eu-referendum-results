@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TopUpRush revision="1">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="107" name="Scotland South" electorate="525784">
+      <Candidate elected="*" previousSittingMember="+" paId="173446" sex="M" firstName="Michael" surname="Reynolds Test" partyListRank="1">
+        <Party paId="8444" abbreviation="Lab" name="Labour" />
+      </Candidate>
+      <Candidate elected="*" paId="173447" sex="M" firstName="Neil" surname="Stewart Test" partyListRank="2">
+        <Party paId="8444" abbreviation="Lab" name="Labour" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="+" paId="173454" sex="M" firstName="Robert" surname="Best Test" partyListRank="1">
+        <Party paId="8446" abbreviation="LD" name="Liberal Democrat" />
+      </Candidate>
+      <Candidate elected="*" paId="173455" sex="M" firstName="Julian" surname="Browne Test" partyListRank="2">
+        <Party paId="8446" abbreviation="LD" name="Liberal Democrat" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="+" paId="173461" sex="M" firstName="Peter" surname="Cooke Test" partyListRank="1">
+        <Party paId="8447" abbreviation="SNP" name="Scottish National Party" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="+" paId="173462" sex="M" firstName="Derek" surname="Martin Test" partyListRank="2">
+        <Party paId="8447" abbreviation="SNP" name="Scottish National Party" />
+      </Candidate>
+      <Candidate elected="*" paId="173498" sex="M" firstName="Richard" surname="Bennett Test" partyListRank="1">
+        <Party paId="8520" abbreviation="UKIP" name="UK Independence Party" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</TopUpRush>
+

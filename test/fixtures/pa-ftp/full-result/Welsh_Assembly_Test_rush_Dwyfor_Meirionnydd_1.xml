@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="20" name="Dwyfor Meirionnydd" electorate="44669" gainOrHold="gain" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="PC" sittingPartyName="Plaid Cymru" change="true" paStyleMessageText="Labour gain from Plaid Cymru in Dwyfor Meirionnydd">
+      <Candidate paId="173954" sex="M" firstName="Henry" surname="Jeremy Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" paId="173955" sex="M" firstName="Stephen" surname="O'Donnell Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173956" sex="M" firstName="Robert" surname="Powell Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate previousSittingMember="*" paId="173957" sex="M" firstName="Andrew" surname="Wilcock Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+      <Candidate paId="173958" sex="M" firstName="Gordon" surname="Davidson Test">
+        <Party paId="8665" name="Voice of Gwynedd" abbreviation="Gwynedd" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

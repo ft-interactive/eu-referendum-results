@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="2">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="1" name="Aberavon" electorate="50754" gainOrHold="hold" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="Lab" sittingPartyName="Labour" change="false" paStyleMessageText="Correction: Welsh Transport Minister Robert Campbell Test holds Aberavon - Labour hold">
+      <Candidate paId="173872" sex="M" firstName="Colin" surname="Miller Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="*" paId="173873" sex="M" firstName="Robert" surname="Campbell Test" rushText="Welsh Transport Minister Robert Campbell Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173874" sex="M" firstName="James" surname="Jones Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="173875" sex="M" firstName="Geoff" surname="Page Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostStateOfParties numberOfResults="9" totalNumberOfConstituencies="73" totalVotes="277811">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S" />
+  <Parties>
+    <Party paId="8447" name="Scottish National Party" abbreviation="SNP" totalSeats="6" gains="2" losses="3" totalVotes="131509" percentageShare="47.34" percentageChange="-0.86" />
+    <Party paId="8446" name="Liberal Democrat" abbreviation="LD" totalSeats="1" gains="1" losses="1" totalVotes="67483" percentageShare="24.29" percentageChange="+12.47" />
+    <Party paId="8444" name="Labour" abbreviation="Lab" totalSeats="1" gains="1" losses="1" totalVotes="41860" percentageShare="15.07" percentageChange="-12.37" />
+    <Party paId="8443" name="Conservative" abbreviation="C" totalSeats="1" gains="1" totalVotes="35053" percentageShare="12.62" percentageChange="+1.91" />
+    <Party paId="8520" name="UK Independence Party" abbreviation="UKIP" totalVotes="1025" percentageShare="0.37" percentageChange="-0.29" />
+    <Party paId="8507" name="Scottish Christian Party" abbreviation="SCP" totalVotes="742" percentageShare="0.27" percentageChange="-0.02" />
+    <Party paId="8465" name="Independent" abbreviation="Ind" totalVotes="139" percentageShare="0.05" percentageChange="-0.85" />
+  </Parties>
+  <ConstituenciesIncluded>
+    <Constituency number="13" name="Caithness, Sutherland &amp; Ross" />
+    <Constituency number="22" name="Cunninghame South" />
+    <Constituency number="25" name="Dundee City East" />
+    <Constituency number="33" name="Edinburgh Northern &amp; Leith" />
+    <Constituency number="38" name="Falkirk East" />
+    <Constituency number="41" name="Fife North East" />
+    <Constituency number="50" name="Glasgow Southside" />
+    <Constituency number="53" name="Inverness &amp; Nairn" />
+    <Constituency number="62" name="Orkney Islands" />
+  </ConstituenciesIncluded>
+</FirstPastThePostStateOfParties>
+

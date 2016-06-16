@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="19" name="Cowdenbeath" electorate="54284" gainOrHold="gain" winningPartyAbbreviation="SNP" winningPartyName="Scottish National Party" sittingPartyAbbreviation="Lab" sittingPartyName="Labour" change="true" paStyleMessageText="Scottish National Party gain from Labour in Cowdenbeath">
+      <Candidate paId="171239" sex="F" firstName="Rosie" surname="Davis Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171240" sex="F" firstName="Sandra" surname="Cook Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171241" sex="M" firstName="Alex" surname="Khan Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate elected="*" paId="171242" sex="M" firstName="Wayne" surname="Davis Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" />
+      </Candidate>
+      <Candidate paId="171243" sex="M" firstName="William" surname="Thomas Test">
+        <Party paId="8485" name="Land Party" abbreviation="Land" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

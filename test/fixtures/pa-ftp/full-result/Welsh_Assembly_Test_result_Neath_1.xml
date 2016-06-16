@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:23:22+00:00">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="27" name="Neath" electorate="57533" turnout="42680" percentageTurnout="74.18" percentageChangeTurnout="+32.73" winningParty="Lab" gainOrHold="hold" sittingParty="Lab" majority="10201" percentageMajority="23.90" percentageChangeMajority="+32.73" swing="8.92" swingTo="C" swingFrom="Lab">
+      <Candidate elected="*" previousSittingMember="*" paId="173988" sex="M" firstName="Brian" surname="Shaw Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" votes="20543" percentageShare="48.13" percentageShareChange="-5.27" />
+      </Candidate>
+      <Candidate paId="173987" sex="M" firstName="Douglas" surname="Rogers Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" votes="10342" percentageShare="24.23" percentageShareChange="+12.57" />
+      </Candidate>
+      <Candidate paId="173990" sex="M" firstName="Chris" surname="Simpson Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" votes="5266" percentageShare="12.34" percentageShareChange="-14.27" />
+      </Candidate>
+      <Candidate paId="173989" sex="M" firstName="Phillip" surname="Hall Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" votes="3606" percentageShare="8.45" percentageShareChange="+4.33" />
+      </Candidate>
+      <Candidate paId="173991" sex="M" firstName="Sean" surname="McDonnell Test">
+        <Party paId="8630" name="British National Party" abbreviation="BNP" votes="2923" percentageShare="6.85" percentageShareChange="+2.64" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Welsh Assembly" date="2011-05-05" type="W">
+    <Constituency number="27" name="Neath" turnout="23849" percentageTurnout="41.45" winningParty="Lab" majority="6390" percentageMajority="26.79">
+      <Candidate paId="61015" firstName="Gwenda" surname="Thomas" sex="F">
+        <Party paId="5732" name="Labour" abbreviation="Lab" votes="12736" percentageShare="53.40" />
+      </Candidate>
+      <Candidate paId="60878" firstName="Alun" surname="Llewelyn" sex="M">
+        <Party paId="5735" name="Plaid Cymru" abbreviation="PC" votes="6346" percentageShare="26.61" />
+      </Candidate>
+      <Candidate paId="70761" firstName="Alex" surname="Powell" sex="M">
+        <Party paId="5731" name="Conservative" abbreviation="C" votes="2780" percentageShare="11.66" />
+      </Candidate>
+      <Candidate paId="71309" firstName="Michael" surname="Green" sex="M">
+        <Party paId="5738" name="British National Party" abbreviation="BNP" votes="1004" percentageShare="4.21" />
+      </Candidate>
+      <Candidate paId="66385" firstName="Mathew" surname="McCarthy" sex="M">
+        <Party paId="5734" name="Liberal Democrat" abbreviation="LD" votes="983" percentageShare="4.12" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:25:14+00:00">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="2" name="Aberconwy" electorate="44978" turnout="22959" percentageTurnout="51.04" percentageChangeTurnout="+5.94" winningParty="PC" gainOrHold="gain" sittingParty="C" majority="3301" percentageMajority="14.38" percentageChangeMajority="+5.94" swing="11.05" swingTo="PC" swingFrom="C">
+      <Candidate elected="*" paId="173879" sex="F" firstName="Mary" surname="Martin Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" votes="9773" percentageShare="42.57" percentageShareChange="+16.34" />
+      </Candidate>
+      <Candidate paId="173876" sex="M" firstName="David" surname="Hughes Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" votes="6472" percentageShare="28.19" percentageShareChange="-5.76" />
+      </Candidate>
+      <Candidate paId="173877" sex="F" firstName="Linda" surname="Stewart Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" votes="5317" percentageShare="23.16" percentageShareChange="-2.50" />
+      </Candidate>
+      <Candidate paId="173878" sex="M" firstName="John" surname="Wright Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" votes="1397" percentageShare="6.08" percentageShareChange="-8.08" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Welsh Assembly" date="2011-05-05" type="W">
+    <Constituency number="2" name="Aberconwy" turnout="20288" percentageTurnout="45.11" winningParty="C" majority="1567" percentageMajority="7.72">
+      <Candidate paId="60483" firstName="Janet" surname="Finch-Saunders" sex="F">
+        <Party paId="5731" name="Conservative" abbreviation="C" votes="6888" percentageShare="33.95" />
+      </Candidate>
+      <Candidate paId="71235" firstName="Iwan" surname="Hughes" sex="M">
+        <Party paId="5735" name="Plaid Cymru" abbreviation="PC" votes="5321" percentageShare="26.23" />
+      </Candidate>
+      <Candidate paId="70700" firstName="Eifion" surname="Williams" sex="M">
+        <Party paId="5732" name="Labour" abbreviation="Lab" votes="5206" percentageShare="25.66" />
+      </Candidate>
+      <Candidate paId="60931" firstName="Mike" surname="Priestley" sex="M">
+        <Party paId="5734" name="Liberal Democrat" abbreviation="LD" votes="2873" percentageShare="14.16" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

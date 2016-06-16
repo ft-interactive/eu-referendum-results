@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="11" name="Merton &amp; Wandsworth" electorate="367535" gainOrHold="hold" winningPartyAbbreviation="C" winningPartyName="Conservative" sittingPartyAbbreviation="C" sittingPartyName="Conservative" change="false" paStyleMessageText="Conservative hold Merton &amp; Wandsworth">
+      <Candidate elected="*" previousSittingMember="*" paId="172020" sex="M" firstName="Andrew" surname="Thompson Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="172021" sex="M" firstName="Mohammed" surname="Moss Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="172022" sex="M" firstName="Keith" surname="Harper Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="172023" sex="M" firstName="David" surname="Burt Test">
+        <Party paId="8571" name="Green" abbreviation="Green" />
+      </Candidate>
+      <Candidate paId="172024" sex="M" firstName="John" surname="Knight Test">
+        <Party paId="8588" name="Independent" abbreviation="Ind" />
+      </Candidate>
+      <Candidate paId="172025" sex="M" firstName="Harold" surname="Williams Test">
+        <Party paId="8609" name="The Socialist Party (GB)" abbreviation="SPGB" />
+      </Candidate>
+      <Candidate paId="172026" sex="M" firstName="Nigel" surname="Newton Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

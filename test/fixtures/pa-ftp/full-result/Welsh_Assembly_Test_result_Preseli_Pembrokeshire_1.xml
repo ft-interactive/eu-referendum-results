@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:35:16+00:00">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="32" name="Preseli Pembrokeshire" electorate="57758" turnout="32802" percentageTurnout="56.79" percentageChangeTurnout="+9.67" winningParty="Lab" gainOrHold="gain" sittingParty="C" majority="11952" percentageMajority="36.44" percentageChangeMajority="+9.67" swing="22.21" swingTo="Lab" swingFrom="C">
+      <Candidate elected="*" paId="174010" sex="M" firstName="David" surname="Adams Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" votes="19341" percentageShare="58.96" percentageShareChange="+24.55" />
+      </Candidate>
+      <Candidate previousSittingMember="*" paId="174009" sex="M" firstName="Sean" surname="Ritchie Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" votes="7389" percentageShare="22.53" percentageShareChange="-19.88" />
+      </Candidate>
+      <Candidate paId="174012" sex="M" firstName="Paul" surname="Jones Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" votes="3883" percentageShare="11.84" percentageShareChange="-3.69" />
+      </Candidate>
+      <Candidate paId="174011" sex="M" firstName="Bill" surname="Scott Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" votes="2189" percentageShare="6.67" percentageShareChange="-0.99" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Welsh Assembly" date="2011-05-05" type="W">
+    <Constituency number="32" name="Preseli Pembrokeshire" turnout="27218" percentageTurnout="47.12" winningParty="C" majority="2175" percentageMajority="7.99">
+      <Candidate paId="60757" firstName="Paul" surname="Davies" sex="M">
+        <Party paId="5731" name="Conservative" abbreviation="C" votes="11541" percentageShare="42.40" />
+      </Candidate>
+      <Candidate paId="66529" firstName="Terry" surname="Mills" sex="M">
+        <Party paId="5732" name="Labour" abbreviation="Lab" votes="9366" percentageShare="34.41" />
+      </Candidate>
+      <Candidate paId="60489" firstName="Rhys" surname="Sinnett" sex="M">
+        <Party paId="5735" name="Plaid Cymru" abbreviation="PC" votes="4226" percentageShare="15.53" />
+      </Candidate>
+      <Candidate paId="60942" firstName="Rob" surname="Kilmister" sex="M">
+        <Party paId="5734" name="Liberal Democrat" abbreviation="LD" votes="2085" percentageShare="7.66" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

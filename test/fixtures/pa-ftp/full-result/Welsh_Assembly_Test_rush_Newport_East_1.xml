@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="28" name="Newport East" electorate="55120" gainOrHold="hold" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="Lab" sittingPartyName="Labour" change="false" paStyleMessageText="Labour hold Newport East">
+      <Candidate paId="173992" sex="M" firstName="Steve" surname="Kemp Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="*" paId="173993" sex="M" firstName="Clive" surname="Ritchie Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173994" sex="M" firstName="Dan" surname="King Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="173995" sex="M" firstName="Iain" surname="Gibson Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="30" name="Ogmore" electorate="55442" gainOrHold="gain" winningPartyAbbreviation="PC" winningPartyName="Plaid Cymru" sittingPartyAbbreviation="Lab" sittingPartyName="Labour" change="true" paStyleMessageText="Plaid Cymru gain from Labour in Ogmore">
+      <Candidate paId="174000" sex="F" firstName="Theresa" surname="Lee Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate previousSittingMember="*" paId="174001" sex="M" firstName="John" surname="Lynch Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="174002" sex="M" firstName="Clive" surname="Johnson Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate elected="*" paId="174003" sex="M" firstName="Brian" surname="Charlesworth Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

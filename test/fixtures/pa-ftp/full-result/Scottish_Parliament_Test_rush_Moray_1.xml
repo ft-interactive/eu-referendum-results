@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="59" name="Moray" electorate="56215" gainOrHold="hold" winningPartyAbbreviation="SNP" winningPartyName="Scottish National Party" sittingPartyAbbreviation="SNP" sittingPartyName="Scottish National Party" change="false" paStyleMessageText="Scottish National Party hold Moray">
+      <Candidate paId="171412" sex="M" firstName="Neil" surname="Thomson Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="171413" sex="M" firstName="Stephen" surname="Hopkins Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171414" sex="F" firstName="Susan" surname="Stevenson Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="+" paId="171415" sex="M" firstName="Jeff" surname="Best Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" />
+      </Candidate>
+      <Candidate paId="171416" sex="M" firstName="Richard" surname="Jones Test">
+        <Party paId="8520" name="UK Independence Party" abbreviation="UKIP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

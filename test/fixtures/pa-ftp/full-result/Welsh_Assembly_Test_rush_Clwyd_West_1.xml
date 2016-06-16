@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="17" name="Clwyd West" electorate="57980" gainOrHold="gain" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="C" sittingPartyName="Conservative" change="true" paStyleMessageText="Labour gain from Conservative in Clwyd West">
+      <Candidate previousSittingMember="*" paId="173942" sex="M" firstName="Andrew" surname="Young Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" paId="173943" sex="M" firstName="John" surname="Wilkinson Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173944" sex="M" firstName="Brian" surname="Singh Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="173945" sex="M" firstName="Tim" surname="Edwards Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

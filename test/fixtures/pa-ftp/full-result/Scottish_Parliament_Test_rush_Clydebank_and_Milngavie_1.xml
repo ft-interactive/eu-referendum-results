@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="16" name="Clydebank &amp; Milngavie" electorate="53018" gainOrHold="gain" winningPartyAbbreviation="LD" winningPartyName="Liberal Democrat" sittingPartyAbbreviation="SNP" sittingPartyName="Scottish National Party" change="true" paStyleMessageText="Liberal Democrat gain from Scottish National Party in Clydebank &amp; Milngavie">
+      <Candidate paId="171228" sex="M" firstName="Jason" surname="Hope Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171229" sex="M" firstName="Stewart" surname="Evans Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate elected="*" paId="171230" sex="M" firstName="Bernard" surname="Arnott Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171231" sex="M" firstName="Christopher" surname="Walsh Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

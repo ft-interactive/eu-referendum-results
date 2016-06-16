@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostStateOfParties numberOfResults="7" totalNumberOfConstituencies="40" totalVotes="227226">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W" />
+  <Parties>
+    <Party paId="8624" name="Labour" abbreviation="Lab" totalSeats="7" gains="2" totalVotes="110853" percentageShare="48.79" percentageChange="+7.78" />
+    <Party paId="8627" name="Plaid Cymru" abbreviation="PC" totalVotes="45966" percentageShare="20.23" percentageChange="+8.61" />
+    <Party paId="8623" name="Conservative" abbreviation="C" losses="2" totalVotes="39513" percentageShare="17.39" percentageChange="-13.72" />
+    <Party paId="8626" name="Liberal Democrat" abbreviation="LD" totalVotes="26826" percentageShare="11.81" percentageChange="-1.52" />
+    <Party paId="8651" name="No description" abbreviation="ND" totalVotes="1640" percentageShare="0.72" percentageChange="+0.42" />
+    <Party paId="8630" name="British National Party" abbreviation="BNP" totalVotes="1633" percentageShare="0.72" percentageChange="+0.14" />
+    <Party paId="8637" name="Independent" abbreviation="Ind" totalVotes="795" percentageShare="0.35" percentageChange="-1.71" />
+  </Parties>
+  <ConstituenciesIncluded>
+    <Constituency number="3" name="Alyn &amp; Deeside" />
+    <Constituency number="10" name="Cardiff North" />
+    <Constituency number="17" name="Clwyd West" />
+    <Constituency number="24" name="Merthyr Tydfil &amp; Rhymney" />
+    <Constituency number="26" name="Montgomeryshire" />
+    <Constituency number="31" name="Pontypridd" />
+    <Constituency number="39" name="Wrexham" />
+  </ConstituenciesIncluded>
+</FirstPastThePostStateOfParties>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReferendumResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ReferendumResult.xsd" revision="1" declarationTime="2016-06-01T18:40:36+01:00">
+  <Referendum name="EU" date="2016-06-23">
+    <VotingArea number="29" name="Bolsover" electorate="57459">
+      <Proposition text="Should the UK remain a member of the EU or leave the EU?" turnout="25875" percentageTurnout="45.03" winningAnswerText="Remain a member of the EU" majority="585" percentageMajority="2.26">
+        <Answer winning="true" text="Remain a member of the EU" shortText="Remain Test" votes="13230" percentageShare="51.13" />
+        <Answer winning="false" text="Leave the EU" shortText="Leave Test" votes="12645" percentageShare="48.87" />
+      </Proposition>
+    </VotingArea>
+  </Referendum>
+</ReferendumResult>
+

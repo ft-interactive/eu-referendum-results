@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:38:17+00:00">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="34" name="Swansea East" electorate="60246" turnout="40009" percentageTurnout="66.41" percentageChangeTurnout="+35.02" winningParty="C" gainOrHold="gain" sittingParty="Lab" majority="14738" percentageMajority="36.84" percentageChangeMajority="+35.02" swing="40.31" swingTo="C" swingFrom="Lab">
+      <Candidate elected="*" paId="174017" sex="M" firstName="Duncan" surname="Davies Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" votes="23244" percentageShare="58.10" percentageShareChange="+43.53" />
+      </Candidate>
+      <Candidate paId="174018" sex="F" firstName="Ann" surname="Smith Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" votes="8506" percentageShare="21.26" percentageShareChange="-37.10" />
+      </Candidate>
+      <Candidate paId="174019" sex="M" firstName="Peter" surname="Ellis Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" votes="6208" percentageShare="15.52" percentageShareChange="+6.67" />
+      </Candidate>
+      <Candidate paId="174020" sex="M" firstName="Matthew" surname="Dixon Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" votes="1546" percentageShare="3.86" percentageShareChange="-8.54" />
+      </Candidate>
+      <Candidate paId="174021" sex="F" firstName="Mary" surname="Cook Test">
+        <Party paId="8630" name="British National Party" abbreviation="BNP" votes="505" percentageShare="1.26" percentageShareChange="-4.57" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="Welsh Assembly" date="2011-05-05" type="W">
+    <Constituency number="34" name="Swansea East" turnout="18910" percentageTurnout="31.39" winningParty="Lab" majority="8281" percentageMajority="43.79">
+      <Candidate paId="60459" firstName="Mike" surname="Hedges" sex="M">
+        <Party paId="5732" name="Labour" abbreviation="Lab" votes="11035" percentageShare="58.36" />
+      </Candidate>
+      <Candidate paId="66518" firstName="Daniel" surname="Boucher" sex="M">
+        <Party paId="5731" name="Conservative" abbreviation="C" votes="2754" percentageShare="14.56" />
+      </Candidate>
+      <Candidate paId="60887" firstName="Dic" surname="Jones" sex="M">
+        <Party paId="5735" name="Plaid Cymru" abbreviation="PC" votes="2346" percentageShare="12.41" />
+      </Candidate>
+      <Candidate paId="70777" firstName="Sam" surname="Samuel" sex="M">
+        <Party paId="5734" name="Liberal Democrat" abbreviation="LD" votes="1673" percentageShare="8.85" />
+      </Candidate>
+      <Candidate paId="71312" firstName="Joanne" surname="Shannon" sex="F">
+        <Party paId="5738" name="British National Party" abbreviation="BNP" votes="1102" percentageShare="5.83" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

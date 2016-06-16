@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:17:40+00:00">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="11" name="Merton &amp; Wandsworth" electorate="367535" turnout="225245" percentageTurnout="61.29" percentageChangeTurnout="+21.13" winningParty="C" gainOrHold="hold" sittingParty="C" majority="24643" percentageMajority="10.94" percentageChangeMajority="+21.13" swing="2.17" swingTo="C" swingFrom="Lab">
+      <Candidate elected="*" previousSittingMember="*" paId="172020" sex="M" firstName="Andrew" surname="Thompson Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" votes="99708" percentageShare="44.27" percentageShareChange="+1.12" />
+      </Candidate>
+      <Candidate paId="172021" sex="M" firstName="Mohammed" surname="Moss Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" votes="75065" percentageShare="33.33" percentageShareChange="-3.21" />
+      </Candidate>
+      <Candidate paId="172026" sex="M" firstName="Nigel" surname="Newton Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" votes="32894" percentageShare="14.60" percentageShareChange="+12.14" />
+      </Candidate>
+      <Candidate paId="172023" sex="M" firstName="David" surname="Burt Test">
+        <Party paId="8571" name="Green" abbreviation="Green" votes="7916" percentageShare="3.51" percentageShareChange="-3.97" />
+      </Candidate>
+      <Candidate paId="172022" sex="M" firstName="Keith" surname="Harper Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" votes="5145" percentageShare="2.28" percentageShareChange="-5.59" />
+      </Candidate>
+      <Candidate paId="172024" sex="M" firstName="John" surname="Knight Test">
+        <Party paId="8588" name="Independent" abbreviation="Ind" votes="2844" percentageShare="1.26" percentageShareChange="-0.34" />
+      </Candidate>
+      <Candidate paId="172025" sex="M" firstName="Harold" surname="Williams Test">
+        <Party paId="8609" name="The Socialist Party (GB)" abbreviation="SPGB" votes="1673" percentageShare="0.74" percentageShareChange="-0.15" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="London" date="2012-05-03" type="L">
+    <Constituency number="11" name="Merton &amp; Wandsworth" turnout="151108" percentageTurnout="40.15" winningParty="C" majority="9981" percentageMajority="6.61">
+      <Candidate paId="80387" firstName="Richard" surname="Tracey" sex="M">
+        <Party paId="6420" name="Conservative" abbreviation="C" votes="65197" percentageShare="43.15" />
+      </Candidate>
+      <Candidate paId="76023" firstName="Leonie" surname="Cooper" sex="F">
+        <Party paId="6421" name="Labour" abbreviation="Lab" votes="55216" percentageShare="36.54" />
+      </Candidate>
+      <Candidate paId="84771" firstName="Lisa" surname="Smart" sex="F">
+        <Party paId="6422" name="Liberal Democrat" abbreviation="LD" votes="11904" percentageShare="7.88" />
+      </Candidate>
+      <Candidate paId="80418" firstName="Roy" surname="Vickery" sex="M">
+        <Party paId="6423" name="Green" abbreviation="Green" votes="11307" percentageShare="7.48" />
+      </Candidate>
+      <Candidate paId="80431" firstName="Mazhar" surname="Manzoor" sex="M">
+        <Party paId="6459" name="UK Independence Party" abbreviation="UKIP" votes="3717" percentageShare="2.46" />
+      </Candidate>
+      <Candidate paId="84780" firstName="Thamilini" surname="Kulendran" sex="F">
+        <Party paId="6438" name="Independent" abbreviation="Ind" votes="2424" percentageShare="1.60" />
+      </Candidate>
+      <Candidate paId="84779" firstName="James" surname="Martin" sex="M">
+        <Party paId="6457" name="The Socialist Party (GB)" abbreviation="SPGB" votes="1343" percentageShare="0.89" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

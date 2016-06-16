@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="4" name="Arfon" electorate="41093" gainOrHold="gain" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="PC" sittingPartyName="Plaid Cymru" change="true" paStyleMessageText="Labour gain from Plaid Cymru in Arfon">
+      <Candidate paId="173885" sex="M" firstName="David" surname="Allen Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" paId="173886" sex="M" firstName="Peter" surname="Hussain Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173887" sex="M" firstName="Christopher" surname="Peacock Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate previousSittingMember="*" paId="173888" sex="M" firstName="Paul" surname="Dunn Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

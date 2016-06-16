@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="26" name="Montgomeryshire" electorate="48675" gainOrHold="gain" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="C" sittingPartyName="Conservative" change="true" paStyleMessageText="Labour gain from Conservative in Montgomeryshire">
+      <Candidate paId="173983" sex="M" firstName="Martin" surname="Wilson Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" paId="173984" sex="F" firstName="Anthea" surname="Wallace Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173985" sex="F" firstName="Vanessa" surname="Scott Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="173986" sex="M" firstName="Bob" surname="King Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

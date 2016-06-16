@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:28:27+00:00">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="6" name="Ealing &amp; Hillingdon" electorate="437251" turnout="273396" percentageTurnout="62.53" percentageChangeTurnout="+25.22" winningParty="Lab" gainOrHold="hold" sittingParty="Lab" majority="44787" percentageMajority="16.38" percentageChangeMajority="+25.22" swing="7.24" swingTo="Lab" swingFrom="C">
+      <Candidate elected="*" paId="171985" sex="M" firstName="Peter" surname="Powell Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" votes="117517" percentageShare="42.98" percentageShareChange="+2.95" />
+      </Candidate>
+      <Candidate previousSittingMember="*" paId="171984" sex="M" firstName="Roger" surname="Sheppard Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" votes="72730" percentageShare="26.60" percentageShareChange="-11.54" />
+      </Candidate>
+      <Candidate paId="171990" sex="M" firstName="James" surname="Williams Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" votes="53273" percentageShare="19.49" percentageShareChange="+15.37" />
+      </Candidate>
+      <Candidate paId="171986" sex="M" firstName="Keith" surname="Williams Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" votes="13155" percentageShare="4.81" percentageShareChange="-2.39" />
+      </Candidate>
+      <Candidate paId="171987" sex="M" firstName="Andrew" surname="Murphy Test">
+        <Party paId="8571" name="Green" abbreviation="Green" votes="8551" percentageShare="3.13" percentageShareChange="-3.51" />
+      </Candidate>
+      <Candidate paId="171988" sex="M" firstName="Ian" surname="Ford Test">
+        <Party paId="8575" name="British National Party" abbreviation="BNP" votes="5058" percentageShare="1.85" percentageShareChange="-0.77" />
+      </Candidate>
+      <Candidate paId="171989" sex="M" firstName="Gordon" surname="Jones Test">
+        <Party paId="8596" name="National Front" abbreviation="NF" votes="3112" percentageShare="1.14" percentageShareChange="-0.10" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="London" date="2012-05-03" type="L">
+    <Constituency number="6" name="Ealing &amp; Hillingdon" turnout="163809" percentageTurnout="37.30" winningParty="Lab" majority="3110" percentageMajority="1.90">
+      <Candidate paId="76027" firstName="Onkar Singh" surname="Sahota" sex="M">
+        <Party paId="6421" name="Labour" abbreviation="Lab" votes="65584" percentageShare="40.04" />
+      </Candidate>
+      <Candidate paId="80392" firstName="Richard" surname="Barnes" sex="M">
+        <Party paId="6420" name="Conservative" abbreviation="C" votes="62474" percentageShare="38.14" />
+      </Candidate>
+      <Candidate paId="84764" firstName="Michael" surname="Cox" sex="M">
+        <Party paId="6422" name="Liberal Democrat" abbreviation="LD" votes="11805" percentageShare="7.21" />
+      </Candidate>
+      <Candidate paId="80413" firstName="Mike" surname="Harling" sex="M">
+        <Party paId="6423" name="Green" abbreviation="Green" votes="10877" percentageShare="6.64" />
+      </Candidate>
+      <Candidate paId="80435" firstName="Helen" surname="Knight" sex="F">
+        <Party paId="6459" name="UK Independence Party" abbreviation="UKIP" votes="6750" percentageShare="4.12" />
+      </Candidate>
+      <Candidate paId="84727" firstName="Dave" surname="Furness" sex="M">
+        <Party paId="6427" name="British National Party" abbreviation="BNP" votes="4284" percentageShare="2.62" />
+      </Candidate>
+      <Candidate paId="84781" firstName="Ian" surname="Edward" sex="M">
+        <Party paId="6446" name="National Front" abbreviation="NF" votes="2035" percentageShare="1.24" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="13" name="South West" electorate="439218" gainOrHold="hold" winningPartyAbbreviation="C" winningPartyName="Conservative" sittingPartyAbbreviation="C" sittingPartyName="Conservative" change="false" paStyleMessageText="Conservative hold South West">
+      <Candidate elected="*" previousSittingMember="*" paId="172033" sex="M" firstName="Richard" surname="Braid Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate paId="172034" sex="M" firstName="Alan" surname="Brown Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="172035" sex="M" firstName="Kevin" surname="Campbell Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="172036" sex="F" firstName="Claire" surname="Anderson Test">
+        <Party paId="8571" name="Green" abbreviation="Green" />
+      </Candidate>
+      <Candidate paId="172037" sex="M" firstName="David" surname="Stewart Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

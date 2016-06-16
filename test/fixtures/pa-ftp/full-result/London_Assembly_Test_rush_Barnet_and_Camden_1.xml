@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="1" name="Barnet &amp; Camden" electorate="379990" gainOrHold="hold" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="Lab" sittingPartyName="Labour" change="false" paStyleMessageText="Labour hold Barnet &amp; Camden">
+      <Candidate previousSittingMember="*" paId="171955" sex="M" firstName="James" surname="Taylor Test" rushText="Tory former Cabinet Minister James Taylor Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" paId="171956" sex="M" firstName="Adrian" surname="Robinson Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171957" sex="M" firstName="John" surname="King Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="171958" sex="F" firstName="Clare" surname="Taylor Test">
+        <Party paId="8571" name="Green" abbreviation="Green" />
+      </Candidate>
+      <Candidate paId="171959" sex="M" firstName="John" surname="Davies Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

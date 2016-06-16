@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Scottish Parliament Test" date="2016-05-04" type="S">
+    <Constituency number="68" name="Rutherglen" electorate="57777" gainOrHold="gain" winningPartyAbbreviation="SNP" winningPartyName="Scottish National Party" sittingPartyAbbreviation="Lab" sittingPartyName="Labour" change="true" paStyleMessageText="Scottish National Party gain from Labour in Rutherglen">
+      <Candidate paId="171452" sex="M" firstName="Peter" surname="Ellis Test">
+        <Party paId="8443" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate previousSittingMember="+" paId="171453" sex="M" firstName="Mike" surname="Morgan Test">
+        <Party paId="8444" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="171454" sex="M" firstName="Bill" surname="Graham Test">
+        <Party paId="8446" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate elected="*" paId="171455" sex="M" firstName="Ron" surname="Taylor Test">
+        <Party paId="8447" name="Scottish National Party" abbreviation="SNP" />
+      </Candidate>
+      <Candidate paId="171456" sex="M" firstName="John" surname="Allen Test">
+        <Party paId="8465" name="Independent" abbreviation="Ind" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostResult revision="1" declarationTime="2016-03-23T18:11:54+00:00">
+  <Election name="London Assembly Test" date="2016-05-04" type="L">
+    <Constituency number="14" name="West Central" electorate="339657" turnout="207686" percentageTurnout="61.15" percentageChangeTurnout="+22.73" winningParty="Lab" gainOrHold="gain" sittingParty="C" majority="51706" percentageMajority="24.90" percentageChangeMajority="+22.73" swing="22.40" swingTo="Lab" swingFrom="C">
+      <Candidate elected="*" paId="172039" sex="M" firstName="James" surname="Jones Test">
+        <Party paId="8569" name="Labour" abbreviation="Lab" votes="109915" percentageShare="52.92" percentageShareChange="+22.44" />
+      </Candidate>
+      <Candidate previousSittingMember="*" paId="172038" sex="M" firstName="Malcolm" surname="Wilkins Test">
+        <Party paId="8568" name="Conservative" abbreviation="C" votes="58209" percentageShare="28.03" percentageShareChange="-22.36" />
+      </Candidate>
+      <Candidate paId="172040" sex="M" firstName="Simon" surname="Jenkins Test">
+        <Party paId="8570" name="Liberal Democrat" abbreviation="LD" votes="22971" percentageShare="11.06" percentageShareChange="+4.21" />
+      </Candidate>
+      <Candidate paId="172041" sex="M" firstName="John" surname="King Test">
+        <Party paId="8571" name="Green" abbreviation="Green" votes="10358" percentageShare="4.99" percentageShareChange="-3.76" />
+      </Candidate>
+      <Candidate paId="172042" sex="M" firstName="Mark" surname="Howarth Test">
+        <Party paId="8612" name="UK Independence Party" abbreviation="UKIP" votes="6233" percentageShare="3.00" percentageShareChange="-0.52" />
+      </Candidate>
+    </Constituency>
+  </Election>
+  <PreviousElection name="London" date="2012-05-03" type="L">
+    <Constituency number="14" name="West Central" turnout="146386" percentageTurnout="38.41" winningParty="C" majority="29131" percentageMajority="19.90">
+      <Candidate paId="80388" firstName="Kit" surname="Malthouse" sex="M">
+        <Party paId="6420" name="Conservative" abbreviation="C" votes="73761" percentageShare="50.39" />
+      </Candidate>
+      <Candidate paId="76028" firstName="Todd" surname="Foreman" sex="M">
+        <Party paId="6421" name="Labour" abbreviation="Lab" votes="44630" percentageShare="30.49" />
+      </Candidate>
+      <Candidate paId="80420" firstName="Susanna" surname="Rustin" sex="F">
+        <Party paId="6423" name="Green" abbreviation="Green" votes="12799" percentageShare="8.74" />
+      </Candidate>
+      <Candidate paId="84777" firstName="Layla" surname="Moran" sex="F">
+        <Party paId="6422" name="Liberal Democrat" abbreviation="LD" votes="10035" percentageShare="6.86" />
+      </Candidate>
+      <Candidate paId="80425" firstName="Elizabeth" surname="Jones" sex="F">
+        <Party paId="6459" name="UK Independence Party" abbreviation="UKIP" votes="5161" percentageShare="3.53" />
+      </Candidate>
+    </Constituency>
+  </PreviousElection>
+</FirstPastThePostResult>
+

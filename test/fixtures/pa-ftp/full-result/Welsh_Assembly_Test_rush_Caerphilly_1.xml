@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="8" name="Caerphilly" electorate="62049" gainOrHold="hold" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="Lab" sittingPartyName="Labour" change="false" paStyleMessageText="Labour hold Caerphilly">
+      <Candidate paId="173903" sex="M" firstName="Barry" surname="Smith Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" previousSittingMember="*" paId="173904" sex="M" firstName="Andrew" surname="Smith Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173905" sex="M" firstName="Robert" surname="Kelly Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="173906" sex="M" firstName="Mike" surname="McCarthy Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+      <Candidate paId="173907" sex="M" firstName="David" surname="Miller Test">
+        <Party paId="8630" name="British National Party" abbreviation="BNP" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+

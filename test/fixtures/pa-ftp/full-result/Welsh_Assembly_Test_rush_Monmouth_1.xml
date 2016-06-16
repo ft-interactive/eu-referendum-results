@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FirstPastThePostRush revision="1">
+  <Election name="Welsh Assembly Test" date="2016-05-04" type="W">
+    <Constituency number="25" name="Monmouth" electorate="64857" gainOrHold="gain" winningPartyAbbreviation="Lab" winningPartyName="Labour" sittingPartyAbbreviation="C" sittingPartyName="Conservative" change="true" paStyleMessageText="Labour gain from Conservative in Monmouth">
+      <Candidate previousSittingMember="*" paId="173978" sex="M" firstName="Hugh" surname="Flynn Test">
+        <Party paId="8623" name="Conservative" abbreviation="C" />
+      </Candidate>
+      <Candidate elected="*" paId="173979" sex="M" firstName="Jim" surname="Kemp Test">
+        <Party paId="8624" name="Labour" abbreviation="Lab" />
+      </Candidate>
+      <Candidate paId="173980" sex="M" firstName="Edward" surname="Stewart Test">
+        <Party paId="8626" name="Liberal Democrat" abbreviation="LD" />
+      </Candidate>
+      <Candidate paId="173981" sex="M" firstName="Graham" surname="Abbott Test">
+        <Party paId="8627" name="Plaid Cymru" abbreviation="PC" />
+      </Candidate>
+      <Candidate paId="173982" sex="M" firstName="David" surname="Thompson Test">
+        <Party paId="8635" name="English Democrats Party" abbreviation="Eng Dem" />
+      </Candidate>
+    </Constituency>
+  </Election>
+</FirstPastThePostRush>
+
