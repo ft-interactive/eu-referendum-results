@@ -18,11 +18,8 @@ function buildChartsData(config, data) {
 		if (config.show.indexOf(chart.symbol) >= 0) {
 			return chart;
 		}
-	});
-
-	// Check what's in data.charts and via a setting, only send the ones through
-	// to the map function that we want to build for the charts
-	chartData = chartData.map((chart, index) => {
+	})
+	.map((chart, index) => {
 		chart.index = index;
 
 		return buildChartData(config, chart);
@@ -109,26 +106,24 @@ function buildChartData(config, chart) {
 		(chart.series);
 
 	if (chart.type === 'index') {
-		const gapEnd = chart.series.filter(point => {
-			if (point.end === true) {
+		const gaps = chart.series.filter((point, idx, arr) => {
+			let prev = 0;
+
+			if( idx > 0 ) {
+				prev = idx-1;
+			}
+
+			if (point.end === true || arr[prev].end === true) {
 				return true;
 			}
 		});
 
-		const gapStart = chart.series.map((point, index, series) => {
-			if (point.end === true) {
-				return series[index+1];
-			} else {
-				return false;
-			}
-		}).filter(a => a);
+		if (gaps.length > 1) {
+			chart.subPathEndY = yScale(gaps[0].value);
+			chart.subPathEndX = xScale(new Date(gaps[0].date));
 
-		if (gapStart.length > 0) {
-			chart.subPathEndY = yScale(gapEnd[0].value);
-			chart.subPathEndX = xScale(new Date(gapEnd[0].date));
-
-			chart.subPathStartY = yScale(gapStart[0].value);
-			chart.subPathStartX = xScale(new Date(gapStart[0].date));
+			chart.subPathStartY = yScale(gaps[1].value);
+			chart.subPathStartX = xScale(new Date(gaps[1].date));
 		}
 	}
 
