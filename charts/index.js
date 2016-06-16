@@ -19,7 +19,7 @@ if (dataPath[0] !== '/') {
 const data = require(dataPath);
 
 // Create the build directory
-const buildDirectory = path.join(__dirname, 'build');
+const buildDirectory = process.argv[3] || path.join(__dirname, 'build');
 console.log(`Creating directory "${buildDirectory}"`);
 exec(`mkdir -p "${buildDirectory}"`);
 
