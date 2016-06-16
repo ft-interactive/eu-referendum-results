@@ -122,6 +122,9 @@ var localframe = d3.select('.location-data')
     .append('g')
         .attr('transform','translate('+localChartMargin.left+','+localChartMargin.top+')');
 
+localframe.append('line')
+    .attr('class', 'local-bar-axis hidden');
+
 //create the scales for the local area chart
 var barValueScale = d3.scale.linear()
     .range([0, localChartWidth-(localChartMargin.left+localChartMargin.right)])
@@ -147,7 +150,7 @@ selectionDispatcher.on('select.local-context', function(localResult){
         },
     ];
 
-    localframe.append('line')
+    localframe.select('line.local-bar-axis')
         .attr('x1', barValueScale(50))
         .attr('y1', 0)
         .attr('x2', barValueScale(50))
@@ -161,43 +164,66 @@ selectionDispatcher.on('select.local-context', function(localResult){
             .attr('class','context-bar')
             .attr('transform',function(d,i){ return 'translate(0,' +(i*(localBarHeight+localBarGap))+ ')'; })
         .call(function(parent){
+            parent.append('text').attr('class', 'bar-title');
+            parent.append('text')
+                .attr('class', 'bar-remain-value')
+                .attr('y',localBarHeight)
+                .attr('dy',2);
 
             parent.append('text')
-                .attr('class', 'bar-title');
+                .attr('class', 'bar-leave-value')
+                .attr('y',localBarHeight)
+                .attr('x',barValueScale(100))
+                .attr('dy',2)
+                .attr('text-anchor', 'end');
 
-            parent.append('text')
-                .attr('class','bar-value-label');
-
-            parent.append('rect');
+            parent.append('rect').attr('class', 'bar-leave');
+            parent.append('rect').attr('class', 'bar-remain');
         });
     
     localframe.selectAll('g.context-bar')
         .call(function(parent){
             parent.select('text.bar-title')
-                .text(function(d){ return d.title + ' ' +d3.round(d.data.leave_percentage_share,1)+'%'; });
+                .text(function(d){ return d.title; });
             
             parent.transition()
-                .select('rect')
-                    .attr('x', function(d){
-                        if(d.data.leave_percentage_share < 50){ 
-                            return barValueScale( d.data.leave_percentage_share ); 
-                        }
-                        return barValueScale( 50 );
-                    })
-                    .attr('y',0)
-                    .attr('width',function(d){
-                        if(d.data.leave_percentage_share < 50){ 
-                            return Math.abs( barValueScale( d.data.leave_percentage_share - 50 )); 
-                        }
-                        return Math.abs( barValueScale( 50 - d.data.leave_percentage_share ));
-                    })
-                    .attr('height', localBarHeight)
-                    .attr('fill', function(d){
-                        if(d.data.leave_percentage_share > 50){
-                            return colour.leaveColour;
-                        }
-                        return colour.remainColour;
-                    });
+                .select('rect.bar-remain')
+                .attr({
+                    x:0,
+                    y:5,
+                    width: function(d){ return barValueScale( d.data.remain_percentage_share ); },
+                    height: localBarHeight/2,
+                    fill: colour.remainColour,
+                });
+
+            parent.transition()
+                .select('rect.bar-leave')
+                .attr({
+                    x:function(d){ return barValueScale( d.data.remain_percentage_share ); },
+                    y:5,
+                    width: function(d){ return barValueScale( d.data.leave_percentage_share ); },
+                    height: localBarHeight/2,
+                    fill: colour.leaveColour,
+                });
+
+            parent.select('text.bar-leave-value')
+                .text(function(d){
+                    return d.data.leave_percentage_share + '% leave ';
+                })
+
+            parent.select('text.bar-remain-value')
+                .text(function(d){
+                    return 'remain ' + d.data.remain_percentage_share + '%';
+                })
+                    // .attr('cx', function(d){ return barValueScale( d.data.leave_percentage_share ); })
+                    // .attr('cy',0)
+                    // .attr('r', 20)
+                    // .attr('fill', function(d){
+                    //     if(d.data.leave_percentage_share > 50){
+                    //         return colour.leaveColour;
+                    //     }
+                    //     return colour.remainColour;
+                    // });
         });
 });
 
