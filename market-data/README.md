@@ -35,3 +35,71 @@ From within this directory:
 From a different directory:
 
 `node /path/to/this/directory/csv-to-chart-json /PATH/TO/INPUT/DIR/ /PATH/TO/OUTPUT/DIR/`
+
+# Example cron setup
+
+## data poller
+
+```
+poll-data.sh
+-
+
+#!/usr/bin/env sh
+set -e
+
+# vars
+SCRIPT_LOCATION=/path/to/eu-referendum-results/market-data/
+OUTPUT_DIR=/path/to/live-brexit-market-data/
+NODE=/path/to/bin/node
+
+# cd to the script location
+cd $SCRIPT_LOCATION
+
+# set up file structure
+mkdir -p $OUTPUT_DIR
+
+# poll data
+$NODE data-poller $OUTPUT_DIR >> $OUTPUT_DIR'market-data-poller.log'
+
+```
+
+```
+crontab
+-
+
+* * * * * /path/to/bash/script/poll-data.sh
+```
+
+## chart generator
+
+```
+generate-chart-data.sh
+-
+
+#!/usr/bin/env sh
+set -e
+
+# vars
+SCRIPT_LOCATION=/path/to/eu-referendum-results/market-data/
+OUTPUT_DIR=/path/to/live-brexit-market-data/
+OUTPUT_DIR=$INPUT_DIR
+NODE=/path/to/bin/node
+
+# cd to the script location
+cd $SCRIPT_LOCATION
+
+# set up file structure
+mkdir -p $INPUT_DIR
+mkdir -p $OUTPUT_DIR
+
+# generate chart json
+$NODE csv-to-chart-json $INPUT_DIR $OUTPUT_DIR >> $OUTPUT_DIR'market-data-csv-to-chart-json.log'
+
+```
+
+```
+crontab
+-
+
+* * * * * /path/to/bash/script/generate-chart-data.sh
+```

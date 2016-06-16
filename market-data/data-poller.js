@@ -277,6 +277,7 @@ const writeOutFile = (path, data) => {
 };
 
 const init = () => {
+	logger.info('Script starting');
 	getMarketsData(data => {
 		publishData(data, () => {
 			logger.info('Script exiting');

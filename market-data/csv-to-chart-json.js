@@ -194,6 +194,7 @@ const generateChartJson = (data, cb) => {
 };
 
 const init = () => {
+	logger.info('Script starting');
 	readDataFromDir(config.data_directory, (err, data) => {
 		if (err) {
 			logger.error(`Script Exiting - ${err}`);
