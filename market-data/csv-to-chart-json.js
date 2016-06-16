@@ -6,8 +6,8 @@ const csvParse = require('csv-parse/lib/sync');
 const logger = require('./lib/logger')('brexit-market-data-to-chart-json');
 
 const config = {
-	data_directory: (process.argv[2] || './input/'), // .csv files to input
-	output_directory: (process.argv[3] || './build/'), // location to output .json
+	data_directory: (process.argv[2] || path.join(__dirname, 'input')), // .csv files to input
+	output_directory: (process.argv[3] || path.join(__dirname, 'build')), // location to output .json
 	chart_timeframe_days: 1, // eg. show the last 24 hours - including custom rounding logic
 	chart_template: require('./data/chart-template.json'), // template chart data to use
 	data_gap_threshold: 60 // in minutes, the amount of time between two datapoints that should result in a 'break' to be rendered in the chart - ie FTSE closing etc

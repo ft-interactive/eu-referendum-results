@@ -22,7 +22,7 @@ const config = {
 			source: '2b80e84c1a' // api key - should be an env var
 		}
 	},
-	output_dir: (process.argv[2] || './build/') // output directory
+	output_dir: (process.argv[2] || path.join(__dirname, 'build')) // output directory
 };
 
 const paramsToString = (obj) => {
