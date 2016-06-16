@@ -161,6 +161,7 @@ selectionDispatcher.on('select.local-context', function(localResult){
             .attr('class','context-bar')
             .attr('transform',function(d,i){ return 'translate(0,' +(i*(localBarHeight+localBarGap))+ ')'; })
         .call(function(parent){
+            
             parent.append('text').attr('class', 'bar-title');
             parent.append('text')
                 .attr('class', 'bar-remain-value')
@@ -176,14 +177,13 @@ selectionDispatcher.on('select.local-context', function(localResult){
 
             parent.append('rect').attr('class', 'bar-leave');
             parent.append('rect').attr('class', 'bar-remain');
+            parent.append('line')
+                .attr('x1', barValueScale(50))
+                .attr('y1', 0)
+                .attr('x2', barValueScale(50))
+                .attr('y2', (localBarHeight))
+                .attr('class', 'local-bar-axis');
         });
-    
-    localframe.select('line.local-bar-axis')
-        .attr('x1', barValueScale(50))
-        .attr('y1', 0)
-        .attr('x2', barValueScale(50))
-        .attr('y2', (localBarHeight+localBarGap) * contextResults.length - localBarGap)
-        .attr('class', 'local-bar-axis');
     
     localframe.selectAll('g.context-bar')
         .call(function(parent){
