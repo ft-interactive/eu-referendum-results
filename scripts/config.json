@@ -1,0 +1,6 @@
+{
+    "outputLocation":"../site/",
+    "regionalResult":"../site/dummyresult/regions.json",
+    "localResult":"../site/dummyresult/voting-areas.json",
+    "nationalResult":"../site/dummyresult/running-totals.json"
+}
