@@ -3,6 +3,8 @@
 
 Generate SVG charts graphing markets data for Brexit.
 
+**See how this can interact with `../market-data/` generator [here](../market-data/README.md#example-cron-setup)**
+
 
 ## Requirements
 
@@ -34,5 +36,6 @@ The data comes from `data/sample.json` and is built to `build/`. You can specify
 ```sh
 node . data/example.json /new-build-folder
 ```
+
 
 [node.js]: https://nodejs.org/

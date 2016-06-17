@@ -11,7 +11,7 @@ const exec = require('child_process').execSync;
 process.on('uncaughtException', handleError);
 
 // Load the chart config and data
-const chartsConfig = require('./charts.json');
+const chartsConfig = require('./charts.js');
 let dataPath = process.argv[2] || './data/test.json';
 if (dataPath[0] !== '/') {
 	dataPath = path.join(__dirname, dataPath);
