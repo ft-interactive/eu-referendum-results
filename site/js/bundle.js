@@ -31,7 +31,7 @@ module.exports = function(){
             .append('g')
                 .attr('transform','translate('+margin.left+','+margin.top+')');
         
-        var localframe = d3.select('svg.local-result-chart');
+        var localframe = d3.select('svg.local-result-chart g');
 
         localframe.selectAll('g.context-bar')
             .data(data)
@@ -109,7 +109,6 @@ module.exports = function(){
 
     chart.data = function(x){
         data = x;
-        console.log(data);
         return chart;
     };
 
