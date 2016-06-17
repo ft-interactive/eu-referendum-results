@@ -80,7 +80,9 @@ module.exports = function(){
                     .attr({
                         x:0,
                         y:5,
-                        width: function(d){ return barValueScale( d.data.remain_percentage_share ); },
+                        width: function(d){ 
+                            if(d.data === null) return 0;
+                            return barValueScale( d.data.remain_percentage_share ); },
                         height: barHeight/2,
                         fill: colour.remainColour,
                     });
@@ -88,20 +90,26 @@ module.exports = function(){
                 parent.transition()
                     .select('rect.bar-leave')
                     .attr({
-                        x:function(d){ return barValueScale( d.data.remain_percentage_share ); },
+                        x:function(d){
+                            if(d.data === null) return barValueScale(100); 
+                            return barValueScale( d.data.remain_percentage_share ); },
                         y:5,
-                        width: function(d){ return barValueScale( d.data.leave_percentage_share ); },
+                        width: function(d){
+                            if(d.data === null) return 0; 
+                            return barValueScale( d.data.leave_percentage_share ); },
                         height: barHeight/2,
                         fill: colour.leaveColour,
                     });
 
                 parent.select('text.bar-leave-value')
                     .html(function(d){
+                        if(d.data === null) return '';
                         return '<tspan class="leave-highlight">'+d3.round(d.data.leave_percentage_share, 1) + '%</tspan> LEAVE ';
                     })
 
                 parent.select('text.bar-remain-value')
                     .html(function(d){
+                        if(d.data === null) return '';
                         return 'REMAIN <tspan class="remain-highlight">' + d3.round(d.data.remain_percentage_share, 1) + '%</tspan>';
                     });
             });
@@ -222,7 +230,24 @@ mapframe.selectAll('.area').data(localResults.filter(function(d){
 //local area chart
 
 var bars = localBarCharts();
-    
+
+bars.data([
+        {
+            title: '',
+            data: null,
+        },
+        {
+            title: '',
+            data: null,
+        },
+        {
+            title: 'National',
+            data: nationalResults,
+        },
+]);
+
+d3.select( '.location-data' )
+    .call( bars );
 
 function updateBars(localResult){
     var regionResult = find(regionalResults, function(e){

@@ -105,7 +105,24 @@ mapframe.selectAll('.area').data(localResults.filter(function(d){
 //local area chart
 
 var bars = localBarCharts();
-    
+
+bars.data([
+        {
+            title: '',
+            data: null,
+        },
+        {
+            title: '',
+            data: null,
+        },
+        {
+            title: 'National',
+            data: nationalResults,
+        },
+]);
+
+d3.select( '.location-data' )
+    .call( bars );
 
 function updateBars(localResult){
     var regionResult = find(regionalResults, function(e){
