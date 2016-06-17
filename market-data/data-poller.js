@@ -284,6 +284,6 @@ const init = () => {
 			process.exit(0);
 		});
 	});
-}
+};
 // run
 init();

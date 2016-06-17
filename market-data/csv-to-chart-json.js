@@ -160,12 +160,33 @@ const mapDataToChartJson = (data) => {
 	template.charts = template.charts.map(obj => {
 		let rObj = Object.assign({}, obj);
 		rObj.series = data[obj.symbol];
+		rObj.xLabel = createDateLabel(data[obj.symbol][0].date);
 		return rObj;
 	});
 
 	return template;
 };
 
+const createDateLabel = (isoString) => {
+	const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	const localStart = new Date(isoString);
+	const utcDayLabel = `${monthNames[localStart.getUTCMonth()]} ${localStart.getUTCDate()}`;
+	const utcHour = localStart.getUTCHours();
+
+	const bstHour = (utcHour + 1 >= 24) ? 0 : utcHour + 1;
+	const bstPeriod = (bstHour <= 11) ? 'am' : 'pm';
+	// convert hour to simple ie 13 becomes 1
+	const bstSimpleHour = (bstHour >=13) ? bstHour -12 : bstHour;
+	if (bstSimpleHour === 0) { bstSimpleHour = 12; }; // special case for 'midnight';
+
+	// optional X hrs ago label
+	// const localNow = Date.now();
+	// const diff = Math.floor((localNow - localStart) / (60*60*1000));
+
+	// return label - we dont need to worry about UTC date not matching an offset BST time
+	// as the start is always going to be 08:00am or 12:00pm noon UTC the previous day
+	return `${bstSimpleHour + bstPeriod} ${utcDayLabel}`;
+};
 
 const generateChartJson = (data, cb) => {
 	let output;
@@ -206,6 +227,6 @@ const init = () => {
 		});
 
 	});
-}
+};
 // run
 init();
