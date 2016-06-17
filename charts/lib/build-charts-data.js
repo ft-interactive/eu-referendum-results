@@ -101,8 +101,8 @@ function buildChartData(config, chart) {
 		buildLine.defined(point => point.end !== true);
 	}
 	chart.data = buildLine
-		.x(point => xScale(new Date(point.date)))
-		.y(point => Math.floor(yScale(point.value)))
+		.x(point => round_2dp(xScale(new Date(point.date))))
+		.y(point => round_2dp(Math.floor(yScale(point.value))))
 		(chart.series);
 
 	if (chart.type === 'index') {
@@ -206,4 +206,8 @@ function verifyChartConfig(config) {
 	}
 
 	return config;
+}
+
+function round_2dp(x) {
+	return Math.round(x * 100) / 100;
 }

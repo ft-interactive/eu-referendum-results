@@ -36,12 +36,12 @@ const size_variants = {
 	small: {
 		width: 400,
 		height: 65,
-		spacing: 10
+		spacing: 2
 	},
 	medium: {
 		width: 500,
 		height: 85,
-		spacing: 10
+		spacing: 5
 	},
 	large: {
 		width: 600,
