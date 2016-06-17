@@ -20,14 +20,14 @@ module.exports = function (national, regional, local, lookupByID){
 
     let marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value">${Math.abs(margin).toFixed(1)}</span>% ( <span class="inline-value">${commas( Math.abs(votes_margin) )}</span> votes )`;
     
-    let mostLeave = 'The places which voted most strongly to <span class="leave-highlight">leave</span> were: ' + getMostLeave( local, 3 ).map(function(d){
+    let mostLeave = 'Stongest <span class="leave-highlight">leave</span> vote: ' + getMostLeave( local, 3 ).map(function(d){
         let name =  lookupByID[d.ons_id].name;
         return '<br><span class="place-detail">' + name + ' <span class="inline-value"><b>'+d3.round(d.leave_percentage_share,1)+'</b></span>%</span>';
     }).join('');
     
-    let mostRemain = 'The places which voted most strongly to <span class="remain-highlight">remain</span> were: ' + getMostRemain( local, 3 ).map(function(d){
+    let mostRemain = 'Strongest <span class="remain-highlight">remain</span> vote: ' + getMostRemain( local, 3 ).map(function(d){
         let name =  lookupByID[d.ons_id].name;
-        return '<br><span class="place-detail">' + name + ' <span class="inline-value"><b>'+d3.round(d.remain_percentage_share,1)+'</b></span>%</span>';
+        return '<br><span class="place-detail">' + name + '&nbsp;<span class="inline-value"><b>'+d3.round(d.remain_percentage_share,1)+'</b></span>%</span>';
     }).join('');
 
 
@@ -39,7 +39,8 @@ module.exports = function (national, regional, local, lookupByID){
     //removed turnout statement <li>${turnoutStatement}</li>
     return {
         headline: headline,
-        standfirstList: `<ul class="standfirst-list"><li>${marginStatement}</li><li>${mostLeave}</li><li>${mostRemain}</li></ul>`,
+        marginStatement: `<h2 class="o-typography-subhead">${marginStatement}</h2>`, 
+        leaveRemainExtremes: `<div data-o-grid-colspan="6">${mostLeave}</div><div data-o-grid-colspan="6">${mostRemain}</div>`,
     };
 };
 
