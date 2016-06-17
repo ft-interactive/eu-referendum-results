@@ -12,10 +12,14 @@ process.on('uncaughtException', handleError);
 
 // Load the chart config and data
 const chartsConfig = require('./charts.json');
-const data = require('./data/sample.json'); // TODO use real data
+let dataPath = process.argv[2] || './data/test.json';
+if (dataPath[0] !== '/') {
+	dataPath = path.join(__dirname, dataPath);
+}
+const data = require(dataPath);
 
 // Create the build directory
-const buildDirectory = path.join(__dirname, 'build');
+const buildDirectory = process.argv[3] || path.join(__dirname, 'build');
 console.log(`Creating directory "${buildDirectory}"`);
 exec(`mkdir -p "${buildDirectory}"`);
 
@@ -30,6 +34,7 @@ chartsConfig.forEach(chartConfig => {
 
 	console.log(`Generating chart "${chartConfig.name}"`);
 	const chartData = buildChartsData(chartConfig, data);
+
 	const chartSvg = nunjucks.render('charts.svg', chartData);
 
 	const chartFilePath = path.join(buildDirectory, `${chartConfig.name}.svg`);
