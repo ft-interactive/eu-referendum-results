@@ -57,7 +57,9 @@ const regionalBreakdownChart = nunjucks.render('vote-swing.svg', layoutVoteSwing
 const context = {
     datetime: String(new Date()),
     headline: words.headline,
-    standfirstList: words.standfirstList,
+    marginStatement: words.marginStatement,
+    leaveRemainExtremes: words.leaveRemainExtremes,
+//    standfirstList: words.standfirstList,
     topoData: JSON.stringify( topoData ),
     localResultData: JSON.stringify( localResuls ),
     regionalResultData: JSON.stringify( regionalResults ),
