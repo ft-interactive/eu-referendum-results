@@ -82,7 +82,7 @@ test('check rollup on partial result', async t => {
 
   const regions = await all_regions(voting_areas);
 
-  const num_assertions_per_region = 18;
+  const num_assertions_per_region = 20;
   t.plan(Facts.TOTAL_REGIONS * num_assertions_per_region);
 
   regions.forEach(region => {
@@ -105,8 +105,10 @@ test('check rollup on partial result', async t => {
     t.is(region.electorate, rollup.electorate, region.name + '.electorate');
     t.is(region.turnout, rollup.turnout, region.name + '.turnout');
     t.is(region.percentage_turnout, rollup.percentage_turnout, region.name + '.percentage_turnout');
-    t.is(region.awaiting_numbers, rollup.awaiting_numbers, region.name + '.awaiting_numbers');
     t.is(region.tied_voting_areas, rollup.tied_voting_areas, region.id + '.tied_voting_areas');
+    t.skip.is(region.remain_voting_areas, rollup.remain_voting_areas, region.id + '.remain_voting_areas');
+    t.skip.is(region.leave_voting_areas, rollup.leave_voting_areas, region.id + '.leave_voting_areas');
+    t.skip.is(region.awaiting_numbers, rollup.awaiting_numbers, region.name + '.awaiting_numbers');
 
     const total_areas = Facts.REGION_TOTAL_AREAS[region.id];
     const total_results = total_areas - rollup.no_result;
