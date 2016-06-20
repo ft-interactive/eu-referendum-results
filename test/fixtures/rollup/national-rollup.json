@@ -1,15 +1,19 @@
 {
-	"state": 0,
+	"state": 1,
+	"outcome": "REMAIN",
   "remain_votes": 4288564,
   "leave_votes": 4200146,
-  "remain_percentage_share": 50.52079762,
-  "leave_percentage_share":	49.47920238,
+  "remain_percentage_share": 50.52079762413841,
+  "leave_percentage_share":	49.47920237586159,
   "majority":	88418,
-  "percentage_majority": 1.041595248,
-  "electorate": 17929402,
+  "percentage_majority": 1.0415952482768205,
+  "electorate": 16863339,
   "turnout": 8488710,
-  "percentage_turnout": 50.33825152,
-	"tied_voting_areas": 0,
+  "percentage_turnout": 50.33825151709279,
+	"tied_voting_areas": 1,
 	"awaiting_numbers": 9,
-	"no_result": 245
+	"awaiting_reports": 236,
+	"number_of_results": 137,
+	"remain_voting_areas": 74,
+	"leave_voting_areas": 62
 }
