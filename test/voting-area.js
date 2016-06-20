@@ -28,13 +28,6 @@ test('all voting area data', async t => {
 
 });
 
-test.todo('ensure 12 unique regions');
-
-test.skip('census', async t => {
-  const data = await all_voting_areas_with_census(results_dir);
-  console.dir(data);
-});
-
 test('before voting area data available', async t => {
   const data = await all_voting_areas(empty_results_dir);
   t.true(Array.isArray(data), 'Returns Array');
@@ -110,3 +103,4 @@ test.todo('State.TURNOUT');
 test.todo('Recount pending');
 test.todo('Rush after result where outcome changes - no results yet');
 test.todo('FT name overrides PA name')
+test.todo('ensure 12 unique regions in the data');

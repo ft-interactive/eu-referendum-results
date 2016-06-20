@@ -118,6 +118,7 @@ test('check rollup on partial result', async t => {
     t.is(region.state, rollup.state, region.name + '.state');
     t.is(region.complete_counts.length, total_results);
     t.is(region.incomplete_counts.length, rollup.no_result);
+
   });
 
 });
