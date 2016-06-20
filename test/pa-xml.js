@@ -42,9 +42,9 @@ test('Result', async t => {
     majority: 1099,
     percentage_majority: 1.35,
     remain_votes: 40122,
-    remain_percentage_share: 49.32,
+    remain_percentage_share: 49.32446553483397,
     leave_votes: 41221,
-    leave_percentage_share: 50.68,
+    leave_percentage_share: 50.67553446516603,
   }, 'Matches values in the fixture XML file');
 });
 

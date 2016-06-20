@@ -74,9 +74,9 @@ test('Aylesbury Vale has Rush, Result and Recount data', async t => {
   t.is(data.outcome, Outcome.LEAVE);
   t.is(data.state, State.RESULT);
   t.is(data.leave_votes, 41221);
-  t.is(data.leave_percentage_share, 50.68);
+  t.is(data.leave_percentage_share, 50.67553446516603);
   t.is(data.remain_votes, 40122);
-  t.is(data.remain_percentage_share, 49.32);
+  t.is(data.remain_percentage_share, 49.32446553483397);
   t.is(data.electorate, 135888);
   t.is(data.turnout, 81343);
   t.is(data.percentage_turnout, 59.86);
