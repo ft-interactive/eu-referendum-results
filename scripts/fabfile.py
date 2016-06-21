@@ -21,6 +21,7 @@ def publish():
 
   with cd(location):        #untar to the correct location
     run('tar xzf ' + temp_location + project_name+'.tgz')
+    sudo('chmod -R ug+rw ' + location)
     run('npm install')      #install node modules
 
   print 'PUBLISHED!\n\n' + location
