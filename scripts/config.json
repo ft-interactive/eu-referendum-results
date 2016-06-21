@@ -1,0 +1,8 @@
+{
+    "outputLocation": "../site/",
+    "regionalResult": "../site/dummyresult/regions.json",
+    "localResult": "../site/dummyresult/voting-areas.json",
+    "nationalResult": "../site/dummyresult/running-totals.json",
+    "live": false,
+    "bertha": "http://bertha.ig.ft.com/republish/publish/ig/1s8z5KLLb4FlP3g59FN_o5Knc7iP32ca8Inp8-J_GZU8/basic"
+}

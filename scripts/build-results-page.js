@@ -1,9 +1,7 @@
 'use strict';
 
 //config
-const outputLocation = '../site/';
-const dumyDataLocation = '../site/dummyresult/old/';
-const resultsLocation = '../site/dummyresult/';
+const config = require('./config.json');
 
 //dependencies
 const fs = require('fs');
@@ -15,9 +13,9 @@ const layoutVoteSwing = require('./layout-vote-swing.js');
 const layoutNationalBars = require('./layout-national-bars.js');
 const writer = require('./news-writer.js');
 const topoData = require('./geodata/referendum-result-areas.json');
-
+console.log(config)
 //HTML build
-const regionalResults = loadLocalJSON( resultsLocation + 'regions.json' )
+const regionalResults = loadLocalJSON( config.regionalResult )
     .map(function(d){
         return {
             remain_votes: d.remain_votes,
@@ -30,9 +28,9 @@ const regionalResults = loadLocalJSON( resultsLocation + 'regions.json' )
         };
     });
 
-const nationalResults = loadLocalJSON( resultsLocation + 'running-totals.json' );
+const nationalResults = loadLocalJSON( config.nationalResult );
 
-const localResuls = loadLocalJSON( resultsLocation + 'voting-areas.json')    
+const localResuls = loadLocalJSON( config.localResult )    
     .map(function(d){
         return {
             name: d.name,
@@ -46,8 +44,7 @@ const localResuls = loadLocalJSON( resultsLocation + 'voting-areas.json')
         };
     });
 
-const lookupByID = makeLookup( loadLocalCSV( './data/names.csv' ), 'ons_id');
-const words = writer(nationalResults, regionalResults, localResuls, lookupByID);
+const words = writer(nationalResults, regionalResults, localResuls);
 
 nunjucks.configure('templates', { autoescape: false });
 
@@ -68,14 +65,19 @@ const context = {
     regionalBreakdownChart: regionalBreakdownChart,
 };
 
-const indexHTML = nunjucks.render( 'index.html', context );
-const homepageWidget = nunjucks.render( 'homepage-widget.html', {data:nationalResults, orderedData:layoutNationalBars( nationalResults )} );
+let indexHTML = nunjucks.render( 'index_holding.html', context );
+let homepageWidget = nunjucks.render( 'homepage-widget_holding.html', {data:nationalResults, orderedData:layoutNationalBars( nationalResults )} );
 
-fs.writeFileSync( outputLocation + 'index.html', indexHTML );
-fs.writeFileSync( outputLocation + 'homepage-widget.html', homepageWidget );
+if(config.live){
+    indexHTML = nunjucks.render( 'index.html', context );
+    homepageWidget = nunjucks.render( 'homepage-widget.html', {data:nationalResults, orderedData:layoutNationalBars( nationalResults )} );
+}
+
+fs.writeFileSync( config.outputLocation + 'index.html', indexHTML );
+fs.writeFileSync( config.outputLocation + 'homepage-widget.html', homepageWidget );
 
 //Javascript build
-const writeStream = fs.createWriteStream(outputLocation + 'js/bundle.js')
+const writeStream = fs.createWriteStream(config.outputLocation + 'js/bundle.js')
 const browserify = require('browserify');
 browserify('./browser-js/main.js')
     .exclude('d3')
@@ -85,11 +87,8 @@ browserify('./browser-js/main.js')
 //utitlity functions
 
 function loadLocalJSON(filename){
+    console.log(filename)
     return JSON.parse( fs.readFileSync( filename, 'utf-8' ) );
-}
-
-function loadLocalCSV(filename){
-    return d3.csv.parse( fs.readFileSync( filename, 'utf-8') );
 }
 
 function makeLookup(array, key){

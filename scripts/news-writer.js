@@ -3,7 +3,7 @@
 const d3 = require('d3');
 const commas = d3.format('0,000');
 
-module.exports = function (national, regional, local, lookupByID){
+module.exports = function (national, regional, local){
  
     let headline = '';
     let winner = '';
@@ -18,21 +18,19 @@ module.exports = function (national, regional, local, lookupByID){
         headline = 'Britons vote to remain in the EU';
     }
 
-    let marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value">${Math.abs(margin).toFixed(1)}</span>% ( <span class="inline-value">${commas( Math.abs(votes_margin) )}</span> votes )`;
-    
+    let marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value percent">${Math.abs(margin).toFixed(1)}</span>% (<span class="inline-value absolute">${commas( Math.abs(votes_margin) )}</span>&nbsp;votes`;
+
     let mostLeave = 'Stongest <span class="leave-highlight">leave</span> vote: ' + getMostLeave( local, 3 ).map(function(d){
-        let name =  lookupByID[d.ons_id].name;
-        return '<br><span class="place-detail">' + name + ' <span class="inline-value"><b>'+d3.round(d.leave_percentage_share,1)+'</b></span>%</span>';
+        return '<br><span class="place-detail">' + d.name + ' <span class="inline-value"><b>'+d3.round(d.leave_percentage_share,1)+'</b></span>%</span>';
     }).join('');
     
     let mostRemain = 'Strongest <span class="remain-highlight">remain</span> vote: ' + getMostRemain( local, 3 ).map(function(d){
-        let name =  lookupByID[d.ons_id].name;
-        return '<br><span class="place-detail">' + name + '&nbsp;<span class="inline-value"><b>'+d3.round(d.remain_percentage_share,1)+'</b></span>%</span>';
+        return '<br><span class="place-detail">' + d.name + '&nbsp;<span class="inline-value"><b>'+d3.round(d.remain_percentage_share,1)+'</b></span>%</span>';
     }).join('');
 
 
     let turnoutExtent = 'from ' + getTurnoutExtent(local).map(function(d,i){
-        return '<span class="inline-value">' + d3.round(d.turnout_pct,1) + '</span>% (' + lookupByID[d.ons_id].name + ')';
+        return '<span class="inline-value">' + d3.round(d.turnout_pct,1) + '</span>% (' + d.name + ')';
     }).join(' to '); 
 
     //let turnoutStatement = 'Overall turnout was ' + turnoutDescription(national.turnout_pct) + ' at <span class="inline-value">'+d3.round(national.turnout_pct,1)+'</span>% locally it varied ' + turnoutExtent;
