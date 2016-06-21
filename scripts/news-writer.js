@@ -18,7 +18,7 @@ module.exports = function (national, regional, local){
         headline = 'Britons vote to remain in the EU';
     }
 
-    let marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value percent">${Math.abs(margin).toFixed(1)}</span>% (<span class="inline-value absolute">${commas( Math.abs(votes_margin) )}</span>&nbsp;votes`;
+    let marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value percent">${Math.abs(margin).toFixed(1)}</span>% (<span class="inline-value absolute">${commas( Math.abs(votes_margin) )}</span>&nbsp;votes)`;
 
     let mostLeave = 'Stongest <span class="leave-highlight">leave</span> vote: ' + getMostLeave( local, 3 ).map(function(d){
         return '<br><span class="place-detail">' + d.name + ' <span class="inline-value"><b>'+d3.round(d.leave_percentage_share,1)+'</b></span>%</span>';

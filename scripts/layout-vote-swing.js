@@ -41,6 +41,17 @@ module.exports = function(regionalResult){
 		return d.margin_abs;
 	});
 	
+	//symetrical domain
+
+	domain = function(d){
+		let extreme = Math.max(Math.abs(d[0]), Math.abs(d[1]));
+		return [-extreme, extreme];
+	}(domain)
+
+	if(domain[0] === 0 && domain[1] === 0){
+		domain = [-1,1];
+	}
+
 	let barScale = d3.scale.linear()
 		.range([0,plotWidth])
 		.domain(domain);
