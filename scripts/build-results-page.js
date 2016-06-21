@@ -17,20 +17,24 @@ console.log(config)
 //HTML build
 
 
-request(config.bertha, function (error, response, body) {
+request(config.bertha, parseBertha);
+
+function parseBertha(error, response, berthaBody) {
   if (!error && response.statusCode == 200) {
-     build( JSON.parse(body).options );
-     // Show the HTML for the Google homepage. 
+     let opts = JSON.parse(berthaBody).options;
+     request(config.storiesFragment, function(error, response, storiesBody){
+         if (!error && response.statusCode == 200) {
+             opts.stories = storiesBody;
+             build(opts);
+         }
+     });
+
   }else{
       console.log('couldn\'t get bertha')
   }
-})
-
-//build();
+}
 
 function build( berthaData ){
-    console.log(berthaData);
-
     const regionalResults = loadLocalJSON( config.regionalResult )
         .map(function(d){
             return {
