@@ -10,15 +10,33 @@ module.exports = function (national, regional, local){
     
     let margin = national.leave_percentage_share - national.remain_percentage_share;
     let votes_margin = national.leave_votes - national.remain_votes;
-    if(margin > 0){
-        winner = 'leave';
-        headline = 'Britons vote to leave the EU';
+    if(national.number_of_results < national.total_voting_areas){
+        if(margin > 0){
+            winner = 'leave';
+            headline = 'Leave lead the count';
+        }else{
+            winner = 'remain';
+            headline = 'Remain lead the count';
+        }
     }else{
-        winner = 'remain';
-        headline = 'Britons vote to remain in the EU';
+        if(margin > 0){
+            winner = 'leave';
+            headline = 'Britons vote to leave the EU';
+        }else{
+            winner = 'remain';
+            headline = 'Britons vote to remain in the EU';
+        }
     }
 
-    let marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value percent">${Math.abs(margin).toFixed(1)}</span>% (<span class="inline-value absolute">${commas( Math.abs(votes_margin) )}</span>&nbsp;votes)`;
+    let marginStatement = ''
+    if(national.number_of_results < national.total_voting_areas){
+        marginStatement = `With ${national.number_of_results} areas of ${national.total_voting_areas} counted the ${winner} camp lead by ${marginDescription(margin)}`;
+    }else{
+        marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value percent">${Math.abs(margin).toFixed(1)}</span>% (<span class="inline-value absolute">${commas( Math.abs(votes_margin) )}</span>&nbsp;votes)`;
+    }
+    console.log(national.number_of_results < national.total_voting_areas);
+
+
 
     let mostLeave = 'Stongest <span class="leave-highlight">leave</span> vote: ' + getMostLeave( local, 3 ).map(function(d){
         return '<br><span class="place-detail">' + d.name + ' <span class="inline-value"><b>'+d3.round(d.leave_percentage_share,1)+'</b></span>%</span>';
@@ -73,12 +91,16 @@ function getMostLeave(data, n){
     let sorted = data.sort(function(a,b){
         return b.leave_percentage_share - a.leave_percentage_share;
     });
-    return sorted.slice(0, n);
+    return sorted.slice(0, n).filter(isNullResult);
 }
 
 function getMostRemain(data, n){
     let sorted = data.sort(function(a,b){
         return b.remain_percentage_share - a.remain_percentage_share;
     });
-    return sorted.slice(0, n);
+    return sorted.slice(0, n).filter(isNullResult);
+}
+
+function isNullResult(d){
+    return !(d.leave_percentage_share === 0 || d.leave_percentage_share === null);
 }
