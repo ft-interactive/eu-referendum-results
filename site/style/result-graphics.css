@@ -160,6 +160,14 @@
 }
 
 /* local result */
+.postcode-message{
+	display: none;
+}
+
+.postcode-error{
+	display: block;
+}
+
 .bar-background{
 	fill:#000;
 	fill-opacity: 0.2

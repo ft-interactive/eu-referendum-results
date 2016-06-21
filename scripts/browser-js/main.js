@@ -150,10 +150,35 @@ function updateBars(localResult){
         .call(bars);
 }
 
+d3.select('#postcode-search').on('click',function(){
+    var query = encodeURIComponent( d3.select('#postcode-input').node().value );
+    d3.text('http://ft-ig-referendum-place-search.herokuapp.com/?q='+query, function(error, serviceID){
+        if(!error){
+            var localResult = find(localResults, function(e){
+                return serviceID === e.ons_id ;
+            });
+            d3.select('.postcode-message').classed('postcode-error',false);
+            if(localResult.state < 3){
+                //incomplete count
+                d3.select('.postcode-message')
+                    .classed('postcode-error',true)
+                    .html('This area has yet to complete its count');
+            }
+            console.log(localResult);
+            selectionDispatcher.select(localResult);
+        }else{
+            d3.select('.postcode-message')
+                .classed('postcode-error',true)
+                .html('Sorry: couldn&apos;t find that postcode');
+        };
+    })
+})
 
 selectionDispatcher.on('select.local-context', updateBars);
 
 selectionDispatcher.on('select.map', function(d){
+    console.log(d3.select('#area-' + d.ons_id)[0][0])
+    if(d3.select('#area-' + d.ons_id)[0][0] == null) return;
     var bounds = d3.select('#area-' + d.ons_id).node().getBBox();
     var highlightData = [{
             cx:bounds.x + bounds.width/2,
