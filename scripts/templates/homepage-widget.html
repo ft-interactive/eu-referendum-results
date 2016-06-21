@@ -75,7 +75,7 @@
   {% for row in orderedData.results %}
     <div class="national-item{% if loop.index == 1 %} win{% endif %}">
         <div class="total-bar" style="width: {{ row.value_pct }}%; background-color: {{ row.colour }};"></div>
-        <div class="total-bar-label">{{ row.label }}</div>
+        <div class="total-bar-label">{% if row.value_pct %} {{ row.label }} {% else %}--%{% endif %} </div>
     </div>
   {% endfor %}
    <figcaption class="footnote"><span class="reported-areas">{{ orderedData.reportedVotingAreas }}</span> of {{ orderedData.totalVotingAreas }} voting areas counted. Updated {{ orderedData.formattedDate }} </figcaption>
