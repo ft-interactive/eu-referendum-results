@@ -11,13 +11,13 @@ temp_location = '/var/tmp/' + env.user + '/deployment_tmp/'
 project_name = 'euref-resultspage'
 server_location = ''
 
-location = '/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/scripts/uk-election-results-2016/'
+location = '/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/scripts/' + project_name
 
 @task
 def publish(): 
-  local('tar --exclude="./node_modules" --exclude="./fabfile.*" -cvf  '.project_name.'.tgz ./')
+  local('tar --exclude="./node_modules" --exclude="./*.tgz" --exclude="./fabfile.*" -czf ' + project_name + '.tgz ./')
 
-  put( projectname.'.tgz', temp_location )  #push to server  
+  put( project_name + '.tgz', temp_location )  #push to server  
 
   with cd(location):        #untar to the correct location
     run('tar xzf ' + temp_location + project_name+'.tgz')

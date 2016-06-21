@@ -65,8 +65,13 @@ const context = {
     regionalBreakdownChart: regionalBreakdownChart,
 };
 
-const indexHTML = nunjucks.render( 'index.html', context );
-const homepageWidget = nunjucks.render( 'homepage-widget.html', {data:nationalResults, orderedData:layoutNationalBars( nationalResults )} );
+let indexHTML = nunjucks.render( 'index_holding.html', context );
+let homepageWidget = nunjucks.render( 'homepage-widget_holding.html', {data:nationalResults, orderedData:layoutNationalBars( nationalResults )} );
+
+if(config.live){
+    indexHTML = nunjucks.render( 'index.html', context );
+    homepageWidget = nunjucks.render( 'homepage-widget.html', {data:nationalResults, orderedData:layoutNationalBars( nationalResults )} );
+}
 
 fs.writeFileSync( config.outputLocation + 'index.html', indexHTML );
 fs.writeFileSync( config.outputLocation + 'homepage-widget.html', homepageWidget );

@@ -17,3 +17,7 @@ site/homepage-widget.html
 
 *.tgz
 *.pyc
+
+scripts/log.txt
+
+scripts/euref-resultspage.tgz
