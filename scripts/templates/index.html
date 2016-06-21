@@ -168,10 +168,8 @@
                     <div class="o-share o-share--vertical o-share--muted"
                         data-o-share-links="twitter facebook"
                         data-o-share-links="{{links}}"
-                        data-o-share-url="{{url}}"
-                        data-o-share-title="{{title}}"
-                        data-o-share-titleExtra="{{titleExtra}}"
-                        data-o-share-summary="{{summary}}"
+                        data-o-share-url="{{ bertha.url }}"
+                        data-o-share-title="{{ headline }}"
                         data-o-share-relatedTwitterAccounts="@ft"
                         data-o-component="o-share">
                     </div>
@@ -193,6 +191,7 @@
                     {{ nationalResultChart }}
                 </div>
                 {% endif %}
+                <div><a href="{{ bertha.toplinkurl }}" class="flyline__link">{{ bertha.toplinktext}}</a></div>
               </header>
             </div>
           </div>
