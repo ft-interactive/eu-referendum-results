@@ -182,18 +182,30 @@
                 </div>
 
                 <h1 class="headline">
-                    {{ headline }}
+                    {% if bertha.headline %}
+                        {{ bertha.headline }}
+                    {% else %}
+                        {{ headline }}
+                    {% endif %}
                 </h1>
+                {% if not bertha.hidenationalbars %}
                 <div class="standfirst">
                     {{ nationalResultChart }}
                 </div>
+                {% endif %}
               </header>
             </div>
           </div>
         </div>
 
         <div class="section-body body">
-            <h2>{{ marginStatement }}</h2>
+            <h2>
+                {% if bertha.standfirst %}
+                {{ bertha.standfirst }}
+                {% else %}
+                {{ marginStatement }}
+                {% endif %}
+            </h2>
             <div class="o-grid-row">
                 <div data-o-grid-colspan="12" class="standfirst">
                     {{ leaveRemainExtremes }}                    

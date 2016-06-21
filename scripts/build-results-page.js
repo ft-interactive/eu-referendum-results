@@ -64,10 +64,12 @@ function build( berthaData ){
 
     nunjucks.configure('templates', { autoescape: false });
 
-    const nationalResultChart = nunjucks.render('national-result-chart.html', layoutNationalBars( nationalResults));
+
+    const nationalResultChart = nunjucks.render('national-result-chart.html', layoutNationalBars( nationalResults)); 
     const regionalBreakdownChart = nunjucks.render('vote-swing.svg', layoutVoteSwing( regionalResults ));
 
     const context = {
+        bertha: config.bertha,
         datetime: String(new Date()),
         headline: words.headline,
         marginStatement: words.marginStatement,
