@@ -25,7 +25,14 @@ def publish():
     run('npm install')      #install node modules
 
   print 'PUBLISHED!\n\n' + location
+  update_config()
 
+
+@task
+def update_config():
+  put('config-server.json', location + '/config.json')
+  sudo('chmod -R ug+rw ' + location + '/config.json')
+  print 'CONFIG UPDATED!\n\n'
 
 @task
 def run_app():

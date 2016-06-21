@@ -181,3 +181,9 @@
 	stroke-width:2px;
 	stroke:#fff1e0;
 }
+
+.updated{
+    font-size: 12px;
+	text-transform: uppercase;
+    color: #8b572a;
+}
