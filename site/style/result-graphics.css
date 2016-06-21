@@ -187,3 +187,39 @@
 	text-transform: uppercase;
     color: #8b572a;
 }
+
+/* stories */
+
+.stories__container{
+  background-color: #f6e9d8;
+  padding: 0 10px;
+  border-top: 1px solid #cec6b9;
+  margin-bottom: 1em;
+}
+
+.stories__story{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.stories__story--container{
+  padding: 10px 0;
+  max-width: 167px;
+}
+
+.stories__story--blurb{
+  color: #505050;
+  font-size: .9em;
+  line-height: 1.3em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.stories__story--headline {
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: #2e6e9e;
+}
