@@ -25,8 +25,8 @@ function parseBertha(error, response, berthaBody) {
      request(config.storiesFragment, function(error, response, storiesBody){
          if (!error && response.statusCode == 200) {
              opts.stories = storiesBody;
-             build(opts);
          }
+         build(opts);
      });
 
   }else{
@@ -105,6 +105,10 @@ function build( berthaData ){
         .exclude('d3')
         .bundle()
         .pipe(writeStream);
+    
+    //CSS copy
+    fs.createReadStream('./style/article.css').pipe(fs.createWriteStream(config.outputLocation + 'style/article.css'));
+    fs.createReadStream('./style/result-graphics.css').pipe(fs.createWriteStream(config.outputLocation + 'style/result-graphics.css'));
 }
 //utitlity functions
 

@@ -311,7 +311,7 @@ selectionDispatcher.on('select.map', function(d){
 //var d3 = require('d3');
 
 module.exports = function (){
-    console.log('hello map');
+
     var width = 600;
     var height = 600;
     
