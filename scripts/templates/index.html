@@ -199,6 +199,7 @@
         </div>
 
         <div class="section-body body">
+            {% if not bertha.hidestandfirst %}
             <h2>
                 {% if bertha.standfirst %}
                 {{ bertha.standfirst }}
@@ -206,11 +207,15 @@
                 {{ marginStatement }}
                 {% endif %}
             </h2>
+            {% endif %}
+            {% if not bertha.hideleaveremain %}
             <div class="o-grid-row">
                 <div data-o-grid-colspan="12" class="standfirst">
                     {{ leaveRemainExtremes }}                    
                 </div>
             </div>
+            {% endif %}
+            {% if not bertha.hideregions %}
             <div class="o-grid-row">
                 <h2 class="o-typography-subhead">Where the vote was swung</h2>
                 <div data-o-grid-colspan="12">
@@ -220,6 +225,8 @@
                     <figcaption class="footnote">* incomplete count</figcaption>
                 </div>
             </div> 
+            {% endif %}
+            {% if not bertha.hidemap %}
             <div class="o-grid-row">
                 <h2 class="o-typography-subhead">How the vote varied accross the country</h2>
                 <div data-o-grid-colspan="6">
@@ -233,6 +240,7 @@
                     </div>
                 </div>
             </div>
+            {% endif %}
         </div>
 
       </article>

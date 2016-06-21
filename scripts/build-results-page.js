@@ -19,7 +19,7 @@ console.log(config)
 
 request(config.bertha, function (error, response, body) {
   if (!error && response.statusCode == 200) {
-     build( JSON.parse(body) );
+     build( JSON.parse(body).options );
      // Show the HTML for the Google homepage. 
   }else{
       console.log('couldn\'t get bertha')
@@ -69,7 +69,7 @@ function build( berthaData ){
     const regionalBreakdownChart = nunjucks.render('vote-swing.svg', layoutVoteSwing( regionalResults ));
 
     const context = {
-        bertha: config.bertha,
+        bertha: berthaData,
         datetime: String(new Date()),
         headline: words.headline,
         marginStatement: words.marginStatement,
