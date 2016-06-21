@@ -184,7 +184,7 @@ selectionDispatcher.on('select.neigbours', function(d){
 
     var neighbourhoodJoin = d3.select('.neighbourhood')
         .selectAll('.neighbour')
-            .data(neighbourhood.filter(function(d){ return d !== undefined }))
+            .data(neighbourhood.filter(function(d){ return d !== undefined; }),function(d){ return d.ons_id; });
     
     neighbourhoodJoin.exit().remove();
 
