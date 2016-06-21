@@ -11,4 +11,5 @@ bundle.js
 foo
 out
 tmp
-override
+/override
+/build
