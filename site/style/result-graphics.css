@@ -392,11 +392,18 @@ a {
 }
 
 @media (max-width: 490px) {
+  .top-story {
+    margin-top: 0.4em;
+  }
   .local-area-lookup {
     margin-left: -10px;
   }
   .stories__container {
     margin-left: 0;
+  }
+  .headline {
+    font-size: 30px;
+    margin-bottom: 0.2em;
   }
   .subhead {
     font-size: 14px;
