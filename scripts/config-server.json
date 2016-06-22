@@ -1,5 +1,5 @@
 {
-    "outputLocation": "/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/html/elections/2016/uk/eu-referendum/",
+    "outputLocation": "/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/html/sites/elections/2016/uk/eu-referendum/",
     "regionalResult": "/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/html/data/eu-referendum/full-regional-results.json",
     "localResult": "/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/html/data/eu-referendum/voting-area-results.json",
     "nationalResult": "/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/html/data/eu-referendum/full-national-results.json",
