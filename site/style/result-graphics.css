@@ -357,31 +357,6 @@ a {
   color: #2e6e9e;
 }
 
-@media (min-width: 740px) {
-  .headline {
-    font-size: 42px;
-    margin-bottom: 0.2em;
-  }
-  .section-head h2 {
-    font-size: 18px;
-  }
-  .o-typography-subhead {
-    font-size: 24px;
-  }
-  .subhead {
-    font-size: 16px;
-  }
-}
-@media (min-width: 972px) {
-  .headline {
-   font-size: 48px;
-   margin-bottom: 0.2em;
-  }
-  .o-typography-subhead {
-    font-size: 28px;
-  }
-}
-
 @media (max-width: 490px) {
   .local-area-lookup {
     margin-left: -10px;
@@ -409,5 +384,38 @@ a {
   .total-bar-label {
     font-size: 1.5rem;
   }
-
 }
+@media (min-width: 490px) {
+  .headline {
+    font-size: 36px;
+    margin-bottom: 0.2em;
+  }
+}
+
+@media (min-width: 740px) {
+  .headline {
+    font-size: 42px;
+    margin-bottom: 0.2em;
+  }
+  .section-head h2 {
+    font-size: 18px;
+  }
+  .o-typography-subhead {
+    font-size: 24px;
+  }
+  .subhead {
+    font-size: 16px;
+  }
+}
+
+
+@media (min-width: 972px) {
+  .headline {
+   font-size: 48px;
+   margin-bottom: 0.2em;
+  }
+  .o-typography-subhead {
+    font-size: 28px;
+  }
+}
+
