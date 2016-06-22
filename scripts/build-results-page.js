@@ -67,8 +67,10 @@ const context = {
 };
 
 const indexHTML = nunjucks.render( 'index.html', context );
+const homepageWidget = nunjucks.render( 'homepage-widget.html', {data:nationalResults, orderedData:layoutNationalBars( nationalResults )} );
 
 fs.writeFileSync( outputLocation + 'index.html', indexHTML );
+fs.writeFileSync( outputLocation + 'homepage-widget.html', homepageWidget );
 
 //Javascript build
 const writeStream = fs.createWriteStream(outputLocation + 'js/bundle.js')

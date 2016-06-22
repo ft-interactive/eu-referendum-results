@@ -11,3 +11,7 @@ dump.rdb
 charts/build
 foo
 /tmp
+
+site/index.html
+site/bundle.js
+site/homepage-widget.html
