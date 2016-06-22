@@ -28,7 +28,6 @@ function parseBertha(error, response, berthaBody) {
          }
          build(opts);
      });
-
   }else{
       console.log('couldn\'t get bertha')
   }

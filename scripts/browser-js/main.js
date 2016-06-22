@@ -200,18 +200,25 @@ selectionDispatcher.on('select.neigbours', function(d){
 selectionDispatcher.on('select.local-context', updateBars);
 
 selectionDispatcher.on('select.map', function(d){
-    console.log(d3.select('#area-' + d.ons_id)[0][0])
-    if(d3.select('#area-' + d.ons_id)[0][0] == null) return;
-    var bounds = d3.select('#area-' + d.ons_id).node().getBBox();
-    var highlightData = [{
+
+    if(d3.select('#area-' + d.ons_id)[0][0] == null){
+        var  highlightData = [];
+    }else{
+        var bounds = d3.select('#area-' + d.ons_id).node().getBBox();
+        highlightData = [{
             cx:bounds.x + bounds.width/2,
             cy:bounds.y + bounds.height/2,
             r:Math.max(10, Math.max(bounds.height/2, bounds.width/2)),
         }];
+    }
+
+
     
     var join = mapframe.selectAll('g.highlight-area')
         .data(highlightData);
     
+    join.exit().remove();
+
     join.enter()
         .append('g').attr('class', 'highlight-area')
         .call(function(parent){
