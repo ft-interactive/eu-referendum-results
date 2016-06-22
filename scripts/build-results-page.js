@@ -25,12 +25,12 @@ function parseBertha(error, response, berthaBody) {
 
     if (!error && response.statusCode == 200) {
         opts = JSON.parse(berthaBody).options;
-        fs.writeFile(config.berthaBackup, JSON.stringify(opts));
+        fs.writeFileSync(config.berthaBackup, JSON.stringify(opts));
 
         request(config.storiesFragment, function(error, response, storiesBody){
             if (!error && response.statusCode == 200) {
                 opts.stories = storiesBody;
-                fs.writeFile( config.storiesFragmentBackup, storiesBody );
+                fs.writeFileSync( config.storiesFragmentBackup, storiesBody );
             } else {
                 opts.stories = fs.readFileSync(config.storiesFragmentBackup);
             }
