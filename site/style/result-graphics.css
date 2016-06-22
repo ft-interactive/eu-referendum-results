@@ -180,8 +180,14 @@ body {
 
 .regional-axis{
   stroke:#000;
+  stroke-opacity:0.5;
+}
+
+.regional-divider {
+  stroke:#000;
   stroke-opacity:0.2;
 }
+
 .regional-axis-label {
   font-size: 1.2rem;
   font-weight: 600;
