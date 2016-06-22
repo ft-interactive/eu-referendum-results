@@ -38,12 +38,12 @@ module.exports = function (national, regional, local){
 
 
 
-    let mostLeave = 'Stongest <span class="leave-highlight">leave</span> vote: ' + getMostLeave( local, 3 ).map(function(d){
-        return '<br><span class="place-detail">' + d.name + ' <span class="inline-value"><b>'+d3.round(d.leave_percentage_share,1)+'</b></span>%</span>';
+    let mostLeave = 'Strongest <span class="leave-highlight">leave</span> vote: ' + getMostLeave( local, 3 ).map(function(d){
+        return '<br><span class="place-detail">' + d.name + ' <span class="inline-value">'+d3.round(d.leave_percentage_share,1)+'</span>%</span>';
     }).join('');
     
     let mostRemain = 'Strongest <span class="remain-highlight">remain</span> vote: ' + getMostRemain( local, 3 ).map(function(d){
-        return '<br><span class="place-detail">' + d.name + '&nbsp;<span class="inline-value"><b>'+d3.round(d.remain_percentage_share,1)+'</b></span>%</span>';
+        return '<br><span class="place-detail">' + d.name + '&nbsp;<span class="inline-value">'+d3.round(d.remain_percentage_share,1)+'</span>%</span>';
     }).join('');
 
 
