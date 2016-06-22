@@ -302,13 +302,18 @@ body {
   stroke:#fff1e0;
 }
 
+.neighbour-label {
+  border-bottom: 1px solid #cec6b9;
+  padding-bottom: 3px;
+}
+
 .neighbour{
   cursor: pointer;
-  text-decoration: underline;
+  color: #2e6e9e;
 }
 
 .neighbour:hover{
-  font-weight: bold;
+  color: #000000;
 }
 
 /* stories */
@@ -384,11 +389,21 @@ a {
   .total-bar-label {
     font-size: 1.5rem;
   }
+  #local-map {
+    margin-bottom: -30px;
+  }
+  .location-input button {
+    width: 100%;
+    margin-top: 8px;
+  }
 }
 @media (min-width: 490px) {
   .headline {
     font-size: 36px;
     margin-bottom: 0.2em;
+  }
+  .local-area-lookup {
+    margin-top: 13px;
   }
 }
 
@@ -406,6 +421,9 @@ a {
   .subhead {
     font-size: 16px;
   }
+  .local-area-lookup {
+    margin-top: 17px;
+  }
 }
 
 
@@ -416,6 +434,9 @@ a {
   }
   .o-typography-subhead {
     font-size: 28px;
+  }
+  .local-area-lookup {
+    margin-top: 22px;
   }
 }
 
