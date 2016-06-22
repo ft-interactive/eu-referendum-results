@@ -184,6 +184,10 @@ body {
   margin-bottom: 20px;  
 }
 
+.regional-results figcaption {
+  margin-bottom: 20px;
+}
+
 /*map*/
 .land{
   fill:#000;
@@ -395,4 +399,15 @@ a {
   .article__crosshead-alt {
     font-size: 18px;
   }
+  .section-head h2 {
+    font-size: 16px;
+  }
+  .flyline {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .total-bar-label {
+    font-size: 1.5rem;
+  }
+
 }

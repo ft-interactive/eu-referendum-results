@@ -1,10 +1,3 @@
-@media (min-width: 972px) {
-  .headline {
-   font-size: 48px;
-   margin-bottom: 0.2em;
-  }
-}
-
 body {
   color: #333333;
   -webkit-font-smoothing: antialiased;
@@ -14,7 +7,7 @@ body {
   margin-top: 0;
   font-weight: 600;
   margin-bottom: 0.3em;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 .top-story {
@@ -362,4 +355,48 @@ a {
   padding-bottom: 10px;
   text-decoration: none;
   color: #2e6e9e;
+}
+
+@media (min-width: 740px) {
+  .headline {
+    font-size: 42px;
+    margin-bottom: 0.2em;
+  }
+  .section-head h2 {
+    font-size: 18px;
+  }
+  .o-typography-subhead {
+    font-size: 24px;
+  }
+  .subhead {
+    font-size: 16px;
+  }
+}
+@media (min-width: 972px) {
+  .headline {
+   font-size: 48px;
+   margin-bottom: 0.2em;
+  }
+  .o-typography-subhead {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 490px) {
+  .local-area-lookup {
+    margin-left: -10px;
+  }
+  .stories__container {
+    margin-left: 0;
+  }
+  .subhead {
+    font-size: 14px;
+  }
+  .strong-votes {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .article__crosshead-alt {
+    font-size: 18px;
+  }
 }
