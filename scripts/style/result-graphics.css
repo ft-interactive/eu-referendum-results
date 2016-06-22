@@ -2,6 +2,9 @@ body {
   color: #333333;
   -webkit-font-smoothing: antialiased;
 }
+.o-header {
+  position: relative;
+}
 
 .o-typography-subhead {
   margin-top: 0;
