@@ -95,6 +95,12 @@ function build( berthaData ){
         nationalResultData: JSON.stringify( nationalResults ),
         nationalResultChart: nationalResultChart,
         regionalBreakdownChart: regionalBreakdownChart,
+        social: {
+            title: 'EU referendum results',
+            description: 'Follow live results with the FT',
+            url: 'https://ig.ft.com/sites/elections/2016/uk/eu-referendum',
+            image: 'https://image.webservices.ft.com/v1/images/raw/ftcms:60d8274e-33e0-11e6-bda0-04585c31b153?source=ig'
+        }
     };
 
     let indexHTML = nunjucks.render( 'index_holding.html', context );
