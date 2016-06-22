@@ -46,7 +46,10 @@ module.exports = function(){
                     .attr('width', barValueScale(100))
                     .attr('height', barHeight/2);
 
-                parent.append('text').attr('class', 'bar-title');
+                parent.append('text')
+                    .attr('class', 'bar-title')
+                    .attr('dy', -5);
+                    
                 parent.append('text')
                     .attr('class', 'bar-remain-value')
                     .attr('y',barHeight)

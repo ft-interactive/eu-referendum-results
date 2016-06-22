@@ -33,7 +33,7 @@ module.exports = function(regionalResult){
 	let width = 800;
 	let height = 400;
 	let margin = {
-		top:50, left:180, bottom:5, right:5,
+		top:80, left:180, bottom:5, right:5,
 	}
 	let plotWidth = width - (margin.left + margin.right);
 	let plotHeight = height - (margin.top + margin.bottom);
@@ -113,7 +113,8 @@ module.exports = function(regionalResult){
         height: height,
         margin: margin,
 		axisLineX:barScale(0),
-		axisLineYStart:-margin.top,
+		axisLineYStart:-35,
+		superTitleY:30,
 		axisLineYEnd:height,
     };
 };

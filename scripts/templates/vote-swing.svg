@@ -1,4 +1,7 @@
 <svg class="vote-swing-chart" style="width:100%; height:100%;" width="{{ width }}" height="{{ height }}" viewBox="0 0 {{ width }} {{ height }}" preserveAspectRatio="xMidYMin meet">
+    <g transform="translate({{ axisLineX + margin.left }}, {{superTitleY}})">
+        <text text-anchor="middle" class="regional-axis-label"> Regional vote difference </text>
+    </g>
     <g transform="translate({{ margin.left }}, {{ margin.top }})">
     {% for row in series %}
         <g transform="{{ row.groupTransform }}" class="{{ row.completeClass }}">
@@ -11,7 +14,7 @@
         </g>
     {% endfor %}
         <line class="regional-axis" x1="{{ axisLineX }}" y1="{{axisLineYStart}}" x2="{{axisLineX}}" y2="{{axisLineYEnd}}"></line>
-        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="end" dy="-25" dx="-10">☜ leave votes </text>        
-        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="start" dy="-25" dx="10">remain votes ☞</text>
+        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="end" dy="-25" dx="-10">☜ more leave </text>        
+        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="start" dy="-25" dx="10"> more remain ☞</text>
     </g>
 </svg>
