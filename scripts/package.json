@@ -4,7 +4,7 @@
   "description": "build the eu referendum results page html,svg etc.",
   "main": "build-results-page.js",
   "scripts": {
-    "start": "node build-results-page.js >> log.txt",
+    "start": "node build-results-page.js",
     "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
