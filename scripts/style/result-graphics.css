@@ -139,6 +139,7 @@ body {
 
 .inline-value{
   font-feature-settings: "tnum";
+  font-weight: 600;
 }
 
 .place-detail{
@@ -519,7 +520,7 @@ a {
   .enhanced .stories__story--blurb {
     box-sizing: border-box;
     float: right;
-    padding-left: 0;
+    padding-left: 10px;
     width: calc(100% - 100px);
   }
 }
