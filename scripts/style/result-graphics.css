@@ -345,7 +345,7 @@ body {
 
 .stories__story--container{
   padding: 10px 0;
-  max-width: 167px;
+  max-width: 310px;
 }
 
 .stories__story--blurb{
@@ -362,4 +362,39 @@ a {
   padding-bottom: 10px;
   text-decoration: none;
   color: #2e6e9e;
+}
+
+@media (min-width: 350px) and (max-width: 489px) {
+	.stories__story--container {
+		max-width: 100%;
+	}
+	.core .stories__story--container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.enhanced .stories__story--container > a:after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+	.enhanced .stories__story--headline {
+		box-sizing: border-box;
+		float: right;
+		padding-left: 10px;
+		width: calc(100% - 167px);
+	}
+	.enhanced .stories__story--image {
+		float: left;
+		width: 167px;
+	}
+	.enhanced .stories__story--blurb {
+		padding-top: 10px;
+	}
+}
+
+@media (min-width: 490px) {
+	.stories__story--container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
