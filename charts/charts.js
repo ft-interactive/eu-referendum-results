@@ -54,24 +54,29 @@ const color_variants = {
 };
 
 const size_variants = {
+	default: {
+		width: 280,
+		height: 80,
+		spacing: 5
+	},
 	small: {
 		width: 400,
-		height: 65,
+		height: 80,
 		spacing: 5
 	},
 	medium: {
-		width: 500,
-		height: 85,
+		width: 645,
+		height: 80,
 		spacing: 8
 	},
 	large: {
-		width: 600,
+		width: 435,
 		height: 80,
 		spacing: 10
 	},
 	xlarge: {
-		width: 680,
-		height: 115,
+		width: 576,
+		height: 80,
 		spacing: 12
 	}
 };
