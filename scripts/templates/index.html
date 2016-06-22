@@ -195,57 +195,67 @@
               </header>
             </div>
           </div>
-        </div>
 
-        <div class="section-body body">
-            {% if not bertha.hidestandfirst %}
-            <h2>
-                {% if bertha.standfirst %}
-                {{ bertha.standfirst }}
-                {% else %}
-                {{ marginStatement }}
-                {% endif %}
-            </h2>
-            {% endif %}
-            {% if not bertha.hideleaveremain %}
             <div class="o-grid-row">
-                <div data-o-grid-colspan="12" class="standfirst">
-                    {{ leaveRemainExtremes }}                    
+                <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
+                    {% if not bertha.hidestandfirst %}
+                    <h2>
+                        {% if bertha.standfirst %}
+                        {{ bertha.standfirst }}
+                        {% else %}
+                        {{ marginStatement }}
+                        {% endif %}
+                    </h2>
+                    {% endif %}
+                    {% if not bertha.hideleaveremain %}
+                    <div class="standfirst">
+                        {{ leaveRemainExtremes }}                    
+                    </div>
                 </div>
             </div>
-            {% endif %}
-            {% if not bertha.hideregions %}
+                {% endif %}
+                {% if not bertha.hideregions %}
             <div class="o-grid-row">
-                <h2 class="o-typography-subhead">Where the vote was swung</h2>
-                <div data-o-grid-colspan="12">
-                    
-                    <p class="o-typography-body">Which areas have had the greatest effect on the outcome?</p>
-                    {{ regionalBreakdownChart }}
-                    <figcaption class="footnote">* incomplete count</figcaption>
-                </div>
-            </div> 
+                 <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
+                    <h2 class="o-typography-subhead">Where the vote was swung</h2>
+                    <div>
+                        
+                        <p class="o-typography-body">Which areas have had the greatest effect on the outcome?</p>
+                        {{ regionalBreakdownChart }}
+                        <figcaption class="footnote">* incomplete count</figcaption>
+                    </div>
+                </div> 
+            </div>
             {% endif %}
             {% if not bertha.hidemap %}
             <div class="o-grid-row">
-                <h2 class="o-typography-subhead">The vote accross the country</h2>
-                <div data-o-grid-colspan="6">
-                    <div id="local-map" data-topology-id="topo-data"></div>
-                </div>
-                <div data-o-grid-colspan="6">
-                    <div class="location-input">
-                        POSTCODE <input id="postcode-input" type="text" name="postcode" value=""><button id="postcode-search" type="">SEARCH</button>
+                <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
+                    <h2 class="o-typography-subhead">The vote accross the country</h2>
+                    <div data-o-grid-colspan="6">
+                        <div id="local-map" data-topology-id="topo-data"></div>
                     </div>
-                    <div class="postcode-message">
-                    </div>
-                    <div class="location-data">
-                    </div>
-                    <div class="neighbourhood">
-                        
+                    <div data-o-grid-colspan="6">
+                        <div class="location-input">
+                            POSTCODE <input id="postcode-input" type="text" name="postcode" value=""><button id="postcode-search" type="">SEARCH</button>
+                        </div>
+                        <div class="postcode-message">
+                        </div>
+                        <div class="location-data">
+                        </div>
+                        <div class="neighbourhood">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
             {% endif %}
-            {{ bertha.stories }}
+             <div class="o-grid-row">
+                <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
+                {{ bertha.stories }}
+                </div>
+            </div>
+
+        </div>
         </div>
 
       </article>

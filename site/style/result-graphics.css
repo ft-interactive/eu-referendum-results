@@ -1,3 +1,15 @@
+@media (min-width: 972px) {
+  .headline {
+   font-size: 48px;
+   margin-bottom: 0.4em;
+  }
+}
+
+body {
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+}
+
 .footnote{
 	line-height: 16px;	
     font-size: 14px;
