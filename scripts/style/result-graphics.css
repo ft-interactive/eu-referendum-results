@@ -385,6 +385,7 @@ a {
 	}
 	.enhanced .stories__story--image {
 		float: left;
+		width: 167px;
 	}
 	.enhanced .stories__story--blurb {
 		padding-top: 10px;
