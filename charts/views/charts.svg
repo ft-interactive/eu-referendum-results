@@ -27,6 +27,13 @@
 				<!-- Y axis rule -->
 				<!-- <line x1="0" y1="{{chart.plotArea.height * 0.15}}" x2="0" y2="{{chart.plotArea.height * 0.85}}" stroke="{{axisStroke}}" stroke-width="1"/> -->
 
+				{% if chart.subPathEndY and chart.subPathStartY %}
+					<line x1="{{chart.subPathEndX}}" y1="{{chart.subPathEndY}}"
+						 		x2="{{chart.subPathStartX}}" y2="{{chart.subPathStartY}}"
+								stroke-dasharray="{{chart.gapStrokeArray}}"
+								stroke="{{gapStroke}}" stroke-width="2"/>
+				{% endif %}
+
 				<!-- Data -->
 				<path shape-rendering="geometricPrecision" d="{{chart.data}}" fill="none" stroke="{{lineStroke}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
@@ -39,7 +46,7 @@
 				{% endif %}
 
 				{% if chart.subPathStartY %}
-					<circle cx="{{chart.subPathStartX}}" cy="{{chart.subPathStartY}}" r="3" fill="{{openCircleFill}}" stroke="{{openCircleStroke}}" stroke-width="1.5"/>
+					<circle cx="{{chart.subPathStartX}}" cy="{{chart.subPathStartY}}" r="3" fill="{{openCircleFill}}" stroke="{{upText if chart.chartIsUp else openCircleStroke}}" stroke-width="1.5"/>
 				{% endif %}
 
 			</g>
@@ -64,11 +71,11 @@
 				<text
 					transform="translate(0, {{chart.height - 3}})"
 					font-family="MetricWeb, sans-serif"
-					font-size="{{textSize}}"
+					font-size="{{textSize*0.85}}"
 					font-weight="400"
 					shape-rendering="geometricPrecision"
 					fill="{{mutedText}}">
-				Data since {{chart.xLabel}}
+					Market data from {{chart.xLabel}} to 15 mins ago
 				</text>
 			{% endif %}
 

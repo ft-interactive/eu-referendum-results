@@ -4,7 +4,7 @@
 // light weight logger
 
 const log = (app, type, message) => {
-	console.log(`[${stamp()} / ${app}] ${type.toUpperCase()}:: ${message}`);
+	console.log(`${stamp()} - ${type.toUpperCase()}:: ${message}`);
 };
 
 const stamp = () => {

@@ -21,7 +21,9 @@ const chart_default = {
 	closeCircleStroke: null,
 	closeCircleFill: null,
 	downText: null,
-	upText: null
+	upText: null,
+	metricEmbed: false,
+	gapStroke: null,
 };
 
 const color_variants = {
@@ -36,7 +38,8 @@ const color_variants = {
 		closeCircleStroke: '#ff2b21',
 		closeCircleFill: '#333333',
 		downText: '#ff767c',
-		upText: '#9cd321'
+		upText: '#9cd321',
+		gapStroke: 'rgba(0,0,0,0.5)'
 	},
 	fullpage: {
 		lineStroke: '#af516c',
@@ -49,7 +52,8 @@ const color_variants = {
 		closeCircleStroke: '#af516c',
 		closeCircleFill: '#fff1e0',
 		downText: '#cc0000',
-		upText: '#458B00'
+		upText: '#458B00',
+		gapStroke: 'rgba(0,0,0,0.3)'
 	}
 };
 
