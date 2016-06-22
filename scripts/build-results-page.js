@@ -97,8 +97,8 @@ function build( berthaData ){
         regionalBreakdownChart: regionalBreakdownChart,
     };
 
-    let indexHTML = nunjucks.render( 'index_holding.html', context );
-    let homepageWidget = nunjucks.render( 'homepage-widget_holding.html', {data:nationalResults, orderedData:layoutNationalBars( nationalResults )} );
+    let indexHTML = nunjucks.render( 'index_holding.html', { datetime: new Date() } );
+    let homepageWidget = nunjucks.render( 'homepage-widget_holding.html', {datetime: new Date()} );
 
     if(config.live){
         indexHTML = nunjucks.render( 'index.html', context );
