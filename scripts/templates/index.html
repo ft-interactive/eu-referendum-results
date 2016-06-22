@@ -8,27 +8,21 @@
     <link rel="preconnect" href="https://origami-build.ft.com/">
     <link rel="preconnect" href="https://cdn.polyfill.io/">
 
-    <!--
-      TODO: FILL IN THESE MANDATORY TAGS AND
-            REMOVE THIS COMMENT
+    <title>{{social.title}}</title>
+    <meta name="twitter:title" content="{{social.title}}">
+    <meta property="og:title" content="{{social.title}}">
 
-    <title>@@TITLE</title>
-    <meta name="twitter:title" content="@@TITLE">
-    <meta property="og:title" content="@@TITLE">
+    <meta name="description" content="{{social.description}}">
+    <meta name="twitter:description" content="{{social.description}}">
+    <meta property="og:description" content="{{social.description}}">
 
-    <meta name="description" content="@@DESCRIPTION">
-    <meta name="twitter:description" content="@@DESCRIPTION">
-    <meta property="og:description" content="@@DESCRIPTION">
+    <link rel="canonical" href="{{social.url}}">
+    <meta name="twitter:url" content="{{social.url}}">
+    <meta property="og:url" content="{{social.url}}">
 
-    <link rel="canonical" href="@@URL">
-    <meta name="twitter:url" content="@@URL">
-    <meta property="og:url" content="@@URL">
-
-    <link rel="image_src" href="@@IMAGE">
-    <meta name="twitter:image" content="@@IMAGE">
-    <meta property="og:image" content="@@IMAGE">
-    -->
-
+    <link rel="image_src" href="{{social.image}}">
+    <meta name="twitter:image" content="{{social.image}}">
+    <meta property="og:image" content="{{social.image}}">
 
     <!--
       TODO: Select Twitter card type -
@@ -167,9 +161,8 @@
                     <div class="section-head__share">
                     <div class="o-share o-share--vertical o-share--muted"
                         data-o-share-links="twitter facebook"
-                        data-o-share-links="{{links}}"
-                        data-o-share-url="{{ bertha.url }}"
-                        data-o-share-title="{{ headline }}"
+                        data-o-share-title="{{social.title}}"
+                        data-o-share-url="{{social.url}}"
                         data-o-share-relatedTwitterAccounts="@ft"
                         data-o-component="o-share">
                     </div>
