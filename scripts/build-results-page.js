@@ -25,12 +25,12 @@ function parseBertha(error, response, berthaBody) {
 
     if (!error && response.statusCode == 200) {
         opts = JSON.parse(berthaBody).options;
-        fs.writeFile(config.berthaBackup, JSON.stringify(opts));
+        fs.writeFileSync(config.berthaBackup, JSON.stringify(opts));
 
         request(config.storiesFragment, function(error, response, storiesBody){
             if (!error && response.statusCode == 200) {
                 opts.stories = storiesBody;
-                fs.writeFile( config.storiesFragmentBackup, storiesBody );
+                fs.writeFileSync( config.storiesFragmentBackup, storiesBody );
             } else {
                 opts.stories = fs.readFileSync(config.storiesFragmentBackup);
             }
@@ -103,8 +103,8 @@ function build( berthaData ){
         }
     };
 
-    let indexHTML = nunjucks.render( 'index_holding.html', context );
-    let homepageWidget = nunjucks.render( 'homepage-widget_holding.html', {data:nationalResults, orderedData:layoutNationalBars( nationalResults )} );
+    let indexHTML = nunjucks.render( 'index_holding.html', { datetime: new Date() } );
+    let homepageWidget = nunjucks.render( 'homepage-widget_holding.html', {datetime: new Date()} );
 
     if(config.live){
         indexHTML = nunjucks.render( 'index.html', context );
