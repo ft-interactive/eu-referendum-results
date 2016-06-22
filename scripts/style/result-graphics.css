@@ -363,7 +363,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: left;
-  padding-left: 10px;
+  padding-left: 0;
 }
 
 .stories__story--image img {
@@ -390,7 +390,6 @@ a {
   text-decoration: none;
   color: #2e6e9e;
 }
-
 
 @media (max-width: 490px) {
   .local-area-lookup {
@@ -454,6 +453,9 @@ a {
     padding-left: 10px;
     padding-right: 10px;
   }
+  .section-head h2 {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 740px) {
@@ -490,6 +492,9 @@ a {
 }
 
 @media (min-width: 350px) and (max-width: 489px) {
+  .stories__story {
+    padding-left: 0;
+  }
   .stories__story--container {
     max-width: 100%;
   }
@@ -497,23 +502,16 @@ a {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .enhanced .stories__story--container > a:after {
-    display: block;
-    clear: both;
-    content: "";
-  }
-  .enhanced .stories__story--headline {
-    box-sizing: border-box;
-    float: right;
-    padding-left: 10px;
-    width: calc(100% - 167px);
-  }
+  
   .enhanced .stories__story--image {
     float: left;
-    width: 167px;
+    width: 100px;
   }
   .enhanced .stories__story--blurb {
-    padding-top: 10px;
+    box-sizing: border-box;
+    float: right;
+    padding-left: 0;
+    width: calc(100% - 100px);
   }
 }
 
