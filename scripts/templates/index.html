@@ -117,7 +117,7 @@
     </style>
 
 
-    <link rel="stylesheet" href="style/result-graphics.css">
+    <link rel="stylesheet" href="style/result-graphics.css{% if cacheBuster %}?{{ cacheBuster }}{% endif %}">
 
     <link href="https://plus.google.com/113457471429583444041/" rel="publisher" />
     <meta property="fb:page_id" content="8860325749" />
@@ -345,7 +345,7 @@
     <script id="local-result-data" type="application/json">
          {{ localResultData }}
     </script>
-    <script src="js/bundle.js"></script>
+    <script src="js/bundle.js{% if cacheBuster %}?{{ cacheBuster }}{% endif %}"></script>
 
   </body>
 </html>
