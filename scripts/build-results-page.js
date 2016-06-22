@@ -20,17 +20,27 @@ console.log(config)
 request(config.bertha, parseBertha);
 
 function parseBertha(error, response, berthaBody) {
-  if (!error && response.statusCode == 200) {
-     let opts = JSON.parse(berthaBody).options;
-     request(config.storiesFragment, function(error, response, storiesBody){
-         if (!error && response.statusCode == 200) {
-             opts.stories = storiesBody;
-         }
-         build(opts);
-     });
-  }else{
-      console.log('couldn\'t get bertha')
-  }
+
+    let opts;
+
+    if (!error && response.statusCode == 200) {
+        opts = JSON.parse(berthaBody).options;
+        fs.writeFile(config.berthaBackup, JSON.stringify(opts));
+
+        request(config.storiesFragment, function(error, response, storiesBody){
+            if (!error && response.statusCode == 200) {
+                opts.stories = storiesBody;
+                fs.writeFile( config.storiesFragmentBackup, storiesBody );
+            } else {
+                opts.stories = fs.readFileSync(config.storiesFragmentBackup);
+            }
+            build(opts);
+        });
+    } else {
+        opts = JSON.parse(fs.readFileSync(config.berthaBackup));
+        opts.stories = fs.readFileSync(config.storiesFragmentBackup);
+        build(opts);
+    }
 }
 
 function build( berthaData ){
