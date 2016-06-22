@@ -1,11 +1,15 @@
 #build-results-page.js
 Script to publish results page and Falcon homepage widget for the EU referendum
 publishes to 
-ig.ft.com/sites/elections/2016/uk/eu-referendum/index.html
+`ig.ft.com/sites/elections/2016/uk/eu-referendum/index.html`
 and 
-ig.ft.com/sites/elections/2016/uk/eu-referendum/homepage-widget.html
+`ig.ft.com/sites/elections/2016/uk/eu-referendum/homepage-widget.html`
 
-```/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/html/sites/elections/2016/uk/eu-referendum/```
+the script lives here...
+`/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/scripts/euref-resultspage/`
+
+and publishes to here...
+`/var/opt/customer/apps/interactive.ftdata.co.uk/var/www/html/sites/elections/2016/uk/eu-referendum/`
 
 ##Deployment
 
