@@ -10,25 +10,46 @@ const chart_default = {
 	background: null,
 	lineStroke: null,
 	text: null,
+	mutedText: null,
 	textSize: null,
 	axisStroke: null,
 	spacing: null,
 	layout: 'horizontal',
-	show: []
+	show: [],
+	openCircleStroke: null,
+	openCircleFill: null,
+	closeCircleStroke: null,
+	closeCircleFill: null,
+	downText: null,
+	upText: null
 };
 
 const color_variants = {
 	homepage: {
 		lineStroke: '#ff2b21',
-		text: '#999999',
-		textSize: 12,
-		axisStroke: '#c2c2c2',
+		text: '#c2c2c2',
+		mutedText: '#999999',
+		textSize: 13,
+		axisStroke: '#676767',
+		openCircleStroke: '#ffffff',
+		openCircleFill: '#333333',
+		closeCircleStroke: '#ff2b21',
+		closeCircleFill: '#333333',
+		downText: '#ff767c',
+		upText: '#9cd321'
 	},
 	fullpage: {
 		lineStroke: '#af516c',
 		text: '#333333',
-		textSize: 12,
+		mutedText: '#999999',
+		textSize: 14,
 		axisStroke: '#a7a59b',
+		openCircleStroke: '#333333',
+		openCircleFill: '#fff1e0',
+		closeCircleStroke: '#af516c',
+		closeCircleFill: '#fff1e0',
+		downText: '#cc0000',
+		upText: '#458B00'
 	}
 };
 
@@ -36,36 +57,44 @@ const size_variants = {
 	small: {
 		width: 400,
 		height: 65,
-		spacing: 2
+		spacing: 5
 	},
 	medium: {
 		width: 500,
 		height: 85,
-		spacing: 5
+		spacing: 8
 	},
 	large: {
 		width: 600,
-		height: 100,
+		height: 80,
 		spacing: 10
 	},
 	xlarge: {
 		width: 680,
 		height: 115,
-		spacing: 10
+		spacing: 12
 	}
 };
 
 const symbol_variants = {
 	day: [
+		"GBPUSD",
 		"GBPEUR",
-		"USDEUR",
 		"FTSE:FSI"
 	],
 	night: [
+		"GBPUSD",
 		"GBPEUR",
-		"USDEUR",
-		"GBPUSD"
-	]
+		"USDEUR"
+	],
+	day2: [
+		"GBPUSD",
+		"FTSE:FSI"
+	],
+	night2: [
+		"GBPUSD",
+		"GBPEUR"
+	],
 };
 
 // create variants output

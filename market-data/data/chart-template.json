@@ -5,7 +5,7 @@
 			"type": "currency",
 			"yLabel": "£ vs $",
 			"xLabel": "12pm",
-			"symbolLabel": "£",
+			"symbolLabel": "$",
 			"series": []
 		},
 		{
@@ -13,7 +13,7 @@
 			"type": "currency",
 			"yLabel": "£ vs €",
 			"xLabel": "12pm",
-			"symbolLabel": "£",
+			"symbolLabel": "€",
 			"series": []
 		},
 		{
@@ -21,7 +21,7 @@
 			"type": "currency",
 			"yLabel": "$ vs €",
 			"xLabel": "12pm",
-			"symbolLabel": "$",
+			"symbolLabel": "€",
 			"series": []
 		},
 		{

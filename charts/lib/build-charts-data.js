@@ -36,7 +36,14 @@ function buildChartsData(config, data) {
 		spacing: config.spacing,
 		layout: config.layout,
 		charts: chartData,
-		metricEmbed: true
+		metricEmbed: typeof config.metricEmbed === 'boolean' ? config.metricEmbed : true,
+		mutedText: config.mutedText,
+		openCircleStroke: config.openCircleStroke,
+		openCircleFill: config.openCircleFill,
+		closeCircleStroke: config.closeCircleStroke,
+		closeCircleFill: config.closeCircleFill,
+		downText: config.downText,
+		upText: config.upText
 	};
 }
 
@@ -59,10 +66,10 @@ function buildChartData(config, chart) {
 		chart.height = chartHeight;
 	}
 	chart.margin = {
-		top: 20,
-		left: 50,
-		bottom: 0,
-		right: 50
+		top: 0,
+		left: 42,
+		bottom: 4,
+		right: 51
 	};
 	chart.plotArea = {
 		width: Math.floor(chart.width - chart.margin.left - chart.margin.right),
@@ -76,10 +83,10 @@ function buildChartData(config, chart) {
 		return (point ? point.value : null);
 	}).reverse();
 	// Pad the value domain with the difference of its values
-	const valueExtentDiff = valueExtent[0] - valueExtent[1];
+	const valueExtentDiff = (valueExtent[0] - valueExtent[1]) * .27;
 	const valueDomain = [
-		valueExtent[0] + valueExtentDiff,
-		valueExtent[1] - valueExtentDiff
+		valueExtent[0] + (valueExtent[0] * 0.0009),
+		valueExtent[1] - (valueExtent[1] * 0.004)
 	];
 
 	const dateDomain = [
@@ -90,6 +97,7 @@ function buildChartData(config, chart) {
 	const yScale = d3Scale.linear()
 		.domain(valueDomain)
 		.range([0, chart.plotArea.height]);
+		// .range([-50, chart.plotArea.height + 50]);
 
 	const xScale = d3Scale.time()
 		.domain(dateDomain)
@@ -101,8 +109,8 @@ function buildChartData(config, chart) {
 		buildLine.defined(point => point.end !== true);
 	}
 	chart.data = buildLine
-		.x(point => round_2dp(xScale(new Date(point.date))))
-		.y(point => round_2dp(Math.floor(yScale(point.value))))
+		.x(point => round_1dp(xScale(new Date(point.date))))
+		.y(point => round_1dp(yScale(point.value)))
 		(chart.series);
 
 	if (chart.type === 'index') {
@@ -131,6 +139,10 @@ function buildChartData(config, chart) {
 	chart.startY = Math.floor(yScale(chart.series[0].value));
 	chart.endY = Math.floor(yScale(chart.series[chart.series.length - 1].value));
 
+	// Position the labels
+	chart.startLabelY = Math.max((chart.startY || 0) - (config.textSize / 4), config.textSize);
+	chart.endLabelY = Math.max(chart.margin.top + (chart.endY || 0) - 2, config.textSize);
+
 	// Add the end value labels
 	chart.endValue = {};
 	if (chart.type === 'index') {
@@ -140,12 +152,12 @@ function buildChartData(config, chart) {
 	}
 
 	const percentageChange = ((lastValue - firstValue) / lastValue) * 100;
-	chart.endValue.diff = d3Format.format(',.1f')(percentageChange) + '%';
+	chart.endValue.diff = (percentageChange < 0 ? '' : '+') + d3Format.format(',.1f')(percentageChange) + '%';
 
 	if (percentageChange < 0) {
-		chart.diffColor = '#ca4050'; // Red
+		chart.diffColor = config.downText; // Red
 	} else {
-		chart.diffColor = '#09a25c'; // Green: 03ac7a
+		chart.diffColor = config.upText; // Green: 03ac7a
 	}
 
 	return chart;
@@ -208,6 +220,6 @@ function verifyChartConfig(config) {
 	return config;
 }
 
-function round_2dp(x) {
-	return Math.round(x * 100) / 100;
+function round_1dp(x) {
+	return Math.round(x * 10) / 10;
 }

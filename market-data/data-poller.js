@@ -11,7 +11,7 @@ const config = {
 		host: 'markets.ft.com', // host & path make up the api endpoint url
 		path: '/research/webservices/securities/v1/time-series?',
 		params: {
-			minuteInterval: 5, // the interval of data points
+			minuteInterval: 10, // the interval of data points
 			dayCount: 2, // how many days worth of data - today backwards
 			symbols: [ // symbols to collect market data on
 				'FTSE:FSI',
