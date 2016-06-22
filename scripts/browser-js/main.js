@@ -3,6 +3,7 @@
 var map = require('./map.js')();
 var localBarCharts = require('./local-result-bars.js');
 var colour = require('../colours.json');
+var neighbours = require('./neighbours.js');
 var find = require('lodash/find');
 var topology = JSON.parse( d3.select('#topo-data').text() );
 
@@ -171,24 +172,53 @@ d3.select('#postcode-search').on('click',function(){
                 .classed('postcode-error',true)
                 .html('Sorry: couldn&apos;t find that postcode');
         };
-    })
-})
+    });
+});
+
+selectionDispatcher.on('select.neigbours', function(d){
+    var neighbourhood = neighbours[d.ons_id].map(function(d){
+        return find(localResults, function(e){
+            return d === e.ons_id ;
+        });
+    });
+
+    var neighbourhoodJoin = d3.select('.neighbourhood')
+        .selectAll('.neighbour')
+            .data(neighbourhood.filter(function(d){ return d !== undefined; }),function(d){ return d.ons_id; });
+    
+    neighbourhoodJoin.exit().remove();
+
+    neighbourhoodJoin.enter()
+        .append('div')
+            .attr('class','neighbour')
+            .text(function(d){ return d.name; })
+            .on('click', function(d){
+                selectionDispatcher.select(d);
+            });
+});
 
 selectionDispatcher.on('select.local-context', updateBars);
 
 selectionDispatcher.on('select.map', function(d){
-    console.log(d3.select('#area-' + d.ons_id)[0][0])
-    if(d3.select('#area-' + d.ons_id)[0][0] == null) return;
-    var bounds = d3.select('#area-' + d.ons_id).node().getBBox();
-    var highlightData = [{
+
+    if(d3.select('#area-' + d.ons_id)[0][0] == null){
+        var  highlightData = [];
+    }else{
+        var bounds = d3.select('#area-' + d.ons_id).node().getBBox();
+        highlightData = [{
             cx:bounds.x + bounds.width/2,
             cy:bounds.y + bounds.height/2,
             r:Math.max(10, Math.max(bounds.height/2, bounds.width/2)),
         }];
+    }
+
+
     
     var join = mapframe.selectAll('g.highlight-area')
         .data(highlightData);
     
+    join.exit().remove();
+
     join.enter()
         .append('g').attr('class', 'highlight-area')
         .call(function(parent){
