@@ -2,6 +2,8 @@
 *.sublime-project
 *.sublime-workspace
 *.log
+*.tgz
+*.pyc
 
 node_modules
 npm-debug.log
@@ -9,23 +11,17 @@ npm-debug.log
 dump.rdb
 
 charts/build
+foo
+/tmp
 
 site/index.html
 site/bundle.js
 site/homepage-widget.html
 
-
-*.tgz
-*.pyc
-
 scripts/log.txt
-
 scripts/euref-resultspage.tgz
-
 site/index.html
-
 site/homepage-widget.html
-
 scripts/euref-resultspage.tgz
 
 backup/storiesFragment.html

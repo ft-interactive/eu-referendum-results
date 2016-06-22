@@ -3,6 +3,6 @@
 module.exports = handleError;
 
 function handleError(error) {
-	console.error('Chart generation failed:', error.message);
+	console.error('Chart generation failed:', error.stack);
 	process.exit(1);
 }
