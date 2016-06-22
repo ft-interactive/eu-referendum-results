@@ -11,11 +11,12 @@ body {
 }
 
 .top-story {
-  margin-bottom: 10px;
+  float: right;
 }
 
 .section-head {
   padding-bottom: 10px;
+  overflow: hidden;
 }
 
 .section-head h2 {
@@ -39,6 +40,23 @@ body {
   margin-top: 0;
   font-family: Georgia, serif;
   font-size: 18px;
+}
+
+.top-story .flyline__link {
+  color: #2e6e9e;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.top-story .flyline__link:after {
+  content: " ";
+  background: url('https://image.webservices.ft.com/v1/images/raw/fticon:arrow-right?height=36&tint=2e6e9e,2e6e9e&source=ig') no-repeat center center;
+  background-size: 20px 20px;
+  float: right;
+  width: 20px;
+  height: 24px;
+  margin: 0;
 }
 
 .footnote{
@@ -395,6 +413,17 @@ a {
   .location-input button {
     width: 100%;
     margin-top: 8px;
+  }
+  .footnote {
+    margin-bottom: 0;
+  }
+  .top-story .flyline__link {
+    font-size: 16px;
+  }
+  .top-story .flyline__link:after {
+    background-size: 16px 16px;
+    width: 16px;
+    height: 20px;
   }
 }
 @media (min-width: 490px) {
