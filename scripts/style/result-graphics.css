@@ -196,6 +196,15 @@
     color: #8b572a;
 }
 
+.neighbour{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.neighbour:hover{
+	font-weight: bold;
+}
+
 /* stories */
 
 .stories__container{
