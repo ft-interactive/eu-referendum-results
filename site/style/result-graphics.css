@@ -1,7 +1,7 @@
 @media (min-width: 972px) {
   .headline {
    font-size: 48px;
-   margin-bottom: 0.4em;
+   margin-bottom: 0.2em;
   }
 }
 
@@ -25,6 +25,14 @@ body {
   padding-bottom: 10px;
 }
 
+.section-head h2 {
+  font-weight: 400;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  color: #505050;
+  margin-bottom: 0.7em;
+}
+
 .strong-votes {
   font-size: 20px;
   font-weight: 600;
@@ -42,11 +50,18 @@ body {
 
 .footnote{
   line-height: 16px;  
-    font-size: 14px;
-    font-weight: 400;
-    font-style: italic;
-    margin-top: .3em;
-    margin-bottom: .8em;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: .3em;
+  margin-bottom: .8em;
+  display: inline-block;
+}
+
+.updated{
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #8b572a;
+  display: inline-block;
 }
 
 /* national results */
@@ -171,6 +186,15 @@ body {
   font-size: 1.2rem;
 }
 
+.regional-results {
+  border-bottom: 1px solid #cec6b9;
+  margin-bottom: 20px;  
+}
+
+.regional-results figcaption {
+  margin-bottom: 20px;
+}
+
 /*map*/
 .land{
   fill:#000;
@@ -213,6 +237,35 @@ body {
 }
 
 /* local result */
+
+.local-area-lookup {
+  background-color: #f6e9d8;
+  padding: 12px;
+}
+
+.location-input {
+  font-size: 18px;
+}
+.location-input input {
+    line-height: 30px;
+    font-size: 16px;
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+    padding-left: 28px;
+    margin-right: 4px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: #fff url(https://image.webservices.ft.com/v1/images/raw/fticon:search?width=13&source=ge15) no-repeat 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .location-input button {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
 .postcode-message{
   display: none;
 }
@@ -221,32 +274,36 @@ body {
   display: block;
 }
 
+.location-data {
+  margin-top: 10px;
+}
+
 .bar-background{
   fill:#000;
   fill-opacity: 0.2
 }
 
+.local-result-chart .context-bar:first-child .bar-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  
+}
 .bar-title{
   font-size: 26px;
 }
 
 .bar-remain-value{
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .bar-leave-value{
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .local-bar-axis{
   stroke-width:2px;
   stroke:#fff1e0;
-}
-
-.updated{
-    font-size: 12px;
-  text-transform: uppercase;
-    color: #8b572a;
 }
 
 .neighbour{

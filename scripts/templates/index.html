@@ -105,7 +105,7 @@
         addScript('https://cdn.polyfill.io/v2/polyfill.min.js');    
     </script>
 
-    <link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=o-fonts@^2.1.2,o-grid@^4.0.10">
+    <link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=o-fonts@^2.1.2,o-grid@^4.0.10,o-buttons@^4.0.1">
     <link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=ig-article@^1.0.0-alpha.3">
 
 
@@ -185,7 +185,17 @@
                     {% else %}
                         {{ headline }}
                     {% endif %}
+
                 </h1>
+                 {% if not bertha.hidestandfirst %}
+                    
+                    {% if bertha.standfirst %}
+                    {{ bertha.standfirst }}
+                    {% else %}
+                    {{ marginStatement }}
+                    {% endif %}
+                
+                {% endif %}
                 {% if not bertha.hidenationalbars %}
                 <div class="standfirst">
                     {{ nationalResultChart }}
@@ -218,7 +228,7 @@
             <div class="o-grid-row">
                  <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
                     <h2 class="o-typography-subhead">Where the vote was swung</h2>
-                    <div>
+                    <div class="regional-results">
                         <p class="o-typography-body subhead">Which areas have had the greatest effect on the outcome?</p>
                         {{ regionalBreakdownChart }}
                         <figcaption class="footnote">* incomplete count</figcaption>
@@ -229,20 +239,21 @@
             {% if not bertha.hidemap %}
             <div class="o-grid-row">
                 <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
-                    <h2 class="o-typography-subhead">The vote accross the country</h2>
-                    <div data-o-grid-colspan="6">
+                    <h2 class="o-typography-subhead">The vote across the country</h2>
+                    <div data-o-grid-colspan="12 M7">
                         <div id="local-map" data-topology-id="topo-data"></div>
                     </div>
-                    <div data-o-grid-colspan="6">
-                        <div class="location-input">
-                            POSTCODE <input id="postcode-input" type="text" name="postcode" value=""><button id="postcode-search" type="">SEARCH</button>
-                        </div>
-                        <div class="postcode-message">
-                        </div>
-                        <div class="location-data">
-                        </div>
-                        <div class="neighbourhood">
-                            
+                    <div  data-o-grid-colspan="12 M5">
+                        <div class="local-area-lookup">
+                            <div class="location-input">
+                                Find your local area <input id="postcode-input" type="search" name="postcode" placeholder="Postcode search" value=""><button class="o-buttons o-buttons--standout" id="postcode-search" type="">Search postcode</button>
+                            </div>
+                            <div class="postcode-message">
+                            </div>
+                            <div class="location-data">
+                            </div>
+                            <div class="neighbourhood">
+                            </div>
                         </div>
                     </div>
                 </div>
