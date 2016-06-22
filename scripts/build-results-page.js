@@ -83,6 +83,7 @@ function build( berthaData ){
 
     const context = {
         bertha: berthaData,
+        cacheBuster: config.version,
         datetime: String(new Date()),
         headline: words.headline,
         marginStatement: words.marginStatement,
