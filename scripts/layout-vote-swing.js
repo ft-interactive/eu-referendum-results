@@ -113,7 +113,7 @@ module.exports = function(regionalResult){
         height: height,
         margin: margin,
 		axisLineX:barScale(0),
-		axisLineYStart:-35,
+		axisLineYStart:-23,
 		superTitleY:30,
 		axisLineYEnd:height,
     };

@@ -178,13 +178,28 @@ body {
   fill-opacity: 0.5;
 }
 
-.regional-axis{
+.regional-divider {
   stroke:#000;
   stroke-opacity:0.2;
 }
 
+.regional-divider:last-child {
+  
+}
+
+.regional-axis {
+  stroke:#000;
+  stroke-opacity:0.5;
+}
+
+.regional-axis-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 .bar-header{
-  font-size: 1.5rem;
+  fill: #505050;
+  font-size: 1rem;
 }
 
 .vote-figure{
@@ -274,7 +289,7 @@ body {
 
   .location-input button {
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     display: block;
   }
 }

@@ -11,11 +11,12 @@ body {
 }
 
 .top-story {
-  margin-bottom: 10px;
+  float: right;
 }
 
 .section-head {
   padding-bottom: 10px;
+  overflow: hidden;
 }
 
 .section-head h2 {
@@ -39,6 +40,23 @@ body {
   margin-top: 0;
   font-family: Georgia, serif;
   font-size: 18px;
+}
+
+.top-story .flyline__link {
+  color: #2e6e9e;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.top-story .flyline__link:after {
+  content: " ";
+  background: url('https://image.webservices.ft.com/v1/images/raw/fticon:arrow-right?height=36&tint=2e6e9e,2e6e9e&source=ig') no-repeat center center;
+  background-size: 20px 20px;
+  float: right;
+  width: 20px;
+  height: 24px;
+  margin: 0;
 }
 
 .footnote{
@@ -164,9 +182,14 @@ body {
   stroke:#000;
   stroke-opacity:0.2;
 }
+.regional-axis-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
 
 .bar-header{
-  font-size: 1.5rem;
+  fill: #505050;
+  font-size: 1rem;
 }
 
 .vote-figure{
@@ -247,7 +270,7 @@ body {
     border-radius: 5px;
     padding-left: 28px;
     margin-right: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-top: 10px;
     background: #fff url(https://image.webservices.ft.com/v1/images/raw/fticon:search?width=13&source=ge15) no-repeat 10px;
     width: 100%;
@@ -283,8 +306,8 @@ body {
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 10px;
-  
 }
+
 .bar-title{
   font-size: 26px;
 }
@@ -299,16 +322,21 @@ body {
 
 .local-bar-axis{
   stroke-width:2px;
-  stroke:#fff1e0;
+  stroke:#f6e9d8;
+}
+
+.neighbour-label {
+  border-bottom: 1px solid #cec6b9;
+  padding-bottom: 3px;
 }
 
 .neighbour{
   cursor: pointer;
-  text-decoration: underline;
+  color: #2e6e9e;
 }
 
 .neighbour:hover{
-  font-weight: bold;
+  color: #000000;
 }
 
 /* stories */
@@ -390,6 +418,20 @@ a {
   .location-input button {
     width: 100%;
     margin-top: 8px;
+  }
+  .footnote {
+    margin-bottom: 0;
+  }
+  .top-story .flyline__link {
+    font-size: 16px;
+  }
+  .top-story .flyline__link:after {
+    background-size: 16px 16px;
+    width: 16px;
+    height: 20px;
+  }
+  .location-input input {
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 490px) {

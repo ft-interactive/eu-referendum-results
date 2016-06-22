@@ -1,11 +1,11 @@
 <svg class="vote-swing-chart" style="width:100%; height:100%;" width="{{ width }}" height="{{ height }}" viewBox="0 0 {{ width }} {{ height }}" preserveAspectRatio="xMidYMin meet">
     <g transform="translate({{ axisLineX + margin.left }}, {{superTitleY}})">
-        <text text-anchor="middle" class="regional-axis-label"> Regional vote difference </text>
+        <text text-anchor="middle" class="regional-axis-label" dy="15"> Regional vote difference </text>
     </g>
     <g transform="translate({{ margin.left }}, {{ margin.top }})">
     {% for row in series %}
         <g transform="{{ row.groupTransform }}" class="{{ row.completeClass }}">
-            <line class="regional-axis" x1="-{{ margin.left }}" x1="{{ row.underline.x1 }}" y1="{{ row.underline.y1 }}" x2="{{ row.underline.x2 }}" y2="{{ row.underline.y2 }}"></line>
+            <line class="regional-divider" x1="-{{ margin.left }}" x1="{{ row.underline.x1 }}" y1="{{ row.underline.y1 }}" x2="{{ row.underline.x2 }}" y2="{{ row.underline.y2 }}"></line>
             <rect x="{{ row.barX }}" y="{{ row.barY }}" width="{{ row.barWidth }}" height="{{ row.barHeight }}" fill="{{ row.barFill }}"></rect>
             <text class="vote-figure" text-anchor="{{ row.valueLabelAnchor }}" transform="{{ row.valueLabelTransform }}" dx="{{ row.valueLabelDx }}" dy="{{ row.valueLabelDy }}">
                 {{ row.valueLabel }}
@@ -14,7 +14,7 @@
         </g>
     {% endfor %}
         <line class="regional-axis" x1="{{ axisLineX }}" y1="{{axisLineYStart}}" x2="{{axisLineX}}" y2="{{axisLineYEnd}}"></line>
-        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="end" dy="-25" dx="-10">☜ more leave </text>        
-        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="start" dy="-25" dx="10"> more remain ☞</text>
+        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="end" dy="-10" dx="-10"> more leave </text>        
+        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="start" dy="-10" dx="10"> more remain </text>
     </g>
 </svg>
