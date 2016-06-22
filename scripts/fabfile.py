@@ -37,4 +37,4 @@ def update_config():
 @task
 def run_app():
   with cd(location):
-    sudo('npm run start')
+    run('npm run start')

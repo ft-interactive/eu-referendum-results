@@ -1,0 +1,36 @@
+{
+	"charts": [
+		{
+			"symbol": "GBPUSD",
+			"type": "currency",
+			"yLabel": "£ vs $",
+			"xLabel": "12pm",
+			"symbolLabel": "$",
+			"series": []
+		},
+		{
+			"symbol": "GBPEUR",
+			"type": "currency",
+			"yLabel": "£ vs €",
+			"xLabel": "12pm",
+			"symbolLabel": "€",
+			"series": []
+		},
+		{
+			"symbol": "USDEUR",
+			"type": "currency",
+			"yLabel": "$ vs €",
+			"xLabel": "12pm",
+			"symbolLabel": "€",
+			"series": []
+		},
+		{
+			"symbol": "FTSE:FSI",
+			"type": "index",
+			"yLabel": "FTSE\n100",
+			"xLabel": "12pm",
+			"symbolLabel": "",
+			"series": []
+		}
+	]
+}

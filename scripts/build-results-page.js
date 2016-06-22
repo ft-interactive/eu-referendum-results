@@ -20,17 +20,27 @@ console.log(config)
 request(config.bertha, parseBertha);
 
 function parseBertha(error, response, berthaBody) {
-  if (!error && response.statusCode == 200) {
-     let opts = JSON.parse(berthaBody).options;
-     request(config.storiesFragment, function(error, response, storiesBody){
-         if (!error && response.statusCode == 200) {
-             opts.stories = storiesBody;
-         }
-         build(opts);
-     });
-  }else{
-      console.log('couldn\'t get bertha')
-  }
+
+    let opts;
+
+    if (!error && response.statusCode == 200) {
+        opts = JSON.parse(berthaBody).options;
+        fs.writeFileSync(config.berthaBackup, JSON.stringify(opts));
+
+        request(config.storiesFragment, function(error, response, storiesBody){
+            if (!error && response.statusCode == 200) {
+                opts.stories = storiesBody;
+                fs.writeFileSync( config.storiesFragmentBackup, storiesBody );
+            } else {
+                opts.stories = fs.readFileSync(config.storiesFragmentBackup);
+            }
+            build(opts);
+        });
+    } else {
+        opts = JSON.parse(fs.readFileSync(config.berthaBackup));
+        opts.stories = fs.readFileSync(config.storiesFragmentBackup);
+        build(opts);
+    }
 }
 
 function build( berthaData ){
@@ -73,6 +83,7 @@ function build( berthaData ){
 
     const context = {
         bertha: berthaData,
+        cacheBuster: config.version,
         datetime: String(new Date()),
         headline: words.headline,
         marginStatement: words.marginStatement,
@@ -86,8 +97,8 @@ function build( berthaData ){
         regionalBreakdownChart: regionalBreakdownChart,
     };
 
-    let indexHTML = nunjucks.render( 'index_holding.html', context );
-    let homepageWidget = nunjucks.render( 'homepage-widget_holding.html', {data:nationalResults, orderedData:layoutNationalBars( nationalResults )} );
+    let indexHTML = nunjucks.render( 'index_holding.html', { datetime: new Date() } );
+    let homepageWidget = nunjucks.render( 'homepage-widget_holding.html', {datetime: new Date()} );
 
     if(config.live){
         indexHTML = nunjucks.render( 'index.html', context );
