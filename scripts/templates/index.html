@@ -191,24 +191,24 @@
                     {{ nationalResultChart }}
                 </div>
                 {% endif %}
-                <div><a href="{{ bertha.toplinkurl }}" class="flyline__link">{{ bertha.toplinktext}}</a></div>
+                <div class="top-story"><a href="{{ bertha.toplinkurl }}" class="flyline__link">{{ bertha.toplinktext}}</a></div>
               </header>
             </div>
           </div>
 
             <div class="o-grid-row">
-                <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
+                <div class="body-section" data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
                     {% if not bertha.hidestandfirst %}
-                    <h2>
+                    
                         {% if bertha.standfirst %}
                         {{ bertha.standfirst }}
                         {% else %}
                         {{ marginStatement }}
                         {% endif %}
-                    </h2>
+                    
                     {% endif %}
                     {% if not bertha.hideleaveremain %}
-                    <div class="standfirst">
+                    <div class="standfirst strong-votes">
                         {{ leaveRemainExtremes }}                    
                     </div>
                 </div>
@@ -219,8 +219,7 @@
                  <div data-o-grid-colspan="12 S11 Scenter M9 L8 XL7">
                     <h2 class="o-typography-subhead">Where the vote was swung</h2>
                     <div>
-                        
-                        <p class="o-typography-body">Which areas have had the greatest effect on the outcome?</p>
+                        <p class="o-typography-body subhead">Which areas have had the greatest effect on the outcome?</p>
                         {{ regionalBreakdownChart }}
                         <figcaption class="footnote">* incomplete count</figcaption>
                     </div>

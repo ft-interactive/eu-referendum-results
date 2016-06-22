@@ -10,8 +10,38 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.o-typography-subhead {
+  margin-top: 0;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+  font-size: 28px;
+}
+
+.top-story {
+  margin-bottom: 10px;
+}
+
+.section-head {
+  padding-bottom: 10px;
+}
+
+.strong-votes {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  overflow: hidden;
+  border-bottom: 1px solid #cec6b9;
+  padding-bottom: 20px;
+}
+
+.subhead {
+  margin-top: 0;
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
 .footnote{
-	line-height: 16px;	
+  line-height: 16px;  
     font-size: 14px;
     font-weight: 400;
     font-style: italic;
@@ -22,84 +52,96 @@ body {
 /* national results */
 .total-bar {
     box-sizing: border-box;
-	display: inline-block;
-	vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
 
 
 .total-bar-label {
-	font-weight: 200;
-	font-family: MetricWeb, sans-serif;
-	font-size: 2rem;
-	vertical-align: top;
-	display: inline-block;
-	padding: 0 10px;
+  font-weight: 200;
+  font-family: MetricWeb, sans-serif;
+  font-size: 2rem;
+  vertical-align: top;
+  display: inline-block;
+  padding: 0 10px;
 }
 
 
 .national-figure{
-	font-weight:600;
+  font-weight:600;
 }
 
 .national-item {
-	display: block;
+  display: block;
 }
 
 .win {
-	order: 1;
+  order: 1;
 }
 
 .lose {
-	order: 2;
+  order: 2;
 }
 
 .total-bar {
-	height: 35px;
+  height: 35px;
     box-sizing: border-box;
-	display: inline-block;
-	vertical-align: top;
-	margin-bottom:4px;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom:4px;
 }
 
 .total-bar-label {
-	font-family: MetricWeb, sans-serif;
-	vertical-align: top;
-	display: inline-block;
-	line-height: 35px;
-	padding: 0 10px;
+  font-family: MetricWeb, sans-serif;
+  vertical-align: top;
+  display: inline-block;
+  line-height: 35px;
+  padding: 0 10px;
 }
 
 /* summary text*/
 .leave-highlight, 
 .remain-highlight{
-	font-weight: bold;
+  font-weight: 600;
 }
 
 .leave-highlight{
-	color:#2fad89;
+  color:#0d8a66;
 }
 
 .remain-highlight{
-	color:#4366af;
+  color:#2a4a8c;
 }
 
 .inline-value{
-	font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
 }
 
 .place-detail{
-	font-weight: 200;
-	padding-left: 20px;
-	font-family: MetricWeb, sans-serif;	
+  font-weight: 400;
+  font-family: MetricWeb, sans-serif; 
 }
 
+.body-section .standfirst div{
+  padding-left: 0;
+}
+
+.body-section .standfirst div:last-child {
+  padding-left: 20px;
+  border-left: 1px solid #cec6b9;
+}
+
+.body-section {
+  padding-bottom: 12px;
+  margin-top: -4px;
+}
 .body .standfirst-list{
-	list-style-type: none;
-	padding-left: 0px;
+  list-style-type: none;
+  padding-left: 0px;
 }
 
 .body .standfirst-list li{
-	padding-bottom: 10px;
+  padding-bottom: 10px;
     margin-left: 0px;
     padding-left: 0px;
 }
@@ -107,64 +149,63 @@ body {
 /* regional results */
 
 .count-incomplete{
-	fill-opacity: 0.5;
+  fill-opacity: 0.5;
 }
 
 .regional-axis{
-	stroke:#000;
-	stroke-opacity:0.2;
+  stroke:#000;
+  stroke-opacity:0.2;
 }
 
 .bar-header{
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .vote-figure{
-	font-weight: 600;
-	font-feature-settings: "tnum";
-	font-size: 1.1rem;
+  font-weight: 600;
+  font-feature-settings: "tnum";
+  font-size: 1.1rem;
 }
 
 .region-label{
-	font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /*map*/
 .land{
-	fill:#000;
-	fill-opacity: 0.1;
-	stroke: #000;
-	stroke-opacity:0.1;
-	stroke-width:1.5px;
-	stroke-linejoin: round;
+  fill:#000;
+  fill-opacity: 0.1;
+  stroke: #000;
+  stroke-opacity:0.1;
+  stroke-width:1.5px;
+  stroke-linejoin: round;
 }
 
 .area{
-	stroke-width:0.2;
-	stroke: #fff1e0;
-	stroke-opacity:0.2;
-	cursor: pointer;
+  stroke-width:0.2;
+  stroke: #fff1e0;
+  stroke-opacity:0.2;
+  cursor: pointer;
 }
 
 .map-frame{
-	stroke:#000;
-	stroke-width:1px;
-	stroke-opacity:0.5;
-	fill:none;
+  stroke:#cec6b9;
+  stroke-width:1px;
+  fill:none;
 }
 
 .highlight-background{
-	pointer-events: none;
-	stroke-width:6px;
-	stroke:#FFF;
-	fill:none;
+  pointer-events: none;
+  stroke-width:6px;
+  stroke:#FFF;
+  fill:none;
 }
 
 .highlight-foreground{
-	pointer-events: none;
-	stroke-width:2px;
-	stroke:#000;
-	fill:none;
+  pointer-events: none;
+  stroke-width:2px;
+  stroke:#000;
+  fill:none;
 }
 
 .map-label{
@@ -173,48 +214,48 @@ body {
 
 /* local result */
 .postcode-message{
-	display: none;
+  display: none;
 }
 
 .postcode-error{
-	display: block;
+  display: block;
 }
 
 .bar-background{
-	fill:#000;
-	fill-opacity: 0.2
+  fill:#000;
+  fill-opacity: 0.2
 }
 
 .bar-title{
-	font-size: 26px;
+  font-size: 26px;
 }
 
 .bar-remain-value{
-	font-size: 26px;
+  font-size: 26px;
 }
 
 .bar-leave-value{
-	font-size: 26px;
+  font-size: 26px;
 }
 
 .local-bar-axis{
-	stroke-width:2px;
-	stroke:#fff1e0;
+  stroke-width:2px;
+  stroke:#fff1e0;
 }
 
 .updated{
     font-size: 12px;
-	text-transform: uppercase;
+  text-transform: uppercase;
     color: #8b572a;
 }
 
 .neighbour{
-	cursor: pointer;
-	text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .neighbour:hover{
-	font-weight: bold;
+  font-weight: bold;
 }
 
 /* stories */
