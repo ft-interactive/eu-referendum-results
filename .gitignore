@@ -9,3 +9,5 @@ npm-debug.log
 dump.rdb
 
 charts/build
+foo
+/tmp
