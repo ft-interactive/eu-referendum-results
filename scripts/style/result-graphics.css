@@ -372,23 +372,15 @@ a {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
-	.enhanced .stories__story--container > a:after {
-		display: block;
-		clear: both;
-		content: "";
+	.enhanced .stories__story--image {
+		float: left;
+		width: 100px;
 	}
-	.enhanced .stories__story--headline {
+	.enhanced .stories__story--blurb {
 		box-sizing: border-box;
 		float: right;
 		padding-left: 10px;
-		width: calc(100% - 167px);
-	}
-	.enhanced .stories__story--image {
-		float: left;
-		width: 167px;
-	}
-	.enhanced .stories__story--blurb {
-		padding-top: 10px;
+		width: calc(100% - 100px);
 	}
 }
 
