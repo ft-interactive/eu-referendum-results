@@ -191,6 +191,10 @@ body {
   margin-bottom: 20px;  
 }
 
+.regional-results figcaption {
+  margin-bottom: 20px;
+}
+
 /*map*/
 .land{
   fill:#000;
@@ -237,6 +241,7 @@ body {
 .local-area-lookup {
   background-color: #f6e9d8;
   padding: 12px;
+  border-bottom: 1px solid #cec6b9;
 }
 
 .location-input {
@@ -272,12 +277,14 @@ body {
 
 .location-data {
   margin-top: 10px;
+  margin-bottom: -40px;
 }
 
 .bar-background{
   fill:#000;
   fill-opacity: 0.2
 }
+
 
 .local-result-chart .context-bar:first-child .bar-title {
   font-size: 36px;
@@ -313,6 +320,11 @@ body {
 
 /* stories */
 
+.article__crosshead-alt {
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
 .stories__container{
   background-color: #f6e9d8;
   padding: 0 10px;
@@ -324,6 +336,11 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: left;
+  padding-left: 10px;
+}
+
+.stories__story--image img {
+  width: 100%;
 }
 
 .stories__story--container{
