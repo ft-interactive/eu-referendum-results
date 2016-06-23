@@ -356,6 +356,14 @@ body {
   color: #000000;
 }
 
+.remain-flag{
+  color: #4366af;
+}
+
+.leave-flag{
+  color: #2fad89;
+}
+
 /* full table */
 .full-area-results{
   width:100%;
