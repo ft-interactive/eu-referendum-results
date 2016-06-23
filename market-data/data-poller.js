@@ -92,7 +92,7 @@ const getMarketsData = (cb) => {
 		req.abort();
 	});
 
-	req.setTimeout(5000);
+	req.setTimeout(4500);
 	req.end();
 };
 

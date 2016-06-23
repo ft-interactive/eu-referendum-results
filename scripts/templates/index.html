@@ -222,7 +222,7 @@
                 {% if not bertha.hideregions %}
             <div class="o-grid-row">
                  <div data-o-grid-colspan="12 S12 Scenter M9 L8">
-                    <h2 class="o-typography-subhead">Where the vote was swung</h2>
+                    <h2 class="o-typography-subhead">Which regions swung the vote?</h2>
                     <div class="regional-results">
                         <p class="o-typography-body subhead">Which areas have had the greatest effect on the outcome?</p>
                         {{ regionalBreakdownChart }}
@@ -252,6 +252,18 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            {% endif %}
+            {% if not bertha.hidefulltable %}
+            <div class="o-grid-row">
+                <div data-o-grid-colspan="12 S12 Scenter M9 L8">
+                    <h2 class="o-typography-subhead">Complete results breakdown</h2>
+                </div>
+            </div>
+            <div class="o-grid-row">
+                <div data-o-grid-colspan="12 S11 Scenter M9 L8">
+                    {{ fullTable }}
                 </div>
             </div>
             {% endif %}

@@ -11,9 +11,8 @@ module.exports = buildChartsData;
 
 function buildChartsData(config, data) {
 	config = verifyChartConfig(config);
-	config.maxCharts = 3;
 	let chartData = data.charts;
-
+	config.maxCharts = Math.min(3, config.show.length);
 	chartData = chartData.filter((chart) => {
 		if (config.show.indexOf(chart.symbol) >= 0) {
 			return chart;
@@ -43,7 +42,8 @@ function buildChartsData(config, data) {
 		closeCircleStroke: config.closeCircleStroke,
 		closeCircleFill: config.closeCircleFill,
 		downText: config.downText,
-		upText: config.upText
+		upText: config.upText,
+		gapStroke: config.gapStroke
 	};
 }
 
@@ -82,11 +82,11 @@ function buildChartData(config, chart) {
 	const valueExtent = d3Array.extent(chart.series, point => {
 		return (point ? point.value : null);
 	}).reverse();
+
 	// Pad the value domain with the difference of its values
-	const valueExtentDiff = (valueExtent[0] - valueExtent[1]) * .27;
 	const valueDomain = [
 		valueExtent[0] + (valueExtent[0] * 0.0009),
-		valueExtent[1] - (valueExtent[1] * 0.004)
+		valueExtent[1] - (valueExtent[1] * 0.002)
 	];
 
 	const dateDomain = [
@@ -132,6 +132,14 @@ function buildChartData(config, chart) {
 
 			chart.subPathStartY = yScale(gaps[1].value);
 			chart.subPathStartX = xScale(new Date(gaps[1].date));
+
+			const gapLength = Math.sqrt(Math.pow(chart.subPathStartX-chart.subPathEndX,2)+Math.pow(chart.subPathStartY-chart.subPathEndY,2));
+			const dashSize = Math.min(Math.max(Math.round(gapLength / 20), 2), 8);
+			chart.gapStrokeArray = [dashSize, dashSize].join(', ');
+			if (chart.subPathEndY > chart.subPathStartY * .01) {
+				config.gapStroke = config.upText;
+				chart.chartIsUp = true;
+			}
 		}
 	}
 

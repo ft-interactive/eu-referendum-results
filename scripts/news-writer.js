@@ -34,9 +34,6 @@ module.exports = function (national, regional, local){
     }else{
         marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value percent">${Math.abs(margin).toFixed(1)}</span>% (<span class="inline-value absolute">${commas( Math.abs(votes_margin) )}</span>&nbsp;votes)`;
     }
-    console.log(national.number_of_results < national.total_voting_areas);
-
-
 
     let mostLeave = 'Strongest <span class="leave-highlight">leave</span> vote: ' + getMostLeave( local, 3 ).map(function(d){
         return '<br><span class="place-detail">' + d.name + ' <span class="inline-value">'+d3.round(d.leave_percentage_share,1)+'</span>%</span>';
