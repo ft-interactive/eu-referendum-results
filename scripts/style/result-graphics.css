@@ -267,11 +267,12 @@ body {
     display: block;
   }
 }
+
 .postcode-message{
   display: none;
 }
 
-.postcode-error{
+.postcode-error.postcode-message{
   display: block;
 }
 
