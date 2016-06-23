@@ -1,0 +1,62 @@
+{
+  "switchTabEvery": {{ switchTabEvery | default("4500", true) }},
+  "updateDataEvery": {{ updateDataEvery | default("60000", true) }},
+  "bigLink": {
+    "text": "{{bigLinkText | default("Live results", true) }}",
+    "url": "{{bigLinkUrl | default(resultsUrl, true) }}"
+  },
+  "tabs": [
+
+{% for tab in tabs %}
+
+  {% if tab == "markets" %}{
+    "title": "Markets",
+    "link": "http://markets.ft.com/data",
+    "type": "svgs",
+    "data": {
+
+      {% set DEFAULT %}{% include svgDir + "/" + def + ".svg" ignore missing %}{% endset %}
+      {% set S %}{% include svgDir + "/" + small + ".svg" ignore missing %}{% endset %}
+      {% set M %}{% include svgDir + "/" + medium + ".svg" ignore missing %}{% endset %}
+      {% set L %}{% include svgDir + "/" + large + ".svg" ignore missing %}{% endset %}
+      {% set XL %}{% include svgDir + "/" + xlarge + ".svg" ignore missing %}{% endset %}
+
+      "default": "{{ DEFAULT | default('') | replace(r/[\n\r\t]+/g, ' ') | replace(r/\"/g, '\\\"') | safe }}",
+      "S": "{{ S | default('') | replace(r/[\n\r\t]+/g, ' ') | replace(r/\"/g, '\\\"') | safe }}",
+      "M": "{{ M | default('') | replace(r/[\n\r\t]+/g, ' ') | replace(r/\"/g, '\\\"') | safe }}",
+      "L": "{{ L | default('') | replace(r/[\n\r\t]+/g, ' ') | replace(r/\"/g, '\\\"') | safe }}",
+      "XL": "{{ XL | default('') | replace(r/[\n\r\t]+/g, ' ') | replace(r/\"/g, '\\\"') | safe }}"
+    }
+  }
+  {% elif tab == "regional" %}{
+    "title": "Regional",
+    "link": "{{resultsUrl}}",
+    "type": "regions",
+    "data": {
+      "duration": "{{tickerSpeed | default("20s", true)}}",
+      "list": [
+        {% for result in individualResults %}
+        {
+          "name": "{{result.name}}",
+          "label": "{{result.label}}"
+        }{% if loop.length and not loop.last %},{% endif%}
+        {% endfor %}
+      ]
+    }
+  }
+  {% elif tab == "national" %}{
+    "title": "National",
+    "link": "{{resultsUrl}}",
+    "type": "result",
+    "data": {
+      "leave": {{leave | default("0", true)}},
+      "remain": {{remain | default("0", true)}},
+      "numDecimalPlaces": 1,
+      "note": "{{note | safe}}"
+    }
+  }{% endif %}{% if loop.length and not loop.last %},{% endif%}
+
+{% endfor %}
+
+  ]
+}
