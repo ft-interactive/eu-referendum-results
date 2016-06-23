@@ -8,6 +8,7 @@ export PUBLIC_DATA_DIR=$2
 OVERRIDE_SPREADSHEET_KEY=1AlfpfzszEPSyYP2iaUpsjBUa-HBAU4f4YNUVgnuVNwM;
 OVERRIDE_URL=https://bertha.ig.ft.com/republish/publish/gss/$OVERRIDE_SPREADSHEET_KEY/areas,regions,national,config
 
+# t
 echo " ";
 echo "Begin run";
 date;
