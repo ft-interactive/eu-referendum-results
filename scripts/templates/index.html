@@ -198,24 +198,20 @@
               </header>
             </div>
           </div>
-
+                {% if not bertha.hideleaveremain %}
             <div class="o-grid-row">
                 <div class="body-section" data-o-grid-colspan="12 S12 Scenter M9 L8">
-                    <!-- {% if not bertha.hidestandfirst %}
+
+                    {% if bertha.localdivideheader %}
+                    <h2 class="o-typography-subhead">{{ bertha.localdivideheader }}</h2>{% endif %}
+                    {% if bertha.localdividesub %}
+                    <p class="o-typography-body subhead">{{ bertha.localdividesub }}</p>{% endif %}
                     
-                        {% if bertha.standfirst %}
-                        {{ bertha.standfirst }}
-                        {% else %}
-                        {{ marginStatement }}
-                        {% endif %}
-                    
-                    {% endif %} -->
-                    <h2 class="o-typography-subhead">Regional divide headline to go here</h2>
-                    <p class="o-typography-body subhead">Some blurb to give some context</p>
                     {% if not bertha.hideleaveremain %}
                     <div class="standfirst strong-votes">
                         {{ leaveRemainExtremes }}                    
                     </div>
+                    {% endif %}
                 </div>
             </div>
                 {% endif %}
@@ -224,7 +220,7 @@
                  <div data-o-grid-colspan="12 S12 Scenter M9 L8">
                     <h2 class="o-typography-subhead">Which regions swung the vote?</h2>
                     <div class="regional-results">
-                        <p class="o-typography-body subhead">Which areas have had the greatest effect on the outcome?</p>
+                        <p class="o-typography-body subhead">Areas which have had the greatest effect on the outcome</p>
                         {{ regionalBreakdownChart }}
                         <figcaption class="footnote">* incomplete count</figcaption>
                     </div>
@@ -248,7 +244,7 @@
                             <div class="location-data">
                             </div>
                             <div class="neighbourhood">
-                            <div class="neighbour-label article__crosshead-alt">Areas in your neighbourhood</div>
+                            <div class="article__crosshead-alt"><div class="neighbour-label" style="display:none;">Areas in your neighbourhood</div></div>
                             </div>
                         </div>
                     </div>
