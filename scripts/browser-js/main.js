@@ -185,6 +185,8 @@ selectionDispatcher.on('select.neigbours', function(d){
         });
     });
 
+    d3.select('.neighbour-label').style('display','block');
+
     var neighbourhoodJoin = d3.select('.neighbourhood')
         .selectAll('.neighbour')
             .data(neighbourhood
@@ -204,14 +206,10 @@ selectionDispatcher.on('select.neigbours', function(d){
             parent
                 .append('span').html(function(d){
                     if(d.state<3) return ''
-                    if(d.remain_votes > d.leave_votes) return ' &mdash; remain (+' + (d.remain_percentage_share - d.leave_percentage_share).toFixed(1) + '%)';
-                    if(d.remain_votes < d.leave_votes) return ' &mdash; leave (+' + (d.leave_percentage_share - d.remain_percentage_share).toFixed(1) + '%)';
+                    if(d.remain_votes > d.leave_votes) return ' &mdash; <span class="remain-flag">remain</span> +' + (d.remain_percentage_share - d.leave_percentage_share).toFixed(1) + '%';
+                    if(d.remain_votes < d.leave_votes) return ' &mdash; <span class="leave-flag">leave</span> +' + (d.leave_percentage_share - d.remain_percentage_share).toFixed(1) + '%';
                 })
-                .attr('class',function(d){
-                    if(d.state < 3) return ''
-                    if(d.remain_votes > d.leave_votes) return 'remain-flag';
-                    if(d.remain_votes < d.leave_votes) return 'leave-flag';
-                });
+                .attr('class','neighbour-info');
 
             parent.on('click', function(d){
                     selectionDispatcher.select(d);
