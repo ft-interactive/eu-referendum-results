@@ -12,10 +12,17 @@ console.log('output', output_dir);
 
 results(results_dir, override_dir, output_dir)
 .then((data) => {
+  console.log('');
+  console.log('Remain', data.national.remain_percentage_share);
+  console.log('Leave', data.national.leave_percentage_share);
+  console.log('Turnout', data.national.percentage_turnout);
+  console.log('Num results', data.national.number_of_results);
+  console.log('Electorate', data.national.electorate);
+  console.log('Results built', new Date());
   return next(output_dir, data)
 })
 .then(() => {
-  console.log('Done');
+  console.log('Next home page data built', new Date());
 })
 .catch(reason => {
   console.error(reason);
