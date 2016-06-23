@@ -47,7 +47,10 @@ module.exports = function(){
                     .attr('width', barValueScale(100))
                     .attr('height', barHeight/2);
 
-                parent.append('text').attr('class', 'bar-title');
+                parent.append('text')
+                    .attr('class', 'bar-title')
+                    .attr('dy', -5);
+                    
                 parent.append('text')
                     .attr('class', 'bar-remain-value')
                     .attr('y',barHeight)
@@ -270,6 +273,16 @@ function updateBars(localResult){
         },
     ];
 
+    if(localResult.state < 3){
+        //incomplete count
+        d3.select('.postcode-message')
+            .style('display', 'block')
+            .html('This area has yet to complete its count');
+    }else{
+        d3.select('.postcode-message')
+            .style('display', 'none');
+    }
+
     bars.data(contextResults);
     
     d3.select('.location-data')
@@ -284,17 +297,10 @@ d3.select('#postcode-search').on('click',function(){
                 return serviceID === e.ons_id ;
             });
             d3.select('.postcode-message').classed('postcode-error',false);
-            if(localResult.state < 3){
-                //incomplete count
-                d3.select('.postcode-message')
-                    .classed('postcode-error',true)
-                    .html('This area has yet to complete its count');
-            }
-            console.log(localResult);
             selectionDispatcher.select(localResult);
         }else{
             d3.select('.postcode-message')
-                .classed('postcode-error',true)
+                .style('display', 'block')
                 .html('Sorry: couldn&apos;t find that postcode');
         };
     });
