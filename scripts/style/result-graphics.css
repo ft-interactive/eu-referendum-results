@@ -297,6 +297,14 @@ body {
   font-size: 26px;
 }
 
+.bar-remain{
+  fill:#4366af;
+}
+
+.bar-leave{
+  fill:#2fad89;
+}
+
 .bar-remain-value{
   font-size: 24px;
 }
@@ -316,6 +324,27 @@ body {
 }
 
 .neighbour:hover{
+  font-weight: bold;
+}
+
+/* full table */
+.full-area-results{
+  width:100%;
+}
+
+.number-cell{
+  text-align: right;
+}
+
+.full-table-label-leave{
+  text-anchor: end;
+}
+
+.table-bar{
+  width:100%;
+}
+
+.full-area-results th{
   font-weight: bold;
 }
 
@@ -383,6 +412,9 @@ a {
 		padding-left: 10px;
 		width: calc(100% - 100px);
 	}
+  .hideable{
+    display:none;
+  }
 }
 
 @media (min-width: 490px) {

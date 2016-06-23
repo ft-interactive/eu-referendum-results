@@ -145,15 +145,12 @@ function updateBars(localResult){
         },
     ];
 
-    console.log( 'state', localResult.state );
     if(localResult.state < 3){
         //incomplete count
-        console.log('on')
         d3.select('.postcode-message')
             .style('display', 'block')
             .html('This area has yet to complete its count');
     }else{
-        console.log('off')
         d3.select('.postcode-message')
             .style('display', 'none');
     }
@@ -172,7 +169,6 @@ d3.select('#postcode-search').on('click',function(){
                 return serviceID === e.ons_id ;
             });
             d3.select('.postcode-message').classed('postcode-error',false);
-            console.log(localResult);
             selectionDispatcher.select(localResult);
         }else{
             d3.select('.postcode-message')
