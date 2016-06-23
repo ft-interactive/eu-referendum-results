@@ -108,6 +108,7 @@ module.exports = function(regionalResult){
 	});
     
     return {
+		axisX: barScale(50),
         series: series,
         width: width,
         height: height,

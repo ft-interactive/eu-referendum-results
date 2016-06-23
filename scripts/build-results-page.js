@@ -11,12 +11,14 @@ const request = require('request');
 
 const layoutVoteSwing = require('./layout-vote-swing.js');
 const layoutNationalBars = require('./layout-national-bars.js');
+const layoutFullTable = require('./layout-full-table');
 const writer = require('./news-writer.js');
 const topoData = require('./geodata/referendum-result-areas.json');
-console.log(config)
+
+
 //HTML build
 
-
+console.log(new Date() + "building")
 request(config.bertha, parseBertha);
 
 function parseBertha(error, response, berthaBody) {
@@ -59,7 +61,7 @@ function build( berthaData ){
 
     const nationalResults = loadLocalJSON( config.nationalResult );
 
-    const localResuls = loadLocalJSON( config.localResult )    
+    const localResults = loadLocalJSON( config.localResult )    
         .map(function(d){
             return {
                 name: d.name,
@@ -73,13 +75,14 @@ function build( berthaData ){
             };
         });
 
-    const words = writer(nationalResults, regionalResults, localResuls);
+    const words = writer(nationalResults, regionalResults, localResults);
 
     nunjucks.configure('templates', { autoescape: false });
 
-
     const nationalResultChart = nunjucks.render('national-result-chart.html', layoutNationalBars( nationalResults)); 
     const regionalBreakdownChart = nunjucks.render('vote-swing.svg', layoutVoteSwing( regionalResults ));
+    const fullTable = nunjucks.render('full-table.html', layoutFullTable(localResults));
+
 
     const context = {
         bertha: berthaData,
@@ -90,11 +93,12 @@ function build( berthaData ){
         leaveRemainExtremes: words.leaveRemainExtremes,
     //    standfirstList: words.standfirstList,
         topoData: JSON.stringify( topoData ),
-        localResultData: JSON.stringify( localResuls ),
+        localResultData: JSON.stringify( localResults ),
         regionalResultData: JSON.stringify( regionalResults ),
         nationalResultData: JSON.stringify( nationalResults ),
         nationalResultChart: nationalResultChart,
         regionalBreakdownChart: regionalBreakdownChart,
+        fullTable: fullTable,
         social: {
             title: 'EU referendum results',
             description: 'Follow live results with the FT',
@@ -114,6 +118,8 @@ function build( berthaData ){
     fs.writeFileSync( config.outputLocation + 'index.html', indexHTML );
     fs.writeFileSync( config.outputLocation + 'homepage-widget.html', homepageWidget );
 
+    console.log('  html done');
+
     //Javascript build
     const writeStream = fs.createWriteStream(config.outputLocation + 'js/bundle.js')
     const browserify = require('browserify');
@@ -122,14 +128,15 @@ function build( berthaData ){
         .bundle()
         .pipe(writeStream);
     
+    console.log('  js done');
     //CSS copy
     fs.createReadStream('./style/article.css').pipe(fs.createWriteStream(config.outputLocation + 'style/article.css'));
     fs.createReadStream('./style/result-graphics.css').pipe(fs.createWriteStream(config.outputLocation + 'style/result-graphics.css'));
+    console.log('  css done. FIN. ('+new Date()+')');
 }
 //utitlity functions
 
 function loadLocalJSON(filename){
-    console.log(filename)
     return JSON.parse( fs.readFileSync( filename, 'utf-8' ) );
 }
 

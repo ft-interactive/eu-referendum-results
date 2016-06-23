@@ -1,0 +1,26 @@
+<table class="full-area-results">
+    <thead>
+        <tr>
+            <th></th><th style="text-align:left;">Remain %</th><th style="text-align:right;">Leave %</span></th><th class="number-cell hideable">Leave votes</th><th class="number-cell hideable">Remain votes</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr data-onsid="{{ row.ons_id }}" data-regionid="{{ row.region_id }}" class="area-state-{{row.state}}" >
+            <td>{{ row.name }}</td>
+            <td colspan="2"><svg class="table-bar" viewBox="0 0 {{svgWidth}} {{svgHeight}}" width="{{ svgWidth }}" height="{{ svgHeight }}">
+                <rect class="bar-background" x="{{ row.barStartX }}" y="{{ row.barStartY }}" width="{{ row.barTotalWidth }}" height="{{ row.barHeight }}"></rect>
+                {% if (row.state>2) %}
+                <text class="full-table-label-remain" transform="translate({{ row.barTotalWidth + row.barStartX + 3 }},{{ row.barHeight/2 + 3 }})">{{row.leave_percentage_share}}%</text>
+                <text class="full-table-label-leave" transform="translate({{ row.barStartX - 3 }},{{ row.barHeight/2 + 3 }})">{{row.remain_percentage_share}}%</text>
+                <rect class="bar-remain" x="{{ row.barStartX  }}" y="{{ row.barStartY }}" width="{{ row.remainBarWidth }}" height="{{ row.barHeight }}"></rect>
+                <rect class="bar-leave" x="{{ row.barStartX + row.remainBarWidth }}" y="{{ row.barStartY }}"  width="{{ row.leaveBarWidth }}" height="{{ row.barHeight }}"></rect>
+                {% endif %}
+                <line class="local-bar-axis" x1="{{ axisX }}" x2="{{ axisX }}" y1="{{ 0 }}" y2="{{ row.barHeight }}"></line>
+                </svg></td>
+            <td class="number-cell hideable">{{ row.leave_votes }}</td>
+            <td class="number-cell hideable">{{ row.remain_votes }}</td>
+        </tr>
+        {% endfor %} 
+    </tbody>
+</table>
