@@ -187,17 +187,37 @@ selectionDispatcher.on('select.neigbours', function(d){
 
     var neighbourhoodJoin = d3.select('.neighbourhood')
         .selectAll('.neighbour')
-            .data(neighbourhood.filter(function(d){ return d !== undefined; }),function(d){ return d.ons_id; });
+            .data(neighbourhood
+                .filter(function(d){ return d !== undefined; })
+                .sort(function(a,b){ 
+                    var textA = a.name.toUpperCase();
+                    var textB = b.name.toUpperCase();
+                    return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+                }), function(d){ return d.ons_id; });
     
     neighbourhoodJoin.exit().remove();
 
     neighbourhoodJoin.enter()
-        .append('div')
-            .attr('class','neighbour')
-            .text(function(d){ return d.name; })
-            .on('click', function(d){
-                selectionDispatcher.select(d);
-            });
+        .append('div').attr('class','neighbour')
+        .call(function(parent){
+            parent.text(function(d){ return d.name; })
+            parent
+                .append('span').html(function(d){
+                    if(d.state<3) return ''
+                    if(d.remain_votes > d.leave_votes) return ' &mdash; remain (+' + (d.remain_percentage_share - d.leave_percentage_share).toFixed(1) + '%)';
+                    if(d.remain_votes < d.leave_votes) return ' &mdash; leave (+' + (d.leave_percentage_share - d.remain_percentage_share).toFixed(1) + '%)';
+                })
+                .attr('class',function(d){
+                    if(d.state < 3) return ''
+                    if(d.remain_votes > d.leave_votes) return 'remain-flag';
+                    if(d.remain_votes < d.leave_votes) return 'leave-flag';
+                });
+
+            parent.on('click', function(d){
+                    selectionDispatcher.select(d);
+                });
+        })
+
 });
 
 selectionDispatcher.on('select.local-context', updateBars);
