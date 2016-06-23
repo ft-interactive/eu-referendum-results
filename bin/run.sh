@@ -4,9 +4,9 @@ TMP_DIR=$1;
 RESULTS_DIR=$TMP_DIR/pa;
 OUTPUT_DIR=$TMP_DIR/results;
 OVERRIDE_DIR=$TMP_DIR/override;
-PUBLIC_DATA_DIR=$2
+export PUBLIC_DATA_DIR=$2
 OVERRIDE_SPREADSHEET_KEY=1AlfpfzszEPSyYP2iaUpsjBUa-HBAU4f4YNUVgnuVNwM;
-OVERRIDE_URL=https://bertha.ig.ft.com/republish/publish/gss/$OVERRIDE_SPREADSHEET_KEY/areas,regions,national
+OVERRIDE_URL=https://bertha.ig.ft.com/republish/publish/gss/$OVERRIDE_SPREADSHEET_KEY/areas,regions,national,config
 date;
 echo PATH=$PATH;
 
