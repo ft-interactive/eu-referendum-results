@@ -86,7 +86,7 @@ function buildChartData(config, chart) {
 	// Pad the value domain with the difference of its values
 	const valueDomain = [
 		valueExtent[0] + (valueExtent[0] * 0.0009),
-		valueExtent[1] - (valueExtent[1] * 0.002)
+		valueExtent[1] - (valueExtent[1] * 0.0028)
 	];
 
 	const dateDomain = [
