@@ -66,7 +66,7 @@ body {
 }
 
 .footnote{
-  line-height: 16px;  
+  line-height: 16px;
   font-size: 14px;
   font-weight: 400;
   margin-top: .3em;
@@ -127,7 +127,7 @@ body {
 
 
 /* summary text*/
-.leave-highlight, 
+.leave-highlight,
 .remain-highlight{
   font-weight: 600;
 }
@@ -147,7 +147,7 @@ body {
 
 .place-detail{
   font-weight: 400;
-  font-family: MetricWeb, sans-serif; 
+  font-family: MetricWeb, sans-serif;
 }
 
 .body-section .standfirst div{
@@ -212,7 +212,7 @@ body {
 
 .regional-results {
   border-bottom: 1px solid #cec6b9;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 
 .regional-results figcaption {
@@ -371,6 +371,9 @@ body {
 
 .number-cell{
   text-align: right;
+  -webkit-font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
 }
 
 .full-table-label-leave{
@@ -522,7 +525,7 @@ a {
   .o-typography-subhead {
     font-size: 24px;
   }
-  
+
   .local-area-lookup {
     margin-top: 17px;
   }
@@ -556,7 +559,7 @@ a {
     padding-left: 30px;
     padding-right: 30px;
   }
-  
+
   .enhanced .stories__story--image {
     float: left;
     width: 100px;
@@ -568,4 +571,3 @@ a {
     width: calc(100% - 100px);
   }
 }
-

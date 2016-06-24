@@ -1,4 +1,21 @@
 <style>
+
+html,body {
+ background-color: #fff1e0;
+ margin:0;
+
+}
+
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+a:visited {
+  color: #333333;
+}
+
   * {
     box-sizing: border-box;
   }
@@ -68,17 +85,24 @@
 .reported-areas{
   color: #333333;
 }
+
+
+
+
 </style>
+
 <div class="national-result-holder">
+  <a href="https://ig.ft.com/sites/elections/2016/uk/eu-referendum/index.html" target="_parent">
   <h1 class="widget-title">UK’s EU referendum</h1>
   <div class="bars-holder">
   {% for row in orderedData.results %}
     <div class="national-item{% if loop.index == 1 %} win{% endif %}">
-        <div class="total-bar" style="width: {{ row.value_pct }}%; background-color: {{ row.colour }};"></div>
+        <div class="total-bar" style="width: {{ row.value_pct * 0.9 }}%; background-color: {{ row.colour }};"></div>
         <div class="total-bar-label">{% if row.value_pct %} {{ row.label }} {% else %}--%{% endif %} </div>
     </div>
   {% endfor %}
    <figcaption class="footnote"><span class="reported-areas">{{ orderedData.reportedVotingAreas }}</span> of {{ orderedData.totalVotingAreas }} voting areas counted. Updated {{ orderedData.formattedDate }} </figcaption>
   </div>
-  <div class="link-holder"><a href="">Full results</a></div>
+</a>
+  <div class="link-holder"><a href="https://ig.ft.com/sites/elections/2016/uk/eu-referendum/index.html" target="_parent">Full results</a></div>
 </div>

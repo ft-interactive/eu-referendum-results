@@ -96,7 +96,7 @@
         // Note: you may also want to add this conditionally - a basic one for non-CTM
         // browsers (just to get basics like the HTML5 Shiv), and a special one (with
         // things like Promise) for CTM browsers.
-        addScript('https://cdn.polyfill.io/v2/polyfill.min.js');    
+        addScript('https://cdn.polyfill.io/v2/polyfill.min.js');
     </script>
 
     <link rel="stylesheet" href="https://origami-build.ft.com/v2/bundles/css?modules=o-fonts@^2.1.2,o-grid@^4.0.10,o-buttons@^4.0.1">
@@ -181,13 +181,13 @@
 
                 </h1>
                  {% if not bertha.hidestandfirst %}
-                    
+
                     {% if bertha.standfirst %}
                     {{ bertha.standfirst }}
                     {% else %}
                     {{ marginStatement }}
                     {% endif %}
-                
+
                 {% endif %}
                 {% if not bertha.hidenationalbars %}
                 <div class="standfirst">
@@ -206,10 +206,10 @@
                     <h2 class="o-typography-subhead">{{ bertha.localdivideheader }}</h2>{% endif %}
                     {% if bertha.localdividesub %}
                     <p class="o-typography-body subhead">{{ bertha.localdividesub }}</p>{% endif %}
-                    
+
                     {% if not bertha.hideleaveremain %}
                     <div class="standfirst strong-votes">
-                        {{ leaveRemainExtremes }}                    
+                        {{ leaveRemainExtremes }}
                     </div>
                     {% endif %}
                 </div>
@@ -224,7 +224,7 @@
                         {{ regionalBreakdownChart }}
                         <figcaption class="footnote">* incomplete count</figcaption>
                     </div>
-                </div> 
+                </div>
             </div>
             {% endif %}
             {% if not bertha.hidemap %}
@@ -356,7 +356,7 @@
         </div>
     </div>
     </footer>
-       
+
     <script id="topo-data" type="application/json">
         {{ topoData }}
     </script>

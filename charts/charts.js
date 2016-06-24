@@ -76,12 +76,17 @@ const size_variants = {
 	large: {
 		width: 435,
 		height: 80,
-		spacing: 10
+		spacing: 8
 	},
 	xlarge: {
 		width: 576,
 		height: 80,
-		spacing: 12
+		spacing: 10
+	},
+	social: {
+		width: 460,
+		height: 436,
+		spacing: 0
 	}
 };
 
@@ -94,7 +99,7 @@ const symbol_variants = {
 	night: [
 		"GBPUSD",
 		"GBPEUR",
-		"USDEUR"
+		"EURUSD"
 	],
 	day2: [
 		"GBPUSD",
@@ -104,6 +109,9 @@ const symbol_variants = {
 		"GBPUSD",
 		"GBPEUR"
 	],
+	pound: [
+		"GBPUSD"
+	]
 };
 
 // create variants output

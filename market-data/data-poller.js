@@ -17,7 +17,8 @@ const config = {
 				'FTSE:FSI',
 				'gbpeur',
 				'gbpusd',
-				'usdeur'
+				'usdeur',
+				'eurusd'
 			],
 			source: '2b80e84c1a' // api key - should be an env var
 		}

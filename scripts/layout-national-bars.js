@@ -1,7 +1,7 @@
 
 const d3 = require('d3');
 const colours = require('./colours.json')
-const ftDateFormat = d3.time.format('%I:%M%p, %B %d %Y'); //11:10am, June 15 2016 
+const ftDateFormat = d3.time.format('%I:%M%p, %B %d %Y'); //11:10am, June 15 2016
 
 module.exports = function(data){
     const nationalResultArray = [
@@ -21,10 +21,13 @@ module.exports = function(data){
     .sort(function(a, b){
         return b.value_pct - a.value_pct;
     });
-	
+
+    var bst = new Date();
+    bst.setTime( bst.getTime() + 60*60*1000 );
+
     return {
-		formattedDate: ftDateFormat( new Date() ),
-        results: nationalResultArray,
+		formattedDate: ftDateFormat( bst ),
+    results: nationalResultArray,
 		totalVotingAreas: data.total_voting_areas,
 		reportedVotingAreas: data.leave_voting_areas + data.remain_voting_areas,
     };

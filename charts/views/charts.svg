@@ -46,14 +46,14 @@
 				{% endif %}
 
 				{% if chart.subPathStartY %}
-					<circle cx="{{chart.subPathStartX}}" cy="{{chart.subPathStartY}}" r="3" fill="{{openCircleFill}}" stroke="{{upText if chart.chartIsUp else openCircleStroke}}" stroke-width="1.5"/>
+					<circle cx="{{chart.subPathStartX}}" cy="{{chart.subPathStartY}}" r="3" fill="{{openCircleFill}}" stroke="{{openCircleStroke}}" stroke-width="1.5"/>
 				{% endif %}
 
 			</g>
 
 			<!-- Y axis label -->
 			<text
-				transform="translate({{chart.margin.left - 3}}, {{chart.startLabelY}})"
+				transform="translate({{chart.margin.left - 5}}, {{chart.startLabelY}})"
 				font-family="MetricWeb, sans-serif"
 				font-size="{{textSize}}"
 				font-weight="400"
@@ -69,7 +69,7 @@
 			{% if loop.first %}
 				<!-- X axis time label -->
 				<text
-					transform="translate(0, {{chart.height - 3}})"
+					transform="translate(0, {{chart.height - 5}})"
 					font-family="MetricWeb, sans-serif"
 					font-size="{{textSize*0.85}}"
 					font-weight="400"

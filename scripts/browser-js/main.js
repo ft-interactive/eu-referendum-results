@@ -24,11 +24,11 @@ var ukLand = topojson.merge( topology, topology.objects.gb.geometries.concat(top
 }) );
 
 var londonLand = topojson.merge( topology, topology.objects.gb.geometries.filter(function(d){
-    return d.properties.region == 'E12000007'; 
+    return d.properties.region == 'E12000007';
 }) );
 
 var shetlandLand = topojson.merge( topology, topology.objects.gb.geometries.filter(function(d){
-    return d.id == 'S12000027'; 
+    return d.id == 'S12000027';
 }) );
 
 uk.features = uk.features.concat( topojson.feature(topology, topology.objects.ni).features );
@@ -88,7 +88,7 @@ mapframe.append('path')
 mapframe.append('path')
     .attr('class','land')
     .attr('d', map.land(londonLand, 'london') )
-    
+
 mapframe.append('path')
     .attr('class','land')
     .attr('d', map.land(shetlandLand, 'shetland') )
@@ -99,7 +99,7 @@ mapframe.selectAll('.area').data(localResults.filter(function(d){
         return d.state > 2;
     }))
     .call(map)
-    .on('click', function(d,i){ 
+    .on('click', function(d,i){
         selectionDispatcher.select(d);
     });
 
@@ -156,14 +156,14 @@ function updateBars(localResult){
     }
 
     bars.data(contextResults);
-    
+
     d3.select('.location-data')
         .call(bars);
 }
 
 d3.select('#postcode-search').on('click',function(){
     var query = encodeURIComponent( d3.select('#postcode-input').node().value );
-    d3.text('http://ft-ig-referendum-place-search.herokuapp.com/?q='+query, function(error, serviceID){
+    d3.text('https://ft-ig-referendum-place-search.herokuapp.com/?q='+query, function(error, serviceID){
         if(!error){
             var localResult = find(localResults, function(e){
                 return serviceID === e.ons_id ;
@@ -191,12 +191,12 @@ selectionDispatcher.on('select.neigbours', function(d){
         .selectAll('.neighbour')
             .data(neighbourhood
                 .filter(function(d){ return d !== undefined; })
-                .sort(function(a,b){ 
+                .sort(function(a,b){
                     var textA = a.name.toUpperCase();
                     var textB = b.name.toUpperCase();
                     return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
                 }), function(d){ return d.ons_id; });
-    
+
     neighbourhoodJoin.exit().remove();
 
     neighbourhoodJoin.enter()
@@ -234,10 +234,10 @@ selectionDispatcher.on('select.map', function(d){
     }
 
 
-    
+
     var join = mapframe.selectAll('g.highlight-area')
         .data(highlightData);
-    
+
     join.exit().remove();
 
     join.enter()
@@ -246,12 +246,12 @@ selectionDispatcher.on('select.map', function(d){
             parent.append('circle').attr('class','highlight-background');
             parent.append('circle').attr('class','highlight-foreground');
         });
-    
+
     join.transition().select('circle.highlight-background')
         .attr('r', function(d){ return d.r; })
         .attr('cx', function(d){ return d.cx; })
         .attr('cy', function(d){ return d.cy; });
-    
+
     join.transition().select('circle.highlight-foreground')
         .attr('r', function(d){ return d.r; })
         .attr('cx', function(d){ return d.cx; })

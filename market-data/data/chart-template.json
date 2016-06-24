@@ -25,6 +25,14 @@
 			"series": []
 		},
 		{
+			"symbol": "EURUSD",
+			"type": "currency",
+			"yLabel": "€ vs $",
+			"xLabel": "12pm",
+			"symbolLabel": "$",
+			"series": []
+		},
+		{
 			"symbol": "FTSE:FSI",
 			"type": "index",
 			"yLabel": "FTSE\n100",

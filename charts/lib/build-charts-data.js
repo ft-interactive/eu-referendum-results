@@ -85,8 +85,8 @@ function buildChartData(config, chart) {
 
 	// Pad the value domain with the difference of its values
 	const valueDomain = [
-		valueExtent[0] + (valueExtent[0] * 0.0009),
-		valueExtent[1] - (valueExtent[1] * 0.0028)
+		valueExtent[0] + (valueExtent[0] * 0.0019),
+		valueExtent[1] - (valueExtent[1] * 0.008)
 	];
 
 	const dateDomain = [
@@ -136,10 +136,7 @@ function buildChartData(config, chart) {
 			const gapLength = Math.sqrt(Math.pow(chart.subPathStartX-chart.subPathEndX,2)+Math.pow(chart.subPathStartY-chart.subPathEndY,2));
 			const dashSize = Math.min(Math.max(Math.round(gapLength / 20), 2), 8);
 			chart.gapStrokeArray = [dashSize, dashSize].join(', ');
-			if (chart.subPathEndY > chart.subPathStartY * .01) {
-				config.gapStroke = config.upText;
-				chart.chartIsUp = true;
-			}
+
 		}
 	}
 
@@ -149,7 +146,7 @@ function buildChartData(config, chart) {
 
 	// Position the labels
 	chart.startLabelY = Math.max((chart.startY || 0) - (config.textSize / 4), config.textSize);
-	chart.endLabelY = Math.max(chart.margin.top + (chart.endY || 0) - 2, config.textSize);
+	chart.endLabelY = Math.min(chart.height - (config.textSize * 2), Math.max(chart.margin.top + (chart.endY || 0) - 2, config.textSize));
 
 	// Add the end value labels
 	chart.endValue = {};

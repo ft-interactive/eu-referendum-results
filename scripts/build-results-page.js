@@ -61,7 +61,7 @@ function build( berthaData ){
 
     const nationalResults = loadLocalJSON( config.nationalResult );
 
-    const localResults = loadLocalJSON( config.localResult )    
+    const localResults = loadLocalJSON( config.localResult )
         .map(function(d){
             return {
                 name: d.name,
@@ -79,7 +79,7 @@ function build( berthaData ){
 
     nunjucks.configure('templates', { autoescape: false });
 
-    const nationalResultChart = nunjucks.render('national-result-chart.html', layoutNationalBars( nationalResults)); 
+    const nationalResultChart = nunjucks.render('national-result-chart.html', layoutNationalBars( nationalResults));
     const regionalBreakdownChart = nunjucks.render('vote-swing.svg', layoutVoteSwing( regionalResults ));
     const fullTable = nunjucks.render('full-table.html', layoutFullTable(localResults));
 
@@ -100,7 +100,7 @@ function build( berthaData ){
         regionalBreakdownChart: regionalBreakdownChart,
         fullTable: fullTable,
         social: {
-            title: 'EU referendum results',
+            title: berthaData.title || 'Referendum local results map, live tracker',
             description: 'Follow live results with the FT',
             url: 'https://ig.ft.com/sites/elections/2016/uk/eu-referendum',
             image: 'https://image.webservices.ft.com/v1/images/raw/ftcms:60d8274e-33e0-11e6-bda0-04585c31b153?source=ig'
@@ -127,7 +127,7 @@ function build( berthaData ){
         .exclude('d3')
         .bundle()
         .pipe(writeStream);
-    
+
     console.log('  js done');
     //CSS copy
     fs.createReadStream('./style/article.css').pipe(fs.createWriteStream(config.outputLocation + 'style/article.css'));
