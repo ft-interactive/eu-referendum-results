@@ -14,7 +14,7 @@
         </g>
     {% endfor %}
         <line class="regional-axis" x1="{{ axisLineX }}" y1="{{axisLineYStart}}" x2="{{axisLineX}}" y2="{{axisLineYEnd}}"></line>
-        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="end" dy="-10" dx="-10"> more leave </text>        
-        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="start" dy="-10" dx="10"> more remain </text>
+        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="end" dy="-10" dx="-10"> more remain </text>        
+        <text transform="translate({{ axisLineX }},0)" class="bar-header" text-anchor="start" dy="-10" dx="10"> more leave </text>
     </g>
 </svg>

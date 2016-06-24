@@ -53,7 +53,7 @@ module.exports = function (national, regional, local){
     return {
         headline: headline,
         marginStatement: `<h2 class="o-typography-subhead">${marginStatement}</h2>`, 
-        leaveRemainExtremes: `<div data-o-grid-colspan="6">${mostLeave}</div><div data-o-grid-colspan="6">${mostRemain}</div>`,
+        leaveRemainExtremes: `<div data-o-grid-colspan="6">${mostRemain}</div><div data-o-grid-colspan="6">${mostLeave}</div>`,
     };
 };
 
