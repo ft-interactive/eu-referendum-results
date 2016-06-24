@@ -24,10 +24,10 @@ const state = {
 module.exports = function(regionalResult){
 
     regionalResult = regionalResult.map(function(d){
-		d.margin_abs = d.remain_votes - d.leave_votes;
+		d.margin_abs = d.leave_votes - d.remain_votes;
 		return d;
 	}).sort(function(a,b){
-		return a.margin_abs - b.margin_abs;
+		return b.margin_abs - a.margin_abs;
 	});
 	
 	let width = 800;
@@ -63,14 +63,14 @@ module.exports = function(regionalResult){
     let series = regionalResult.map(function(d, i){
 		let x = barScale(d.margin_abs);
 		let w = barScale( 0 ) - barScale( d.margin_abs );
-		let fill = colours.leaveColour;
+		let fill = colours.remainColour;
 		let valueAnchor = 'start';
 		let valueDx = 5;
 						
 		if(d.margin_abs > 0){
 			x = barScale( 0 );
 			w = barScale( d.margin_abs ) - barScale( 0 );
-			fill = colours.remainColour;
+			fill = colours.leaveColour;
 			valueAnchor = 'end';
 			valueDx = -5;
 		}

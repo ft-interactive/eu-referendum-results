@@ -63,7 +63,6 @@ function build( berthaData ){
 
     const localResults = loadLocalJSON( config.localResult )
         .map(function(d){
-            console.log('main ' + d.name)
             return {
                 name: d.name,
                 ons_id: d.ons_id,
