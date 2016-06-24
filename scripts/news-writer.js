@@ -30,9 +30,9 @@ module.exports = function (national, regional, local){
 
     let marginStatement = ''
     if(national.number_of_results < national.total_voting_areas){
-        marginStatement = `With ${national.number_of_results} areas of ${national.total_voting_areas} counted the ${winner} camp lead by ${marginDescription(margin)}`;
+        marginStatement = `With ${national.number_of_results} areas of ${national.total_voting_areas} counted the ${winner} camp lead by ${marginDescription(margin)} of ${commas( Math.abs(votes_margin) )}&nbsp;votes`;
     }else{
-        marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, <span class="inline-value percent">${Math.abs(margin).toFixed(1)}</span>% (<span class="inline-value absolute">${commas( Math.abs(votes_margin) )}</span>&nbsp;votes)`;
+        marginStatement = `The <span class="${winner}-highlight">${winner}</span> camp won the day by a ${marginDescription(margin)}, ${commas( Math.abs(votes_margin) )}&nbsp;votes)`;
     }
 
     let mostLeave = 'Strongest <span class="leave-highlight">leave</span> vote: ' + getMostLeave( local, 3 ).map(function(d){
