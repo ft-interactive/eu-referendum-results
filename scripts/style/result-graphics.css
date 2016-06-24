@@ -350,18 +350,33 @@ body {
 .neighbour{
   cursor: pointer;
   color: #2e6e9e;
+  margin: 5px 0;
 }
 
 .neighbour:hover{
   color: #000000;
 }
 
-.remain-flag{
-  color: #4366af;
+
+
+.leave-flag, .leave-flag{
+  font-size: 12px;
+  padding: 2px 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .leave-flag{
-  color: #2fad89;
+  background-color: #2fad89;
+}
+
+.neighbour-info {
+  color: #333;
+}
+
+.remain-flag{
+  background-color: #4366af;
 }
 
 /* full table */
@@ -378,6 +393,13 @@ body {
 
 .full-table-label-leave{
   text-anchor: end;
+
+}
+
+.full-table-label-leave, .full-table-label-remain {
+  -webkit-font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
 }
 
 .table-bar{
