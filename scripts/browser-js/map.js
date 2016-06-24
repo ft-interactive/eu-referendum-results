@@ -44,7 +44,7 @@ module.exports = function (){
     }
         
     var isShetland = function(d){
-        return (d.local_id === 'S12000027');
+        return (d.ons_id === 'S12000027');
     }
     
     var idAccessor = function(d){
