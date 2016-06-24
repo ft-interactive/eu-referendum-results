@@ -1,7 +1,11 @@
 <table class="full-area-results">
     <thead>
         <tr>
-            <th></th><th style="text-align:left;">Remain %</th><th style="text-align:right;">Leave %</span></th><th class="number-cell hideable">Leave votes</th><th class="number-cell hideable">Remain votes</th>
+            <th></th>
+            <th style="text-align:left;">Remain %</th>
+            <th style="text-align:right;">Leave %</span></th>
+            <th class="number-cell hideable">Remain votes</th>
+            <th class="number-cell hideable">Leave votes</th>
         </tr>
     </thead>
     <tbody>
@@ -18,8 +22,8 @@
                 {% endif %}
                 <line class="local-bar-axis" x1="{{ axisX }}" x2="{{ axisX }}" y1="{{ 0 }}" y2="{{ row.barHeight }}"></line>
                 </svg></td>
-            <td class="number-cell hideable">{{ row.leave_votes }}</td>
             <td class="number-cell hideable">{{ row.remain_votes }}</td>
+            <td class="number-cell hideable">{{ row.leave_votes }}</td>
         </tr>
         {% endfor %}
     </tbody>
