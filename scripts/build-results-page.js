@@ -63,6 +63,7 @@ function build( berthaData ){
 
     const localResults = loadLocalJSON( config.localResult )
         .map(function(d){
+            console.log('main ' + d.name)
             return {
                 name: d.name,
                 ons_id: d.ons_id,
@@ -74,14 +75,13 @@ function build( berthaData ){
                 state: d.state,
             };
         });
-
-    const words = writer(nationalResults, regionalResults, localResults);
-
     nunjucks.configure('templates', { autoescape: false });
 
+    
+    const words = writer(nationalResults, regionalResults, localResults);
+    const fullTable = nunjucks.render('full-table.html', layoutFullTable( localResults ));
     const nationalResultChart = nunjucks.render('national-result-chart.html', layoutNationalBars( nationalResults));
     const regionalBreakdownChart = nunjucks.render('vote-swing.svg', layoutVoteSwing( regionalResults ));
-    const fullTable = nunjucks.render('full-table.html', layoutFullTable(localResults));
 
 
     const context = {
