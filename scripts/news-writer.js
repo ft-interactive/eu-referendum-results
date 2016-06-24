@@ -28,7 +28,7 @@ module.exports = function (national, regional, local){
         }
     }
 
-    let marginStatement = ''
+    let marginStatement = '';
     if(national.number_of_results < national.total_voting_areas){
         marginStatement = `With ${national.number_of_results} areas of ${national.total_voting_areas} counted the ${winner} camp lead by ${commas( Math.abs(votes_margin) )}&nbsp;votes`;
     }else{
@@ -79,8 +79,8 @@ function getTurnoutExtent(data){
     });
     
     return [
-        sorted.shift(),
-        sorted.pop()
+        sorted[0],
+        sorted[ sorted.length - 1 ]
     ];
 }
 

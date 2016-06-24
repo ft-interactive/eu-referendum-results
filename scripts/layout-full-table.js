@@ -14,6 +14,7 @@ module.exports = function(data){
 
 
     let layedOut = data.map(function(d){
+        console.log(d.name)
         return {
             name:d.name,
             state: d.state,
