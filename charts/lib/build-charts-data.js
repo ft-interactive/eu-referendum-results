@@ -65,16 +65,26 @@ function buildChartData(config, chart) {
 		chart.width = config.width;
 		chart.height = chartHeight;
 	}
+
 	chart.margin = {
 		top: 0,
 		left: 42,
-		bottom: 4,
+		bottom: 0,
 		right: 51
 	};
+
 	chart.plotArea = {
 		width: Math.floor(chart.width - chart.margin.left - chart.margin.right),
 		height: Math.floor(chart.height - chart.margin.top - chart.margin.bottom)
 	};
+
+	if (config.layout === 'vertical') {
+		const boost = 1.35;
+		if (chart.index) {
+			chart.y -= ((chart.plotArea.height * boost - chart.plotArea.height) / 2) + (chart.index * (chart.plotArea.height/100));
+		}
+		chart.plotArea.height *= boost;
+	}
 
 	const firstValue = chart.series[0].value;
 	const lastValue = chart.series[chart.series.length - 1].value;
@@ -85,8 +95,9 @@ function buildChartData(config, chart) {
 
 	// Pad the value domain with the difference of its values
 	const valueDomain = [
-		valueExtent[0] + (valueExtent[0] * 0.0019),
-		valueExtent[1] - (valueExtent[1] * 0.008)
+		// make the numbers SMALLER to get bigger chart to fill the space
+		valueExtent[0] + (valueExtent[0] * 0.0016),
+		valueExtent[1] - (valueExtent[1] * 0.006)
 	];
 
 	const dateDomain = [

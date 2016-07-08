@@ -45,7 +45,7 @@ const color_variants = {
 		lineStroke: '#af516c',
 		text: '#333333',
 		mutedText: '#999999',
-		textSize: 14,
+		textSize: 13,
 		axisStroke: '#a7a59b',
 		openCircleStroke: '#333333',
 		openCircleFill: '#fff1e0',
@@ -87,30 +87,48 @@ const size_variants = {
 		width: 460,
 		height: 436,
 		spacing: 0
+	},
+	mrf_default: {
+		width: 174,
+		height: 200,
+		spacing: 2,
+		layout: 'vertical'
+	},
+	mrf_small: {
+		width: 177,
+		height: 200,
+		spacing: 0,
+		layout: 'vertical'
+	},
+	mrf_medium: {
+		width: 185,
+		height: 200,
+		spacing: 0,
+		layout: 'vertical'
+	},
+	mrf_large: {
+		width: 265,
+		height: 135,
+		spacing: 0,
+		layout: 'horizontal'
+	},
+	mrf_xlarge: {
+		width: 354,
+		height: 130,
+		spacing: 0,
+		layout: 'horizontal'
 	}
 };
 
 const symbol_variants = {
-	day: [
-		"GBPUSD",
-		"GBPEUR",
-		"FTSE:FSI"
-	],
 	night: [
 		"GBPUSD",
 		"GBPEUR",
 		"EURUSD"
 	],
-	day2: [
-		"GBPUSD",
-		"FTSE:FSI"
-	],
 	night2: [
 		"GBPUSD",
 		"GBPEUR"
-	],
-	pound: [
-		"GBPUSD"
 	]
 };
 
