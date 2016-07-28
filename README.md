@@ -1,19 +1,7 @@
 # eu-referendum-results
 
-Items for the UK EU Referendum results, June 2016.
+Items for the [UK EU Referendum results](https://ig.ft.com/sites/elections/2016/uk/eu-referendum/), June 23-24 2016.
 
-## dependencies
-
-* [csvkit](https://csvkit.readthedocs.org/en/0.9.1/)
-* [jq](https://stedolan.github.io/jq/)
-* [pup](https://github.com/ericchiang/pup)
-
-## (future) contents
-
-* Press Association data scraper/cleaner
-* Home page results widget graphic
-* Results map
-* Results scatterplot
 
 ## Licence
 This software is published by the Financial Times under the [MIT licence](http://opensource.org/licenses/MIT). 
