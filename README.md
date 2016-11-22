@@ -1,6 +1,6 @@
-# eu-referendum-results
+# EU referendum results
 
-Items for the [UK EU Referendum results](https://ig.ft.com/sites/elections/2016/uk/eu-referendum/), June 23-24 2016.
+Items for the Financial Times' live-updating coverage of the [UK EU Referendum results](https://ig.ft.com/sites/elections/2016/uk/eu-referendum/), June 23-24 2016.
 
 
 ## Licence
