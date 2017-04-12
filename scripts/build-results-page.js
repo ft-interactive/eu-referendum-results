@@ -76,7 +76,7 @@ function build( berthaData ){
         });
     nunjucks.configure('templates', { autoescape: false });
 
-    
+
     const words = writer(nationalResults, regionalResults, localResults);
     const fullTable = nunjucks.render('full-table.html', layoutFullTable( localResults ));
     const nationalResultChart = nunjucks.render('national-result-chart.html', layoutNationalBars( nationalResults));
@@ -102,7 +102,7 @@ function build( berthaData ){
             title: berthaData.title || 'Referendum local results map, live tracker',
             description: 'Follow live results with the FT',
             url: 'https://ig.ft.com/sites/elections/2016/uk/eu-referendum',
-            image: 'https://image.webservices.ft.com/v1/images/raw/ftcms:60d8274e-33e0-11e6-bda0-04585c31b153?source=ig'
+            image: 'https://www.ft.com/__origami/service/image/v2/images/raw/ftcms:60d8274e-33e0-11e6-bda0-04585c31b153?source=ig'
         }
     };
 
